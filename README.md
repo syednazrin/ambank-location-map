@@ -111,6 +111,19 @@ At street zoom the vector pane fades so the basemap stays readable.
 - **Catchment** draws a dashed straight-line radius around every location: toggle On/Off and
   drag the radius slider from 1 to 30 km. The circles live in their own pane, so they stay
   visible while the choropleth fades out at street zoom. Straight-line radius, not drive time.
+  Defaults: parliament borders, 10 km.
+
+## Analytics tab
+
+`Network / Analytics` switches the panel body (and the heading) to analysis:
+
+- KPIs: locations, states, population, share of population inside the radius.
+- **Catchment by hospital** — a table of all 26 sites, ranked by population served. Each
+  district is assigned to its *nearest* hospital inside the radius, so the column adds up
+  instead of counting the same people once per nearby site.
+- Click a row to open the detail widget over the map: population served, share of state,
+  overlapping population in radius, neighbouring hospitals, and the districts behind the number.
+- **Coverage by state** — share of each state's population inside the radius.
 
 ## Editing the data
 

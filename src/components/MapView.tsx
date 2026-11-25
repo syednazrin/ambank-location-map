@@ -7,6 +7,7 @@ import { LOCATIONS, STATES, type Location } from "@/lib/locations";
 import { loadBorders } from "@/lib/malaysia-borders";
 import {
   DISTRICT_CENTROID,
+  DISTRICT_NAME,
   DISTRICT_POPULATION,
   DUN_POPULATION,
   PARLIMEN_POPULATION,
@@ -139,19 +140,141 @@ type Analytics = {
   coveredShare: number;
 };
 
+type CatchmentRow = {
+  loc: Location;
+  assigned: number;
+  within: number;
+  districts: { key: string; name: string; population: number }[];
+};
+
+function CatchmentWidget({
+  row,
+  radius,
+  nearby,
+  onClose,
+  onFocus,
+}: {
+  row: CatchmentRow;
+  radius: number;
+  nearby: number;
+  onClose: () => void;
+  onFocus: () => void;
+}) {
+  const statePopulation = STATE_POPULATION[stateKey(row.loc.state)] ?? 0;
+  const share = statePopulation ? row.assigned / statePopulation : 0;
+
+  return (
+    <div className="pointer-events-auto absolute right-3 top-3 z-[1050] flex max-h-[calc(100dvh-1.5rem)] w-[380px] max-w-[calc(100vw-1.5rem)] flex-col overflow-hidden rounded-xl border bg-card shadow-xl">
+      <div className="flex items-start gap-2 border-b px-4 pb-3 pt-4">
+        <div className="min-w-0 flex-1">
+          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+            {row.loc.kind} · {row.loc.state}
+          </p>
+          <h2 className="mt-1 text-[15px] font-semibold leading-tight">{row.loc.name}</h2>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close detail"
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+
+      <div className="overflow-y-auto px-4 py-4">
+        <div>
+          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+            Population served · {radius} km
+          </p>
+          <p className="mt-1 text-[26px] font-semibold leading-none tabular-nums">
+            {fmtValue(row.assigned)}
+          </p>
+          <p className="mt-1 text-[10.5px] text-muted-foreground">
+            people · {Math.round(share * 100)}% of {row.loc.state}
+          </p>
+        </div>
+
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <Kpi label="In radius (overlapping)" value={fmtValue(row.within)} />
+          <Kpi label="Other hospitals" value={nearby} />
+        </div>
+
+        <div className="mt-4">
+          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+            Districts in range
+          </p>
+          <ul className="mt-1.5 space-y-1">
+            {row.districts.map((district) => (
+              <li
+                key={district.key}
+                className="flex items-baseline justify-between gap-2 border-b border-border/60 pb-1 text-[10.5px] last:border-0"
+              >
+                <span className="truncate">{district.name}</span>
+                <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
+                  {fmtValue(district.population)}
+                </span>
+              </li>
+            ))}
+            {row.districts.length === 0 ? (
+              <li className="text-[10.5px] text-muted-foreground">
+                No district centre falls inside this radius.
+              </li>
+            ) : null}
+          </ul>
+        </div>
+
+        <p className="mt-3 text-[9.5px] leading-relaxed text-muted-foreground">
+          Each district is assigned to its nearest hospital within {radius} km, so these totals add
+          up instead of counting the same people twice. Straight-line approximation, not drive
+          time.
+        </p>
+
+        <div className="mt-3 flex gap-1.5">
+          <button
+            type="button"
+            onClick={onFocus}
+            className="flex-1 rounded-md bg-primary px-2.5 py-2 text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
+          >
+            Show on map
+          </button>
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${row.loc.coords[0]},${row.loc.coords[1]}`}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md border px-2.5 py-2 text-[11px] font-medium transition hover:bg-secondary"
+          >
+            Directions ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function PanelAnalytics({
   data,
   radius,
   locationCount,
   stateCount,
+  rows,
+  selectedId,
+  onSelect,
 }: {
   data: Analytics;
   radius: number;
   locationCount: number;
   stateCount: number;
+  rows: CatchmentRow[];
+  selectedId: string | null;
+  onSelect: (id: string) => void;
 }) {
+  const max = rows[0]?.assigned ?? 1;
+
   return (
-    <div className="space-y-5 px-4 py-4">
+    <div className="space-y-5 px-3 py-4">
       <div className="grid grid-cols-2 gap-2">
         <Kpi label="Locations" value={locationCount} />
         <Kpi label="States" value={stateCount} />
@@ -160,30 +283,54 @@ function PanelAnalytics({
       </div>
 
       <section>
-        <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-          Hospitals by state
+        <h2 className="px-1 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+          Catchment by hospital
         </h2>
-        <ul className="mt-2 space-y-2">
-          {data.stateRows.map((row) => (
-            <li key={row.state}>
-              <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
-                <span className="truncate">{row.state}</span>
-                <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
-                  {row.count} · {fmtValue(row.population / row.count)}/hospital
-                </span>
-              </div>
-              <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
-                <div
-                  className="h-full rounded-full bg-foreground"
-                  style={{ width: `${Math.max(4, (row.count / data.maxCount) * 100)}%` }}
-                />
-              </div>
-            </li>
-          ))}
-        </ul>
+        <table className="mt-1.5 w-full border-collapse">
+          <thead>
+            <tr className="border-b">
+              <th className="px-1 pb-1 text-left font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                Hospital
+              </th>
+              <th className="px-1 pb-1 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                Served
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr
+                key={row.loc.id}
+                onClick={() => onSelect(row.loc.id)}
+                className={`cursor-pointer border-b border-border/50 transition last:border-0 ${
+                  selectedId === row.loc.id ? "bg-secondary" : "hover:bg-secondary/60"
+                }`}
+              >
+                <td className="px-1 py-1.5">
+                  <span className="block truncate text-[10.5px] leading-tight">{row.loc.name}</span>
+                  <span className="mt-0.5 block truncate font-mono text-[8.5px] uppercase tracking-[0.08em] text-muted-foreground">
+                    {row.loc.state}
+                  </span>
+                  <span className="mt-1 block h-0.5 overflow-hidden rounded-full bg-secondary">
+                    <span
+                      className="block h-full rounded-full bg-foreground/70"
+                      style={{ width: `${Math.max(2, (row.assigned / max) * 100)}%` }}
+                    />
+                  </span>
+                </td>
+                <td className="px-1 py-1.5 text-right align-middle font-mono text-[10px] tabular-nums">
+                  {fmtValue(row.assigned)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="mt-2 px-1 text-[9px] leading-relaxed text-muted-foreground">
+          Population served: each district assigned to its nearest hospital. Click a row for the breakdown.
+        </p>
       </section>
 
-      <section>
+      <section className="px-1">
         <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
           Coverage within {radius} km
         </h2>
@@ -205,10 +352,6 @@ function PanelAnalytics({
             </li>
           ))}
         </ul>
-        <p className="mt-2.5 text-[9.5px] leading-relaxed text-muted-foreground">
-          Share of state population living in districts whose centre falls within {radius} km of a
-          hospital. District-level approximation — adjust the radius under Catchment.
-        </p>
       </section>
     </div>
   );
@@ -409,8 +552,9 @@ export default function MapView() {
   const [resizing, setResizing] = useState(false);
   const [catchmentOpen, setCatchmentOpen] = useState(true);
   const [showCatchment, setShowCatchment] = useState(true);
-  const [catchmentKm, setCatchmentKm] = useState(5);
-  const [borderLevel, setBorderLevel] = useState<BorderLevel>("state");
+  const [catchmentKm, setCatchmentKm] = useState(10);
+  const [selectedHospitalId, setSelectedHospitalId] = useState<string | null>(null);
+  const [borderLevel, setBorderLevel] = useState<BorderLevel>("parlimen");
   const [shade, setShade] = useState<Shade>("population");
   const [shadeData, setShadeData] = useState<ShadeData | null>(null);
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
@@ -658,6 +802,59 @@ export default function MapView() {
   };
 
   const shadeView = shadeData && shadeData.level === borderLevel && shade === "population" ? shadeData : null;
+
+  // Population each hospital serves at the current radius. Districts are assigned to
+  // their nearest hospital inside the radius, so the column adds up instead of
+  // double-counting the same people for every nearby site.
+  const hospitalCatchment = useMemo<CatchmentRow[]>(() => {
+    const districts = Object.entries(DISTRICT_POPULATION)
+      .map(([key, population]) => {
+        const centre = DISTRICT_CENTROID[key];
+        if (!centre) return null;
+        return { key, centre, population };
+      })
+      .filter((district): district is NonNullable<typeof district> => district !== null);
+
+    const buckets = new Map<string, CatchmentRow>(
+      LOCATIONS.map((loc) => [loc.id, { loc, assigned: 0, within: 0, districts: [] }]),
+    );
+
+    for (const district of districts) {
+      let nearestId: string | null = null;
+      let nearestDistance = Infinity;
+
+      for (const loc of LOCATIONS) {
+        const distance = haversineKm(district.centre, loc.coords);
+        if (distance > catchmentKm) continue;
+        buckets.get(loc.id)!.within += district.population;
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestId = loc.id;
+        }
+      }
+
+      if (nearestId) {
+        const bucket = buckets.get(nearestId)!;
+        bucket.assigned += district.population;
+        bucket.districts.push({
+          key: district.key,
+          name: DISTRICT_NAME[district.key] ?? district.key,
+          population: district.population,
+        });
+      }
+    }
+
+    return [...buckets.values()]
+      .map((row) => ({
+        ...row,
+        districts: row.districts.sort((a, b) => b.population - a.population),
+      }))
+      .sort((a, b) => b.assigned - a.assigned || b.within - a.within);
+  }, [catchmentKm]);
+
+  const selectedRow = selectedHospitalId
+    ? hospitalCatchment.find((row) => row.loc.id === selectedHospitalId) ?? null
+    : null;
 
   const analytics = useMemo(() => {
     const byState = new Map<string, number>();
@@ -950,6 +1147,11 @@ export default function MapView() {
                 radius={catchmentKm}
                 locationCount={LOCATIONS.length}
                 stateCount={analytics.stateRows.length}
+                rows={hospitalCatchment}
+                selectedId={selectedHospitalId}
+                onSelect={(id) =>
+                  setSelectedHospitalId((current) => (current === id ? null : id))
+                }
               />
             </div>
           )}
@@ -1090,8 +1292,25 @@ export default function MapView() {
           </button>
         )}
 
+        {/* catchment detail widget */}
+        {selectedRow ? (
+          <CatchmentWidget
+            row={selectedRow}
+            radius={catchmentKm}
+            nearby={
+              LOCATIONS.filter(
+                (other) =>
+                  other.id !== selectedRow.loc.id &&
+                  haversineKm(other.coords, selectedRow.loc.coords) <= catchmentKm,
+              ).length
+            }
+            onClose={() => setSelectedHospitalId(null)}
+            onFocus={() => focus(selectedRow.loc)}
+          />
+        ) : null}
+
         {/* concentration bars */}
-        {shadeView ? (
+        {shadeView && !selectedRow ? (
           <div className="pointer-events-none absolute right-3 top-3 z-[1000] hidden w-[236px] rounded-xl border bg-card p-3 shadow-sm md:block">
             <div className="flex items-baseline justify-between gap-2">
               <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">

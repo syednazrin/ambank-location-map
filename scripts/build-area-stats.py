@@ -150,6 +150,7 @@ report("dun", geojson("malaysia.dun.geojson"), lambda p: DUN_POP.get(f"{state_ke
 
 # District centroids (largest polygon) — used for the catchment coverage metric.
 DISTRICT_CENTROID = {}
+DISTRICT_NAME = {}
 for feature in geojson("malaysia.district.geojson"):
     props = feature["properties"]
     centre = feature_centroid(feature["geometry"])
@@ -157,6 +158,7 @@ for feature in geojson("malaysia.district.geojson"):
         continue
     key = f"{state_key(STATE_NAME_BY_CODE.get(props['state'], ''))}|{district_key(props['name'])}"
     DISTRICT_CENTROID[key] = [round(centre[1], 5), round(centre[0], 5)]  # lat, lng
+    DISTRICT_NAME[key] = props["name"]
 
 
 def block(name, mapping, comment):
@@ -201,6 +203,7 @@ export const POPULATION_YEAR = "{YEAR[:4]}";
 {block("PARLIMEN_POPULATION", PARLIMEN_POP, "Parliament slug → population.")}
 {strings("STATE_NAME_BY_CODE", STATE_NAME_BY_CODE, "Boundary state code (SGR, KDH …) → state name.")}
 {centroids("DISTRICT_CENTROID", DISTRICT_CENTROID, "`state|district` → [lat, lng] of the largest polygon.")}
+{strings("DISTRICT_NAME", DISTRICT_NAME, "`state|district` → district display name.")}
 
 export const slugKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
 
