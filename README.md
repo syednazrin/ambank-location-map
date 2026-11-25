@@ -104,6 +104,14 @@ which also validates the name joins against the boundary files. Colours use a fi
 quantile ramp; the panel carries the legend and a top-six concentration card sits on the map.
 At street zoom the vector pane fades so the basemap stays readable.
 
+## Panel & catchment
+
+- The side panel is **resizable** — drag its right edge (280–640 px, double-click resets to 340)
+  and it still collapses to a bare map with the chevron.
+- **Catchment** draws a dashed straight-line radius around every location: toggle On/Off and
+  drag the radius slider from 1 to 30 km. The circles live in their own pane, so they stay
+  visible while the choropleth fades out at street zoom. Straight-line radius, not drive time.
+
 ## Editing the data
 
 Everything the map renders lives in `src/lib/locations.ts`:

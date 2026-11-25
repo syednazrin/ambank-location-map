@@ -111,6 +111,15 @@ function borderLabel(props: Record<string, unknown>) {
   return (props.dun ?? props.parlimen ?? props.name ?? "") as string;
 }
 
+/** At street level a filled choropleth would swallow the basemap — fade its pane. */
+function fadeChoropleth(map: L.Map) {
+  const pane = map.getPane("choropleth");
+  if (!pane) return;
+  const zoom = map.getZoom();
+  pane.style.transition = "opacity 200ms ease";
+  pane.style.opacity = zoom >= 13 ? "0.15" : zoom >= 11 ? "0.45" : "1";
+}
+
 function BorderChips({
   value,
   onChange,
@@ -288,6 +297,11 @@ export default function MapView() {
   const [toast, setToast] = useState<string | null>(null);
   const [collapsed, setCollapsed] = useState(false);
   const [layersOpen, setLayersOpen] = useState(true);
+  const [panelWidth, setPanelWidth] = useState(340);
+  const [resizing, setResizing] = useState(false);
+  const [catchmentOpen, setCatchmentOpen] = useState(true);
+  const [showCatchment, setShowCatchment] = useState(true);
+  const [catchmentKm, setCatchmentKm] = useState(5);
   const [borderLevel, setBorderLevel] = useState<BorderLevel>("state");
   const [shade, setShade] = useState<Shade>("population");
   const [shadeData, setShadeData] = useState<ShadeData | null>(null);
@@ -322,17 +336,59 @@ export default function MapView() {
     return () => observer.disconnect();
   }, [map]);
 
-  // At street level a filled choropleth would swallow the basemap — fade the
-  // vector pane rather than repainting hundreds of paths on every zoom.
+  // Drag the panel's right edge to widen it.
+  useEffect(() => {
+    if (!resizing) return;
+    const onMove = (event: PointerEvent) => {
+      setPanelWidth(Math.min(640, Math.max(280, Math.round(event.clientX))));
+    };
+    const onUp = () => setResizing(false);
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+    const previousSelect = document.body.style.userSelect;
+    const previousCursor = document.body.style.cursor;
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "col-resize";
+
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      document.body.style.userSelect = previousSelect;
+      document.body.style.cursor = previousCursor;
+    };
+  }, [resizing]);
+
+  // Catchment circles: a straight-line radius around every location.
+  useEffect(() => {
+    if (!map || !showCatchment) return;
+
+    const radius = catchmentKm * 1000;
+    const group = L.layerGroup().addTo(map);
+    for (const loc of LOCATIONS) {
+      L.circle(loc.coords, {
+        radius,
+        color: "#191713",
+        weight: 1.2,
+        opacity: 0.6,
+        dashArray: "3 4",
+        fill: true,
+        fillColor: "#191713",
+        fillOpacity: 0.03,
+        interactive: false,
+      }).addTo(group);
+    }
+
+    return () => {
+      group.remove();
+    };
+  }, [map, showCatchment, catchmentKm]);
+
+  // Fade the choropleth pane at street level, without touching the markers,
+  // popups or catchment circles (which live in their own panes).
   useEffect(() => {
     if (!map) return;
-    const apply = () => {
-      const pane = map.getPane("overlayPane");
-      if (!pane) return;
-      const zoom = map.getZoom();
-      pane.style.transition = "opacity 200ms ease";
-      pane.style.opacity = zoom >= 13 ? "0.15" : zoom >= 11 ? "0.45" : "1";
-    };
+    const apply = () => fadeChoropleth(map);
     map.on("zoomend", apply);
     apply();
     return () => {
@@ -376,7 +432,13 @@ export default function MapView() {
         const entries: { label: string; value: number }[] = [];
         const baseWeight = BORDER_WEIGHT[level];
 
+        if (!map.getPane("choropleth")) {
+          const pane = map.createPane("choropleth");
+          pane.style.zIndex = "350";
+        }
+
         const layer = L.geoJSON(geo, {
+          pane: "choropleth",
           style: (feature) => {
             const value = feature && shaded ? valueFor(feature.properties ?? {}, level) : null;
             const fill = colourOf(value);
@@ -419,8 +481,8 @@ export default function MapView() {
           },
         }).addTo(map);
 
-        layer.bringToBack();
         borderLayerRef.current = layer;
+        fadeChoropleth(map);
 
         if (shaded && values.length) {
           entries.sort((a, b) => b.value - a.value);
@@ -496,12 +558,13 @@ export default function MapView() {
     <div className="flex h-dvh w-full overflow-hidden bg-background text-foreground">
       {/* ---------- side panel ---------- */}
       <aside
-        className={`hidden shrink-0 overflow-hidden bg-card transition-[width] duration-300 ease-out md:flex md:flex-col ${
-          collapsed ? "w-0" : "w-[340px] border-r"
-        }`}
+        className={`relative hidden shrink-0 overflow-hidden bg-card md:flex md:flex-col ${
+          collapsed ? "w-0" : "border-r"
+        } ${resizing ? "" : "transition-[width] duration-300 ease-out"}`}
+        style={{ width: collapsed ? 0 : panelWidth }}
         aria-hidden={collapsed}
       >
-        <div className="flex h-full w-[340px] shrink-0 flex-col">
+        <div className="flex h-full shrink-0 flex-col" style={{ width: panelWidth }}>
           <div className="border-b px-5 pb-4 pt-5">
             <div className="flex items-start gap-2.5">
               <div className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-foreground text-[11px] font-semibold text-background">
@@ -581,6 +644,87 @@ export default function MapView() {
             ) : null}
           </div>
 
+          <div className="border-b px-5 py-3">
+            <button
+              type="button"
+              onClick={() => setCatchmentOpen((open) => !open)}
+              aria-expanded={catchmentOpen}
+              aria-controls="catchment-controls"
+              className="flex w-full items-center justify-between gap-2"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                Catchment
+              </span>
+              <span className="flex items-center gap-1.5">
+                {!catchmentOpen ? (
+                  <span className="font-mono text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                    {showCatchment ? `${catchmentKm} km` : "Off"}
+                  </span>
+                ) : null}
+                <svg
+                  viewBox="0 0 24 24"
+                  className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${
+                    catchmentOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+
+            {catchmentOpen ? (
+              <div id="catchment-controls" className="mt-2.5 space-y-2.5">
+                <div className="flex flex-wrap gap-1">
+                  {[
+                    { id: false, label: "Off" },
+                    { id: true, label: "On" },
+                  ].map((option) => (
+                    <button
+                      key={String(option.id)}
+                      type="button"
+                      onClick={() => setShowCatchment(option.id)}
+                      aria-pressed={showCatchment === option.id}
+                      className={`rounded-md border px-2 py-1 text-[10.5px] transition ${
+                        showCatchment === option.id
+                          ? "border-primary bg-primary font-medium text-primary-foreground"
+                          : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div className={showCatchment ? "" : "opacity-45"}>
+                  <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                    <span>Radius</span>
+                    <span>{catchmentKm} km</span>
+                  </div>
+                  <input
+                    type="range"
+                    min={1}
+                    max={30}
+                    step={1}
+                    value={catchmentKm}
+                    disabled={!showCatchment}
+                    onChange={(event) => setCatchmentKm(Number(event.target.value))}
+                    aria-label="Catchment radius in kilometres"
+                    className="mt-1.5 w-full accent-foreground"
+                  />
+                </div>
+
+                <p className="text-[9.5px] leading-relaxed text-muted-foreground">
+                  Straight-line radius around each point — not drive time.
+                </p>
+              </div>
+            ) : null}
+          </div>
+
           <div className="flex-1 overflow-y-auto px-2 py-2">
             {STATES.map((state) => (
               <div key={state} className="mb-1.5">
@@ -621,6 +765,21 @@ export default function MapView() {
             <span>Malaysia</span>
           </div>
         </div>
+
+        {!collapsed ? (
+          <div
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="Resize panel"
+            title="Drag to resize"
+            onPointerDown={(event) => {
+              event.preventDefault();
+              setResizing(true);
+            }}
+            onDoubleClick={() => setPanelWidth(340)}
+            className="absolute right-0 top-0 z-20 h-full w-1.5 cursor-col-resize bg-transparent transition-colors hover:bg-border"
+          />
+        ) : null}
       </aside>
 
       {/* ---------- map ---------- */}
