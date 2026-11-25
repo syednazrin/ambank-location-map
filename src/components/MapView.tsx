@@ -349,6 +349,12 @@ function PanelAnalytics({
         <p className="mt-1 px-1 text-[9.5px] leading-relaxed text-muted-foreground">
           Tap a row to open its full catchment table.
         </p>
+        {locationCount > rows.length ? (
+          <p className="mt-0.5 px-1 text-[9px] leading-relaxed text-muted-foreground">
+            {locationCount - rows.length} site outside Malaysia is excluded — DOSM population
+            covers Malaysia only.
+          </p>
+        ) : null}
 
         <table className="mt-1.5 w-full border-collapse">
           <thead>
@@ -656,7 +662,10 @@ export default function MapView() {
   const borderLayerRef = useRef<L.GeoJSON | null>(null);
 
   const fitAll = useCallback((instance: L.Map) => {
-    const bounds = L.latLngBounds(LOCATIONS.map((loc) => loc.coords));
+    // The Bình Dương site sits in Vietnam; fitting all 32 sites would drag the
+    // camera across the South China Sea.
+    const local = LOCATIONS.filter((loc) => loc.country === "Malaysia");
+    const bounds = L.latLngBounds(local.map((loc) => loc.coords));
     const wide = window.matchMedia("(min-width: 768px)").matches;
     instance.fitBounds(bounds, {
       paddingTopLeft: wide ? [32, 32] : [16, 124],
@@ -907,12 +916,13 @@ export default function MapView() {
       })
       .filter((district): district is NonNullable<typeof district> => district !== null);
 
+    const sites = LOCATIONS.filter((loc) => loc.country === "Malaysia");
     const buckets = new Map<string, CatchmentRow>(
-      LOCATIONS.map((loc) => [loc.id, { loc, served: 0, within: 0, contributions: [] }]),
+      sites.map((loc) => [loc.id, { loc, served: 0, within: 0, contributions: [] }]),
     );
 
     for (const district of districts) {
-      const reachable = LOCATIONS.map((loc) => ({
+      const reachable = sites.map((loc) => ({
         loc,
         distance: districtDistanceKm(district.key, district.centre, loc.coords),
       })).filter((entry) => entry.distance <= catchmentKm);
@@ -983,6 +993,7 @@ export default function MapView() {
     }
 
     const coverageRows = stateRows
+      .filter((row) => coverage.has(stateKey(row.state)))
       .map((row) => {
         const entry = coverage.get(stateKey(row.state));
         return {
@@ -1224,6 +1235,14 @@ export default function MapView() {
                             }`}
                           />
                           <span className="min-w-0 flex-1 truncate text-[11.5px]">{loc.name}</span>
+                          {loc.precision !== "exact" ? (
+                            <span
+                              title={`${loc.precision} pin${loc.precisionNote ? ` — ${loc.precisionNote}` : ""}`}
+                              className="shrink-0 font-mono text-[9px] text-muted-foreground"
+                            >
+                              ≈
+                            </span>
+                          ) : null}
                           <span className="shrink-0 font-mono text-[9px] uppercase text-muted-foreground">
                             {KIND_CODE[loc.kind]}
                           </span>
@@ -1316,6 +1335,15 @@ export default function MapView() {
                   <p className="mt-1.5 text-[11.5px] leading-relaxed text-muted-foreground">
                     {loc.address}
                   </p>
+
+                  {loc.precision !== "exact" ? (
+                    <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground">
+                      <span className="font-mono uppercase tracking-[0.08em]">
+                        {loc.precision} pin
+                      </span>
+                      {loc.precisionNote ? ` — ${loc.precisionNote}` : ""}
+                    </p>
+                  ) : null}
 
                   <div className="mt-3 space-y-1 border-t pt-2.5 text-[11px]">
                     <p className="flex gap-2">

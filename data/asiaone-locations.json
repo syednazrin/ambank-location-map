@@ -16,7 +16,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -41,7 +43,9 @@
       "type": "building",
       "label": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia",
       "confidence": "high",
-      "note": "Address names Menara ALTY; coordinates copied from ALTY Orthopaedic Hospital"
+      "note": "Address names Menara ALTY; coordinates copied from ALTY Orthopaedic Hospital",
+      "precision": "exact",
+      "precisionNote": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -65,7 +69,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Ara Damansara Medical Centre, Lot 2, Jalan Lapangan Terbang Subang, Seksyen U3, Shah Alam, Petaling, Selangor, 40150, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Ara Damansara Medical Centre, Lot 2, Jalan Lapangan Terbang Subang, Seksyen U3, Shah Alam, Petaling, Selangor, 40150, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -89,7 +95,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Beacon Hospital, 1, Seksyen 51, Petaling Jaya, Petaling, Selangor, 46050, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Beacon Hospital, 1, Seksyen 51, Petaling Jaya, Petaling, Selangor, 46050, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -113,7 +121,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Bukit Tinggi Medical Centre, Jalan Batu Nilam 13, Bandar Bukit Tinggi 1, Bandar Bukit Tinggi, Pelabuhan Klang, Bandaraya Klang, Klang, Selangor, 41200, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Bukit Tinggi Medical Centre, Jalan Batu Nilam 13, Bandar Bukit Tinggi 1, Bandar Bukit Tinggi, Pelabuhan Klang, Bandaraya Klang, Klang, Selangor, 41200, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -137,7 +147,9 @@
       "source": "nominatim",
       "type": "tertiary",
       "label": "Jalan Stesen Sentral 5, KL Sentral, Bangsar, Kuala Lumpur, 50470, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan Stesen Sentral 5, KL Sentral, Bangsar, Kuala Lumpur, 50470, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -154,15 +166,16 @@
     "email": "customercare.binhduong@columbiaasia.com",
     "website": "https://www.columbiaasia.com/vietnam/hospitals/binh-duong/binh-duong-overview",
     "image": "https://asiaonehealth.com/storage/our-brands/Binh-Duong-Resize.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 10.9512013,
+    "lng": 106.7070829,
     "geocode": {
       "query": "Đường 22 tháng 12, Khu Phố Hòa Lân 1, Thuận Giao, Thuận An, Bình Dương",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "The hospital itself, on Đường 22 Tháng 12.",
+      "confidence": "exact",
+      "precision": "exact",
+      "note": "The hospital itself, on Đường 22 Tháng 12."
     }
   },
   {
@@ -182,7 +195,9 @@
       "source": "nominatim",
       "type": "residential",
       "label": "Jalan Baung 17/22, Seksyen 17, Shah Alam, Petaling, Selangor, 40200, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan Baung 17/22, Seksyen 17, Shah Alam, Petaling, Selangor, 40200, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -206,7 +221,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital, Persiaran Cassia Barat 3, Bandar Cassia, Batu Kawan, Seberang Perai Selatan, Seberang Perai, Pulau Pinang, 14110, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital, Persiaran Cassia Barat 3, Bandar Cassia, Batu Kawan, Seberang Perai Selatan, Seberang Perai, Pulau Pinang, 14110, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -230,7 +247,9 @@
       "source": "nominatim",
       "type": "tertiary",
       "label": "Jalan Jalil Perkasa 7, Bukit Jalil, Kuala Lumpur, 57000, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan Jalil Perkasa 7, Bukit Jalil, Kuala Lumpur, 57000, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -254,7 +273,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital Bukit Rimau, 3, Persiaran Anggerik Eria, Kota Kemuning, Seksyen 31, Shah Alam, Klang, Selangor, 40460, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital Bukit Rimau, 3, Persiaran Anggerik Eria, Kota Kemuning, Seksyen 31, Shah Alam, Klang, Selangor, 40460, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -278,7 +299,9 @@
       "source": "nominatim",
       "type": "tertiary",
       "label": "Persiaran Suakasih, Cheras, Majlis Perbandaran Kajang, Hulu Langat, Selangor, 43200, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Persiaran Suakasih, Cheras, Majlis Perbandaran Kajang, Hulu Langat, Selangor, 43200, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -302,7 +325,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital Iskandar Puteri, Persiaran Afiat, Afiat Healthpark, Pulai, Iskandar Puteri, Johor Bahru, Johor, 79250, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital Iskandar Puteri, Persiaran Afiat, Afiat Healthpark, Pulai, Iskandar Puteri, Johor Bahru, Johor, 79250, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -326,7 +351,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital, Jalan Mahkota 1/KU 2, Bandar Bukit Raja, Bandaraya Klang, Klang, Selangor, 41050, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital, Jalan Mahkota 1/KU 2, Bandar Bukit Raja, Bandaraya Klang, Klang, Selangor, 41050, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -350,7 +377,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital, Lot 69, Jalan 13/6, Seksyen 13, Petaling Jaya, Petaling, Selangor, 46200, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital, Lot 69, Jalan 13/6, Seksyen 13, Petaling Jaya, Petaling, Selangor, 46200, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -374,7 +403,9 @@
       "source": "nominatim",
       "type": "secondary",
       "label": "Lebuh Puteri, Bandar Puteri Puchong, Puchong, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47100, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Lebuh Puteri, Bandar Puteri Puchong, Puchong, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47100, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -398,7 +429,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital, Jalan Haruan 2, Rasah, Seremban, Negeri Sembilan, 70300, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital, Jalan Haruan 2, Rasah, Seremban, Negeri Sembilan, 70300, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -422,7 +455,9 @@
       "source": "nominatim",
       "type": "tertiary",
       "label": "Jalan Danau Saujana, Taman Danau Kota, Setapak, Kuala Lumpur, 53300, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan Danau Saujana, Taman Danau Kota, Setapak, Kuala Lumpur, 53300, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -446,7 +481,9 @@
       "source": "nominatim",
       "type": "residential",
       "label": "Jalan Perwira, Taman Zenith, Kampung Melayu Assam Kumbang, Taiping, Larut, Matang dan Selama, Perak, 34000, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan Perwira, Taman Zenith, Kampung Melayu Assam Kumbang, Taiping, Larut, Matang dan Selama, Perak, 34000, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -470,7 +507,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Columbia Asia Hospital, Jalan Seri Setanggi Utama, Kampung Dato' Hajah Hasnah Ahmad, Tebrau, Johor Bahru, Johor, 81100, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Columbia Asia Hospital, Jalan Seri Setanggi Utama, Kampung Dato' Hajah Hasnah Ahmad, Tebrau, Johor Bahru, Johor, 81100, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -494,7 +533,9 @@
       "source": "nominatim",
       "type": "building",
       "label": "Quill 9 Annexe, 110, Jalan Professor Khoo Kay Kim, Seksyen 19, Petaling Jaya, Petaling, Selangor, 57300, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Quill 9 Annexe, 110, Jalan Professor Khoo Kay Kim, Seksyen 19, Petaling Jaya, Petaling, Selangor, 57300, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -518,7 +559,9 @@
       "source": "nominatim",
       "type": "building",
       "label": "Northern Heart Hospital, Lebuhraya Peel, Kampung Sireh, Pulau Tikus, Central George Town, Timur Laut, George Town, Pulau Pinang, 10450, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Northern Heart Hospital, Lebuhraya Peel, Kampung Sireh, Pulau Tikus, Central George Town, Timur Laut, George Town, Pulau Pinang, 10450, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -542,7 +585,9 @@
       "source": "nominatim",
       "type": "amenity",
       "label": "Pusat Perubatan ParkCity, 2, Jalan Intisari, ParkCity Heights, Desa ParkCity, Kepong, Kuala Lumpur, 52200, Malaysia",
-      "confidence": "high"
+      "confidence": "high",
+      "precision": "exact",
+      "precisionNote": "Pusat Perubatan ParkCity, 2, Jalan Intisari, ParkCity Heights, Desa ParkCity, Kepong, Kuala Lumpur, 52200, Malaysia"
     },
     "validation": {
       "checked": false,
@@ -566,7 +611,9 @@
       "source": "nominatim",
       "type": "residential",
       "label": "Jalan SS 12/1A, SS 12, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47500, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan SS 12/1A, SS 12, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47500, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -583,15 +630,16 @@
     "email": "cheras.enquiry@tonikasia.com",
     "website": "https://tags.my/tags-cheras/",
     "image": "https://asiaonehealth.com/storage/our-brands/TAGS-CHERAS-1-resized-1.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 3.1228929,
+    "lng": 101.7299483,
     "geocode": {
       "query": "Menara PGRM 2, Lot 3.01, Level 3, No 8 Jalan Pudu Ulu, Taman Pertama, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "Tower 2 car park; the tower is about 100 m away.",
+      "confidence": "good",
+      "precision": "good",
+      "note": "Tower 2 car park; the tower is about 100 m away."
     }
   },
   {
@@ -604,15 +652,16 @@
     "email": "hartamas.enquiry@tonikasia.com",
     "website": "https://tags.my/tags-hartamas/",
     "image": "https://asiaonehealth.com/storage/our-brands/TAGS-HARTAMAS-3-resized-1.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 3.1614169,
+    "lng": 101.6502533,
     "geocode": {
       "query": "A-G-05 & A-01-06, Galeria Hartamas, Jalan 26A/70A, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "Galeria Hartamas is on Jalan 26A/70A; OSM has no building feature here.",
+      "confidence": "street",
+      "precision": "street",
+      "note": "Galeria Hartamas is on Jalan 26A/70A; OSM has no building feature here."
     }
   },
   {
@@ -625,15 +674,16 @@
     "email": "johor_bahru.enquiry@tonikasia.com",
     "website": "https://tags.my/tags-johor-bahru/",
     "image": "https://asiaonehealth.com/storage/our-brands/TAGS-JOHOR-2-resized-1.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 1.4807367,
+    "lng": 103.7600896,
     "geocode": {
       "query": "No 43 & 44, Jalan Harimau Tarum, Taman Century, 80250 Johor Bahru, Johor",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "Dewanraya Taman Century; expect a few hundred metres of error.",
+      "confidence": "approximate",
+      "precision": "approximate",
+      "note": "Dewanraya Taman Century; expect a few hundred metres of error."
     }
   },
   {
@@ -653,7 +703,9 @@
       "source": "nominatim",
       "type": "healthcare",
       "label": "Tags Chiropractic & Rehabilitation, Jalan Setia Raja, Kampung Stampin, Stutong Baru, Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Tags Chiropractic & Rehabilitation, Jalan Setia Raja, Kampung Stampin, Stutong Baru, Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -677,7 +729,9 @@
       "type": "secondary",
       "label": "Jalan Penghulu Abas, Bukit Baru, Bandaraya Melaka, Melaka Tengah, Melaka, 75150, Malaysia",
       "confidence": "medium",
-      "retried": true
+      "retried": true,
+      "precision": "street",
+      "precisionNote": "Jalan Penghulu Abas, Bukit Baru, Bandaraya Melaka, Melaka Tengah, Melaka, 75150, Malaysia"
     },
     "validation": {
       "checked": true,
@@ -694,15 +748,16 @@
     "email": "penang.enquiry@tonikasia.com",
     "website": "https://tags.my/tags-penang/",
     "image": "https://asiaonehealth.com/storage/our-brands/TAGS-PENANG-3-resized-1.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 5.3944698,
+    "lng": 100.3028578,
     "geocode": {
       "query": "4F, Jalan Masjid Negeri, Greenlane, 11600 George Town, Penang",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "30 Jalan Masjid Negeri, Greenlane.",
+      "confidence": "good",
+      "precision": "good",
+      "note": "30 Jalan Masjid Negeri, Greenlane."
     }
   },
   {
@@ -715,15 +770,16 @@
     "email": "seremban.enquiry@tonikasia.com",
     "website": "https://tags.my/tags-seremban/",
     "image": "https://asiaonehealth.com/storage/our-brands/TAGS-SEREMBAN-1-resized-1.webp",
-    "lat": null,
-    "lng": null,
+    "lat": 2.6946589,
+    "lng": 101.911087,
     "geocode": {
       "query": "No 249, Jalan S2 B12, Seksyen B, Uptown Avenue, Seremban 2, 70300 Seremban, Negeri Sembilan",
-      "source": null,
-      "type": null,
-      "label": null,
-      "confidence": "none",
-      "note": "automatic match rejected (wrong place); needs precise geocoding"
+      "source": "osm-supplied",
+      "type": "manual",
+      "label": "Jalan S2 B12, Uptown Avenue, Seremban 2.",
+      "confidence": "good",
+      "precision": "good",
+      "note": "Jalan S2 B12, Uptown Avenue, Seremban 2."
     }
   },
   {
@@ -743,7 +799,9 @@
       "source": "nominatim",
       "type": "residential",
       "label": "Jalan SS 17/1A, SS 17, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47200, Malaysia",
-      "confidence": "medium"
+      "confidence": "medium",
+      "precision": "street",
+      "precisionNote": "Jalan SS 17/1A, SS 17, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47200, Malaysia"
     },
     "validation": {
       "checked": true,

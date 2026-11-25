@@ -23,20 +23,23 @@ Scraped from <https://asiaonehealth.com/our-brands> on 2026-11-25 (4 pages, 32 c
 
 ## Status
 
-- **32** locations scraped, **26** with coordinates.
-- All 26 points fall **inside the Malaysian state their address claims** (validated against the state boundary file).
-- **6 need a better geocoder** — Nominatim had no result and the fallbacks landed on a wrong building or a centroid, so they were discarded rather than shipped wrong:
+- **32** locations, all with coordinates.
+- 26 came from automatic geocoding and were validated against the state polygons; 6 use
+  supplied OSM points and carry a `precision` flag:
 
-| Brand | Address |
-| --- | --- |
-| Columbia Asia Binh Duong | Đường 22 tháng 12, Thuận Giao, Thuận An, Bình Dương |
-| TAGS Cheras | Menara PGRM 2, Jalan Pudu Ulu, 56100 Cheras |
-| TAGS Hartamas | Galeria Hartamas, Jalan 26A/70A, 50480 Kuala Lumpur |
-| TAGS Johor Bahru | Jalan Harimau Tarum, Taman Century, 80250 Johor Bahru |
-| TAGS Penang | Jalan Masjid Negeri, Greenlane, 11600 George Town |
-| TAGS Seremban | Jalan S2 B12, Uptown Avenue, Seremban 2, 70300 Seremban |
+| Brand | Precision | Note |
+| --- | --- | --- |
+| Columbia Asia Binh Duong | exact | The hospital itself, Đường 22 Tháng 12 |
+| TAGS Cheras | good | Tower 2 car park; tower ~100 m away |
+| TAGS Hartamas | street | Galeria Hartamas is on Jalan 26A/70A, no building feature in OSM |
+| TAGS Penang | good | 30 Jalan Masjid Negeri, Greenlane |
+| TAGS Seremban | good | Jalan S2 B12, Uptown Avenue |
+| TAGS Johor Bahru | approximate | Dewanraya Taman Century; a few hundred metres of error |
 
-Drop a TomTom key in and the retry script can fill these in without touching the rest.
+Anything that isn't `exact` shows a `≈` in the panel list and a "pin" note in the popup.
+
+The Bình Dương hospital is in Vietnam, so the map still fits to Malaysia on load and the
+catchment analytics (which use DOSM population) cover the 31 Malaysian sites.
 
 ## How it was produced
 

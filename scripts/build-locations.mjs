@@ -48,16 +48,20 @@ function kindOf(name) {
 const items = rows
   .map((r) => {
     const meta = STATE_LABEL[r.state.toLowerCase()] ?? { state: r.state, code: "MY" };
+    const precision = r.geocode?.precision ?? "exact";
     return {
       id: r.id,
       name: r.name.replace(/\s*\(.*\)$/, ""),
       kind: kindOf(r.name),
+      country: r.country,
       state: meta.state,
       stateCode: meta.code,
       address: r.address,
       phone: formatPhone(r.phone),
       email: r.email,
       website: r.website,
+      precision,
+      precisionNote: r.geocode?.note ?? "",
       coords: [Number(r.lat.toFixed(5)), Number(r.lng.toFixed(5))],
     };
   })
@@ -69,12 +73,15 @@ const lines = items
     id: ${JSON.stringify(l.id)},
     name: ${JSON.stringify(l.name)},
     kind: ${JSON.stringify(l.kind)},
+    country: ${JSON.stringify(l.country)},
     state: ${JSON.stringify(l.state)},
     stateCode: ${JSON.stringify(l.stateCode)},
     address: ${JSON.stringify(l.address)},
     phone: ${JSON.stringify(l.phone)},
     email: ${JSON.stringify(l.email)},
     website: ${JSON.stringify(l.website)},
+    precision: ${JSON.stringify(l.precision)},
+    precisionNote: ${JSON.stringify(l.precisionNote)},
     coords: [${l.coords[0]}, ${l.coords[1]}],
   },`,
   )
@@ -82,7 +89,8 @@ const lines = items
 
 const file = `/**
  * Asia OneHealthcare network — scraped from asiaonehealth.com/our-brands on 2026-11-25.
- * 26 of the 32 listed brands have coordinates; the rest need a paid geocoder.
+ * All 32 listed brands carry coordinates; the six that automated geocoding missed use
+ * supplied OSM points, flagged by \`precision\` (exact | good | street | approximate).
  * Source data and provenance: \`data/asiaone-locations.json\`.
  *
  * Regenerate with: node scripts/build-locations.mjs
@@ -90,10 +98,14 @@ const file = `/**
 
 export type LocationKind = "Hospital" | "Specialist Centre" | "Physiotherapy";
 
+/** How exact the pin is: exact building, ~100 m, street-level, or approximate. */
+export type LocationPrecision = "exact" | "good" | "street" | "approximate";
+
 export type Location = {
   id: string;
   name: string;
   kind: LocationKind;
+  country: string;
   state: string;
   /** Short state code shown as a badge in the list. */
   stateCode: string;
@@ -101,6 +113,8 @@ export type Location = {
   phone: string;
   email: string;
   website: string;
+  precision: LocationPrecision;
+  precisionNote: string;
   /** [latitude, longitude] */
   coords: [number, number];
 };
