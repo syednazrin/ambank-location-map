@@ -1,11 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { LOCATIONS, STATES, type Location } from "@/lib/locations";
 import { loadBorders } from "@/lib/malaysia-borders";
 import {
+  DISTRICT_CENTROID,
   DISTRICT_POPULATION,
   DUN_POPULATION,
   PARLIMEN_POPULATION,
@@ -105,6 +106,112 @@ function valueFor(props: Record<string, unknown>, level: BorderLevel): number | 
 
 function fmtValue(value: number) {
   return value >= 1_000_000 ? `${(value / 1_000_000).toFixed(2)}M` : `${Math.round(value / 1000)}k`;
+}
+
+/** Great-circle distance in kilometres. */
+function haversineKm(a: [number, number], b: [number, number]) {
+  const R = 6371;
+  const dLat = ((b[0] - a[0]) * Math.PI) / 180;
+  const dLon = ((b[1] - a[1]) * Math.PI) / 180;
+  const lat1 = (a[0] * Math.PI) / 180;
+  const lat2 = (b[0] * Math.PI) / 180;
+  const h =
+    Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function Kpi({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div className="rounded-lg border bg-secondary/40 px-2.5 py-2">
+      <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
+        {label}
+      </p>
+      <p className="mt-1 text-[15px] font-semibold leading-none tabular-nums">{value}</p>
+    </div>
+  );
+}
+
+type Analytics = {
+  stateRows: { state: string; count: number; population: number }[];
+  coverageRows: { state: string; share: number }[];
+  maxCount: number;
+  totalPopulation: number;
+  coveredShare: number;
+};
+
+function PanelAnalytics({
+  data,
+  radius,
+  locationCount,
+  stateCount,
+}: {
+  data: Analytics;
+  radius: number;
+  locationCount: number;
+  stateCount: number;
+}) {
+  return (
+    <div className="space-y-5 px-4 py-4">
+      <div className="grid grid-cols-2 gap-2">
+        <Kpi label="Locations" value={locationCount} />
+        <Kpi label="States" value={stateCount} />
+        <Kpi label="Population" value={fmtValue(data.totalPopulation)} />
+        <Kpi label={`Within ${radius} km`} value={`${Math.round(data.coveredShare * 100)}%`} />
+      </div>
+
+      <section>
+        <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+          Hospitals by state
+        </h2>
+        <ul className="mt-2 space-y-2">
+          {data.stateRows.map((row) => (
+            <li key={row.state}>
+              <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
+                <span className="truncate">{row.state}</span>
+                <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
+                  {row.count} · {fmtValue(row.population / row.count)}/hospital
+                </span>
+              </div>
+              <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
+                <div
+                  className="h-full rounded-full bg-foreground"
+                  style={{ width: `${Math.max(4, (row.count / data.maxCount) * 100)}%` }}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+          Coverage within {radius} km
+        </h2>
+        <ul className="mt-2 space-y-2">
+          {data.coverageRows.map((row) => (
+            <li key={row.state}>
+              <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
+                <span className="truncate">{row.state}</span>
+                <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
+                  {Math.round(row.share * 100)}%
+                </span>
+              </div>
+              <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
+                <div
+                  className="h-full rounded-full bg-foreground"
+                  style={{ width: `${Math.max(2, row.share * 100)}%` }}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-2.5 text-[9.5px] leading-relaxed text-muted-foreground">
+          Share of state population living in districts whose centre falls within {radius} km of a
+          hospital. District-level approximation — adjust the radius under Catchment.
+        </p>
+      </section>
+    </div>
+  );
 }
 
 function borderLabel(props: Record<string, unknown>) {
@@ -296,6 +403,7 @@ export default function MapView() {
   const [locating, setLocating] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [collapsed, setCollapsed] = useState(false);
+  const [panelTab, setPanelTab] = useState<"network" | "analytics">("network");
   const [layersOpen, setLayersOpen] = useState(true);
   const [panelWidth, setPanelWidth] = useState(340);
   const [resizing, setResizing] = useState(false);
@@ -551,6 +659,57 @@ export default function MapView() {
 
   const shadeView = shadeData && shadeData.level === borderLevel && shade === "population" ? shadeData : null;
 
+  const analytics = useMemo(() => {
+    const byState = new Map<string, number>();
+    for (const loc of LOCATIONS) byState.set(loc.state, (byState.get(loc.state) ?? 0) + 1);
+
+    const stateRows = [...byState.entries()]
+      .map(([state, count]) => ({
+        state,
+        count,
+        population: STATE_POPULATION[stateKey(state)] ?? 0,
+      }))
+      .sort((a, b) => b.count - a.count || b.population - a.population);
+
+    const coverage = new Map<string, { covered: number; total: number }>();
+    let total = 0;
+    let covered = 0;
+
+    for (const [key, population] of Object.entries(DISTRICT_POPULATION)) {
+      const centre = DISTRICT_CENTROID[key];
+      if (!centre) continue;
+      const [stateSlug] = key.split("|");
+      const entry = coverage.get(stateSlug) ?? { covered: 0, total: 0 };
+      entry.total += population;
+      total += population;
+
+      const reachable = LOCATIONS.some((loc) => haversineKm(centre, loc.coords) <= catchmentKm);
+      if (reachable) {
+        entry.covered += population;
+        covered += population;
+      }
+      coverage.set(stateSlug, entry);
+    }
+
+    const coverageRows = stateRows
+      .map((row) => {
+        const entry = coverage.get(stateKey(row.state));
+        return {
+          state: row.state,
+          share: entry && entry.total ? entry.covered / entry.total : 0,
+        };
+      })
+      .sort((a, b) => a.share - b.share);
+
+    return {
+      stateRows,
+      coverageRows,
+      maxCount: stateRows[0]?.count ?? 1,
+      totalPopulation: total,
+      coveredShare: total ? covered / total : 0,
+    };
+  }, [catchmentKm]);
+
   const controlBtn =
     "grid h-8 w-8 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground active:scale-95 disabled:opacity-40";
 
@@ -575,7 +734,7 @@ export default function MapView() {
                   Asia OneHealthcare
                 </p>
                 <h1 className="truncate text-[15px] font-semibold leading-tight">
-                  Hospital network
+                  {panelTab === "network" ? "Hospital network" : "Analysis"}
                 </h1>
               </div>
               <button
@@ -590,9 +749,33 @@ export default function MapView() {
               </button>
             </div>
             <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
-              {LOCATIONS.length} hospitals and specialist centres across {STATES.length} states.
-              Pick a name to fly there.
+              {panelTab === "network"
+                ? `${LOCATIONS.length} hospitals and specialist centres across ${STATES.length} states. Pick a name to fly there.`
+                : `Where the network is dense, where it is thin, and how much population sits within reach.`}
             </p>
+
+            <div className="mt-3 flex rounded-lg bg-secondary p-0.5">
+              {(
+                [
+                  { id: "network", label: "Network" },
+                  { id: "analytics", label: "Analytics" },
+                ] as const
+              ).map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setPanelTab(tab.id)}
+                  aria-pressed={panelTab === tab.id}
+                  className={`flex-1 rounded-md px-2 py-1.5 text-[11px] transition ${
+                    panelTab === tab.id
+                      ? "bg-card font-medium text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="border-b px-5 py-3">
@@ -725,40 +908,51 @@ export default function MapView() {
             ) : null}
           </div>
 
-          <div className="flex-1 overflow-y-auto px-2 py-2">
-            {STATES.map((state) => (
-              <div key={state} className="mb-1.5">
-                <p className="px-2 pb-1 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-                  {state}
-                </p>
-                <ul className="space-y-px">
-                  {LOCATIONS.filter((loc) => loc.state === state).map((loc) => (
-                    <li key={loc.id}>
-                      <button
-                        type="button"
-                        onClick={() => focus(loc)}
-                        className={`group flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left transition ${
-                          activeId === loc.id ? "bg-secondary" : "hover:bg-secondary/60"
-                        }`}
-                      >
-                        <span
-                          className={`h-1.5 w-1.5 shrink-0 rounded-full transition ${
-                            activeId === loc.id
-                              ? "bg-foreground"
-                              : "bg-border group-hover:bg-muted-foreground"
+          {panelTab === "network" ? (
+            <div className="flex-1 overflow-y-auto px-2 py-2">
+              {STATES.map((state) => (
+                <div key={state} className="mb-1.5">
+                  <p className="px-2 pb-1 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                    {state}
+                  </p>
+                  <ul className="space-y-px">
+                    {LOCATIONS.filter((loc) => loc.state === state).map((loc) => (
+                      <li key={loc.id}>
+                        <button
+                          type="button"
+                          onClick={() => focus(loc)}
+                          className={`group flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left transition ${
+                            activeId === loc.id ? "bg-secondary" : "hover:bg-secondary/60"
                           }`}
-                        />
-                        <span className="min-w-0 flex-1 truncate text-[11.5px]">{loc.name}</span>
-                        <span className="shrink-0 font-mono text-[9px] uppercase text-muted-foreground">
-                          {KIND_CODE[loc.kind]}
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+                        >
+                          <span
+                            className={`h-1.5 w-1.5 shrink-0 rounded-full transition ${
+                              activeId === loc.id
+                                ? "bg-foreground"
+                                : "bg-border group-hover:bg-muted-foreground"
+                            }`}
+                          />
+                          <span className="min-w-0 flex-1 truncate text-[11.5px]">{loc.name}</span>
+                          <span className="shrink-0 font-mono text-[9px] uppercase text-muted-foreground">
+                            {KIND_CODE[loc.kind]}
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex-1 overflow-y-auto">
+              <PanelAnalytics
+                data={analytics}
+                radius={catchmentKm}
+                locationCount={LOCATIONS.length}
+                stateCount={analytics.stateRows.length}
+              />
+            </div>
+          )}
 
           <div className="flex items-center justify-between gap-3 border-t px-5 py-3 font-mono text-[9.5px] uppercase tracking-[0.14em] text-muted-foreground">
             <span>{LOCATIONS.length} locations</span>

@@ -56,6 +56,43 @@ def geojson(name):
         return json.load(handle)["features"]
 
 
+def ring_area(ring):
+    total = 0.0
+    for i in range(len(ring) - 1):
+        x1, y1 = ring[i][0], ring[i][1]
+        x2, y2 = ring[i + 1][0], ring[i + 1][1]
+        total += x1 * y2 - x2 * y1
+    return total / 2.0
+
+
+def ring_centroid(ring):
+    area = 0.0
+    cx = 0.0
+    cy = 0.0
+    for i in range(len(ring) - 1):
+        x1, y1 = ring[i][0], ring[i][1]
+        x2, y2 = ring[i + 1][0], ring[i + 1][1]
+        cross = x1 * y2 - x2 * y1
+        area += cross
+        cx += (x1 + x2) * cross
+        cy += (y1 + y2) * cross
+    if area == 0:
+        return ring[0]
+    area *= 0.5
+    return [cx / (6 * area), cy / (6 * area)]
+
+
+def feature_centroid(geometry):
+    polys = [geometry["coordinates"]] if geometry["type"] == "Polygon" else geometry["coordinates"]
+    best, best_area = None, 0.0
+    for poly in polys:
+        outer = poly[0]
+        area = abs(ring_area(outer))
+        if area > best_area:
+            best, best_area = ring_centroid(outer), area
+    return best
+
+
 def report(label, features, lookup):
     hit, miss = 0, []
     for feature in features:
@@ -111,6 +148,16 @@ report(
 report("parlimen", geojson("malaysia.parlimen.geojson"), lambda p: PARLIMEN_POP.get(slug(p["parlimen"])))
 report("dun", geojson("malaysia.dun.geojson"), lambda p: DUN_POP.get(f"{state_key(p['state'])}|{slug(p['dun'])}"))
 
+# District centroids (largest polygon) — used for the catchment coverage metric.
+DISTRICT_CENTROID = {}
+for feature in geojson("malaysia.district.geojson"):
+    props = feature["properties"]
+    centre = feature_centroid(feature["geometry"])
+    if centre is None:
+        continue
+    key = f"{state_key(STATE_NAME_BY_CODE.get(props['state'], ''))}|{district_key(props['name'])}"
+    DISTRICT_CENTROID[key] = [round(centre[1], 5), round(centre[0], 5)]  # lat, lng
+
 
 def block(name, mapping, comment):
     rows = "\n".join(
@@ -122,6 +169,13 @@ def block(name, mapping, comment):
 def strings(name, mapping, comment):
     rows = "\n".join(f"  {json.dumps(k)}: {json.dumps(v)}," for k, v in sorted(mapping.items()))
     return f"/** {comment} */\nexport const {name}: Record<string, string> = {{\n{rows}\n}};\n"
+
+
+def centroids(name, mapping, comment):
+    rows = "\n".join(f"  {json.dumps(k)}: [{v[0]}, {v[1]}]," for k, v in sorted(mapping.items()))
+    return (
+        f"/** {comment} */\nexport const {name}: Record<string, [number, number]> = {{\n{rows}\n}};\n"
+    )
 
 
 out = f'''/**
@@ -146,10 +200,16 @@ export const POPULATION_YEAR = "{YEAR[:4]}";
 {block("DUN_POPULATION", DUN_POP, "`state|dun` → population.")}
 {block("PARLIMEN_POPULATION", PARLIMEN_POP, "Parliament slug → population.")}
 {strings("STATE_NAME_BY_CODE", STATE_NAME_BY_CODE, "Boundary state code (SGR, KDH …) → state name.")}
+{centroids("DISTRICT_CENTROID", DISTRICT_CENTROID, "`state|district` → [lat, lng] of the largest polygon.")}
 
 export const slugKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-const STATE_ALIAS: Record<string, string> = {{ wpklumpur: "wpkualalumpur" }};
+const STATE_ALIAS: Record<string, string> = {{
+  wpklumpur: "wpkualalumpur",
+  kualalumpur: "wpkualalumpur",
+  putrajaya: "wpputrajaya",
+  labuan: "wplabuan",
+}};
 
 export const stateKey = (name: string) => STATE_ALIAS[slugKey(name)] ?? slugKey(name);
 
