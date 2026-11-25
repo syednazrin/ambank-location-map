@@ -336,6 +336,7 @@ function PanelAnalytics({
   selectedId,
   onSelect,
   onFocus,
+  onOpenCapacity,
 }: {
   data: Analytics;
   radius: number;
@@ -345,6 +346,7 @@ function PanelAnalytics({
   selectedId: string | null;
   onSelect: (id: string) => void;
   onFocus: (loc: Location) => void;
+  onOpenCapacity: () => void;
 }) {
   const max = rows[0]?.served ?? 1;
 
@@ -362,9 +364,13 @@ function PanelAnalytics({
           <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
             Beds &amp; specialists
           </h2>
-          <span className="font-mono text-[8.5px] uppercase tracking-[0.1em] text-muted-foreground">
-            {CAPACITY_REPORTED.length}/{CAPACITY_TOTALS.sites} sites
-          </span>
+          <button
+            type="button"
+            onClick={onOpenCapacity}
+            className="font-mono text-[8.5px] uppercase tracking-[0.1em] text-muted-foreground underline-offset-2 transition hover:text-foreground hover:underline"
+          >
+            Widget ↗
+          </button>
         </div>
 
         <div className="mt-1.5 grid grid-cols-2 gap-2">
@@ -1557,6 +1563,7 @@ export default function MapView() {
                   setSelectedHospitalId((current) => (current === id ? null : id))
                 }
                 onFocus={focus}
+                onOpenCapacity={() => setCapacityOpen(true)}
               />
             </div>
           )}
@@ -1900,7 +1907,7 @@ export default function MapView() {
 
         {/* capacity widget */}
         {capacityOpen ? (
-          <div className="pointer-events-none absolute bottom-20 left-3 z-[1040] hidden md:block">
+          <div className="pointer-events-none absolute inset-x-2 bottom-4 z-[1040] md:inset-x-auto md:bottom-20 md:left-3 md:w-[600px]">
             <CapacityWidget onClose={() => setCapacityOpen(false)} />
           </div>
         ) : null}
