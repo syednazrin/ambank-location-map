@@ -2,8 +2,16 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { CircleMarker, MapContainer, Marker, Popup, TileLayer, Tooltip, useMap } from "react-leaflet";
 import { LOCATIONS, STATES, type Location } from "@/lib/locations";
+import publicHospitalsGeocoded from "@/data/public-hospitals.geocoded.json";
+import swastaBerlesenGeocoded from "@/data/swasta-berlesen.geocoded.json";
+import {
+  CAPACITY_BY_ID,
+  CAPACITY_REPORTED,
+  CAPACITY_TOTALS,
+  SOURCE_LABEL,
+} from "@/lib/capacity";
 import { loadBorders } from "@/lib/malaysia-borders";
 import {
   DISTRICT_CENTROID,
@@ -317,6 +325,7 @@ function PanelAnalytics({
   rows,
   selectedId,
   onSelect,
+  onFocus,
 }: {
   data: Analytics;
   radius: number;
@@ -325,6 +334,7 @@ function PanelAnalytics({
   rows: CatchmentRow[];
   selectedId: string | null;
   onSelect: (id: string) => void;
+  onFocus: (loc: Location) => void;
 }) {
   const max = rows[0]?.served ?? 1;
 
@@ -336,6 +346,93 @@ function PanelAnalytics({
         <Kpi label="Population" value={fmtValue(data.totalPopulation)} />
         <Kpi label={`Within ${radius} km`} value={`${Math.round(data.coveredShare * 100)}%`} />
       </div>
+
+      <section>
+        <div className="flex items-baseline justify-between px-1">
+          <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+            Beds &amp; specialists
+          </h2>
+          <span className="font-mono text-[8.5px] uppercase tracking-[0.1em] text-muted-foreground">
+            {CAPACITY_REPORTED.length}/{CAPACITY_TOTALS.sites} sites
+          </span>
+        </div>
+
+        <div className="mt-1.5 grid grid-cols-2 gap-2">
+          <Kpi label="Licensed beds" value={CAPACITY_TOTALS.beds.toLocaleString("en-MY")} />
+          <Kpi label="Specialists" value={CAPACITY_TOTALS.specialists.toLocaleString("en-MY")} />
+        </div>
+
+        <p className="mt-1 px-1 text-[9px] leading-relaxed text-muted-foreground">
+          {CAPACITY_TOTALS.bedsKnown} sites report beds · {CAPACITY_TOTALS.specialistsKnown} report
+          specialists. Tap a row to fly there.
+        </p>
+
+        <table className="mt-1.5 w-full border-collapse">
+          <thead>
+            <tr className="border-b">
+              <th className="px-1 pb-1 text-left font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                Hospital
+              </th>
+              <th className="px-1 pb-1 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                Beds
+              </th>
+              <th className="px-1 pb-1 pl-2 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                Spec.
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {CAPACITY_REPORTED.map((row) => (
+              <tr
+                key={row.loc.id}
+                onClick={() => onFocus(row.loc)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onFocus(row.loc);
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label={`Fly to ${row.loc.name}`}
+                className="cursor-pointer border-b border-border/50 outline-none transition last:border-0 hover:bg-secondary/60 focus-visible:bg-secondary"
+              >
+                <td className="px-1 py-1.5">
+                  <span className="block truncate text-[10.5px] leading-tight">{row.loc.name}</span>
+                  <span className="mt-0.5 block truncate font-mono text-[8.5px] uppercase tracking-[0.08em] text-muted-foreground">
+                    {row.loc.state}
+                  </span>
+                </td>
+                <td className="px-1 py-1.5 text-right align-top">
+                  <span className="block font-mono text-[10.5px] tabular-nums">
+                    {row.beds ? row.beds.value.toLocaleString("en-MY") : "—"}
+                  </span>
+                  {row.beds ? (
+                    <span className="block font-mono text-[7.5px] uppercase tracking-[0.1em] text-muted-foreground">
+                      {SOURCE_LABEL[row.beds.source]}
+                    </span>
+                  ) : null}
+                </td>
+                <td className="py-1.5 pl-2 pr-1 text-right align-top">
+                  <span className="block font-mono text-[10.5px] tabular-nums">
+                    {row.specialists ? row.specialists.value.toLocaleString("en-MY") : "—"}
+                  </span>
+                  {row.specialists ? (
+                    <span className="block font-mono text-[7.5px] uppercase tracking-[0.1em] text-muted-foreground">
+                      {SOURCE_LABEL[row.specialists.source]}
+                    </span>
+                  ) : null}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <p className="mt-1.5 px-1 text-[8.5px] leading-relaxed text-muted-foreground">
+          Site = brand website · MOH = licensed register · NSR = specialist register · Listed =
+          doctor profiles.
+        </p>
+      </section>
 
       <section>
         <div className="flex items-baseline justify-between px-1">
@@ -560,30 +657,138 @@ function ShadeLegend({ data }: { data: ShadeData }) {
   );
 }
 
-/* ---------- custom pin ---------- */
+/* ---------- facility layers ---------- */
 
-const PIN_SVG = `<svg class="pin-svg" viewBox="0 0 26 34" width="26" height="34" aria-hidden="true">
-  <path d="M13 1C6.4 1 1 6.3 1 12.9 1 21 13 33 13 33s12-12 12-20.1C25 6.3 19.6 1 13 1Z"
-    fill="#191713" stroke="rgba(255,255,255,.92)" stroke-width="1.2" />
-  <circle cx="13" cy="12.6" r="3.7" fill="#ffffff" />
-</svg>`;
+const SERIES = {
+  asiaOne: { label: "Asia One", fill: "#191713" },
+  public: { label: "Public · MOH", fill: "#2E6F9E" },
+  private: { label: "Private · licensed", fill: "#B5713B" },
+} as const;
 
-const iconCache = new Map<string, L.DivIcon>();
+type MapSite = {
+  id: string;
+  name: string;
+  state: string;
+  coords: [number, number];
+};
 
-function pinIcon(active: boolean) {
-  const key = active ? "active" : "idle";
-  let icon = iconCache.get(key);
-  if (!icon) {
-    icon = L.divIcon({
-      className: `pin-root${active ? " is-active" : ""}`,
-      html: PIN_SVG,
-      iconSize: [26, 34],
-      iconAnchor: [13, 33],
-      popupAnchor: [0, -29],
-    });
-    iconCache.set(key, icon);
-  }
-  return icon;
+function titleCase(value: string): string {
+  return value.toLowerCase().replace(/\b[a-z]/g, (char) => char.toUpperCase());
+}
+
+const PUBLIC_SITES: MapSite[] = publicHospitalsGeocoded.locations.flatMap((row, index) =>
+  typeof row.lat === "number" && typeof row.lon === "number"
+    ? [
+        {
+          id: `pub-${index}`,
+          name: row.name,
+          state: row.stateTitle ?? "",
+          coords: [row.lat, row.lon] as [number, number],
+        },
+      ]
+    : [],
+);
+
+const PRIVATE_SITES: MapSite[] = swastaBerlesenGeocoded.hospitals.flatMap((row, index) =>
+  typeof row.lat === "number" && typeof row.lon === "number"
+    ? [
+        {
+          id: `pvt-${index}`,
+          name: titleCase(String(row.NAMA_PENUH_FASILITI ?? "")),
+          state: titleCase(String(row.NEGERI ?? "")),
+          coords: [row.lat, row.lon] as [number, number],
+        },
+      ]
+    : [],
+);
+
+function LayerLegend({
+  showAsiaOne,
+  showPublic,
+  showPrivate,
+  onToggleAsiaOne,
+  onTogglePublic,
+  onTogglePrivate,
+}: {
+  showAsiaOne: boolean;
+  showPublic: boolean;
+  showPrivate: boolean;
+  onToggleAsiaOne: () => void;
+  onTogglePublic: () => void;
+  onTogglePrivate: () => void;
+}) {
+  const rows = [
+    {
+      key: "asia-one",
+      label: SERIES.asiaOne.label,
+      fill: SERIES.asiaOne.fill,
+      count: LOCATIONS.length,
+      on: showAsiaOne,
+      toggle: onToggleAsiaOne,
+      primary: true,
+    },
+    {
+      key: "public",
+      label: SERIES.public.label,
+      fill: SERIES.public.fill,
+      count: PUBLIC_SITES.length,
+      on: showPublic,
+      toggle: onTogglePublic,
+      primary: false,
+    },
+    {
+      key: "private",
+      label: SERIES.private.label,
+      fill: SERIES.private.fill,
+      count: PRIVATE_SITES.length,
+      on: showPrivate,
+      toggle: onTogglePrivate,
+      primary: false,
+    },
+  ];
+
+  return (
+    <div className="pointer-events-auto w-[178px] rounded-lg border bg-card/95 px-3 py-2.5 shadow-sm backdrop-blur">
+      <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
+        Legend
+      </p>
+
+      <ul className="mt-2 space-y-0.5">
+        {rows.map((row) => (
+          <li key={row.key}>
+            <button
+              type="button"
+              onClick={row.toggle}
+              aria-pressed={row.on}
+              className="flex w-full items-center gap-2 rounded py-0.5 text-left transition"
+              title={row.on ? `Hide ${row.label}` : `Show ${row.label}`}
+            >
+              <span
+                className={`shrink-0 rounded-full ring-2 ring-white/90 transition ${
+                  row.primary ? "h-3 w-3" : "h-2.5 w-2.5 ring-1"
+                } ${row.on ? "" : "opacity-30"}`}
+                style={{ background: row.fill }}
+              />
+              <span
+                className={`flex-1 text-[11px] transition ${
+                  row.primary ? "font-semibold" : ""
+                } ${row.on ? "text-foreground" : "text-muted-foreground line-through"}`}
+              >
+                {row.label}
+              </span>
+              <span className="font-mono text-[9px] tabular-nums text-muted-foreground">
+                {row.count}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-1.5 border-t pt-1.5 text-[9px] leading-relaxed text-muted-foreground">
+        Tap a row to show or hide.
+      </p>
+    </div>
+  );
 }
 
 /* ---------- helpers bound to the map instance ---------- */
@@ -643,6 +848,7 @@ function CoordsHud({ map }: { map: L.Map | null }) {
 export default function MapView() {
   const [map, setMap] = useState<L.Map | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [hoverId, setHoverId] = useState<string | null>(null);
   const [me, setMe] = useState<L.LatLng | null>(null);
   const [locating, setLocating] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
@@ -653,12 +859,15 @@ export default function MapView() {
   const [resizing, setResizing] = useState(false);
   const [catchmentOpen, setCatchmentOpen] = useState(true);
   const [showCatchment, setShowCatchment] = useState(true);
+  const [showAsiaOne, setShowAsiaOne] = useState(true);
+  const [showPublic, setShowPublic] = useState(true);
+  const [showPrivate, setShowPrivate] = useState(true);
   const [catchmentKm, setCatchmentKm] = useState(10);
   const [selectedHospitalId, setSelectedHospitalId] = useState<string | null>(null);
   const [borderLevel, setBorderLevel] = useState<BorderLevel>("parlimen");
   const [shade, setShade] = useState<Shade>("population");
   const [shadeData, setShadeData] = useState<ShadeData | null>(null);
-  const markerRefs = useRef<Record<string, L.Marker | null>>({});
+  const markerRefs = useRef<Record<string, L.CircleMarker | null>>({});
   const borderLayerRef = useRef<L.GeoJSON | null>(null);
 
   const fitAll = useCallback((instance: L.Map) => {
@@ -717,13 +926,19 @@ export default function MapView() {
 
   // Catchment circles: a straight-line radius around every location.
   useEffect(() => {
-    if (!map || !showCatchment) return;
+    if (!map || !showCatchment || !showAsiaOne) return;
 
     const radius = catchmentKm * 1000;
+    if (!map.getPane("catchment")) {
+      const pane = map.createPane("catchment");
+      pane.style.zIndex = "390";
+      pane.style.pointerEvents = "none";
+    }
     const group = L.layerGroup().addTo(map);
     for (const loc of LOCATIONS) {
       L.circle(loc.coords, {
         radius,
+        pane: "catchment",
         color: "#191713",
         weight: 1.2,
         opacity: 0.6,
@@ -738,7 +953,7 @@ export default function MapView() {
     return () => {
       group.remove();
     };
-  }, [map, showCatchment, catchmentKm]);
+  }, [map, showCatchment, showAsiaOne, catchmentKm]);
 
   // Fade the choropleth pane at street level, without touching the markers,
   // popups or catchment circles (which live in their own panes).
@@ -864,9 +1079,21 @@ export default function MapView() {
   const focus = useCallback(
     (loc: Location) => {
       setActiveId(loc.id);
-      if (!map) return;
-      map.flyTo(loc.coords, Math.max(map.getZoom(), 15), { duration: 0.9 });
-      markerRefs.current[loc.id]?.openPopup();
+      // Reveal the Asia One layer if the user hid it, then open the popup once the
+      // marker is mounted and attached to the map.
+      setShowAsiaOne(true);
+      if (map) map.flyTo(loc.coords, Math.max(map.getZoom(), 15), { duration: 0.9 });
+
+      let tries = 0;
+      const openWhenReady = () => {
+        const marker = markerRefs.current[loc.id];
+        if (marker) {
+          marker.openPopup();
+          if (marker.isPopupOpen()) return;
+        }
+        if (tries++ < 10) window.setTimeout(openWhenReady, 60);
+      };
+      window.setTimeout(openWhenReady, 0);
     },
     [map],
   );
@@ -1265,6 +1492,7 @@ export default function MapView() {
                 onSelect={(id) =>
                   setSelectedHospitalId((current) => (current === id ? null : id))
                 }
+                onFocus={focus}
               />
             </div>
           )}
@@ -1316,76 +1544,157 @@ export default function MapView() {
 
           <MapBridge onReady={handleReady} />
 
-          {LOCATIONS.map((loc) => (
-            <Marker
-              key={loc.id}
-              position={loc.coords}
-              icon={pinIcon(activeId === loc.id)}
-              ref={(instance) => {
-                markerRefs.current[loc.id] = instance;
-              }}
-              eventHandlers={{ click: () => setActiveId(loc.id) }}
-            >
-              <Popup className="loc-popup" closeButton={false} offset={[0, -4]}>
-                <div>
-                  <p className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">
-                    {loc.kind} · {loc.state}
-                  </p>
-                  <h3 className="mt-1 text-[15px] font-semibold leading-tight">{loc.name}</h3>
-                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-muted-foreground">
-                    {loc.address}
-                  </p>
+          {showPublic
+            ? PUBLIC_SITES.map((site) => (
+                <CircleMarker
+                  key={site.id}
+                  center={site.coords}
+                  radius={4.5}
+                  pathOptions={{
+                    color: "#ffffff",
+                    weight: 1,
+                    opacity: 0.85,
+                    fillColor: SERIES.public.fill,
+                    fillOpacity: 0.9,
+                  }}
+                >
+                  <Tooltip direction="top" offset={[0, -4]} opacity={1}>
+                    {`${site.name} · ${site.state}`}
+                  </Tooltip>
+                </CircleMarker>
+              ))
+            : null}
 
-                  {loc.precision !== "exact" ? (
-                    <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground">
-                      <span className="font-mono uppercase tracking-[0.08em]">
-                        {loc.precision} pin
-                      </span>
-                      {loc.precisionNote ? ` — ${loc.precisionNote}` : ""}
-                    </p>
-                  ) : null}
+          {showPrivate
+            ? PRIVATE_SITES.map((site) => (
+                <CircleMarker
+                  key={site.id}
+                  center={site.coords}
+                  radius={4.5}
+                  pathOptions={{
+                    color: "#ffffff",
+                    weight: 1,
+                    opacity: 0.85,
+                    fillColor: SERIES.private.fill,
+                    fillOpacity: 0.9,
+                  }}
+                >
+                  <Tooltip direction="top" offset={[0, -4]} opacity={1}>
+                    {`${site.name} · ${site.state}`}
+                  </Tooltip>
+                </CircleMarker>
+              ))
+            : null}
 
-                  <div className="mt-3 space-y-1 border-t pt-2.5 text-[11px]">
-                    <p className="flex gap-2">
-                      <span className="w-11 shrink-0 text-muted-foreground">Phone</span>
-                      <a href={`tel:${loc.phone.replace(/\s/g, "")}`} className="hover:underline">
-                        {loc.phone}
-                      </a>
+          {showAsiaOne
+            ? LOCATIONS.map((loc) => {
+            const active = activeId === loc.id;
+            const hovered = hoverId === loc.id;
+            const capacity = CAPACITY_BY_ID.get(loc.id);
+            return (
+              <CircleMarker
+                key={loc.id}
+                center={loc.coords}
+                radius={active ? 9 : hovered ? 8 : 6}
+                pathOptions={{
+                  color: "#ffffff",
+                  weight: active ? 2.5 : 1.5,
+                  opacity: 0.95,
+                  fillColor: "#191713",
+                  fillOpacity: 1,
+                }}
+                ref={(instance) => {
+                  markerRefs.current[loc.id] = instance;
+                }}
+                eventHandlers={{
+                  click: () => setActiveId(loc.id),
+                  mouseover: () => setHoverId(loc.id),
+                  mouseout: () => setHoverId((id) => (id === loc.id ? null : id)),
+                }}
+              >
+                <Popup className="loc-popup" closeButton={false} offset={[0, -8]}>
+                  <div>
+                    <p className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">
+                      {loc.kind} · {loc.state}
                     </p>
-                    <p className="flex gap-2">
-                      <span className="w-11 shrink-0 text-muted-foreground">Email</span>
+                    <h3 className="mt-1 text-[15px] font-semibold leading-tight">{loc.name}</h3>
+                    <p className="mt-1.5 text-[11.5px] leading-relaxed text-muted-foreground">
+                      {loc.address}
+                    </p>
+
+                    {capacity && (capacity.beds || capacity.specialists) ? (
+                      <p className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[9.5px] uppercase tracking-[0.08em] text-muted-foreground">
+                        {capacity.beds ? (
+                          <span>
+                            <span className="text-[11px] font-semibold text-foreground">
+                              {capacity.beds.value.toLocaleString("en-MY")}
+                            </span>{" "}
+                            beds · {SOURCE_LABEL[capacity.beds.source]}
+                          </span>
+                        ) : null}
+                        {capacity.specialists ? (
+                          <span>
+                            <span className="text-[11px] font-semibold text-foreground">
+                              {capacity.specialists.value.toLocaleString("en-MY")}
+                            </span>{" "}
+                            specialists · {SOURCE_LABEL[capacity.specialists.source]}
+                          </span>
+                        ) : null}
+                      </p>
+                    ) : null}
+
+                    {loc.precision !== "exact" ? (
+                      <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground">
+                        <span className="font-mono uppercase tracking-[0.08em]">
+                          {loc.precision} pin
+                        </span>
+                        {loc.precisionNote ? ` — ${loc.precisionNote}` : ""}
+                      </p>
+                    ) : null}
+
+                    <div className="mt-3 space-y-1 border-t pt-2.5 text-[11px]">
+                      <p className="flex gap-2">
+                        <span className="w-11 shrink-0 text-muted-foreground">Phone</span>
+                        <a href={`tel:${loc.phone.replace(/\s/g, "")}`} className="hover:underline">
+                          {loc.phone}
+                        </a>
+                      </p>
+                      <p className="flex gap-2">
+                        <span className="w-11 shrink-0 text-muted-foreground">Email</span>
+                        <a
+                          href={`mailto:${loc.email}`}
+                          className="truncate hover:underline"
+                          title={loc.email}
+                        >
+                          {loc.email}
+                        </a>
+                      </p>
+                    </div>
+
+                    <div className="mt-3 flex gap-1.5">
                       <a
-                        href={`mailto:${loc.email}`}
-                        className="truncate hover:underline"
-                        title={loc.email}
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${loc.coords[0]},${loc.coords[1]}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="popup-cta flex-1 rounded-md bg-primary px-2.5 py-2 text-center text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
                       >
-                        {loc.email}
+                        Directions
                       </a>
-                    </p>
+                      <a
+                        href={loc.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-md border px-2.5 py-2 text-[11px] font-medium transition hover:bg-secondary"
+                      >
+                        Website ↗
+                      </a>
+                    </div>
                   </div>
-
-                  <div className="mt-3 flex gap-1.5">
-                    <a
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${loc.coords[0]},${loc.coords[1]}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="popup-cta flex-1 rounded-md bg-primary px-2.5 py-2 text-center text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
-                    >
-                      Directions
-                    </a>
-                    <a
-                      href={loc.website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-md border px-2.5 py-2 text-[11px] font-medium transition hover:bg-secondary"
-                    >
-                      Website ↗
-                    </a>
-                  </div>
-                </div>
-              </Popup>
-            </Marker>
-          ))}
+                </Popup>
+              </CircleMarker>
+            );
+          })
+            : null}
 
           {me && (
             <Marker
@@ -1413,6 +1722,18 @@ export default function MapView() {
             </svg>
           </button>
         )}
+
+        {/* legend */}
+        <div className="pointer-events-none absolute right-3 top-3 z-[1000] hidden md:block">
+          <LayerLegend
+            showAsiaOne={showAsiaOne}
+            showPublic={showPublic}
+            showPrivate={showPrivate}
+            onToggleAsiaOne={() => setShowAsiaOne((value) => !value)}
+            onTogglePublic={() => setShowPublic((value) => !value)}
+            onTogglePrivate={() => setShowPrivate((value) => !value)}
+          />
+        </div>
 
         {/* catchment detail widget */}
         {selectedRow ? (

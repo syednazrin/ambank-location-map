@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "profiles:scrape": "node scripts/scrape-asiaone-profiles.mjs",
+    "profiles:build": "node scripts/build-asiaone-profiles.mjs",
     "predev": "node scripts/sync-maplibre-worker.mjs",
     "prebuild": "node scripts/sync-maplibre-worker.mjs"
   },

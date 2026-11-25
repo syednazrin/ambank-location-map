@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-05-20T07:28:41.891Z",
+  "inputPath": "exports\\kv-doctor-dir-scrape-rerun-18.json",
+  "browserUserDataRelative": "exports\\playwright-browser-user-data",
+  "workbook": "exports\\KV_doctor_directory_specialists_rerun18.xlsx",
+  "interactiveCapture": true,
+  "errorsCount": 0,
+  "specialistsCount": 437
+}

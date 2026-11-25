@@ -1,0 +1,322 @@
+{
+  "generatedAt": "2026-11-25T13:01:35.204Z",
+  "method": "Fetched each brand site's home + /about-us, /our-doctors, /doctors, /our-team, /specialists; regex-extracted published bed and specialist/consultant counts. Values need eyeballing — see snippet.",
+  "profiles": [
+    {
+      "id": "alty-orthopaedic-hospital",
+      "name": "ALTY Orthopaedic Hospital",
+      "website": "https://www.altyortho.com/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": 32,
+      "pagesFetched": 3
+    },
+    {
+      "id": "alty-physio",
+      "name": "ALTY Physio",
+      "website": "https://tags.my/alty-physio/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "ara-damansara-medical-centre",
+      "name": "Ara Damansara Medical Centre",
+      "website": "https://aradamansaramedicalcentre.com/",
+      "beds": {
+        "value": 165,
+        "snippet": "and Shah Alam, right across Oasis Ara. The hospital has a capacity of 165-beds and offers a range of exclusive medical services to cater to your pri",
+        "source": "https://aradamansaramedicalcentre.com/"
+      },
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 5
+    },
+    {
+      "id": "beacon-hospital",
+      "name": "Beacon Hospital",
+      "website": "https://www.beaconhospital.com.my/",
+      "beds": {
+        "value": 100,
+        "snippet": "n Hospital is a medium-sized cancer specialist hospital equipped with 100 beds and more than 120 medical specialists. Our primary focus is to provid",
+        "source": "https://www.beaconhospital.com.my/"
+      },
+      "specialists": {
+        "value": 120,
+        "snippet": "ospital is a medium-sized cancer specialist hospital equipped with 100 beds and more than 120 medical specialists. Our primary focus is to provide advanced medical equipment, specialist doctors",
+        "source": "https://www.beaconhospital.com.my/"
+      },
+      "doctorsListed": null,
+      "pagesFetched": 2
+    },
+    {
+      "id": "bukit-tinggi-medical-centre",
+      "name": "Bukit Tinggi Medical Centre",
+      "website": "https://bukittinggimedicalcentre.com/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 5
+    },
+    {
+      "id": "cardiac-vascular-sentral-kuala-lumpur",
+      "name": "Cardiac Vascular Sentral Kuala Lumpur (CVSKL)",
+      "website": "https://www.cvskl.com/",
+      "beds": {
+        "value": 60,
+        "snippet": "st standards of evidence-based and professional care. Comprising of a 60-bedded hospital equipped with modern facilities, CVSKL houses a full range o",
+        "source": "https://www.cvskl.com/about-us/our-story/"
+      },
+      "specialists": null,
+      "doctorsListed": 34,
+      "pagesFetched": 5
+    },
+    {
+      "id": "columbia-asia-binh-duong",
+      "name": "Columbia Asia Binh Duong",
+      "website": "https://www.columbiaasia.com/vietnam/hospitals/binh-duong/binh-duong-overview",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-extended-care-hospital-shah-alam",
+      "name": "Columbia Asia Extended Care Hospital Shah Alam",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/shah-alam/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-batu-kawan",
+      "name": "Columbia Asia Hospital Batu Kawan",
+      "website": "https://www.columbiaasia.com/malaysia//hospitals/batu-kawan/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-bukit-jalil",
+      "name": "Columbia Asia Hospital Bukit Jalil",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-jalil/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-bukit-rimau",
+      "name": "Columbia Asia Hospital Bukit Rimau",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-rimau/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-cheras",
+      "name": "Columbia Asia Hospital Cheras",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/cheras/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-iskandar-puteri",
+      "name": "Columbia Asia Hospital Iskandar Puteri",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/iskandar-puteri/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-klang",
+      "name": "Columbia Asia Hospital Klang",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/klang/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-petaling-jaya",
+      "name": "Columbia Asia Hospital Petaling Jaya",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-puchong",
+      "name": "Columbia Asia Hospital Puchong",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/puchong",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-seremban",
+      "name": "Columbia Asia Hospital Seremban",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/seremban/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-setapak",
+      "name": "Columbia Asia Hospital Setapak",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/setapak/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-taiping",
+      "name": "Columbia Asia Hospital Taiping",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/taiping/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "columbia-asia-hospital-tebrau",
+      "name": "Columbia Asia Hospital Tebrau",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/tebrau/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 0
+    },
+    {
+      "id": "hospital-picaso",
+      "name": "Hospital Picaso",
+      "website": "https://www.hospitalpicaso.com/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 5
+    },
+    {
+      "id": "northern-heart-hospital",
+      "name": "Northern Heart Hospital",
+      "website": "https://nhearthospital.com/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 1
+    },
+    {
+      "id": "parkcity-medical-centre",
+      "name": "ParkCity Medical Centre",
+      "website": "https://parkcitymedicalcentre.com/",
+      "beds": {
+        "value": 300,
+        "snippet": "ital in Malaysia Parkcity Medical Centre ParkCity Medical Centre is a 300-bed, state-of-the-art multidisciplinary private hospital in Kuala Lumpur,",
+        "source": "https://parkcitymedicalcentre.com/"
+      },
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 5
+    },
+    {
+      "id": "subang-jaya-medical-centre",
+      "name": "Subang Jaya Medical Centre",
+      "website": "https://subangjayamedicalcentre.com/",
+      "beds": {
+        "value": 442,
+        "snippet": "al outcomes for close to four decades. Today, we are an award-winning 442-bed multidisciplinary quaternary hospital with over 260 highly experience",
+        "source": "https://subangjayamedicalcentre.com/"
+      },
+      "specialists": {
+        "value": 260,
+        "snippet": "day, we are an award-winning 442-bed multidisciplinary quaternary hospital with over 260 highly experienced and skilled specialists, providing comprehensive and complex care across more than 50 specialties. Know",
+        "source": "https://subangjayamedicalcentre.com/"
+      },
+      "doctorsListed": null,
+      "pagesFetched": 5
+    },
+    {
+      "id": "tags-cheras",
+      "name": "TAGS Cheras",
+      "website": "https://tags.my/tags-cheras/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-hartamas",
+      "name": "TAGS Hartamas",
+      "website": "https://tags.my/tags-hartamas/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-johor-bahru",
+      "name": "TAGS Johor Bahru",
+      "website": "https://tags.my/tags-johor-bahru/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-kuching",
+      "name": "TAGS Kuching",
+      "website": "https://tags.my/tags-kuching/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-melaka",
+      "name": "TAGS Melaka",
+      "website": "https://tags.my/tags-melaka/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-penang",
+      "name": "TAGS Penang",
+      "website": "https://tags.my/tags-penang/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-seremban",
+      "name": "TAGS Seremban",
+      "website": "https://tags.my/tags-seremban/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    },
+    {
+      "id": "tags-subang-jaya",
+      "name": "TAGS Subang Jaya",
+      "website": "https://tags.my/tags-subang-jaya/",
+      "beds": null,
+      "specialists": null,
+      "doctorsListed": null,
+      "pagesFetched": 3
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+[
+  {
+    "bil": 93,
+    "name": "ARA DAMANSARA MEDICAL CENTRE",
+    "specialistDirectory": "https://admc.com.my/doctors/",
+    "website": "https://admc.com.my/"
+  },
+  {
+    "bil": 94,
+    "name": "ASSUNTA HOSPITAL",
+    "specialistDirectory": "https://www.assunta.com.my/doctors/",
+    "website": "https://www.assunta.com.my/"
+  },
+  {
+    "bil": 95,
+    "name": "AVISENA SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://avisena.com.my/doctors/",
+    "website": "https://avisena.com.my/"
+  },
+  {
+    "bil": 96,
+    "name": "AVISENA WOMEN'S & CHILDREN'S SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://awcssh.avisena.com.my/specialists/",
+    "website": "https://awcssh.avisena.com.my/"
+  },
+  {
+    "bil": 97,
+    "name": "BEACON HOSPITAL",
+    "specialistDirectory": "https://www.beaconhospital.com.my/doctors/",
+    "website": "https://www.beaconhospital.com.my/"
+  },
+  {
+    "bil": 99,
+    "name": "BUKIT TINGGI MEDICAL CENTRE",
+    "specialistDirectory": "https://btmc.com.my/specialist/",
+    "website": "https://btmc.com.my/"
+  },
+  {
+    "bil": 100,
+    "name": "COLUMBIA ASIA HOSPITAL",
+    "specialistDirectory": "https://www.columbiaasia.com/malaysia/doctors",
+    "website": "https://www.columbiaasia.com/malaysia/"
+  },
+  {
+    "bil": 101,
+    "name": "COLUMBIA ASIA HOSPITAL",
+    "specialistDirectory": "https://www.columbiaasia.com/malaysia/doctors",
+    "website": "https://www.columbiaasia.com/malaysia/"
+  },
+  {
+    "bil": 102,
+    "name": "COLUMBIA ASIA HOSPITAL",
+    "specialistDirectory": "https://www.columbiaasia.com/malaysia/doctors",
+    "website": "https://www.columbiaasia.com/malaysia/"
+  },
+  {
+    "bil": 104,
+    "name": "COLUMBIA HOSPITAL",
+    "specialistDirectory": "https://columbiahospital.com/specialists/",
+    "website": "https://columbiahospital.com/"
+  },
+  {
+    "bil": 105,
+    "name": "HOPSITAL DBM PUSRAWI",
+    "specialistDirectory": "https://pusrawi.com.my/doctors/",
+    "website": "https://pusrawi.com.my/"
+  },
+  {
+    "bil": 106,
+    "name": "HOSPITAL BERSALIN RAZIF",
+    "specialistDirectory": null,
+    "website": "https://hospitalbersalinrazif.com/"
+  },
+  {
+    "bil": 108,
+    "name": "HOSPITAL MATA NASIONAL TUN HUSSEIN ONN (THE TUN HUSSEIN ONN NATIONAL EYE HOSPITAL)",
+    "specialistDirectory": "https://thoneh.com/consultants/",
+    "website": "https://thoneh.com/"
+  },
+  {
+    "bil": 110,
+    "name": "HOSPITAL RAWATAN LANJUTAN COLUMBIA ASIA (COLUMBIA ASIA EXTENDED CARE HOSPITAL)",
+    "specialistDirectory": null,
+    "website": "https://www.columbiaasia.com/malaysia/"
+  },
+  {
+    "bil": 111,
+    "name": "HOSPITAL UMRA",
+    "specialistDirectory": null,
+    "website": "https://hospitalumra.com/"
+  },
+  {
+    "bil": 114,
+    "name": "HOSPITAL WANITA METRO",
+    "specialistDirectory": null,
+    "website": "https://metro.com.my/"
+  },
+  {
+    "bil": 116,
+    "name": "KAJANG PLAZA MEDICAL CENTRE",
+    "specialistDirectory": null,
+    "website": "https://kpmc.com.my/"
+  },
+  {
+    "bil": 117,
+    "name": "KLINIK PAKAR WANITA DAN BERSALIN SUBANG PERMAI",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 118,
+    "name": "KLINIK PAKAR WANITA SHEELA SDN. BHD.",
+    "specialistDirectory": null,
+    "website": "https://sheelahospital.com/"
+  },
+  {
+    "bil": 119,
+    "name": "KMI KELANA JAYA MEDICAL CENTRE",
+    "specialistDirectory": "https://kmimh.com/kmi-kelana-jaya-medical-centre/doctors/",
+    "website": "https://kmimh.com/kmi-kelana-jaya-medical-centre/"
+  },
+  {
+    "bil": 120,
+    "name": "KO SPECIALIST MEDICAL CENTRE",
+    "specialistDirectory": "https://koscm.com.my/our-doctors/",
+    "website": "https://koscm.com.my/"
+  },
+  {
+    "bil": 121,
+    "name": "AMPANG PUTERI SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/ampangputeri/specialist",
+    "website": "https://kpjhealth.com.my/ampangputeri/"
+  },
+  {
+    "bil": 122,
+    "name": "DAMANSARA SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/dsh2/specialist",
+    "website": "https://kpjhealth.com.my/dsh2/"
+  },
+  {
+    "bil": 123,
+    "name": "KPJ KAJANG SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/kajang/specialist",
+    "website": "https://kpjhealth.com.my/kajang/"
+  },
+  {
+    "bil": 124,
+    "name": "KPJ KLANG SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/klang/specialist",
+    "website": "https://kpjhealth.com.my/klang/"
+  },
+  {
+    "bil": 125,
+    "name": "KPJ RAWANG SPECIALIST HOSPITAL (HOSPITAL PAKAR KPJ RAWANG)",
+    "specialistDirectory": "https://kpjhealth.com.my/rawang/specialist",
+    "website": "https://kpjhealth.com.my/rawang/"
+  },
+  {
+    "bil": 126,
+    "name": "KPJ SELANGOR SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/selangor/specialist",
+    "website": "https://kpjhealth.com.my/selangor/"
+  },
+  {
+    "bil": 127,
+    "name": "KPMC PUCHONG SPECIALIST CENTRE",
+    "specialistDirectory": "https://kpmc.com.my/our-doctors/",
+    "website": "https://kpmc.com.my/"
+  },
+  {
+    "bil": 129,
+    "name": "MSU MEDICAL CENTRE",
+    "specialistDirectory": "https://msumedicalcentre.com/specialist-doctors/",
+    "website": "https://msumedicalcentre.com/"
+  },
+  {
+    "bil": 130,
+    "name": "PANTAI HOSPITAL KLANG",
+    "specialistDirectory": "https://www.pantai.com.my/klang/doctors",
+    "website": "https://www.pantai.com.my/klang"
+  },
+  {
+    "bil": 131,
+    "name": "PUSAT PAKAR ORTOPEDIK OSC ORTHOPAEDIC SPECIALIST CENTRE",
+    "specialistDirectory": "https://oscoesc.com/doctors/",
+    "website": "https://oscoesc.com/"
+  },
+  {
+    "bil": 132,
+    "name": "PUSAT PERUBATAN DAMANSARA DAMAI",
+    "specialistDirectory": "https://damansaradamaimc.wordpress.com/warga-ddmc/",
+    "website": "https://ppdd.com.my/"
+  },
+  {
+    "bil": 133,
+    "name": "PUSAT PERUBATAN JOE (KLINIK WANITA DAN KANAK-KANAK)",
+    "specialistDirectory": null,
+    "website": "https://joemedicalcentre.com/"
+  },
+  {
+    "bil": 134,
+    "name": "PUSAT PERUBATAN PAKAR SRI KOTA",
+    "specialistDirectory": "https://srikotamedical.com/our-doctors/",
+    "website": "https://srikotamedical.com/"
+  },
+  {
+    "bil": 135,
+    "name": "QHC MEDICAL CENTRE",
+    "specialistDirectory": "https://www.qhcmedical.com/SpecialistList.aspx?SpecialistID=12",
+    "website": "https://qhc.com.my/"
+  },
+  {
+    "bil": 136,
+    "name": "SALAM SHAH ALAM SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://www.salam.com.my/shah-alam-specialist-hospital/our-doctors/",
+    "website": "https://www.salam.com.my/shah-alam-specialist-hospital/"
+  },
+  {
+    "bil": 137,
+    "name": "SENTOSA SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://sentosaspecialisthospital.com/doctors/",
+    "website": "https://sentosaspecialisthospital.com/"
+  },
+  {
+    "bil": 138,
+    "name": "SUBANG JAYA MEDICAL CENTRE",
+    "specialistDirectory": "https://subangjayamedicalcentre.com/find-a-doctor/",
+    "website": "https://subangjayamedicalcentre.com/"
+  },
+  {
+    "bil": 139,
+    "name": "SUNGAI LONG SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://slspecialist.com/our-doctors/",
+    "website": "https://slspecialist.com/"
+  },
+  {
+    "bil": 140,
+    "name": "SUNWAY MEDICAL CENTRE",
+    "specialistDirectory": "https://www.sunwaymedical.com/en/doctors/",
+    "website": "https://www.sunwaymedical.com/"
+  },
+  {
+    "bil": 141,
+    "name": "THOMSON HOSPITAL KOTA DAMANSARA",
+    "specialistDirectory": "https://thomsonhospitals.com/doctors/",
+    "website": "https://thomsonhospitals.com/"
+  },
+  {
+    "bil": 142,
+    "name": "UITM PRIVATE SPECIALIST CENTRE",
+    "specialistDirectory": "https://upsc.uitm.edu.my/specialist/",
+    "website": "https://upsc.uitm.edu.my/"
+  },
+  {
+    "bil": 143,
+    "name": "PUTRA MEDICAL CENTRE",
+    "specialistDirectory": null,
+    "website": "https://putramedicalcentre.com.my/"
+  },
+  {
+    "bil": 144,
+    "name": "HOSPITAL REGEN REHAB",
+    "specialistDirectory": "https://regen.rehab/our-doctors/",
+    "website": "https://regen.rehab/"
+  },
+  {
+    "bil": 145,
+    "name": "HOSPITAL PICASO",
+    "specialistDirectory": "https://www.picasohospital.com/doctors/",
+    "website": "https://www.picasohospital.com/"
+  },
+  {
+    "bil": 146,
+    "name": "OHANA SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://www.ohanaspecialisthospital.com/doctors/",
+    "website": "https://www.ohanaspecialisthospital.com/"
+  },
+  {
+    "bil": 178,
+    "name": "SENTUL MEDICAL CENTRE",
+    "specialistDirectory": null,
+    "website": "https://sentulmedicalcentre.com/"
+  },
+  {
+    "bil": 169,
+    "name": "AL-ISLAM SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://www.alislamhospital.com.my/specialist/",
+    "website": "https://www.alislamhospital.com.my/"
+  },
+  {
+    "bil": 170,
+    "name": "ALTY ORTHOPAEDIC HOSPITAL",
+    "specialistDirectory": "https://altyortho.com/doctors/",
+    "website": "https://altyortho.com/"
+  },
+  {
+    "bil": 171,
+    "name": "BEVERLY WILSHIRE MEDICAL CENTRE",
+    "specialistDirectory": "https://www.beverlywilshiremedical.com/doctors/",
+    "website": "https://www.beverlywilshiremedical.com/"
+  },
+  {
+    "bil": 172,
+    "name": "CARDIAC VASCULAR SENTRAL KUALA LUMPUR",
+    "specialistDirectory": "https://www.cvskl.com/consultants/",
+    "website": "https://www.cvskl.com/"
+  },
+  {
+    "bil": 173,
+    "name": "CENGILD G.I MEDICAL CENTRE",
+    "specialistDirectory": "https://www.cengild.com/doctors/",
+    "website": "https://www.cengild.com/"
+  },
+  {
+    "bil": 174,
+    "name": "CHAUDHURY MEDICAL CENTRE",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 175,
+    "name": "CHERAS SPECIALIST MATERNITY CENTRE",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 176,
+    "name": "COLUMBIA HOSPITAL",
+    "specialistDirectory": "https://columbiahospital.com/specialists/",
+    "website": "https://columbiahospital.com/"
+  },
+  {
+    "bil": 177,
+    "name": "DAMAI SERVICE HOSPITAL (HQ) SDN BHD",
+    "specialistDirectory": "https://damai.com.my/doctors/",
+    "website": "https://damai.com.my/"
+  },
+  {
+    "bil": 178,
+    "name": "GLENEAGLES HOSPITAL KUALA LUMPUR",
+    "specialistDirectory": "https://gleneagles.com.my/kuala-lumpur/doctors",
+    "website": "https://gleneagles.com.my/kuala-lumpur"
+  },
+  {
+    "bil": 179,
+    "name": "GLOBAL DOCTORS HOSPITAL",
+    "specialistDirectory": "https://globaldoctorshospital.com/specialist/",
+    "website": "https://globaldoctorshospital.com/"
+  },
+  {
+    "bil": 180,
+    "name": "HOSPITAL KIARA MEDICAL CENTRE",
+    "specialistDirectory": null,
+    "website": "https://kiaramedical.com.my/"
+  },
+  {
+    "bil": 181,
+    "name": "HOSPITAL PAKAR DAMANSARA 2",
+    "specialistDirectory": "https://kpjhealth.com.my/dsh2/specialist",
+    "website": "https://kpjhealth.com.my/dsh2/"
+  },
+  {
+    "bil": 182,
+    "name": "TAWAKKAL SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://tawakkal.com.my/doctors/",
+    "website": "https://tawakkal.com.my/"
+  },
+  {
+    "bil": 183,
+    "name": "HOSPITAL PAKAR WANITA SARMUKH",
+    "specialistDirectory": null,
+    "website": "https://sarmukhhospital.com/"
+  },
+  {
+    "bil": 184,
+    "name": "HOSPITAL PAKAR PUSRAWI KUALA LUMPUR",
+    "specialistDirectory": "https://pusrawi.com.my/doctors/",
+    "website": "https://pusrawi.com.my/"
+  },
+  {
+    "bil": 185,
+    "name": "PUSAT PERUBATAN NALURI",
+    "specialistDirectory": null,
+    "website": "https://nalurilife.com/"
+  },
+  {
+    "bil": 186,
+    "name": "IHEAL MEDICAL CENTRE KUALA LUMPUR",
+    "specialistDirectory": "https://www.ihealmedical.com/our-specialists/",
+    "website": "https://www.ihealmedical.com/"
+  },
+  {
+    "bil": 187,
+    "name": "INSTITUT JANTUNG NEGARA",
+    "specialistDirectory": "https://www.ijn.com.my/doctors",
+    "website": "https://www.ijn.com.my/"
+  },
+  {
+    "bil": 188,
+    "name": "KLINIK PAKAR WANITA KEPONG DAN PUSAT BERSALIN",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 189,
+    "name": "KLSMC HOSPITAL",
+    "specialistDirectory": "https://klsmc.com/doctors/",
+    "website": "https://klsmc.com/"
+  },
+  {
+    "bil": 190,
+    "name": "KMI TAMAN DESA MEDICAL CENTRE",
+    "specialistDirectory": "https://kmimh.com/kmi-taman-desa-medical-centre/doctors/",
+    "website": "https://kmimh.com/kmi-taman-desa-medical-centre/"
+  },
+  {
+    "bil": 191,
+    "name": "KPJ SENTOSA KL SPECIALIST HOSPITAL",
+    "specialistDirectory": "https://kpjhealth.com.my/sentosaKL/specialist",
+    "website": "https://kpjhealth.com.my/sentosaKL/"
+  },
+  {
+    "bil": 192,
+    "name": "PANTAI HOSPITAL AMPANG",
+    "specialistDirectory": "https://www.pantai.com.my/ampang/doctors",
+    "website": "https://www.pantai.com.my/ampang"
+  },
+  {
+    "bil": 193,
+    "name": "PANTAI HOSPITAL CHERAS",
+    "specialistDirectory": "https://www.pantai.com.my/cheras/doctors",
+    "website": "https://www.pantai.com.my/cheras"
+  },
+  {
+    "bil": 194,
+    "name": "PANTAI HOSPITAL KUALA LUMPUR",
+    "specialistDirectory": "https://www.pantai.com.my/kuala-lumpur/doctors",
+    "website": "https://www.pantai.com.my/kuala-lumpur"
+  },
+  {
+    "bil": 195,
+    "name": "PARKCITY MEDICAL CENTRE",
+    "specialistDirectory": "https://www.parkcity-medical.com/find-a-doctor/",
+    "website": "https://www.parkcity-medical.com/"
+  },
+  {
+    "bil": 196,
+    "name": "PUDU SPECIALISTS' CENTRE SDN BHD",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 197,
+    "name": "PUSAT DIAGNOSTIK JANTUNG MAA MEDICARE CARDIAC DIAGNOSTIC CENTRE",
+    "specialistDirectory": null,
+    "website": null
+  },
+  {
+    "bil": 198,
+    "name": "PUSAT PAKAR ORTOPEDIK QUILL ORTHOPAEDIC SPECIALIST CENTRE",
+    "specialistDirectory": "https://quillortho.com/doctors/",
+    "website": "https://quillortho.com/"
+  },
+  {
+    "bil": 199,
+    "name": "PUSAT PAKAR UKM",
+    "specialistDirectory": "https://www.ppukm.ukm.edu.my/pakar/",
+    "website": "https://www.ppukm.ukm.edu.my/"
+  },
+  {
+    "bil": 200,
+    "name": "PRINCE COURT MEDICAL CENTRE",
+    "specialistDirectory": "https://www.princecourt.com/find-a-doctor/",
+    "website": "https://www.princecourt.com/"
+  },
+  {
+    "bil": 201,
+    "name": "PUSAT PERUBATAN ROOPI MEDICAL CENTRE SDN BHD",
+    "specialistDirectory": null,
+    "website": "https://roopimedicalcentre.com/"
+  },
+  {
+    "bil": 202,
+    "name": "SUNWAY MEDICAL CENTRE VELOCITY",
+    "specialistDirectory": "https://www.sunwaymedicalvelocity.com.my/en/doctors/",
+    "website": "https://www.sunwaymedicalvelocity.com.my/"
+  },
+  {
+    "bil": 203,
+    "name": "TUNG SHIN HOSPITAL",
+    "specialistDirectory": "https://www.tungshin.com.my/en/doctors/",
+    "website": "https://www.tungshin.com.my/"
+  },
+  {
+    "bil": 204,
+    "name": "HOSPITAL COLUMBIA ASIA",
+    "specialistDirectory": "https://www.columbiaasia.com/malaysia/doctors",
+    "website": "https://www.columbiaasia.com/malaysia/"
+  },
+  {
+    "bil": 206,
+    "name": "SUNWAY MEDICAL CENTRE DAMANSARA (PUSAT PERUBATAN SUNWAY MEDICAL)",
+    "specialistDirectory": "https://www.sunwaymedicaldamansara.com.my/en/doctors/",
+    "website": "https://www.sunwaymedicaldamansara.com.my/"
+  },
+  {
+    "bil": 225,
+    "name": "COLUMBIA ASIA HOSPITAL",
+    "specialistDirectory": "https://www.columbiaasia.com/malaysia/doctors",
+    "website": "https://www.columbiaasia.com/malaysia/"
+  }
+]

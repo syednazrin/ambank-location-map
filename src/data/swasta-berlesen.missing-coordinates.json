@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-17T03:57:58.499Z",
+    "source": "src/data/swasta-berlesen.geocoded.json",
+    "hospitalCount": 0,
+    "note": "Previous manual rows were merged into swasta-berlesen.geocoded.json (25 applied). Regenerate with npm run data:swasta-berlesen-missing-coords if TomTom leaves new gaps.",
+    "coordinatesField": {
+      "description": "Single `coordinates` value only (string | null). Example: \"3.1234, 101.5678\" (lat first, then longitude).",
+      "example": "5.0263, 118.3250"
+    }
+  },
+  "hospitals": []
+}

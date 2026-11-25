@@ -1,0 +1,491 @@
+{
+  "generatedAt": "2026-11-25T13:03:40.889Z",
+  "sources": {
+    "site": "Published figure on the brand website (see note/snippet)",
+    "moh": "MOH licensed private hospital register (TOTAL_BEDS)",
+    "nsr": "National Specialist Register, records whose establishment matches the site",
+    "listed": "Doctor profiles listed on the brand website (lower bound)"
+  },
+  "profiles": [
+    {
+      "id": "alty-orthopaedic-hospital",
+      "name": "ALTY Orthopaedic Hospital",
+      "state": "Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://www.altyortho.com/",
+      "beds": {
+        "value": 31,
+        "source": "moh",
+        "note": "MOH licensed register · ALTY ORTHOPAEDIC HOSPITAL",
+        "url": null
+      },
+      "specialists": {
+        "value": 9,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "ALTY ORTHOPAEDIC HOSPITAL"
+    },
+    {
+      "id": "alty-physio",
+      "name": "ALTY Physio",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://tags.my/alty-physio/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "ara-damansara-medical-centre",
+      "name": "Ara Damansara Medical Centre",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://aradamansaramedicalcentre.com/",
+      "beds": {
+        "value": 165,
+        "source": "site",
+        "note": "and Shah Alam, right across Oasis Ara. The hospital has a capacity of 165-beds and offers a range of exclusive medical services to cater to your pri",
+        "url": "https://aradamansaramedicalcentre.com/"
+      },
+      "specialists": {
+        "value": 64,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "ARA DAMANSARA MEDICAL CENTRE"
+    },
+    {
+      "id": "beacon-hospital",
+      "name": "Beacon Hospital",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.beaconhospital.com.my/",
+      "beds": {
+        "value": 100,
+        "source": "site",
+        "note": "n Hospital is a medium-sized cancer specialist hospital equipped with 100 beds and more than 120 medical specialists. Our primary focus is to provid",
+        "url": "https://www.beaconhospital.com.my/"
+      },
+      "specialists": {
+        "value": 120,
+        "source": "site",
+        "note": "ospital is a medium-sized cancer specialist hospital equipped with 100 beds and more than 120 medical specialists. Our primary focus is to provide advanced medical equipment, specialist doctors",
+        "url": "https://www.beaconhospital.com.my/"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "bukit-tinggi-medical-centre",
+      "name": "Bukit Tinggi Medical Centre",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://bukittinggimedicalcentre.com/",
+      "beds": {
+        "value": 159,
+        "source": "moh",
+        "note": "MOH licensed register · BUKIT TINGGI MEDICAL CENTRE",
+        "url": null
+      },
+      "specialists": {
+        "value": 23,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "BUKIT TINGGI MEDICAL CENTRE"
+    },
+    {
+      "id": "cardiac-vascular-sentral-kuala-lumpur",
+      "name": "Cardiac Vascular Sentral Kuala Lumpur (CVSKL)",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://www.cvskl.com/",
+      "beds": {
+        "value": 60,
+        "source": "site",
+        "note": "st standards of evidence-based and professional care. Comprising of a 60-bedded hospital equipped with modern facilities, CVSKL houses a full range o",
+        "url": "https://www.cvskl.com/about-us/our-story/"
+      },
+      "specialists": {
+        "value": 7,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-binh-duong",
+      "name": "Columbia Asia Binh Duong",
+      "state": "Bình Dương",
+      "country": "Vietnam",
+      "website": "https://www.columbiaasia.com/vietnam/hospitals/binh-duong/binh-duong-overview",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-extended-care-hospital-shah-alam",
+      "name": "Columbia Asia Extended Care Hospital Shah Alam",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/shah-alam/",
+      "beds": {
+        "value": 60,
+        "source": "moh",
+        "note": "MOH licensed register · HOSPITAL RAWATAN LANJUTAN COLUMBIA ASIA (COLUMBIA ASIA EXTENDED CARE HOSPITAL)",
+        "url": null
+      },
+      "specialists": {
+        "value": 36,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "HOSPITAL RAWATAN LANJUTAN COLUMBIA ASIA (COLUMBIA ASIA EXTENDED CARE HOSPITAL)"
+    },
+    {
+      "id": "columbia-asia-hospital-batu-kawan",
+      "name": "Columbia Asia Hospital Batu Kawan",
+      "state": "Pulau Pinang",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia//hospitals/batu-kawan/",
+      "beds": null,
+      "specialists": {
+        "value": 3,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-bukit-jalil",
+      "name": "Columbia Asia Hospital Bukit Jalil",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-jalil/",
+      "beds": null,
+      "specialists": {
+        "value": 9,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-bukit-rimau",
+      "name": "Columbia Asia Hospital Bukit Rimau",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-rimau/",
+      "beds": null,
+      "specialists": {
+        "value": 23,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-cheras",
+      "name": "Columbia Asia Hospital Cheras",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/cheras/",
+      "beds": null,
+      "specialists": {
+        "value": 27,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-iskandar-puteri",
+      "name": "Columbia Asia Hospital Iskandar Puteri",
+      "state": "Johor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/iskandar-puteri/",
+      "beds": {
+        "value": 164,
+        "source": "moh",
+        "note": "MOH licensed register · COLUMBIA ASIA HOSPITAL - ISKANDAR PUTERI",
+        "url": null
+      },
+      "specialists": {
+        "value": 27,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "COLUMBIA ASIA HOSPITAL - ISKANDAR PUTERI"
+    },
+    {
+      "id": "columbia-asia-hospital-klang",
+      "name": "Columbia Asia Hospital Klang",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/klang/",
+      "beds": null,
+      "specialists": {
+        "value": 28,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-petaling-jaya",
+      "name": "Columbia Asia Hospital Petaling Jaya",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/",
+      "beds": null,
+      "specialists": {
+        "value": 28,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-puchong",
+      "name": "Columbia Asia Hospital Puchong",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/puchong",
+      "beds": null,
+      "specialists": {
+        "value": 24,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-seremban",
+      "name": "Columbia Asia Hospital Seremban",
+      "state": "Negeri Sembilan",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/seremban/",
+      "beds": {
+        "value": 114,
+        "source": "moh",
+        "note": "MOH licensed register · COLUMBIA ASIA HOSPITAL – SEREMBAN",
+        "url": null
+      },
+      "specialists": {
+        "value": 49,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "COLUMBIA ASIA HOSPITAL – SEREMBAN"
+    },
+    {
+      "id": "columbia-asia-hospital-setapak",
+      "name": "Columbia Asia Hospital Setapak",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/setapak/",
+      "beds": null,
+      "specialists": {
+        "value": 19,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "columbia-asia-hospital-taiping",
+      "name": "Columbia Asia Hospital Taiping",
+      "state": "Perak",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/taiping/",
+      "beds": {
+        "value": 62,
+        "source": "moh",
+        "note": "MOH licensed register · COLUMBIA ASIA HOSPITAL – TAIPING",
+        "url": null
+      },
+      "specialists": {
+        "value": 21,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "COLUMBIA ASIA HOSPITAL – TAIPING"
+    },
+    {
+      "id": "columbia-asia-hospital-tebrau",
+      "name": "Columbia Asia Hospital Tebrau",
+      "state": "Johor",
+      "country": "Malaysia",
+      "website": "https://www.columbiaasia.com/malaysia/hospitals/tebrau/",
+      "beds": null,
+      "specialists": {
+        "value": 7,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": null
+    },
+    {
+      "id": "hospital-picaso",
+      "name": "Hospital Picaso",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://www.hospitalpicaso.com/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "northern-heart-hospital",
+      "name": "Northern Heart Hospital",
+      "state": "Penang",
+      "country": "Malaysia",
+      "website": "https://nhearthospital.com/",
+      "beds": {
+        "value": 31,
+        "source": "moh",
+        "note": "MOH licensed register · NORTHERN HEART HOSPITAL PENANG",
+        "url": null
+      },
+      "specialists": {
+        "value": 6,
+        "source": "nsr",
+        "note": "NSR records naming this establishment",
+        "url": "https://nsr.org.my/list1pview.asp"
+      },
+      "mohFacility": "NORTHERN HEART HOSPITAL PENANG"
+    },
+    {
+      "id": "parkcity-medical-centre",
+      "name": "ParkCity Medical Centre",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://parkcitymedicalcentre.com/",
+      "beds": {
+        "value": 300,
+        "source": "site",
+        "note": "ital in Malaysia Parkcity Medical Centre ParkCity Medical Centre is a 300-bed, state-of-the-art multidisciplinary private hospital in Kuala Lumpur,",
+        "url": "https://parkcitymedicalcentre.com/"
+      },
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "subang-jaya-medical-centre",
+      "name": "Subang Jaya Medical Centre",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://subangjayamedicalcentre.com/",
+      "beds": {
+        "value": 442,
+        "source": "site",
+        "note": "al outcomes for close to four decades. Today, we are an award-winning 442-bed multidisciplinary quaternary hospital with over 260 highly experience",
+        "url": "https://subangjayamedicalcentre.com/"
+      },
+      "specialists": {
+        "value": 260,
+        "source": "site",
+        "note": "day, we are an award-winning 442-bed multidisciplinary quaternary hospital with over 260 highly experienced and skilled specialists, providing comprehensive and complex care across more than 50 specialties. Know",
+        "url": "https://subangjayamedicalcentre.com/"
+      },
+      "mohFacility": "SUBANG JAYA MEDICAL CENTRE"
+    },
+    {
+      "id": "tags-cheras",
+      "name": "TAGS Cheras",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-cheras/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-hartamas",
+      "name": "TAGS Hartamas",
+      "state": "Wilayah Persekutuan Kuala Lumpur",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-hartamas/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-johor-bahru",
+      "name": "TAGS Johor Bahru",
+      "state": "Johor",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-johor-bahru/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-kuching",
+      "name": "TAGS Kuching",
+      "state": "Sarawak",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-kuching/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-melaka",
+      "name": "TAGS Melaka",
+      "state": "Melaka",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-melaka/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-penang",
+      "name": "TAGS Penang",
+      "state": "Penang",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-penang/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-seremban",
+      "name": "TAGS Seremban",
+      "state": "Negeri Sembilan",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-seremban/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    },
+    {
+      "id": "tags-subang-jaya",
+      "name": "TAGS Subang Jaya",
+      "state": "Selangor",
+      "country": "Malaysia",
+      "website": "https://tags.my/tags-subang-jaya/",
+      "beds": null,
+      "specialists": null,
+      "mohFacility": null
+    }
+  ]
+}

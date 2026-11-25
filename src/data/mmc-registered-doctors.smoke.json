@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "sourceListTemplate": "https://merits.mmc.gov.my/search/registeredDoctor?…",
+    "defaultQueryParams": {
+      "name": "",
+      "graduateFrom": "",
+      "place-of-practice": "",
+      "tindakanSiasatan": "",
+      "full": "",
+      "provisional": "",
+      "tpc": ""
+    },
+    "scrapedAt": "2026-05-17T13:48:29.468Z",
+    "totalPagesReportedByPagination": 19566,
+    "pagesFetched": 3,
+    "rowsParsed": 30,
+    "rowsFirstPage": 10,
+    "delayMsBetweenRequests": 300,
+    "fieldDefinitions": {
+      "rowNumberOnPage": "Value in the first table column (`No.`) on that **page** (1–10), not a global MMC serial.",
+      "practitionerName": "Column `Nama of Practitioner` — display name on the register list.",
+      "graduatedFrom": "Column `Graduated From` — institution string as shown on the list.",
+      "mmcDoctorId": "Numeric id from the list row’s `viewDoctor/{id}/search` link (MeRITS internal id; used for the detail endpoint).",
+      "detailAbsoluteUrl": "Absolute URL to `viewDoctor/{id}/search` (same path the site loads via AJAX for the Details button).",
+      "listPage": "1-based result list page this row was scraped from.",
+      "globalRowIndex": "1-based index across the crawl: `(listPage - 1) * rowsFirstPage + rowNumberOnPage`, where `rowsFirstPage` is the number of rows parsed on page 1 (used as the page size for this index)."
+    },
+    "notes": [
+      "MeRITS registered **doctor** list (MMC), not the NSR specialist register.",
+      "Each row is one list entry as shown in search results; use mmcDoctorId / detailAbsoluteUrl if you later scrape the AJAX detail view (not implemented here).",
+      "globalRowIndex assumes every page before the last has the same row count as page 1; if the last page is partial, total unique rows equals all.length after a full run."
+    ]
+  },
+  "records": [
+    {
+      "rowNumberOnPage": 1,
+      "practitionerName": "NOR 'AFIAH BT MOHD ZULKEFLI @ MOHD ZULKEFFLY",
+      "graduatedFrom": "UNIVERSITI KEBANGSAAN MALAYSIA",
+      "mmcDoctorId": "55",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/55/search",
+      "listPage": 1,
+      "globalRowIndex": 1
+    },
+    {
+      "rowNumberOnPage": 2,
+      "practitionerName": "MD MUJAIT BIN KASMAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "46",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/46/search",
+      "listPage": 1,
+      "globalRowIndex": 2
+    },
+    {
+      "rowNumberOnPage": 3,
+      "practitionerName": "MAZNOR BIN SHAARI",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "1221",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/1221/search",
+      "listPage": 1,
+      "globalRowIndex": 3
+    },
+    {
+      "rowNumberOnPage": 4,
+      "practitionerName": "YEW TEIK GUAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "3098",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3098/search",
+      "listPage": 1,
+      "globalRowIndex": 4
+    },
+    {
+      "rowNumberOnPage": 5,
+      "practitionerName": "CHIU CHIAW LING",
+      "graduatedFrom": "UNIVERSITY OF GLASGOW",
+      "mmcDoctorId": "10089",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/10089/search",
+      "listPage": 1,
+      "globalRowIndex": 5
+    },
+    {
+      "rowNumberOnPage": 6,
+      "practitionerName": "JAYABALA A/L KARUPPIAH",
+      "graduatedFrom": "KARNATAK UNIVERSITY",
+      "mmcDoctorId": "16267",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/16267/search",
+      "listPage": 1,
+      "globalRowIndex": 6
+    },
+    {
+      "rowNumberOnPage": 7,
+      "practitionerName": "SAHARUDDIN BIN ABDULLAH",
+      "graduatedFrom": "UNIVERSITY OF ISTANBUL",
+      "mmcDoctorId": "12442",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/12442/search",
+      "listPage": 1,
+      "globalRowIndex": 7
+    },
+    {
+      "rowNumberOnPage": 8,
+      "practitionerName": "NORSILA BINTI ABD RAZAK",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "79",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/79/search",
+      "listPage": 1,
+      "globalRowIndex": 8
+    },
+    {
+      "rowNumberOnPage": 9,
+      "practitionerName": "FARIDAH BINTI HAMZAH",
+      "graduatedFrom": "UNIVERSITI KEBANGSAAN MALAYSIA",
+      "mmcDoctorId": "759",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/759/search",
+      "listPage": 1,
+      "globalRowIndex": 9
+    },
+    {
+      "rowNumberOnPage": 10,
+      "practitionerName": "ROSNITA BINTI ALIAS",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "10304",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/10304/search",
+      "listPage": 1,
+      "globalRowIndex": 10
+    },
+    {
+      "rowNumberOnPage": 11,
+      "practitionerName": "MAZIAH BINTI ISHAK",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "3069",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3069/search",
+      "listPage": 2,
+      "globalRowIndex": 21
+    },
+    {
+      "rowNumberOnPage": 12,
+      "practitionerName": "LAW SOOK EE",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "12822",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/12822/search",
+      "listPage": 2,
+      "globalRowIndex": 22
+    },
+    {
+      "rowNumberOnPage": 13,
+      "practitionerName": "LIM HOOI HOOI",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "15674",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/15674/search",
+      "listPage": 2,
+      "globalRowIndex": 23
+    },
+    {
+      "rowNumberOnPage": 14,
+      "practitionerName": "MANOHARI A/P BALASINGAM",
+      "graduatedFrom": "MANGALORE UNIVERSITY",
+      "mmcDoctorId": "8619",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/8619/search",
+      "listPage": 2,
+      "globalRowIndex": 24
+    },
+    {
+      "rowNumberOnPage": 15,
+      "practitionerName": "WAN ZAIDAH BINTI ABDULLAH",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "11185",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/11185/search",
+      "listPage": 2,
+      "globalRowIndex": 25
+    },
+    {
+      "rowNumberOnPage": 16,
+      "practitionerName": "NORLIZA BINTI AHMAD",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "2264",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/2264/search",
+      "listPage": 2,
+      "globalRowIndex": 26
+    },
+    {
+      "rowNumberOnPage": 17,
+      "practitionerName": "LIU CHING CHING, NELLY",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "15715",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/15715/search",
+      "listPage": 2,
+      "globalRowIndex": 27
+    },
+    {
+      "rowNumberOnPage": 18,
+      "practitionerName": "NOR AZIZAH BINTI ABDUL RAHIM",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "727",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/727/search",
+      "listPage": 2,
+      "globalRowIndex": 28
+    },
+    {
+      "rowNumberOnPage": 19,
+      "practitionerName": "AZLITA BINTI MUHAMAD",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "986",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/986/search",
+      "listPage": 2,
+      "globalRowIndex": 29
+    },
+    {
+      "rowNumberOnPage": 20,
+      "practitionerName": "SUHAILA BINTI SHARIF",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "12998",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/12998/search",
+      "listPage": 2,
+      "globalRowIndex": 30
+    },
+    {
+      "rowNumberOnPage": 21,
+      "practitionerName": "TAN WAI CHOONG, ALAN GERARD",
+      "graduatedFrom": "NATIONAL UNIVERSITY OF IRELAND",
+      "mmcDoctorId": "2241",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/2241/search",
+      "listPage": 3,
+      "globalRowIndex": 41
+    },
+    {
+      "rowNumberOnPage": 22,
+      "practitionerName": "BURHANUDDIN BIN TAJUDDIN",
+      "graduatedFrom": "UNIVERSITI KEBANGSAAN MALAYSIA",
+      "mmcDoctorId": "563",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/563/search",
+      "listPage": 3,
+      "globalRowIndex": 42
+    },
+    {
+      "rowNumberOnPage": 23,
+      "practitionerName": "SHUGUNA A/P C. MARIAPPAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "3146",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3146/search",
+      "listPage": 3,
+      "globalRowIndex": 43
+    },
+    {
+      "rowNumberOnPage": 24,
+      "practitionerName": "ROS'AINI BINTI PAIJAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "3027",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3027/search",
+      "listPage": 3,
+      "globalRowIndex": 44
+    },
+    {
+      "rowNumberOnPage": 25,
+      "practitionerName": "ADAI KAMMAI RANGAMMAL A/P KALAI RAJAN",
+      "graduatedFrom": "BANARAS HINDU UNIVERSITY",
+      "mmcDoctorId": "3136",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3136/search",
+      "listPage": 3,
+      "globalRowIndex": 45
+    },
+    {
+      "rowNumberOnPage": 26,
+      "practitionerName": "JORAHALIZA BT ABDUL RAHAMAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "1429",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/1429/search",
+      "listPage": 3,
+      "globalRowIndex": 46
+    },
+    {
+      "rowNumberOnPage": 27,
+      "practitionerName": "ISKANDAR FIRZADA BIN HJ OSMAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "3035",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/3035/search",
+      "listPage": 3,
+      "globalRowIndex": 47
+    },
+    {
+      "rowNumberOnPage": 28,
+      "practitionerName": "CHAN CHING PHING",
+      "graduatedFrom": "UNIVERSITI KEBANGSAAN MALAYSIA",
+      "mmcDoctorId": "2666",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/2666/search",
+      "listPage": 3,
+      "globalRowIndex": 48
+    },
+    {
+      "rowNumberOnPage": 29,
+      "practitionerName": "HARIJAH BINTI WAHIDIN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "9307",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/9307/search",
+      "listPage": 3,
+      "globalRowIndex": 49
+    },
+    {
+      "rowNumberOnPage": 30,
+      "practitionerName": "ROSNAH BINTI ABU HASSAN",
+      "graduatedFrom": "UNIVERSITI SAINS MALAYSIA",
+      "mmcDoctorId": "2761",
+      "detailAbsoluteUrl": "https://merits.mmc.gov.my/viewDoctor/2761/search",
+      "listPage": 3,
+      "globalRowIndex": 50
+    }
+  ]
+}

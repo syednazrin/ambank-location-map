@@ -9,7 +9,9 @@ just the map with a floating glass UI on top.
 
 - **Edge-to-edge map** — the Leaflet container is `100dvh` with `overflow: hidden`, so it engulfs the page on desktop and mobile.
 - **No API keys** — three basemaps (Midnight, Paper, Streets) served by keyless Esri tile endpoints.
-- **Custom pins + popups** — gold SVG pins, dark glass popups, one-tap Google Maps directions.
+- **Custom pins + popups** — circular markers with a white ring, dark glass popups, one-tap Google Maps directions.
+- **Three map layers** — Asia One (primary, dark), MOH public hospitals (blue) and MOH-licensed private hospitals (amber), colour-coded with a toggleable legend. Public/private points carry a hover label.
+- **Capacity analytics** — licensed beds and specialist counts per Asia One site, with the source of every figure (brand site, MOH register, NSR, doctor profiles) and network totals.
 - **Location list** — click any branch in the panel to fly to it and open its popup.
 - **Find my location** — geolocation with a pulsing "you are here" dot.
 - **Live coordinate HUD** — lat/lng and zoom level follow the cursor.
@@ -129,21 +131,34 @@ At street zoom the vector pane fades so the basemap stays readable.
 
 ## Editing the data
 
-Everything the map renders lives in `src/lib/locations.ts`:
+The Asia One network — everything with a popup, catchment ring and analytics row — lives in
+`src/lib/locations.ts`:
 
 ```ts
 {
-  id: "klcc",
-  name: "AmBank KLCC",
-  type: "Branch",            // Head Office | Branch | Business Centre | ATM
+  id: "alty-orthopaedic-hospital",
+  name: "ALTY Orthopaedic Hospital",
+  kind: "Hospital",          // Hospital | Specialist Centre | Physiotherapy
+  country: "Malaysia",
+  state: "Kuala Lumpur",
+  stateCode: "KUL",
   address: "…",
-  hours: "Daily · 10:00–20:00",
-  phone: "+60 3-2382 0288",
-  coords: [3.1582, 101.7116], // [lat, lng]
+  phone: "+03-2787 0500",
+  email: "…",
+  website: "https://…",
+  precision: "exact",        // exact | good | street | approximate
+  precisionNote: "",
+  coords: [3.1599583, 101.7228519], // [lat, lng]
 }
 ```
 
-Add, remove or edit entries and the pins, popups and sidebar list update automatically.
+Add, remove or edit entries and the circles, popups and sidebar list update automatically.
+
+The two context layers are plain JSON and need no code change:
+`src/data/public-hospitals.geocoded.json` (143 MOH public) and
+`src/data/swasta-berlesen.geocoded.json` (224 licensed private). All three series are
+toggleable from the legend at the top-right of the map; picking a site in the panel turns
+the Asia One layer back on automatically.
 
 ## Basemaps
 

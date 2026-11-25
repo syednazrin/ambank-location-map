@@ -1,0 +1,882 @@
+[
+  {
+    "state": "Johor",
+    "hospital": "Hospital Enche' Besar Hajjah Khalsom",
+    "beds": 373,
+    "icu_beds": 9,
+    "bed_utilization_percent": 89.3,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Kota Tinggi",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Mersing",
+    "beds": 85,
+    "icu_beds": 0,
+    "bed_utilization_percent": 47.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Pakar Sultanah Fatimah",
+    "beds": 544,
+    "icu_beds": 16,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 68.8
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Permai",
+    "beds": 0,
+    "icu_beds": 0,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Pontian",
+    "beds": 120,
+    "icu_beds": 0,
+    "bed_utilization_percent": 57.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Segamat",
+    "beds": 306,
+    "icu_beds": 8,
+    "bed_utilization_percent": 77.8,
+    "icu_utilization_percent": 62.5
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Sultan Ismail Johor Bahru",
+    "beds": 692,
+    "icu_beds": 32,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 56.3
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Sultanah Aminah",
+    "beds": 1156,
+    "icu_beds": 30,
+    "bed_utilization_percent": 88.8,
+    "icu_utilization_percent": 83.3
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Sultanah Nora Ismail",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Tangkak",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Johor",
+    "hospital": "Hospital Temenggong Seri Maharaja Tun Ibrahim",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Baling",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Jitra",
+    "beds": 91,
+    "icu_beds": 0,
+    "bed_utilization_percent": 72.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Kuala Nerang",
+    "beds": 80,
+    "icu_beds": 0,
+    "bed_utilization_percent": 66.3,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Kulim",
+    "beds": 308,
+    "icu_beds": 12,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 91.7
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Pendang",
+    "beds": 118,
+    "icu_beds": 8,
+    "bed_utilization_percent": 108.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Sultanah Maliha",
+    "beds": 154,
+    "icu_beds": 9,
+    "bed_utilization_percent": 85.7,
+    "icu_utilization_percent": 33.3
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Yan",
+    "beds": 89,
+    "icu_beds": 0,
+    "bed_utilization_percent": 52.8,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Gua Musang",
+    "beds": 106,
+    "icu_beds": 4,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 25.0
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Jeli",
+    "beds": 80,
+    "icu_beds": 0,
+    "bed_utilization_percent": 72.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Machang",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Pasir Mas",
+    "beds": 120,
+    "icu_beds": 0,
+    "bed_utilization_percent": 90.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Raja Perempuan Zainab II",
+    "beds": 917,
+    "icu_beds": 48,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 79.2
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Sultan Ismail Petra",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Tanah Merah",
+    "beds": 197,
+    "icu_beds": 12,
+    "bed_utilization_percent": 78.7,
+    "icu_utilization_percent": 91.7
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Tengku Anis",
+    "beds": 90,
+    "icu_beds": 0,
+    "bed_utilization_percent": 68.9,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Tumpat",
+    "beds": 119,
+    "icu_beds": 0,
+    "bed_utilization_percent": 57.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kelantan",
+    "hospital": "Hospital Universiti Sains Malaysia",
+    "beds": 724,
+    "icu_beds": 87,
+    "bed_utilization_percent": 68.8,
+    "icu_utilization_percent": 62.1
+  },
+  {
+    "state": "Melaka",
+    "hospital": "Hospital Alor Gajah",
+    "beds": 100,
+    "icu_beds": 6,
+    "bed_utilization_percent": 96.0,
+    "icu_utilization_percent": 50.0
+  },
+  {
+    "state": "Melaka",
+    "hospital": "Hospital Jasin",
+    "beds": 97,
+    "icu_beds": 6,
+    "bed_utilization_percent": 77.3,
+    "icu_utilization_percent": 33.3
+  },
+  {
+    "state": "Melaka",
+    "hospital": "Hospital Melaka",
+    "beds": 1072,
+    "icu_beds": 46,
+    "bed_utilization_percent": 86.2,
+    "icu_utilization_percent": 73.9
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Jelebu",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Jempol",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Port Dickson",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Rembau",
+    "beds": 76,
+    "icu_beds": 0,
+    "bed_utilization_percent": 100.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Tampin",
+    "beds": 92,
+    "icu_beds": 16,
+    "bed_utilization_percent": 69.6,
+    "icu_utilization_percent": 6.3
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Tuanku Ampuan Najihah",
+    "beds": 299,
+    "icu_beds": 15,
+    "bed_utilization_percent": 80.6,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Negeri Sembilan",
+    "hospital": "Hospital Tuanku Ja'afar",
+    "beds": 1117,
+    "icu_beds": 26,
+    "bed_utilization_percent": 71.4,
+    "icu_utilization_percent": 111.5
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Bentong",
+    "beds": 0,
+    "icu_beds": 0,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Bera",
+    "beds": 40,
+    "icu_beds": 0,
+    "bed_utilization_percent": 85.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Jengka",
+    "beds": 70,
+    "icu_beds": 0,
+    "bed_utilization_percent": 77.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Jerantut",
+    "beds": 77,
+    "icu_beds": 0,
+    "bed_utilization_percent": 55.8,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Kuala Lipis",
+    "beds": 162,
+    "icu_beds": 6,
+    "bed_utilization_percent": 100.0,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Muadzam Shah",
+    "beds": 49,
+    "icu_beds": 0,
+    "bed_utilization_percent": 55.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Pekan",
+    "beds": 106,
+    "icu_beds": 4,
+    "bed_utilization_percent": 75.5,
+    "icu_utilization_percent": 75.0
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Raub",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Rompin",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Sultan Hj Ahmad Shah",
+    "beds": null,
+    "icu_beds": null,
+    "bed_utilization_percent": null,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Sultanah Hajjah Kalsom",
+    "beds": 40,
+    "icu_beds": 0,
+    "bed_utilization_percent": 75.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Pahang",
+    "hospital": "Hospital Tengku Ampuan Afzan",
+    "beds": 798,
+    "icu_beds": 31,
+    "bed_utilization_percent": 74.2,
+    "icu_utilization_percent": 83.9
+  },
+  {
+    "state": "Perak",
+    "hospital": "Hospital Raja Permaisuri Bainun",
+    "beds": 1064,
+    "icu_beds": 33,
+    "bed_utilization_percent": 79.0,
+    "icu_utilization_percent": 78.8
+  },
+  {
+    "state": "Perak",
+    "hospital": "Hospital Seri Manjung",
+    "beds": 297,
+    "icu_beds": 8,
+    "bed_utilization_percent": 110.8,
+    "icu_utilization_percent": 50.0
+  },
+  {
+    "state": "Perak",
+    "hospital": "Hospital Slim River",
+    "beds": 157,
+    "icu_beds": 18,
+    "bed_utilization_percent": 66.2,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Perak",
+    "hospital": "Hospital Taiping",
+    "beds": 617,
+    "icu_beds": 25,
+    "bed_utilization_percent": 82.8,
+    "icu_utilization_percent": 80.0
+  },
+  {
+    "state": "Perak",
+    "hospital": "Hospital Teluk Intan",
+    "beds": 532,
+    "icu_beds": 16,
+    "bed_utilization_percent": 58.6,
+    "icu_utilization_percent": 37.5
+  },
+  {
+    "state": "Perlis",
+    "hospital": "Hospital Tuanku Fauziah",
+    "beds": 491,
+    "icu_beds": 21,
+    "bed_utilization_percent": 96.1,
+    "icu_utilization_percent": 66.7
+  },
+  {
+    "state": "Pulau Pinang",
+    "hospital": "Hospital Bukit Mertajam",
+    "beds": 235,
+    "icu_beds": 7,
+    "bed_utilization_percent": 74.5,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Pulau Pinang",
+    "hospital": "Hospital Pulau Pinang",
+    "beds": 1137,
+    "icu_beds": 26,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 100.0
+  },
+  {
+    "state": "Pulau Pinang",
+    "hospital": "Hospital Sungai Bakap",
+    "beds": 105,
+    "icu_beds": 0,
+    "bed_utilization_percent": 78.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Keningau",
+    "beds": 203,
+    "icu_beds": 21,
+    "bed_utilization_percent": 96.1,
+    "icu_utilization_percent": 119.0
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Kota Marudu",
+    "beds": 97,
+    "icu_beds": 0,
+    "bed_utilization_percent": 70.1,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Kuala Penyu",
+    "beds": 48,
+    "icu_beds": 0,
+    "bed_utilization_percent": 64.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Kunak",
+    "beds": 48,
+    "icu_beds": 0,
+    "bed_utilization_percent": 39.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Papar",
+    "beds": 77,
+    "icu_beds": 0,
+    "bed_utilization_percent": 67.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Queen Elizabeth",
+    "beds": 706,
+    "icu_beds": 42,
+    "bed_utilization_percent": 103.0,
+    "icu_utilization_percent": 83.3
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Queen Elizabeth II",
+    "beds": 235,
+    "icu_beds": 12,
+    "bed_utilization_percent": 104.3,
+    "icu_utilization_percent": 58.3
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Semporna",
+    "beds": 70,
+    "icu_beds": 0,
+    "bed_utilization_percent": 74.3,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Sipitang",
+    "beds": 93,
+    "icu_beds": 0,
+    "bed_utilization_percent": 35.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Tambunan",
+    "beds": 49,
+    "icu_beds": 0,
+    "bed_utilization_percent": 46.9,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Tuaran",
+    "beds": 82,
+    "icu_beds": 0,
+    "bed_utilization_percent": 103.7,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sabah",
+    "hospital": "Hospital Wanita Dan Kanak-Kanak",
+    "beds": 646,
+    "icu_beds": 21,
+    "bed_utilization_percent": 73.8,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Betong",
+    "beds": 48,
+    "icu_beds": 0,
+    "bed_utilization_percent": 60.4,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Bintulu",
+    "beds": 329,
+    "icu_beds": 10,
+    "bed_utilization_percent": 72.9,
+    "icu_utilization_percent": 50.0
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Dalat",
+    "beds": 8,
+    "icu_beds": 0,
+    "bed_utilization_percent": 37.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Daro",
+    "beds": 46,
+    "icu_beds": 0,
+    "bed_utilization_percent": 19.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Kapit",
+    "beds": 128,
+    "icu_beds": 6,
+    "bed_utilization_percent": 41.4,
+    "icu_utilization_percent": 50.0
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Lawas",
+    "beds": 46,
+    "icu_beds": 0,
+    "bed_utilization_percent": 52.2,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Lundu",
+    "beds": 46,
+    "icu_beds": 0,
+    "bed_utilization_percent": 32.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Marudi",
+    "beds": 50,
+    "icu_beds": 0,
+    "bed_utilization_percent": 44.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Miri",
+    "beds": 331,
+    "icu_beds": 18,
+    "bed_utilization_percent": 92.1,
+    "icu_utilization_percent": 38.9
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Saratok",
+    "beds": 80,
+    "icu_beds": 0,
+    "bed_utilization_percent": 20.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Sarikei",
+    "beds": 198,
+    "icu_beds": 14,
+    "bed_utilization_percent": 69.2,
+    "icu_utilization_percent": 28.6
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Sentosa",
+    "beds": 338,
+    "icu_beds": 0,
+    "bed_utilization_percent": 47.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Serian",
+    "beds": 84,
+    "icu_beds": 0,
+    "bed_utilization_percent": 59.5,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Sibu",
+    "beds": 639,
+    "icu_beds": 23,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 78.3
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Simunjan",
+    "beds": 30,
+    "icu_beds": 0,
+    "bed_utilization_percent": 83.3,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Sri Aman",
+    "beds": 146,
+    "icu_beds": 4,
+    "bed_utilization_percent": 66.4,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Hospital Umum Sarawak",
+    "beds": 979,
+    "icu_beds": 28,
+    "bed_utilization_percent": 94.1,
+    "icu_utilization_percent": 100.0
+  },
+  {
+    "state": "Sarawak",
+    "hospital": "Pusat Jantung Sarawak",
+    "beds": 138,
+    "icu_beds": 4,
+    "bed_utilization_percent": 83.3,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Hospital Ampang",
+    "beds": 676,
+    "icu_beds": 15,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 93.3
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Hospital Kajang",
+    "beds": 378,
+    "icu_beds": 8,
+    "bed_utilization_percent": 77.8,
+    "icu_utilization_percent": 162.5
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Hospital Selayang",
+    "beds": 1018,
+    "icu_beds": 29,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 65.5
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Hospital Shah Alam",
+    "beds": 472,
+    "icu_beds": 13,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 123.1
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Hospital Sungai Buloh",
+    "beds": 626,
+    "icu_beds": 42,
+    "bed_utilization_percent": 85.9,
+    "icu_utilization_percent": 81.0
+  },
+  {
+    "state": "Selangor",
+    "hospital": "Pusat Kawalan Kusta Negara",
+    "beds": 106,
+    "icu_beds": 0,
+    "bed_utilization_percent": 87.7,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Terengganu",
+    "hospital": "Hospital Dungun",
+    "beds": 100,
+    "icu_beds": 0,
+    "bed_utilization_percent": 89.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Terengganu",
+    "hospital": "Hospital Hulu Terengganu",
+    "beds": 105,
+    "icu_beds": 0,
+    "bed_utilization_percent": 66.7,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Terengganu",
+    "hospital": "Hospital Kemaman",
+    "beds": 158,
+    "icu_beds": 6,
+    "bed_utilization_percent": 97.5,
+    "icu_utilization_percent": 66.7
+  },
+  {
+    "state": "Terengganu",
+    "hospital": "Hospital Setiu",
+    "beds": 76,
+    "icu_beds": 0,
+    "bed_utilization_percent": 86.8,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Terengganu",
+    "hospital": "Hospital Sultanah Nur Zahirah",
+    "beds": 1098,
+    "icu_beds": 29,
+    "bed_utilization_percent": 91.0,
+    "icu_utilization_percent": 82.8
+  },
+  {
+    "state": "W.P. Kuala Lumpur",
+    "hospital": "Hospital Kuala Lumpur",
+    "beds": 1672,
+    "icu_beds": 34,
+    "bed_utilization_percent": 71.7,
+    "icu_utilization_percent": 100.0
+  },
+  {
+    "state": "W.P. Kuala Lumpur",
+    "hospital": "Hospital Tunku Azizah",
+    "beds": 596,
+    "icu_beds": 4,
+    "bed_utilization_percent": 107.2,
+    "icu_utilization_percent": 25.0
+  },
+  {
+    "state": "W.P. Kuala Lumpur",
+    "hospital": "Institut Perubatan Respiratori",
+    "beds": 110,
+    "icu_beds": 0,
+    "bed_utilization_percent": 60.0,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "W.P. Labuan",
+    "hospital": "Hospital Labuan",
+    "beds": 115,
+    "icu_beds": 7,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 42.9
+  },
+  {
+    "state": "W.P. Putrajaya",
+    "hospital": "Hospital Putrajaya",
+    "beds": 533,
+    "icu_beds": 19,
+    "bed_utilization_percent": 61.4,
+    "icu_utilization_percent": 0.0
+  },
+  {
+    "state": "W.P. Putrajaya",
+    "hospital": "Institut Kanser Negara",
+    "beds": 234,
+    "icu_beds": 4,
+    "bed_utilization_percent": 0.0,
+    "icu_utilization_percent": 50.0
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Sik",
+    "beds": 93,
+    "icu_beds": 0,
+    "bed_utilization_percent": 65.6,
+    "icu_utilization_percent": null
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Sultan Abdul Halim",
+    "beds": 668,
+    "icu_beds": 28,
+    "bed_utilization_percent": 95.4,
+    "icu_utilization_percent": 64.3
+  },
+  {
+    "state": "Kedah",
+    "hospital": "Hospital Sultanah Bahiyah",
+    "beds": 1084,
+    "icu_beds": 24,
+    "bed_utilization_percent": 82.4,
+    "icu_utilization_percent": 83.3
+  }
+]

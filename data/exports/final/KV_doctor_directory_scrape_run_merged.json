@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-05-20T12:59:25.301Z",
+  "mergeRule": "Specialists / Run_log / Errors from full scrape minus MOH bil listed in kv-doctor-dir-scrape-rerun-18.json, then rerun workbook appended/overlaid.",
+  "stripHospitalIdsFromMain": [
+    "94",
+    "100",
+    "101",
+    "102",
+    "105",
+    "130",
+    "132",
+    "135",
+    "144",
+    "171",
+    "173",
+    "178",
+    "184",
+    "187",
+    "192",
+    "193",
+    "204",
+    "225"
+  ],
+  "counts": {
+    "main_specialists_before_merge": 357,
+    "rerun_specialists": 437,
+    "merged_specialists": 437,
+    "merged_run_log_rows": 84,
+    "merged_error_rows": 19
+  },
+  "warning_main_only_rerun_cohort": true,
+  "inputs": {
+    "main_workbook": "exports\\KV_doctor_directory_specialists.xlsx",
+    "rerun_workbook": "exports\\KV_doctor_directory_specialists_rerun18.xlsx",
+    "targets_json": "exports\\kv-doctor-dir-scrape-rerun-18.json"
+  },
+  "prior_main_run": {
+    "generatedAt": "2026-05-20T05:54:37.700Z",
+    "inputPath": "exports\\klang-valley-private-licensed-hospitals.json",
+    "browserUserDataRelative": "exports\\playwright-browser-user-data",
+    "workbook": "exports\\KV_doctor_directory_specialists.xlsx",
+    "errorsCount": 19,
+    "specialistsCount": 357
+  },
+  "prior_rerun_run": {
+    "generatedAt": "2026-05-20T07:28:41.891Z",
+    "inputPath": "exports\\kv-doctor-dir-scrape-rerun-18.json",
+    "browserUserDataRelative": "exports\\playwright-browser-user-data",
+    "workbook": "exports\\KV_doctor_directory_specialists_rerun18.xlsx",
+    "interactiveCapture": true,
+    "errorsCount": 0,
+    "specialistsCount": 437
+  },
+  "output_workbook": "exports\\KV_doctor_directory_specialists_merged.xlsx"
+}

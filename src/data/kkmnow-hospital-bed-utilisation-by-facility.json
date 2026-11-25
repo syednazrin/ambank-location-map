@@ -1,0 +1,1932 @@
+{
+  "source_url": "https://data.moh.gov.my/dashboard/hospital-bed-utilisation",
+  "scraped_at": "2026-05-17T04:02:42.330Z",
+  "data_as_of": "2024-09-06 23:59",
+  "row_count": 148,
+  "rows": [
+    {
+      "data": {
+        "hospital": "Hospital Enche' Besar Hajjah Khalsom",
+        "beds_nonicu": "373.0",
+        "util_nonicu": "89.27613941018767",
+        "beds_icu": "9.0",
+        "util_icu": "0.0",
+        "vent": "45.0",
+        "util_vent": "0.0"
+      },
+      "index": 0,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kota Tinggi",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 1,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Mersing",
+        "beds_nonicu": "85.0",
+        "util_nonicu": "47.05882352941176",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 2,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pakar Sultanah Fatimah",
+        "beds_nonicu": "544.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "16.0",
+        "util_icu": "68.75",
+        "vent": "39.0",
+        "util_vent": "17.94871794871795"
+      },
+      "index": 3,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Permai",
+        "beds_nonicu": "0.0",
+        "util_nonicu": "None",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 4,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pontian",
+        "beds_nonicu": "120.0",
+        "util_nonicu": "57.49999999999999",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "4.0",
+        "util_vent": "0.0"
+      },
+      "index": 5,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Segamat",
+        "beds_nonicu": "306.0",
+        "util_nonicu": "77.77777777777779",
+        "beds_icu": "8.0",
+        "util_icu": "62.5",
+        "vent": "31.0",
+        "util_vent": "35.483870967741936"
+      },
+      "index": 6,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultan Ismail Johor Bahru",
+        "beds_nonicu": "692.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "32.0",
+        "util_icu": "56.25",
+        "vent": "59.0",
+        "util_vent": "32.20338983050847"
+      },
+      "index": 7,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Aminah",
+        "beds_nonicu": "1156.0",
+        "util_nonicu": "88.840830449827",
+        "beds_icu": "30.0",
+        "util_icu": "83.33333333333334",
+        "vent": "75.0",
+        "util_vent": "45.33333333333333"
+      },
+      "index": 8,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Nora Ismail",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 9,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tangkak",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 10,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Temenggong Seri Maharaja Tun Ibrahim",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 11,
+      "state": "jhr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Baling",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 12,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jitra",
+        "beds_nonicu": "91.0",
+        "util_nonicu": "72.52747252747253",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 13,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Nerang",
+        "beds_nonicu": "80.0",
+        "util_nonicu": "66.25",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 14,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kulim",
+        "beds_nonicu": "308.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "12.0",
+        "util_icu": "91.66666666666666",
+        "vent": "25.0",
+        "util_vent": "44.0"
+      },
+      "index": 15,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pendang",
+        "beds_nonicu": "118.0",
+        "util_nonicu": "108.47457627118644",
+        "beds_icu": "8.0",
+        "util_icu": "0.0",
+        "vent": "6.0",
+        "util_vent": "66.66666666666666"
+      },
+      "index": 16,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sik",
+        "beds_nonicu": "93.0",
+        "util_nonicu": "65.59139784946237",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 17,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultan Abdul Halim",
+        "beds_nonicu": "668.0",
+        "util_nonicu": "95.35928143712576",
+        "beds_icu": "28.0",
+        "util_icu": "64.28571428571429",
+        "vent": "60.0",
+        "util_vent": "21.666666666666668"
+      },
+      "index": 18,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Bahiyah",
+        "beds_nonicu": "1084.0",
+        "util_nonicu": "82.380073800738",
+        "beds_icu": "24.0",
+        "util_icu": "83.33333333333334",
+        "vent": "81.0",
+        "util_vent": "44.44444444444444"
+      },
+      "index": 19,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Maliha",
+        "beds_nonicu": "154.0",
+        "util_nonicu": "85.71428571428571",
+        "beds_icu": "9.0",
+        "util_icu": "33.33333333333333",
+        "vent": "14.0",
+        "util_vent": "21.428571428571427"
+      },
+      "index": 20,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Yan",
+        "beds_nonicu": "89.0",
+        "util_nonicu": "52.80898876404494",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 21,
+      "state": "kdh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Gua Musang",
+        "beds_nonicu": "106.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "4.0",
+        "util_icu": "25.0",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 22,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jeli",
+        "beds_nonicu": "80.0",
+        "util_nonicu": "72.5",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 23,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Machang",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 24,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pasir Mas",
+        "beds_nonicu": "120.0",
+        "util_nonicu": "90.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 25,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Raja Perempuan Zainab II",
+        "beds_nonicu": "917.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "48.0",
+        "util_icu": "79.16666666666666",
+        "vent": "79.0",
+        "util_vent": "45.56962025316456"
+      },
+      "index": 26,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultan Ismail Petra",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 27,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tanah Merah",
+        "beds_nonicu": "197.0",
+        "util_nonicu": "78.68020304568529",
+        "beds_icu": "12.0",
+        "util_icu": "91.66666666666666",
+        "vent": "24.0",
+        "util_vent": "41.66666666666667"
+      },
+      "index": 28,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tengku Anis",
+        "beds_nonicu": "90.0",
+        "util_nonicu": "68.88888888888889",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 29,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tumpat",
+        "beds_nonicu": "119.0",
+        "util_nonicu": "57.14285714285714",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 30,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Universiti Sains Malaysia",
+        "beds_nonicu": "724.0",
+        "util_nonicu": "68.78453038674033",
+        "beds_icu": "87.0",
+        "util_icu": "62.06896551724138",
+        "vent": "83.0",
+        "util_vent": "44.57831325301205"
+      },
+      "index": 31,
+      "state": "ktn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Alor Gajah",
+        "beds_nonicu": "100.0",
+        "util_nonicu": "96.0",
+        "beds_icu": "6.0",
+        "util_icu": "50.0",
+        "vent": "12.0",
+        "util_vent": "16.666666666666664"
+      },
+      "index": 32,
+      "state": "mlk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jasin",
+        "beds_nonicu": "97.0",
+        "util_nonicu": "77.31958762886599",
+        "beds_icu": "6.0",
+        "util_icu": "33.33333333333333",
+        "vent": "16.0",
+        "util_vent": "6.25"
+      },
+      "index": 33,
+      "state": "mlk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Melaka",
+        "beds_nonicu": "1072.0",
+        "util_nonicu": "86.19402985074626",
+        "beds_icu": "46.0",
+        "util_icu": "73.91304347826086",
+        "vent": "95.0",
+        "util_vent": "54.736842105263165"
+      },
+      "index": 34,
+      "state": "mlk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jelebu",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 35,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jempol",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 36,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Port Dickson",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 37,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Rembau",
+        "beds_nonicu": "76.0",
+        "util_nonicu": "100.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "2.0",
+        "util_vent": "0.0"
+      },
+      "index": 38,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tampin",
+        "beds_nonicu": "92.0",
+        "util_nonicu": "69.56521739130434",
+        "beds_icu": "16.0",
+        "util_icu": "6.25",
+        "vent": "12.0",
+        "util_vent": "41.66666666666667"
+      },
+      "index": 39,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tuanku Ampuan Najihah",
+        "beds_nonicu": "299.0",
+        "util_nonicu": "80.60200668896321",
+        "beds_icu": "15.0",
+        "util_icu": "0.0",
+        "vent": "27.0",
+        "util_vent": "0.0"
+      },
+      "index": 40,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tuanku Ja'afar",
+        "beds_nonicu": "1117.0",
+        "util_nonicu": "71.35183527305283",
+        "beds_icu": "26.0",
+        "util_icu": "111.53846153846155",
+        "vent": "158.0",
+        "util_vent": "0.0"
+      },
+      "index": 41,
+      "state": "nsn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bentong",
+        "beds_nonicu": "0.0",
+        "util_nonicu": "None",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 42,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bera",
+        "beds_nonicu": "40.0",
+        "util_nonicu": "85.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 43,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jengka",
+        "beds_nonicu": "70.0",
+        "util_nonicu": "77.14285714285715",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 44,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Jerantut",
+        "beds_nonicu": "77.0",
+        "util_nonicu": "55.84415584415584",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 45,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Lipis",
+        "beds_nonicu": "162.0",
+        "util_nonicu": "100.0",
+        "beds_icu": "6.0",
+        "util_icu": "0.0",
+        "vent": "16.0",
+        "util_vent": "0.0"
+      },
+      "index": 46,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Muadzam Shah",
+        "beds_nonicu": "49.0",
+        "util_nonicu": "55.10204081632652",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 47,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pekan",
+        "beds_nonicu": "106.0",
+        "util_nonicu": "75.47169811320755",
+        "beds_icu": "4.0",
+        "util_icu": "75.0",
+        "vent": "7.0",
+        "util_vent": "42.857142857142854"
+      },
+      "index": 48,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Raub",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 49,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Rompin",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 50,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultan Hj Ahmad Shah",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 51,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Hajjah Kalsom",
+        "beds_nonicu": "40.0",
+        "util_nonicu": "75.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "1.0",
+        "util_vent": "0.0"
+      },
+      "index": 52,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tengku Ampuan Afzan",
+        "beds_nonicu": "798.0",
+        "util_nonicu": "74.18546365914787",
+        "beds_icu": "31.0",
+        "util_icu": "83.87096774193549",
+        "vent": "62.0",
+        "util_vent": "53.2258064516129"
+      },
+      "index": 53,
+      "state": "phg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bahagia Ulu Kinta",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 54,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Batu Gajah",
+        "beds_nonicu": "148.0",
+        "util_nonicu": "50.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 55,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Changkat Melintang",
+        "beds_nonicu": "50.0",
+        "util_nonicu": "46.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 56,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Gerik",
+        "beds_nonicu": "75.0",
+        "util_nonicu": "48.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 57,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kampar",
+        "beds_nonicu": "73.0",
+        "util_nonicu": "58.9041095890411",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 58,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Kangsar",
+        "beds_nonicu": "136.0",
+        "util_nonicu": "69.11764705882352",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 59,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Parit Buntar",
+        "beds_nonicu": "100.0",
+        "util_nonicu": "64.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 60,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Raja Permaisuri Bainun",
+        "beds_nonicu": "1064.0",
+        "util_nonicu": "79.04135338345864",
+        "beds_icu": "33.0",
+        "util_icu": "78.78787878787878",
+        "vent": "70.0",
+        "util_vent": "77.14285714285715"
+      },
+      "index": 61,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Selama",
+        "beds_nonicu": "72.0",
+        "util_nonicu": "44.44444444444444",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 62,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Seri Manjung",
+        "beds_nonicu": "297.0",
+        "util_nonicu": "110.77441077441077",
+        "beds_icu": "8.0",
+        "util_icu": "50.0",
+        "vent": "19.0",
+        "util_vent": "42.10526315789473"
+      },
+      "index": 63,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Slim River",
+        "beds_nonicu": "157.0",
+        "util_nonicu": "66.2420382165605",
+        "beds_icu": "18.0",
+        "util_icu": "0.0",
+        "vent": "12.0",
+        "util_vent": "0.0"
+      },
+      "index": 64,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sungai Siput",
+        "beds_nonicu": "72.0",
+        "util_nonicu": "59.72222222222222",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 65,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Taiping",
+        "beds_nonicu": "617.0",
+        "util_nonicu": "82.82009724473258",
+        "beds_icu": "25.0",
+        "util_icu": "80.0",
+        "vent": "45.0",
+        "util_vent": "82.22222222222221"
+      },
+      "index": 66,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tapah",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 67,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Teluk Intan",
+        "beds_nonicu": "532.0",
+        "util_nonicu": "58.64661654135338",
+        "beds_icu": "16.0",
+        "util_icu": "37.5",
+        "vent": "39.0",
+        "util_vent": "35.8974358974359"
+      },
+      "index": 68,
+      "state": "prk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tuanku Fauziah",
+        "beds_nonicu": "491.0",
+        "util_nonicu": "96.13034623217924",
+        "beds_icu": "21.0",
+        "util_icu": "66.66666666666666",
+        "vent": "28.0",
+        "util_vent": "53.57142857142857"
+      },
+      "index": 69,
+      "state": "pls"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Balik Pulau",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 70,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bukit Mertajam",
+        "beds_nonicu": "235.0",
+        "util_nonicu": "74.46808510638297",
+        "beds_icu": "7.0",
+        "util_icu": "0.0",
+        "vent": "26.0",
+        "util_vent": "0.0"
+      },
+      "index": 71,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kepala Batas",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 72,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pulau Pinang",
+        "beds_nonicu": "1137.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "26.0",
+        "util_icu": "100.0",
+        "vent": "74.0",
+        "util_vent": "45.94594594594595"
+      },
+      "index": 73,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Seberang Jaya",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 74,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sungai Bakap",
+        "beds_nonicu": "105.0",
+        "util_nonicu": "78.0952380952381",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "2.0",
+        "util_vent": "0.0"
+      },
+      "index": 75,
+      "state": "png"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Beaufort",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 76,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Beluran",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 77,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Duchess Of Kent",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 78,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Keningau",
+        "beds_nonicu": "203.0",
+        "util_nonicu": "96.05911330049261",
+        "beds_icu": "21.0",
+        "util_icu": "119.04761904761905",
+        "vent": "20.0",
+        "util_vent": "30.0"
+      },
+      "index": 79,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kinabatangan",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 80,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kota Belud",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 81,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kota Marudu",
+        "beds_nonicu": "97.0",
+        "util_nonicu": "70.10309278350515",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 82,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Penyu",
+        "beds_nonicu": "48.0",
+        "util_nonicu": "64.58333333333334",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 83,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kudat",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 84,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kunak",
+        "beds_nonicu": "48.0",
+        "util_nonicu": "39.58333333333333",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 85,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Lahad Datu",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 86,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Mesra Bukit Padang",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 87,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Papar",
+        "beds_nonicu": "77.0",
+        "util_nonicu": "67.53246753246754",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 88,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Pitas",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 89,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Queen Elizabeth",
+        "beds_nonicu": "706.0",
+        "util_nonicu": "102.97450424929178",
+        "beds_icu": "42.0",
+        "util_icu": "83.33333333333334",
+        "vent": "65.0",
+        "util_vent": "69.23076923076923"
+      },
+      "index": 90,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Queen Elizabeth II",
+        "beds_nonicu": "235.0",
+        "util_nonicu": "104.25531914893618",
+        "beds_icu": "12.0",
+        "util_icu": "58.333333333333336",
+        "vent": "34.0",
+        "util_vent": "50.0"
+      },
+      "index": 91,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Ranau",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 92,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Semporna",
+        "beds_nonicu": "70.0",
+        "util_nonicu": "74.28571428571429",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 93,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sipitang",
+        "beds_nonicu": "93.0",
+        "util_nonicu": "35.483870967741936",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 94,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tambunan",
+        "beds_nonicu": "49.0",
+        "util_nonicu": "46.93877551020408",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 95,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tawau",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 96,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tenom",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 97,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tuaran",
+        "beds_nonicu": "82.0",
+        "util_nonicu": "103.65853658536585",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 98,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Wanita Dan Kanak-Kanak",
+        "beds_nonicu": "646.0",
+        "util_nonicu": "73.83900928792569",
+        "beds_icu": "21.0",
+        "util_icu": "0.0",
+        "vent": "13.0",
+        "util_vent": "0.0"
+      },
+      "index": 99,
+      "state": "sbh"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bau",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 100,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Betong",
+        "beds_nonicu": "48.0",
+        "util_nonicu": "60.416666666666664",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 101,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Bintulu",
+        "beds_nonicu": "329.0",
+        "util_nonicu": "72.94832826747721",
+        "beds_icu": "10.0",
+        "util_icu": "50.0",
+        "vent": "35.0",
+        "util_vent": "11.428571428571429"
+      },
+      "index": 102,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Dalat",
+        "beds_nonicu": "8.0",
+        "util_nonicu": "37.5",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 103,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Daro",
+        "beds_nonicu": "46.0",
+        "util_nonicu": "19.565217391304348",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "2.0",
+        "util_vent": "0.0"
+      },
+      "index": 104,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kanowit",
+        "beds_nonicu": "0.0",
+        "util_nonicu": "None",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 105,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kapit",
+        "beds_nonicu": "128.0",
+        "util_nonicu": "41.40625",
+        "beds_icu": "6.0",
+        "util_icu": "50.0",
+        "vent": "11.0",
+        "util_vent": "9.090909090909092"
+      },
+      "index": 106,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Lawas",
+        "beds_nonicu": "46.0",
+        "util_nonicu": "52.17391304347826",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "3.0",
+        "util_vent": "0.0"
+      },
+      "index": 107,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Lundu",
+        "beds_nonicu": "46.0",
+        "util_nonicu": "32.608695652173914",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 108,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Marudi",
+        "beds_nonicu": "50.0",
+        "util_nonicu": "44.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 109,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Miri",
+        "beds_nonicu": "331.0",
+        "util_nonicu": "92.14501510574019",
+        "beds_icu": "18.0",
+        "util_icu": "38.88888888888889",
+        "vent": "36.0",
+        "util_vent": "52.77777777777778"
+      },
+      "index": 110,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Mukah",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 111,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Rajah Charles Brooke Memorial",
+        "beds_nonicu": "0.0",
+        "util_nonicu": "None",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 112,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Saratok",
+        "beds_nonicu": "80.0",
+        "util_nonicu": "20.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 113,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sarikei",
+        "beds_nonicu": "198.0",
+        "util_nonicu": "69.1919191919192",
+        "beds_icu": "14.0",
+        "util_icu": "28.57142857142857",
+        "vent": "19.0",
+        "util_vent": "21.052631578947366"
+      },
+      "index": 114,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sentosa",
+        "beds_nonicu": "338.0",
+        "util_nonicu": "47.633136094674555",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 115,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Serian",
+        "beds_nonicu": "84.0",
+        "util_nonicu": "59.523809523809526",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 116,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sibu",
+        "beds_nonicu": "639.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "23.0",
+        "util_icu": "78.26086956521739",
+        "vent": "59.0",
+        "util_vent": "42.3728813559322"
+      },
+      "index": 117,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Simunjan",
+        "beds_nonicu": "30.0",
+        "util_nonicu": "83.33333333333334",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 118,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sri Aman",
+        "beds_nonicu": "146.0",
+        "util_nonicu": "66.43835616438356",
+        "beds_icu": "4.0",
+        "util_icu": "0.0",
+        "vent": "4.0",
+        "util_vent": "50.0"
+      },
+      "index": 119,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Umum Sarawak",
+        "beds_nonicu": "979.0",
+        "util_nonicu": "94.0755873340143",
+        "beds_icu": "28.0",
+        "util_icu": "100.0",
+        "vent": "63.0",
+        "util_vent": "68.25396825396825"
+      },
+      "index": 120,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Pusat Jantung Sarawak",
+        "beds_nonicu": "138.0",
+        "util_nonicu": "83.33333333333334",
+        "beds_icu": "4.0",
+        "util_icu": "0.0",
+        "vent": "16.0",
+        "util_vent": "0.0"
+      },
+      "index": 121,
+      "state": "swk"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Ampang",
+        "beds_nonicu": "676.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "15.0",
+        "util_icu": "93.33333333333333",
+        "vent": "74.0",
+        "util_vent": "41.891891891891895"
+      },
+      "index": 122,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Banting",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 123,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kajang",
+        "beds_nonicu": "378.0",
+        "util_nonicu": "77.77777777777779",
+        "beds_icu": "8.0",
+        "util_icu": "162.5",
+        "vent": "32.0",
+        "util_vent": "21.875"
+      },
+      "index": 124,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Kubu Bharu",
+        "beds_nonicu": "0.0",
+        "util_nonicu": "None",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 125,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Orang Asli Gombak",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 126,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Selayang",
+        "beds_nonicu": "1018.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "29.0",
+        "util_icu": "65.51724137931035",
+        "vent": "97.0",
+        "util_vent": "16.49484536082474"
+      },
+      "index": 127,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Serdang",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 128,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Shah Alam",
+        "beds_nonicu": "472.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "13.0",
+        "util_icu": "123.07692307692308",
+        "vent": "42.0",
+        "util_vent": "45.23809523809524"
+      },
+      "index": 129,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sungai Buloh",
+        "beds_nonicu": "626.0",
+        "util_nonicu": "85.94249201277955",
+        "beds_icu": "42.0",
+        "util_icu": "80.95238095238095",
+        "vent": "121.0",
+        "util_vent": "31.40495867768595"
+      },
+      "index": 130,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tengku Ampuan Rahimah",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 131,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Pusat Kawalan Kusta Negara",
+        "beds_nonicu": "106.0",
+        "util_nonicu": "87.73584905660378",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 132,
+      "state": "sgr"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Besut",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 133,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Dungun",
+        "beds_nonicu": "100.0",
+        "util_nonicu": "89.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 134,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Hulu Terengganu",
+        "beds_nonicu": "105.0",
+        "util_nonicu": "66.66666666666666",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 135,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kemaman",
+        "beds_nonicu": "158.0",
+        "util_nonicu": "97.46835443037975",
+        "beds_icu": "6.0",
+        "util_icu": "66.66666666666666",
+        "vent": "18.0",
+        "util_vent": "16.666666666666664"
+      },
+      "index": 136,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Setiu",
+        "beds_nonicu": "76.0",
+        "util_nonicu": "86.8421052631579",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 137,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Sultanah Nur Zahirah",
+        "beds_nonicu": "1098.0",
+        "util_nonicu": "90.98360655737704",
+        "beds_icu": "29.0",
+        "util_icu": "82.75862068965517",
+        "vent": "88.0",
+        "util_vent": "45.45454545454545"
+      },
+      "index": 138,
+      "state": "trg"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Kuala Lumpur",
+        "beds_nonicu": "1672.0",
+        "util_nonicu": "71.71052631578947",
+        "beds_icu": "34.0",
+        "util_icu": "100.0",
+        "vent": "92.0",
+        "util_vent": "40.21739130434783"
+      },
+      "index": 139,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Rehabilitasi Cheras",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 140,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Tunku Azizah",
+        "beds_nonicu": "596.0",
+        "util_nonicu": "107.21476510067114",
+        "beds_icu": "4.0",
+        "util_icu": "25.0",
+        "vent": "12.0",
+        "util_vent": "0.0"
+      },
+      "index": 141,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Universiti Kebangsaan Malaysia",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 142,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Institut Perubatan Respiratori",
+        "beds_nonicu": "110.0",
+        "util_nonicu": "60.0",
+        "beds_icu": "0.0",
+        "util_icu": "None",
+        "vent": "0.0",
+        "util_vent": "None"
+      },
+      "index": 143,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Pusat Perubatan Universiti Malaya",
+        "beds_nonicu": "None",
+        "util_nonicu": "None",
+        "beds_icu": "None",
+        "util_icu": "None",
+        "vent": "None",
+        "util_vent": "None"
+      },
+      "index": 144,
+      "state": "kul"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Labuan",
+        "beds_nonicu": "115.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "7.0",
+        "util_icu": "42.857142857142854",
+        "vent": "46.0",
+        "util_vent": "0.0"
+      },
+      "index": 145,
+      "state": "lbn"
+    },
+    {
+      "data": {
+        "hospital": "Hospital Putrajaya",
+        "beds_nonicu": "533.0",
+        "util_nonicu": "61.350844277673545",
+        "beds_icu": "19.0",
+        "util_icu": "0.0",
+        "vent": "37.0",
+        "util_vent": "0.0"
+      },
+      "index": 146,
+      "state": "pjy"
+    },
+    {
+      "data": {
+        "hospital": "Institut Kanser Negara",
+        "beds_nonicu": "234.0",
+        "util_nonicu": "0.0",
+        "beds_icu": "4.0",
+        "util_icu": "50.0",
+        "vent": "8.0",
+        "util_vent": "12.5"
+      },
+      "index": 147,
+      "state": "pjy"
+    }
+  ]
+}

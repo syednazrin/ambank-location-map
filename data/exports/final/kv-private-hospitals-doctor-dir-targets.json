@@ -1,0 +1,178 @@
+[
+  {
+    "state": "Selangor",
+    "name": "Sunway Medical Centre",
+    "id": "pvt-145",
+    "category": "private",
+    "lat": 3.06573,
+    "lon": 101.609266,
+    "beds": 812,
+    "website": "https://www.sunwaymedical.com",
+    "doctor_directory_url": "https://www.sunwaymedical.com/en/find-a-doctor"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "Pantai Hospital Kuala Lumpur",
+    "id": "pvt-203",
+    "category": "private",
+    "lat": 3.124889,
+    "lon": 101.668063,
+    "beds": 475,
+    "website": "https://www.pantai.com.my/kuala-lumpur",
+    "doctor_directory_url": "https://www.pantai.com.my/kuala-lumpur/doctors"
+  },
+  {
+    "state": "Selangor",
+    "name": "Subang Jaya Medical Centre",
+    "id": "asia-13",
+    "category": "asia-one",
+    "lat": 3.074765,
+    "lon": 101.594529,
+    "beds": 444,
+    "website": "https://subangjayamedicalcentre.com",
+    "doctor_directory_url": "https://subangjayamedicalcentre.com/find-doctor"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "Institut Jantung Negara",
+    "id": "pvt-196",
+    "category": "private",
+    "lat": 3.172348,
+    "lon": 101.693412,
+    "beds": 437,
+    "website": "https://www.ijn.com.my",
+    "doctor_directory_url": "https://www.ijn.com.my/doctors-directory/"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "Gleneagles Hospital Kuala Lumpur",
+    "id": "pvt-187",
+    "category": "private",
+    "lat": 3.161391,
+    "lon": 101.739238,
+    "beds": 406,
+    "website": "https://gleneagles.com.my/kuala-lumpur",
+    "doctor_directory_url": "https://gleneagles.com.my/kuala-lumpur/doctors"
+  },
+  {
+    "state": "Selangor",
+    "name": "Thomson Hospital Kota Damansara",
+    "id": "pvt-146",
+    "category": "private",
+    "lat": 3.150334,
+    "lon": 101.575257,
+    "beds": 399,
+    "website": "https://www.thomsonhospitals.com",
+    "doctor_directory_url": "https://www.thomsonhospitals.com/all-doctors/"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "ParkCity Medical Centre",
+    "id": "asia-12",
+    "category": "asia-one",
+    "lat": 3.189329,
+    "lon": 101.623807,
+    "beds": 300,
+    "website": "https://parkcitymedicalcentre.com",
+    "doctor_directory_url": "https://parkcitymedicalcentre.com/find-doctor"
+  },
+  {
+    "state": "Selangor",
+    "name": "Ampang Puteri Specialist Hospital",
+    "id": "pvt-126",
+    "category": "private",
+    "lat": 3.157,
+    "lon": 101.754445,
+    "beds": 298,
+    "website": "https://kpjhealth.com.my/ampang",
+    "doctor_directory_url": "https://kpjhealth.com.my/doctor?location=Ampang+Puteri+Specialist+Hospital&page=1"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "Sunway Medical Centre Velocity",
+    "id": "pvt-211",
+    "category": "private",
+    "lat": 3.128331,
+    "lon": 101.722477,
+    "beds": 292,
+    "website": "https://www.sunwaymedicalvelocity.com.my",
+    "doctor_directory_url": "https://www.sunwaymedicalvelocity.com.my/en/find-a-doctor/"
+  },
+  {
+    "state": "Selangor",
+    "name": "Assunta Hospital",
+    "id": "pvt-98",
+    "category": "private",
+    "lat": 3.091542,
+    "lon": 101.650145,
+    "beds": 245,
+    "website": "https://www.assunta.com.my",
+    "doctor_directory_url": "https://www.assunta.com.my/doctors/"
+  },
+  {
+    "state": "Kuala Lumpur",
+    "name": "Tawakkal Specialist Hospital",
+    "id": "pvt-191",
+    "category": "private",
+    "lat": 3.176212,
+    "lon": 101.698541,
+    "beds": 224,
+    "website": "https://kpjhealth.com.my/tawakkal",
+    "doctor_directory_url": "https://kpjhealth.com.my/doctor?location=Tawakkal+Specialist+Hospital&page=1"
+  },
+  {
+    "state": "Selangor",
+    "name": "Ara Damansara Medical Centre",
+    "id": "asia-2",
+    "category": "asia-one",
+    "lat": 3.114937,
+    "lon": 101.565081,
+    "beds": 220,
+    "website": "https://aradamansaramedicalcentre.com",
+    "doctor_directory_url": "https://aradamansaramedicalcentre.com/find-doctor"
+  },
+  {
+    "state": "Selangor",
+    "name": "Sunway Medical Centre Damansara",
+    "id": "pvt-215",
+    "category": "private",
+    "lat": 3.154998,
+    "lon": 101.591993,
+    "beds": 210,
+    "website": "https://www.sunwaymedicaldamansara.com.my",
+    "doctor_directory_url": "https://www.sunwaymedicaldamansara.com.my/en/our-doctors/"
+  },
+  {
+    "state": "Selangor",
+    "name": "Columbia Asia Hospital - Petaling Jaya",
+    "id": "asia-9",
+    "category": "asia-one",
+    "lat": 3.117318,
+    "lon": 101.637158,
+    "beds": 205,
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/",
+    "doctor_directory_url": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/"
+  },
+  {
+    "state": "Selangor",
+    "name": "Damansara Specialist Hospital 2",
+    "id": "pvt-127",
+    "category": "private",
+    "lat": 3.133773,
+    "lon": 101.624131,
+    "beds": 198,
+    "website": "https://www.kpjhealth.com.my/damansara2",
+    "doctor_directory_url": "https://www.kpjhealth.com.my/damansara2/find-doctor"
+  },
+  {
+    "state": "Selangor",
+    "name": "KPJ Selangor Specialist Hospital",
+    "id": "pvt-131",
+    "category": "private",
+    "lat": 3.05312,
+    "lon": 101.537632,
+    "beds": 192,
+    "website": "https://www.kpjhealth.com.my/selangor",
+    "doctor_directory_url": "https://kpjhealth.com.my/doctor?location=KPJ+Selangor+Specialist+Hospital&page=1"
+  }
+]

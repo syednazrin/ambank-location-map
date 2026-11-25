@@ -1,0 +1,2747 @@
+{
+  "unit": "thousands",
+  "source": "DOSM",
+  "referenceDate": "2022-01-01",
+  "byDun": {
+    "10_N.01": {
+      "population": 18.5
+    },
+    "10_N.02": {
+      "population": 29.9
+    },
+    "10_N.03": {
+      "population": 39.1
+    },
+    "10_N.04": {
+      "population": 20.2
+    },
+    "10_N.05": {
+      "population": 35.3
+    },
+    "10_N.06": {
+      "population": 47.7
+    },
+    "10_N.07": {
+      "population": 158.4
+    },
+    "10_N.08": {
+      "population": 25.9
+    },
+    "10_N.09": {
+      "population": 34.4
+    },
+    "10_N.10": {
+      "population": 46.1
+    },
+    "10_N.11": {
+      "population": 38.7
+    },
+    "10_N.12": {
+      "population": 87.6
+    },
+    "10_N.13": {
+      "population": 103.2
+    },
+    "10_N.14": {
+      "population": 147.9
+    },
+    "10_N.15": {
+      "population": 114.5
+    },
+    "10_N.16": {
+      "population": 72.5
+    },
+    "10_N.17": {
+      "population": 177.6
+    },
+    "10_N.18": {
+      "population": 101.2
+    },
+    "10_N.19": {
+      "population": 124.2
+    },
+    "10_N.20": {
+      "population": 81.5
+    },
+    "10_N.21": {
+      "population": 102.8
+    },
+    "10_N.22": {
+      "population": 126.0
+    },
+    "10_N.23": {
+      "population": 113.9
+    },
+    "10_N.24": {
+      "population": 235.9
+    },
+    "10_N.25": {
+      "population": 237.7
+    },
+    "10_N.26": {
+      "population": 280.0
+    },
+    "10_N.27": {
+      "population": 174.2
+    },
+    "10_N.28": {
+      "population": 131.1
+    },
+    "10_N.29": {
+      "population": 246.5
+    },
+    "10_N.30": {
+      "population": 271.8
+    },
+    "10_N.31": {
+      "population": 209.3
+    },
+    "10_N.32": {
+      "population": 196.2
+    },
+    "10_N.33": {
+      "population": 90.4
+    },
+    "10_N.34": {
+      "population": 77.9
+    },
+    "10_N.35": {
+      "population": 55.2
+    },
+    "10_N.36": {
+      "population": 126.1
+    },
+    "10_N.37": {
+      "population": 290.5
+    },
+    "10_N.38": {
+      "population": 170.4
+    },
+    "10_N.39": {
+      "population": 178.9
+    },
+    "10_N.40": {
+      "population": 294.5
+    },
+    "10_N.41": {
+      "population": 147.0
+    },
+    "10_N.42": {
+      "population": 115.7
+    },
+    "10_N.43": {
+      "population": 116.8
+    },
+    "10_N.44": {
+      "population": 83.5
+    },
+    "10_N.45": {
+      "population": 113.1
+    },
+    "10_N.46": {
+      "population": 101.2
+    },
+    "10_N.47": {
+      "population": 85.5
+    },
+    "10_N.48": {
+      "population": 187.0
+    },
+    "10_N.49": {
+      "population": 153.4
+    },
+    "10_N.50": {
+      "population": 186.0
+    },
+    "10_N.51": {
+      "population": 141.2
+    },
+    "10_N.52": {
+      "population": 55.3
+    },
+    "10_N.53": {
+      "population": 52.2
+    },
+    "10_N.54": {
+      "population": 30.7
+    },
+    "10_N.55": {
+      "population": 287.7
+    },
+    "10_N.56": {
+      "population": 68.2
+    },
+    "11_N.01": {
+      "population": 32.2
+    },
+    "11_N.02": {
+      "population": 43.9
+    },
+    "11_N.03": {
+      "population": 31.8
+    },
+    "11_N.04": {
+      "population": 24.1
+    },
+    "11_N.05": {
+      "population": 27.2
+    },
+    "11_N.06": {
+      "population": 38.2
+    },
+    "11_N.07": {
+      "population": 23.4
+    },
+    "11_N.08": {
+      "population": 37.6
+    },
+    "11_N.09": {
+      "population": 50.3
+    },
+    "11_N.10": {
+      "population": 31.9
+    },
+    "11_N.11": {
+      "population": 43.9
+    },
+    "11_N.12": {
+      "population": 22.8
+    },
+    "11_N.13": {
+      "population": 40.0
+    },
+    "11_N.14": {
+      "population": 16.9
+    },
+    "11_N.15": {
+      "population": 27.2
+    },
+    "11_N.16": {
+      "population": 49.2
+    },
+    "11_N.17": {
+      "population": 45.9
+    },
+    "11_N.18": {
+      "population": 37.8
+    },
+    "11_N.19": {
+      "population": 41.1
+    },
+    "11_N.20": {
+      "population": 42.8
+    },
+    "11_N.21": {
+      "population": 21.2
+    },
+    "11_N.22": {
+      "population": 20.7
+    },
+    "11_N.23": {
+      "population": 26.6
+    },
+    "11_N.24": {
+      "population": 26.4
+    },
+    "11_N.25": {
+      "population": 21.6
+    },
+    "11_N.26": {
+      "population": 43.9
+    },
+    "11_N.27": {
+      "population": 36.1
+    },
+    "11_N.28": {
+      "population": 59.7
+    },
+    "11_N.29": {
+      "population": 39.3
+    },
+    "11_N.30": {
+      "population": 53.7
+    },
+    "11_N.31": {
+      "population": 51.8
+    },
+    "11_N.32": {
+      "population": 77.9
+    },
+    "12_N.01": {
+      "population": 9.4
+    },
+    "12_N.02": {
+      "population": 18.2
+    },
+    "12_N.03": {
+      "population": 19.2
+    },
+    "12_N.04": {
+      "population": 45.0
+    },
+    "12_N.05": {
+      "population": 34.2
+    },
+    "12_N.06": {
+      "population": 34.8
+    },
+    "12_N.07": {
+      "population": 30.2
+    },
+    "12_N.08": {
+      "population": 19.2
+    },
+    "12_N.09": {
+      "population": 20.0
+    },
+    "12_N.10": {
+      "population": 34.2
+    },
+    "12_N.11": {
+      "population": 33.0
+    },
+    "12_N.12": {
+      "population": 29.8
+    },
+    "12_N.13": {
+      "population": 46.4
+    },
+    "12_N.14": {
+      "population": 40.2
+    },
+    "12_N.15": {
+      "population": 17.4
+    },
+    "12_N.16": {
+      "population": 162.7
+    },
+    "12_N.17": {
+      "population": 64.3
+    },
+    "12_N.18": {
+      "population": 106.5
+    },
+    "12_N.19": {
+      "population": 38.5
+    },
+    "12_N.20": {
+      "population": 20.8
+    },
+    "12_N.21": {
+      "population": 54.0
+    },
+    "12_N.22": {
+      "population": 36.9
+    },
+    "12_N.23": {
+      "population": 35.6
+    },
+    "12_N.24": {
+      "population": 41.8
+    },
+    "12_N.25": {
+      "population": 118.0
+    },
+    "12_N.26": {
+      "population": 59.0
+    },
+    "12_N.27": {
+      "population": 30.6
+    },
+    "12_N.28": {
+      "population": 51.2
+    },
+    "12_N.29": {
+      "population": 24.2
+    },
+    "12_N.30": {
+      "population": 31.6
+    },
+    "12_N.31": {
+      "population": 18.4
+    },
+    "12_N.32": {
+      "population": 28.2
+    },
+    "12_N.33": {
+      "population": 23.5
+    },
+    "12_N.34": {
+      "population": 28.5
+    },
+    "12_N.35": {
+      "population": 37.5
+    },
+    "12_N.36": {
+      "population": 30.9
+    },
+    "12_N.37": {
+      "population": 20.9
+    },
+    "12_N.38": {
+      "population": 33.5
+    },
+    "12_N.39": {
+      "population": 31.7
+    },
+    "12_N.40": {
+      "population": 38.0
+    },
+    "12_N.41": {
+      "population": 59.1
+    },
+    "12_N.42": {
+      "population": 24.9
+    },
+    "12_N.43": {
+      "population": 24.9
+    },
+    "12_N.44": {
+      "population": 19.8
+    },
+    "12_N.45": {
+      "population": 33.0
+    },
+    "12_N.46": {
+      "population": 29.0
+    },
+    "12_N.47": {
+      "population": 33.9
+    },
+    "12_N.48": {
+      "population": 38.1
+    },
+    "12_N.49": {
+      "population": 28.2
+    },
+    "12_N.50": {
+      "population": 72.2
+    },
+    "12_N.51": {
+      "population": 22.8
+    },
+    "12_N.52": {
+      "population": 75.0
+    },
+    "12_N.53": {
+      "population": 87.8
+    },
+    "12_N.54": {
+      "population": 30.9
+    },
+    "12_N.55": {
+      "population": 100.6
+    },
+    "12_N.56": {
+      "population": 20.1
+    },
+    "12_N.57": {
+      "population": 46.1
+    },
+    "12_N.58": {
+      "population": 55.9
+    },
+    "12_N.59": {
+      "population": 112.2
+    },
+    "12_N.60": {
+      "population": 79.3
+    },
+    "12_N.61": {
+      "population": 104.8
+    },
+    "12_N.62": {
+      "population": 45.0
+    },
+    "12_N.63": {
+      "population": 67.9
+    },
+    "12_N.64": {
+      "population": 33.6
+    },
+    "12_N.65": {
+      "population": 56.8
+    },
+    "12_N.66": {
+      "population": 74.9
+    },
+    "12_N.67": {
+      "population": 70.1
+    },
+    "12_N.68": {
+      "population": 98.2
+    },
+    "12_N.69": {
+      "population": 60.4
+    },
+    "12_N.70": {
+      "population": 29.6
+    },
+    "12_N.71": {
+      "population": 41.6
+    },
+    "12_N.72": {
+      "population": 63.9
+    },
+    "12_N.73": {
+      "population": 52.0
+    },
+    "13_N.01": {
+      "population": 21.9
+    },
+    "13_N.02": {
+      "population": 29.9
+    },
+    "13_N.03": {
+      "population": 16.1
+    },
+    "13_N.04": {
+      "population": 56.4
+    },
+    "13_N.05": {
+      "population": 46.0
+    },
+    "13_N.06": {
+      "population": 91.9
+    },
+    "13_N.07": {
+      "population": 45.4
+    },
+    "13_N.08": {
+      "population": 14.6
+    },
+    "13_N.09": {
+      "population": 14.3
+    },
+    "13_N.10": {
+      "population": 37.3
+    },
+    "13_N.11": {
+      "population": 65.5
+    },
+    "13_N.12": {
+      "population": 66.9
+    },
+    "13_N.13": {
+      "population": 59.4
+    },
+    "13_N.14": {
+      "population": 87.4
+    },
+    "13_N.15": {
+      "population": 20.2
+    },
+    "13_N.16": {
+      "population": 65.5
+    },
+    "13_N.17": {
+      "population": 74.0
+    },
+    "13_N.18": {
+      "population": 16.9
+    },
+    "13_N.19": {
+      "population": 38.5
+    },
+    "13_N.20": {
+      "population": 26.0
+    },
+    "13_N.21": {
+      "population": 22.1
+    },
+    "13_N.22": {
+      "population": 18.2
+    },
+    "13_N.23": {
+      "population": 21.9
+    },
+    "13_N.24": {
+      "population": 11.0
+    },
+    "13_N.25": {
+      "population": 12.4
+    },
+    "13_N.26": {
+      "population": 10.5
+    },
+    "13_N.27": {
+      "population": 11.9
+    },
+    "13_N.28": {
+      "population": 10.8
+    },
+    "13_N.29": {
+      "population": 15.9
+    },
+    "13_N.30": {
+      "population": 15.3
+    },
+    "13_N.31": {
+      "population": 18.8
+    },
+    "13_N.32": {
+      "population": 29.2
+    },
+    "13_N.33": {
+      "population": 12.7
+    },
+    "13_N.34": {
+      "population": 14.3
+    },
+    "13_N.35": {
+      "population": 11.6
+    },
+    "13_N.36": {
+      "population": 12.8
+    },
+    "13_N.37": {
+      "population": 10.5
+    },
+    "13_N.38": {
+      "population": 12.9
+    },
+    "13_N.39": {
+      "population": 15.6
+    },
+    "13_N.40": {
+      "population": 13.2
+    },
+    "13_N.41": {
+      "population": 18.9
+    },
+    "13_N.42": {
+      "population": 14.1
+    },
+    "13_N.43": {
+      "population": 14.5
+    },
+    "13_N.44": {
+      "population": 13.1
+    },
+    "13_N.45": {
+      "population": 24.3
+    },
+    "13_N.46": {
+      "population": 19.1
+    },
+    "13_N.47": {
+      "population": 17.3
+    },
+    "13_N.48": {
+      "population": 18.1
+    },
+    "13_N.49": {
+      "population": 10.2
+    },
+    "13_N.50": {
+      "population": 14.6
+    },
+    "13_N.51": {
+      "population": 37.9
+    },
+    "13_N.52": {
+      "population": 67.7
+    },
+    "13_N.53": {
+      "population": 26.8
+    },
+    "13_N.54": {
+      "population": 42.3
+    },
+    "13_N.55": {
+      "population": 73.5
+    },
+    "13_N.56": {
+      "population": 16.8
+    },
+    "13_N.57": {
+      "population": 27.2
+    },
+    "13_N.58": {
+      "population": 17.2
+    },
+    "13_N.59": {
+      "population": 16.9
+    },
+    "13_N.60": {
+      "population": 34.8
+    },
+    "13_N.61": {
+      "population": 12.0
+    },
+    "13_N.62": {
+      "population": 9.6
+    },
+    "13_N.63": {
+      "population": 22.7
+    },
+    "13_N.64": {
+      "population": 9.5
+    },
+    "13_N.65": {
+      "population": 13.2
+    },
+    "13_N.66": {
+      "population": 21.1
+    },
+    "13_N.67": {
+      "population": 35.5
+    },
+    "13_N.68": {
+      "population": 74.4
+    },
+    "13_N.69": {
+      "population": 47.5
+    },
+    "13_N.70": {
+      "population": 79.3
+    },
+    "13_N.71": {
+      "population": 22.3
+    },
+    "13_N.72": {
+      "population": 49.2
+    },
+    "13_N.73": {
+      "population": 34.9
+    },
+    "13_N.74": {
+      "population": 39.5
+    },
+    "13_N.75": {
+      "population": 133.3
+    },
+    "13_N.76": {
+      "population": 33.1
+    },
+    "13_N.77": {
+      "population": 16.1
+    },
+    "13_N.78": {
+      "population": 14.8
+    },
+    "13_N.79": {
+      "population": 32.0
+    },
+    "13_N.80": {
+      "population": 13.4
+    },
+    "13_N.81": {
+      "population": 9.7
+    },
+    "13_N.82": {
+      "population": 27.1
+    },
+    "1_N.01": {
+      "population": 32.1
+    },
+    "1_N.02": {
+      "population": 44.2
+    },
+    "1_N.03": {
+      "population": 32.8
+    },
+    "1_N.04": {
+      "population": 46.8
+    },
+    "1_N.05": {
+      "population": 20.5
+    },
+    "1_N.06": {
+      "population": 22.0
+    },
+    "1_N.07": {
+      "population": 34.8
+    },
+    "1_N.08": {
+      "population": 60.7
+    },
+    "1_N.09": {
+      "population": 39.2
+    },
+    "1_N.10": {
+      "population": 56.6
+    },
+    "1_N.11": {
+      "population": 52.3
+    },
+    "1_N.12": {
+      "population": 35.9
+    },
+    "1_N.13": {
+      "population": 67.1
+    },
+    "1_N.14": {
+      "population": 32.6
+    },
+    "1_N.15": {
+      "population": 60.0
+    },
+    "1_N.16": {
+      "population": 40.5
+    },
+    "1_N.17": {
+      "population": 46.4
+    },
+    "1_N.18": {
+      "population": 36.3
+    },
+    "1_N.19": {
+      "population": 42.2
+    },
+    "1_N.20": {
+      "population": 29.8
+    },
+    "1_N.21": {
+      "population": 80.9
+    },
+    "1_N.22": {
+      "population": 94.8
+    },
+    "1_N.23": {
+      "population": 92.5
+    },
+    "1_N.24": {
+      "population": 47.4
+    },
+    "1_N.25": {
+      "population": 26.6
+    },
+    "1_N.26": {
+      "population": 47.0
+    },
+    "1_N.27": {
+      "population": 29.6
+    },
+    "1_N.28": {
+      "population": 104.5
+    },
+    "1_N.29": {
+      "population": 80.0
+    },
+    "1_N.30": {
+      "population": 32.5
+    },
+    "1_N.31": {
+      "population": 31.3
+    },
+    "1_N.32": {
+      "population": 33.4
+    },
+    "1_N.33": {
+      "population": 45.1
+    },
+    "1_N.34": {
+      "population": 54.3
+    },
+    "1_N.35": {
+      "population": 40.2
+    },
+    "1_N.36": {
+      "population": 27.6
+    },
+    "1_N.37": {
+      "population": 30.0
+    },
+    "1_N.38": {
+      "population": 40.7
+    },
+    "1_N.39": {
+      "population": 30.4
+    },
+    "1_N.40": {
+      "population": 203.7
+    },
+    "1_N.41": {
+      "population": 273.1
+    },
+    "1_N.42": {
+      "population": 153.4
+    },
+    "1_N.43": {
+      "population": 208.4
+    },
+    "1_N.44": {
+      "population": 99.6
+    },
+    "1_N.45": {
+      "population": 78.8
+    },
+    "1_N.46": {
+      "population": 190.4
+    },
+    "1_N.47": {
+      "population": 102.5
+    },
+    "1_N.48": {
+      "population": 138.3
+    },
+    "1_N.49": {
+      "population": 310.9
+    },
+    "1_N.50": {
+      "population": 77.6
+    },
+    "1_N.51": {
+      "population": 81.9
+    },
+    "1_N.52": {
+      "population": 128.8
+    },
+    "1_N.53": {
+      "population": 29.1
+    },
+    "1_N.54": {
+      "population": 52.9
+    },
+    "1_N.55": {
+      "population": 51.9
+    },
+    "1_N.56": {
+      "population": 40.0
+    },
+    "2_N.01": {
+      "population": 45.4
+    },
+    "2_N.02": {
+      "population": 50.5
+    },
+    "2_N.03": {
+      "population": 32.7
+    },
+    "2_N.04": {
+      "population": 34.7
+    },
+    "2_N.05": {
+      "population": 78.0
+    },
+    "2_N.06": {
+      "population": 96.6
+    },
+    "2_N.07": {
+      "population": 35.1
+    },
+    "2_N.08": {
+      "population": 32.1
+    },
+    "2_N.09": {
+      "population": 48.5
+    },
+    "2_N.10": {
+      "population": 42.2
+    },
+    "2_N.11": {
+      "population": 44.9
+    },
+    "2_N.12": {
+      "population": 57.2
+    },
+    "2_N.13": {
+      "population": 14.8
+    },
+    "2_N.14": {
+      "population": 49.2
+    },
+    "2_N.15": {
+      "population": 45.3
+    },
+    "2_N.16": {
+      "population": 64.4
+    },
+    "2_N.17": {
+      "population": 65.6
+    },
+    "2_N.18": {
+      "population": 44.4
+    },
+    "2_N.19": {
+      "population": 56.8
+    },
+    "2_N.20": {
+      "population": 36.5
+    },
+    "2_N.21": {
+      "population": 38.0
+    },
+    "2_N.22": {
+      "population": 54.0
+    },
+    "2_N.23": {
+      "population": 30.6
+    },
+    "2_N.24": {
+      "population": 38.2
+    },
+    "2_N.25": {
+      "population": 153.4
+    },
+    "2_N.26": {
+      "population": 66.9
+    },
+    "2_N.27": {
+      "population": 62.5
+    },
+    "2_N.28": {
+      "population": 93.1
+    },
+    "2_N.29": {
+      "population": 124.9
+    },
+    "2_N.30": {
+      "population": 44.1
+    },
+    "2_N.31": {
+      "population": 48.8
+    },
+    "2_N.32": {
+      "population": 52.3
+    },
+    "2_N.33": {
+      "population": 104.8
+    },
+    "2_N.34": {
+      "population": 162.0
+    },
+    "2_N.35": {
+      "population": 77.2
+    },
+    "2_N.36": {
+      "population": 45.2
+    },
+    "3_N.01": {
+      "population": 43.3
+    },
+    "3_N.02": {
+      "population": 43.5
+    },
+    "3_N.03": {
+      "population": 50.7
+    },
+    "3_N.04": {
+      "population": 46.2
+    },
+    "3_N.05": {
+      "population": 35.2
+    },
+    "3_N.06": {
+      "population": 50.2
+    },
+    "3_N.07": {
+      "population": 77.5
+    },
+    "3_N.08": {
+      "population": 68.1
+    },
+    "3_N.09": {
+      "population": 20.8
+    },
+    "3_N.10": {
+      "population": 44.6
+    },
+    "3_N.11": {
+      "population": 42.7
+    },
+    "3_N.12": {
+      "population": 38.1
+    },
+    "3_N.13": {
+      "population": 34.9
+    },
+    "3_N.14": {
+      "population": 33.7
+    },
+    "3_N.15": {
+      "population": 42.6
+    },
+    "3_N.16": {
+      "population": 43.1
+    },
+    "3_N.17": {
+      "population": 44.4
+    },
+    "3_N.18": {
+      "population": 61.1
+    },
+    "3_N.19": {
+      "population": 54.3
+    },
+    "3_N.20": {
+      "population": 56.9
+    },
+    "3_N.21": {
+      "population": 56.7
+    },
+    "3_N.22": {
+      "population": 46.9
+    },
+    "3_N.23": {
+      "population": 34.2
+    },
+    "3_N.24": {
+      "population": 25.9
+    },
+    "3_N.25": {
+      "population": 50.6
+    },
+    "3_N.26": {
+      "population": 69.9
+    },
+    "3_N.27": {
+      "population": 31.0
+    },
+    "3_N.28": {
+      "population": 28.2
+    },
+    "3_N.29": {
+      "population": 36.3
+    },
+    "3_N.30": {
+      "population": 44.1
+    },
+    "3_N.31": {
+      "population": 33.9
+    },
+    "3_N.32": {
+      "population": 24.4
+    },
+    "3_N.33": {
+      "population": 34.1
+    },
+    "3_N.34": {
+      "population": 30.4
+    },
+    "3_N.35": {
+      "population": 48.4
+    },
+    "3_N.36": {
+      "population": 24.3
+    },
+    "3_N.37": {
+      "population": 38.2
+    },
+    "3_N.38": {
+      "population": 18.0
+    },
+    "3_N.39": {
+      "population": 31.6
+    },
+    "3_N.40": {
+      "population": 31.2
+    },
+    "3_N.41": {
+      "population": 26.7
+    },
+    "3_N.42": {
+      "population": 17.8
+    },
+    "3_N.43": {
+      "population": 32.9
+    },
+    "3_N.44": {
+      "population": 30.6
+    },
+    "3_N.45": {
+      "population": 51.3
+    },
+    "4_N.01": {
+      "population": 19.3
+    },
+    "4_N.02": {
+      "population": 23.4
+    },
+    "4_N.03": {
+      "population": 16.5
+    },
+    "4_N.04": {
+      "population": 20.0
+    },
+    "4_N.05": {
+      "population": 17.3
+    },
+    "4_N.06": {
+      "population": 47.5
+    },
+    "4_N.07": {
+      "population": 28.6
+    },
+    "4_N.08": {
+      "population": 25.2
+    },
+    "4_N.09": {
+      "population": 53.8
+    },
+    "4_N.10": {
+      "population": 17.6
+    },
+    "4_N.11": {
+      "population": 43.6
+    },
+    "4_N.12": {
+      "population": 25.9
+    },
+    "4_N.13": {
+      "population": 91.3
+    },
+    "4_N.14": {
+      "population": 39.0
+    },
+    "4_N.15": {
+      "population": 31.6
+    },
+    "4_N.16": {
+      "population": 72.1
+    },
+    "4_N.17": {
+      "population": 50.6
+    },
+    "4_N.18": {
+      "population": 31.2
+    },
+    "4_N.19": {
+      "population": 85.2
+    },
+    "4_N.20": {
+      "population": 35.7
+    },
+    "4_N.21": {
+      "population": 36.4
+    },
+    "4_N.22": {
+      "population": 19.5
+    },
+    "4_N.23": {
+      "population": 40.7
+    },
+    "4_N.24": {
+      "population": 38.0
+    },
+    "4_N.25": {
+      "population": 21.3
+    },
+    "4_N.26": {
+      "population": 26.7
+    },
+    "4_N.27": {
+      "population": 27.2
+    },
+    "4_N.28": {
+      "population": 22.7
+    },
+    "5_N.01": {
+      "population": 16.5
+    },
+    "5_N.02": {
+      "population": 11.1
+    },
+    "5_N.03": {
+      "population": 18.3
+    },
+    "5_N.04": {
+      "population": 18.8
+    },
+    "5_N.05": {
+      "population": 29.2
+    },
+    "5_N.06": {
+      "population": 22.9
+    },
+    "5_N.07": {
+      "population": 24.9
+    },
+    "5_N.08": {
+      "population": 32.299
+    },
+    "5_N.09": {
+      "population": 38.3
+    },
+    "5_N.10": {
+      "population": 120.5
+    },
+    "5_N.11": {
+      "population": 27.4
+    },
+    "5_N.12": {
+      "population": 17.7
+    },
+    "5_N.13": {
+      "population": 45.3
+    },
+    "5_N.14": {
+      "population": 25.3
+    },
+    "5_N.15": {
+      "population": 19.9
+    },
+    "5_N.16": {
+      "population": 8.7
+    },
+    "5_N.17": {
+      "population": 8.1
+    },
+    "5_N.18": {
+      "population": 22.3
+    },
+    "5_N.19": {
+      "population": 12.5
+    },
+    "5_N.20": {
+      "population": 59.8
+    },
+    "5_N.21": {
+      "population": 87.7
+    },
+    "5_N.22": {
+      "population": 14.8
+    },
+    "5_N.23": {
+      "population": 45.4
+    },
+    "5_N.24": {
+      "population": 50.8
+    },
+    "5_N.25": {
+      "population": 110.0
+    },
+    "5_N.26": {
+      "population": 33.5
+    },
+    "5_N.27": {
+      "population": 54.2
+    },
+    "5_N.28": {
+      "population": 14.1
+    },
+    "5_N.29": {
+      "population": 14.7
+    },
+    "5_N.30": {
+      "population": 37.7
+    },
+    "5_N.31": {
+      "population": 35.2
+    },
+    "5_N.32": {
+      "population": 22.6
+    },
+    "5_N.33": {
+      "population": 19.8
+    },
+    "5_N.34": {
+      "population": 29.1
+    },
+    "5_N.35": {
+      "population": 27.5
+    },
+    "5_N.36": {
+      "population": 32.2
+    },
+    "6_N.01": {
+      "population": 39.5
+    },
+    "6_N.02": {
+      "population": 29.4
+    },
+    "6_N.03": {
+      "population": 27.7
+    },
+    "6_N.04": {
+      "population": 24.7
+    },
+    "6_N.05": {
+      "population": 16.4
+    },
+    "6_N.06": {
+      "population": 22.8
+    },
+    "6_N.07": {
+      "population": 51.2
+    },
+    "6_N.08": {
+      "population": 23.2
+    },
+    "6_N.09": {
+      "population": 27.0
+    },
+    "6_N.10": {
+      "population": 47.6
+    },
+    "6_N.11": {
+      "population": 31.5
+    },
+    "6_N.12": {
+      "population": 119.3
+    },
+    "6_N.13": {
+      "population": 133.0
+    },
+    "6_N.14": {
+      "population": 29.0
+    },
+    "6_N.15": {
+      "population": 70.4
+    },
+    "6_N.16": {
+      "population": 30.6
+    },
+    "6_N.17": {
+      "population": 19.2
+    },
+    "6_N.18": {
+      "population": 49.4
+    },
+    "6_N.19": {
+      "population": 61.2
+    },
+    "6_N.20": {
+      "population": 51.4
+    },
+    "6_N.21": {
+      "population": 60.5
+    },
+    "6_N.22": {
+      "population": 29.9
+    },
+    "6_N.23": {
+      "population": 21.5
+    },
+    "6_N.24": {
+      "population": 22.3
+    },
+    "6_N.25": {
+      "population": 19.1
+    },
+    "6_N.26": {
+      "population": 21.4
+    },
+    "6_N.27": {
+      "population": 15.0
+    },
+    "6_N.28": {
+      "population": 13.2
+    },
+    "6_N.29": {
+      "population": 40.8
+    },
+    "6_N.30": {
+      "population": 52.7
+    },
+    "6_N.31": {
+      "population": 39.0
+    },
+    "6_N.32": {
+      "population": 52.0
+    },
+    "6_N.33": {
+      "population": 30.3
+    },
+    "6_N.34": {
+      "population": 52.6
+    },
+    "6_N.35": {
+      "population": 21.8
+    },
+    "6_N.36": {
+      "population": 14.6
+    },
+    "6_N.37": {
+      "population": 24.4
+    },
+    "6_N.38": {
+      "population": 42.9
+    },
+    "6_N.39": {
+      "population": 31.9
+    },
+    "6_N.40": {
+      "population": 30.5
+    },
+    "6_N.41": {
+      "population": 35.1
+    },
+    "6_N.42": {
+      "population": 36.6
+    },
+    "7_N.01": {
+      "population": 28.2
+    },
+    "7_N.02": {
+      "population": 25.2
+    },
+    "7_N.03": {
+      "population": 63.6
+    },
+    "7_N.04": {
+      "population": 39.5
+    },
+    "7_N.05": {
+      "population": 37.5
+    },
+    "7_N.06": {
+      "population": 29.8
+    },
+    "7_N.07": {
+      "population": 49.4
+    },
+    "7_N.08": {
+      "population": 34.3
+    },
+    "7_N.09": {
+      "population": 28.9
+    },
+    "7_N.10": {
+      "population": 93.7
+    },
+    "7_N.11": {
+      "population": 34.3
+    },
+    "7_N.12": {
+      "population": 31.8
+    },
+    "7_N.13": {
+      "population": 28.1
+    },
+    "7_N.14": {
+      "population": 95.1
+    },
+    "7_N.15": {
+      "population": 39.6
+    },
+    "7_N.16": {
+      "population": 26.4
+    },
+    "7_N.17": {
+      "population": 76.0
+    },
+    "7_N.18": {
+      "population": 61.9
+    },
+    "7_N.19": {
+      "population": 37.4
+    },
+    "7_N.20": {
+      "population": 56.7
+    },
+    "7_N.21": {
+      "population": 27.8
+    },
+    "7_N.22": {
+      "population": 47.7
+    },
+    "7_N.23": {
+      "population": 14.7
+    },
+    "7_N.24": {
+      "population": 28.2
+    },
+    "7_N.25": {
+      "population": 33.1
+    },
+    "7_N.26": {
+      "population": 5.9
+    },
+    "7_N.27": {
+      "population": 21.1
+    },
+    "7_N.28": {
+      "population": 7.8
+    },
+    "7_N.29": {
+      "population": 23.3
+    },
+    "7_N.30": {
+      "population": 55.4
+    },
+    "7_N.31": {
+      "population": 34.9
+    },
+    "7_N.32": {
+      "population": 38.0
+    },
+    "7_N.33": {
+      "population": 27.7
+    },
+    "7_N.34": {
+      "population": 135.1
+    },
+    "7_N.35": {
+      "population": 83.8
+    },
+    "7_N.36": {
+      "population": 41.5
+    },
+    "7_N.37": {
+      "population": 63.1
+    },
+    "7_N.38": {
+      "population": 85.2
+    },
+    "7_N.39": {
+      "population": 27.3
+    },
+    "7_N.40": {
+      "population": 19.7
+    },
+    "8_N.01": {
+      "population": 23.1
+    },
+    "8_N.02": {
+      "population": 34.3
+    },
+    "8_N.03": {
+      "population": 22.9
+    },
+    "8_N.04": {
+      "population": 14.9
+    },
+    "8_N.05": {
+      "population": 22.4
+    },
+    "8_N.06": {
+      "population": 19.1
+    },
+    "8_N.07": {
+      "population": 25.2
+    },
+    "8_N.08": {
+      "population": 43.1
+    },
+    "8_N.09": {
+      "population": 31.0
+    },
+    "8_N.10": {
+      "population": 34.0
+    },
+    "8_N.11": {
+      "population": 30.8
+    },
+    "8_N.12": {
+      "population": 29.2
+    },
+    "8_N.13": {
+      "population": 46.9
+    },
+    "8_N.14": {
+      "population": 45.4
+    },
+    "8_N.15": {
+      "population": 16.7
+    },
+    "8_N.16": {
+      "population": 40.6
+    },
+    "8_N.17": {
+      "population": 36.8
+    },
+    "8_N.18": {
+      "population": 54.6
+    },
+    "8_N.19": {
+      "population": 17.1
+    },
+    "8_N.20": {
+      "population": 21.6
+    },
+    "8_N.21": {
+      "population": 39.1
+    },
+    "8_N.22": {
+      "population": 48.6
+    },
+    "8_N.23": {
+      "population": 147.0
+    },
+    "8_N.24": {
+      "population": 114.8
+    },
+    "8_N.25": {
+      "population": 47.4
+    },
+    "8_N.26": {
+      "population": 55.7
+    },
+    "8_N.27": {
+      "population": 33.0
+    },
+    "8_N.28": {
+      "population": 71.0
+    },
+    "8_N.29": {
+      "population": 23.4
+    },
+    "8_N.30": {
+      "population": 41.9
+    },
+    "8_N.31": {
+      "population": 46.0
+    },
+    "8_N.32": {
+      "population": 46.0
+    },
+    "8_N.33": {
+      "population": 46.7
+    },
+    "8_N.34": {
+      "population": 27.0
+    },
+    "8_N.35": {
+      "population": 25.4
+    },
+    "8_N.36": {
+      "population": 22.5
+    },
+    "8_N.37": {
+      "population": 47.6
+    },
+    "8_N.38": {
+      "population": 50.9
+    },
+    "8_N.39": {
+      "population": 11.4
+    },
+    "8_N.40": {
+      "population": 50.2
+    },
+    "8_N.41": {
+      "population": 30.1
+    },
+    "8_N.42": {
+      "population": 38.2
+    },
+    "8_N.43": {
+      "population": 37.3
+    },
+    "8_N.44": {
+      "population": 76.8
+    },
+    "8_N.45": {
+      "population": 100.0
+    },
+    "8_N.46": {
+      "population": 41.6
+    },
+    "8_N.47": {
+      "population": 35.0
+    },
+    "8_N.48": {
+      "population": 44.9
+    },
+    "8_N.49": {
+      "population": 39.7
+    },
+    "8_N.50": {
+      "population": 41.6
+    },
+    "8_N.51": {
+      "population": 96.0
+    },
+    "8_N.52": {
+      "population": 29.6
+    },
+    "8_N.53": {
+      "population": 20.6
+    },
+    "8_N.54": {
+      "population": 56.7
+    },
+    "8_N.55": {
+      "population": 38.4
+    },
+    "8_N.56": {
+      "population": 65.8
+    },
+    "8_N.57": {
+      "population": 25.6
+    },
+    "8_N.58": {
+      "population": 28.8
+    },
+    "8_N.59": {
+      "population": 69.9
+    },
+    "9_N.01": {
+      "population": 19.0
+    },
+    "9_N.02": {
+      "population": 18.4
+    },
+    "9_N.03": {
+      "population": 24.7
+    },
+    "9_N.04": {
+      "population": 12.1
+    },
+    "9_N.05": {
+      "population": 14.1
+    },
+    "9_N.06": {
+      "population": 28.5
+    },
+    "9_N.07": {
+      "population": 20.7
+    },
+    "9_N.08": {
+      "population": 16.7
+    },
+    "9_N.09": {
+      "population": 20.2
+    },
+    "9_N.10": {
+      "population": 16.4
+    },
+    "9_N.11": {
+      "population": 40.3
+    },
+    "9_N.12": {
+      "population": 21.0
+    },
+    "9_N.13": {
+      "population": 12.4
+    },
+    "9_N.14": {
+      "population": 14.9
+    },
+    "9_N.15": {
+      "population": 10.4
+    }
+  },
+  "byParlimen": {
+    "P.001": {
+      "population": 88.3,
+      "state": "Perlis"
+    },
+    "P.002": {
+      "population": 102.5,
+      "state": "Perlis"
+    },
+    "P.003": {
+      "population": 99.0,
+      "state": "Perlis"
+    },
+    "P.004": {
+      "population": 95.9,
+      "state": "Kedah"
+    },
+    "P.005": {
+      "population": 67.3,
+      "state": "Kedah"
+    },
+    "P.006": {
+      "population": 174.6,
+      "state": "Kedah"
+    },
+    "P.007": {
+      "population": 67.2,
+      "state": "Kedah"
+    },
+    "P.008": {
+      "population": 135.5,
+      "state": "Kedah"
+    },
+    "P.009": {
+      "population": 121.2,
+      "state": "Kedah"
+    },
+    "P.010": {
+      "population": 175.3,
+      "state": "Kedah"
+    },
+    "P.011": {
+      "population": 101.2,
+      "state": "Kedah"
+    },
+    "P.012": {
+      "population": 128.5,
+      "state": "Kedah"
+    },
+    "P.013": {
+      "population": 68.9,
+      "state": "Kedah"
+    },
+    "P.014": {
+      "population": 220.4,
+      "state": "Kedah"
+    },
+    "P.015": {
+      "population": 280.5,
+      "state": "Kedah"
+    },
+    "P.016": {
+      "population": 145.2,
+      "state": "Kedah"
+    },
+    "P.017": {
+      "population": 266.8,
+      "state": "Kedah"
+    },
+    "P.018": {
+      "population": 122.4,
+      "state": "Kedah"
+    },
+    "P.019": {
+      "population": 183.6,
+      "state": "Kelantan"
+    },
+    "P.020": {
+      "population": 163.0,
+      "state": "Kelantan"
+    },
+    "P.021": {
+      "population": 133.5,
+      "state": "Kelantan"
+    },
+    "P.022": {
+      "population": 115.8,
+      "state": "Kelantan"
+    },
+    "P.023": {
+      "population": 119.4,
+      "state": "Kelantan"
+    },
+    "P.024": {
+      "population": 159.8,
+      "state": "Kelantan"
+    },
+    "P.025": {
+      "population": 160.5,
+      "state": "Kelantan"
+    },
+    "P.026": {
+      "population": 110.7,
+      "state": "Kelantan"
+    },
+    "P.027": {
+      "population": 129.1,
+      "state": "Kelantan"
+    },
+    "P.028": {
+      "population": 138.6,
+      "state": "Kelantan"
+    },
+    "P.029": {
+      "population": 112.8,
+      "state": "Kelantan"
+    },
+    "P.030": {
+      "population": 80.6,
+      "state": "Kelantan"
+    },
+    "P.031": {
+      "population": 107.2,
+      "state": "Kelantan"
+    },
+    "P.032": {
+      "population": 114.8,
+      "state": "Kelantan"
+    },
+    "P.033": {
+      "population": 132.0,
+      "state": "Terengganu"
+    },
+    "P.034": {
+      "population": 126.4,
+      "state": "Terengganu"
+    },
+    "P.035": {
+      "population": 148.9,
+      "state": "Terengganu"
+    },
+    "P.036": {
+      "population": 133.3,
+      "state": "Terengganu"
+    },
+    "P.037": {
+      "population": 167.6,
+      "state": "Terengganu"
+    },
+    "P.038": {
+      "population": 94.9,
+      "state": "Terengganu"
+    },
+    "P.039": {
+      "population": 161.3,
+      "state": "Terengganu"
+    },
+    "P.040": {
+      "population": 222.6,
+      "state": "Terengganu"
+    },
+    "P.041": {
+      "population": 116.9,
+      "state": "Pulau Pinang"
+    },
+    "P.042": {
+      "population": 106.8,
+      "state": "Pulau Pinang"
+    },
+    "P.043": {
+      "population": 112.6,
+      "state": "Pulau Pinang"
+    },
+    "P.044": {
+      "population": 159.8,
+      "state": "Pulau Pinang"
+    },
+    "P.045": {
+      "population": 162.8,
+      "state": "Pulau Pinang"
+    },
+    "P.046": {
+      "population": 164.3,
+      "state": "Pulau Pinang"
+    },
+    "P.047": {
+      "population": 121.9,
+      "state": "Pulau Pinang"
+    },
+    "P.048": {
+      "population": 123.7,
+      "state": "Pulau Pinang"
+    },
+    "P.049": {
+      "population": 34.8,
+      "state": "Pulau Pinang"
+    },
+    "P.050": {
+      "population": 113.6,
+      "state": "Pulau Pinang"
+    },
+    "P.051": {
+      "population": 200.8,
+      "state": "Pulau Pinang"
+    },
+    "P.052": {
+      "population": 188.4,
+      "state": "Pulau Pinang"
+    },
+    "P.053": {
+      "population": 132.2,
+      "state": "Pulau Pinang"
+    },
+    "P.054": {
+      "population": 57.4,
+      "state": "Perak"
+    },
+    "P.055": {
+      "population": 37.8,
+      "state": "Perak"
+    },
+    "P.056": {
+      "population": 66.7,
+      "state": "Perak"
+    },
+    "P.057": {
+      "population": 74.1,
+      "state": "Perak"
+    },
+    "P.058": {
+      "population": 93.9,
+      "state": "Perak"
+    },
+    "P.059": {
+      "population": 108.9,
+      "state": "Perak"
+    },
+    "P.060": {
+      "population": 132.1,
+      "state": "Perak"
+    },
+    "P.061": {
+      "population": 38.7,
+      "state": "Perak"
+    },
+    "P.062": {
+      "population": 87.7,
+      "state": "Perak"
+    },
+    "P.063": {
+      "population": 261.8,
+      "state": "Perak"
+    },
+    "P.064": {
+      "population": 136.1,
+      "state": "Perak"
+    },
+    "P.065": {
+      "population": 136.4,
+      "state": "Perak"
+    },
+    "P.066": {
+      "population": 138.6,
+      "state": "Perak"
+    },
+    "P.067": {
+      "population": 52.3,
+      "state": "Perak"
+    },
+    "P.068": {
+      "population": 121.0,
+      "state": "Perak"
+    },
+    "P.069": {
+      "population": 61.6,
+      "state": "Perak"
+    },
+    "P.070": {
+      "population": 105.6,
+      "state": "Perak"
+    },
+    "P.071": {
+      "population": 218.5,
+      "state": "Perak"
+    },
+    "P.072": {
+      "population": 79.9,
+      "state": "Perak"
+    },
+    "P.073": {
+      "population": 81.3,
+      "state": "Perak"
+    },
+    "P.074": {
+      "population": 125.6,
+      "state": "Perak"
+    },
+    "P.075": {
+      "population": 77.3,
+      "state": "Perak"
+    },
+    "P.076": {
+      "population": 104.1,
+      "state": "Perak"
+    },
+    "P.077": {
+      "population": 124.2,
+      "state": "Perak"
+    },
+    "P.078": {
+      "population": 68.9,
+      "state": "Pahang"
+    },
+    "P.079": {
+      "population": 68.8,
+      "state": "Pahang"
+    },
+    "P.080": {
+      "population": 97.2,
+      "state": "Pahang"
+    },
+    "P.081": {
+      "population": 106.2,
+      "state": "Pahang"
+    },
+    "P.082": {
+      "population": 252.3,
+      "state": "Pahang"
+    },
+    "P.083": {
+      "population": 130.0,
+      "state": "Pahang"
+    },
+    "P.084": {
+      "population": 129.8,
+      "state": "Pahang"
+    },
+    "P.085": {
+      "population": 163.3,
+      "state": "Pahang"
+    },
+    "P.086": {
+      "population": 62.8,
+      "state": "Pahang"
+    },
+    "P.087": {
+      "population": 69.0,
+      "state": "Pahang"
+    },
+    "P.088": {
+      "population": 143.7,
+      "state": "Pahang"
+    },
+    "P.089": {
+      "population": 119.4,
+      "state": "Pahang"
+    },
+    "P.090": {
+      "population": 99.3,
+      "state": "Pahang"
+    },
+    "P.091": {
+      "population": 102.2,
+      "state": "Pahang"
+    },
+    "P.092": {
+      "population": 48.4,
+      "state": "Selangor"
+    },
+    "P.093": {
+      "population": 59.3,
+      "state": "Selangor"
+    },
+    "P.094": {
+      "population": 241.5,
+      "state": "Selangor"
+    },
+    "P.095": {
+      "population": 60.2,
+      "state": "Selangor"
+    },
+    "P.096": {
+      "population": 172.3,
+      "state": "Selangor"
+    },
+    "P.097": {
+      "population": 365.6,
+      "state": "Selangor"
+    },
+    "P.098": {
+      "population": 351.4,
+      "state": "Selangor"
+    },
+    "P.099": {
+      "population": 205.7,
+      "state": "Selangor"
+    },
+    "P.100": {
+      "population": 228.8,
+      "state": "Selangor"
+    },
+    "P.101": {
+      "population": 349.7,
+      "state": "Selangor"
+    },
+    "P.102": {
+      "population": 691.9,
+      "state": "Selangor"
+    },
+    "P.103": {
+      "population": 377.5,
+      "state": "Selangor"
+    },
+    "P.104": {
+      "population": 481.1,
+      "state": "Selangor"
+    },
+    "P.105": {
+      "population": 364.6,
+      "state": "Selangor"
+    },
+    "P.106": {
+      "population": 471.9,
+      "state": "Selangor"
+    },
+    "P.107": {
+      "population": 349.3,
+      "state": "Selangor"
+    },
+    "P.108": {
+      "population": 441.5,
+      "state": "Selangor"
+    },
+    "P.109": {
+      "population": 316.0,
+      "state": "Selangor"
+    },
+    "P.110": {
+      "population": 299.7,
+      "state": "Selangor"
+    },
+    "P.111": {
+      "population": 526.4,
+      "state": "Selangor"
+    },
+    "P.112": {
+      "population": 248.6,
+      "state": "Selangor"
+    },
+    "P.113": {
+      "population": 386.6,
+      "state": "Selangor"
+    },
+    "P.114": {
+      "population": 104.2,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.115": {
+      "population": 215.1,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.116": {
+      "population": 211.6,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.117": {
+      "population": 249.0,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.118": {
+      "population": 144.4,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.119": {
+      "population": 119.8,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.120": {
+      "population": 118.3,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.121": {
+      "population": 145.3,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.122": {
+      "population": 316.5,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.123": {
+      "population": 133.3,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.124": {
+      "population": 187.8,
+      "state": "W.P. Kuala Lumpur"
+    },
+    "P.125": {
+      "population": 120.3,
+      "state": "W.P. Putrajaya"
+    },
+    "P.126": {
+      "population": 64.7,
+      "state": "Negeri Sembilan"
+    },
+    "P.127": {
+      "population": 109.2,
+      "state": "Negeri Sembilan"
+    },
+    "P.128": {
+      "population": 274.6,
+      "state": "Negeri Sembilan"
+    },
+    "P.129": {
+      "population": 71.5,
+      "state": "Negeri Sembilan"
+    },
+    "P.130": {
+      "population": 258.5,
+      "state": "Negeri Sembilan"
+    },
+    "P.131": {
+      "population": 211.8,
+      "state": "Negeri Sembilan"
+    },
+    "P.132": {
+      "population": 129.9,
+      "state": "Negeri Sembilan"
+    },
+    "P.133": {
+      "population": 88.8,
+      "state": "Negeri Sembilan"
+    },
+    "P.134": {
+      "population": 96.6,
+      "state": "Melaka"
+    },
+    "P.135": {
+      "population": 172.7,
+      "state": "Melaka"
+    },
+    "P.136": {
+      "population": 199.9,
+      "state": "Melaka"
+    },
+    "P.137": {
+      "population": 185.4,
+      "state": "Melaka"
+    },
+    "P.138": {
+      "population": 217.4,
+      "state": "Melaka"
+    },
+    "P.139": {
+      "population": 135.8,
+      "state": "Melaka"
+    },
+    "P.140": {
+      "population": 76.3,
+      "state": "Johor"
+    },
+    "P.141": {
+      "population": 79.6,
+      "state": "Johor"
+    },
+    "P.142": {
+      "population": 42.5,
+      "state": "Johor"
+    },
+    "P.143": {
+      "population": 95.5,
+      "state": "Johor"
+    },
+    "P.144": {
+      "population": 148.1,
+      "state": "Johor"
+    },
+    "P.145": {
+      "population": 135.6,
+      "state": "Johor"
+    },
+    "P.146": {
+      "population": 100.6,
+      "state": "Johor"
+    },
+    "P.147": {
+      "population": 82.7,
+      "state": "Johor"
+    },
+    "P.148": {
+      "population": 72.0,
+      "state": "Johor"
+    },
+    "P.149": {
+      "population": 175.7,
+      "state": "Johor"
+    },
+    "P.150": {
+      "population": 166.5,
+      "state": "Johor"
+    },
+    "P.151": {
+      "population": 76.5,
+      "state": "Johor"
+    },
+    "P.152": {
+      "population": 184.5,
+      "state": "Johor"
+    },
+    "P.153": {
+      "population": 63.8,
+      "state": "Johor"
+    },
+    "P.154": {
+      "population": 78.4,
+      "state": "Johor"
+    },
+    "P.155": {
+      "population": 94.5,
+      "state": "Johor"
+    },
+    "P.156": {
+      "population": 57.6,
+      "state": "Johor"
+    },
+    "P.157": {
+      "population": 71.1,
+      "state": "Johor"
+    },
+    "P.158": {
+      "population": 476.8,
+      "state": "Johor"
+    },
+    "P.159": {
+      "population": 361.8,
+      "state": "Johor"
+    },
+    "P.160": {
+      "population": 178.4,
+      "state": "Johor"
+    },
+    "P.161": {
+      "population": 292.8,
+      "state": "Johor"
+    },
+    "P.162": {
+      "population": 449.2,
+      "state": "Johor"
+    },
+    "P.163": {
+      "population": 288.3,
+      "state": "Johor"
+    },
+    "P.164": {
+      "population": 82.0,
+      "state": "Johor"
+    },
+    "P.165": {
+      "population": 91.8,
+      "state": "Johor"
+    },
+    "P.166": {
+      "population": 96.8,
+      "state": "W.P. Labuan"
+    },
+    "P.167": {
+      "population": 91.8,
+      "state": "Sabah"
+    },
+    "P.168": {
+      "population": 99.2,
+      "state": "Sabah"
+    },
+    "P.169": {
+      "population": 106.4,
+      "state": "Sabah"
+    },
+    "P.170": {
+      "population": 133.9,
+      "state": "Sabah"
+    },
+    "P.171": {
+      "population": 333.5,
+      "state": "Sabah"
+    },
+    "P.172": {
+      "population": 113.3,
+      "state": "Sabah"
+    },
+    "P.173": {
+      "population": 114.3,
+      "state": "Sabah"
+    },
+    "P.174": {
+      "population": 177.0,
+      "state": "Sabah"
+    },
+    "P.175": {
+      "population": 105.9,
+      "state": "Sabah"
+    },
+    "P.176": {
+      "population": 50.0,
+      "state": "Sabah"
+    },
+    "P.177": {
+      "population": 51.7,
+      "state": "Sabah"
+    },
+    "P.178": {
+      "population": 66.0,
+      "state": "Sabah"
+    },
+    "P.179": {
+      "population": 85.4,
+      "state": "Sabah"
+    },
+    "P.180": {
+      "population": 128.8,
+      "state": "Sabah"
+    },
+    "P.181": {
+      "population": 49.8,
+      "state": "Sabah"
+    },
+    "P.182": {
+      "population": 81.8,
+      "state": "Sabah"
+    },
+    "P.183": {
+      "population": 100.2,
+      "state": "Sabah"
+    },
+    "P.184": {
+      "population": 170.1,
+      "state": "Sabah"
+    },
+    "P.185": {
+      "population": 118.7,
+      "state": "Sabah"
+    },
+    "P.186": {
+      "population": 120.7,
+      "state": "Sabah"
+    },
+    "P.187": {
+      "population": 214.3,
+      "state": "Sabah"
+    },
+    "P.188": {
+      "population": 297.1,
+      "state": "Sabah"
+    },
+    "P.189": {
+      "population": 165.2,
+      "state": "Sabah"
+    },
+    "P.190": {
+      "population": 228.6,
+      "state": "Sabah"
+    },
+    "P.191": {
+      "population": 187.1,
+      "state": "Sabah"
+    },
+    "P.192": {
+      "population": 51.8,
+      "state": "Sarawak"
+    },
+    "P.193": {
+      "population": 118.6,
+      "state": "Sarawak"
+    },
+    "P.194": {
+      "population": 151.9,
+      "state": "Sarawak"
+    },
+    "P.195": {
+      "population": 117.1,
+      "state": "Sarawak"
+    },
+    "P.196": {
+      "population": 213.7,
+      "state": "Sarawak"
+    },
+    "P.197": {
+      "population": 159.6,
+      "state": "Sarawak"
+    },
+    "P.198": {
+      "population": 81.3,
+      "state": "Sarawak"
+    },
+    "P.199": {
+      "population": 62.2,
+      "state": "Sarawak"
+    },
+    "P.200": {
+      "population": 33.9,
+      "state": "Sarawak"
+    },
+    "P.201": {
+      "population": 38.6,
+      "state": "Sarawak"
+    },
+    "P.202": {
+      "population": 63.3,
+      "state": "Sarawak"
+    },
+    "P.203": {
+      "population": 27.0,
+      "state": "Sarawak"
+    },
+    "P.204": {
+      "population": 34.9,
+      "state": "Sarawak"
+    },
+    "P.205": {
+      "population": 41.6,
+      "state": "Sarawak"
+    },
+    "P.206": {
+      "population": 33.0,
+      "state": "Sarawak"
+    },
+    "P.207": {
+      "population": 27.6,
+      "state": "Sarawak"
+    },
+    "P.208": {
+      "population": 43.4,
+      "state": "Sarawak"
+    },
+    "P.209": {
+      "population": 35.4,
+      "state": "Sarawak"
+    },
+    "P.210": {
+      "population": 24.9,
+      "state": "Sarawak"
+    },
+    "P.211": {
+      "population": 105.7,
+      "state": "Sarawak"
+    },
+    "P.212": {
+      "population": 142.6,
+      "state": "Sarawak"
+    },
+    "P.213": {
+      "population": 61.2,
+      "state": "Sarawak"
+    },
+    "P.214": {
+      "population": 51.7,
+      "state": "Sarawak"
+    },
+    "P.215": {
+      "population": 44.3,
+      "state": "Sarawak"
+    },
+    "P.216": {
+      "population": 43.7,
+      "state": "Sarawak"
+    },
+    "P.217": {
+      "population": 236.7,
+      "state": "Sarawak"
+    },
+    "P.218": {
+      "population": 71.5,
+      "state": "Sarawak"
+    },
+    "P.219": {
+      "population": 207.6,
+      "state": "Sarawak"
+    },
+    "P.220": {
+      "population": 63.9,
+      "state": "Sarawak"
+    },
+    "P.221": {
+      "population": 45.4,
+      "state": "Sarawak"
+    },
+    "P.222": {
+      "population": 36.9,
+      "state": "Sarawak"
+    }
+  },
+  "byState": {
+    "Johor": {
+      "population": 4022.6000000000004
+    },
+    "Kedah": {
+      "population": 2170.9000000000005
+    },
+    "Kelantan": {
+      "population": 1829.3999999999999
+    },
+    "Melaka": {
+      "population": 1007.8
+    },
+    "Negeri Sembilan": {
+      "population": 1209.0
+    },
+    "Pahang": {
+      "population": 1612.9000000000003
+    },
+    "Perak": {
+      "population": 2521.6000000000004
+    },
+    "Perlis": {
+      "population": 289.8
+    },
+    "Pulau Pinang": {
+      "population": 1738.6
+    },
+    "Sabah": {
+      "population": 3390.7999999999997
+    },
+    "Sarawak": {
+      "population": 2471.0
+    },
+    "Selangor": {
+      "population": 7038.000000000001
+    },
+    "Terengganu": {
+      "population": 1187.0
+    },
+    "W.P. Kuala Lumpur": {
+      "population": 1945.3
+    },
+    "W.P. Labuan": {
+      "population": 96.8
+    },
+    "W.P. Putrajaya": {
+      "population": 120.3
+    }
+  }
+}

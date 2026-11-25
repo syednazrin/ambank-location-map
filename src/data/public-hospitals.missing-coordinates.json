@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-17T12:00:00.000Z",
+    "source": "src/data/public-hospitals.geocoded.json",
+    "hospitalCount": 0,
+    "note": "Hospital Lahad Datu was merged into public-hospitals.geocoded.json on 2026-05-17 (manual coordinates). Regenerate with npm run data:public-hospitals-missing-coords if you re-run TomTom geocode and new failures appear.",
+    "coordinatesField": {
+      "description": "Per hospital: single `coordinates` string \"<latitude>, <longitude>\" WGS84 when a row appears here after extract.",
+      "example": "5.026870383670027, 118.31363067968468"
+    }
+  },
+  "hospitals": []
+}

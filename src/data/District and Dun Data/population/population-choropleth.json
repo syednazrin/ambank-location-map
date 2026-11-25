@@ -1,0 +1,6668 @@
+{
+  "source": "DOSM",
+  "baseDate": "2020-01-01",
+  "latestDate": "2022-01-01",
+  "ageBandsInSource": false,
+  "metrics": {
+    "population": {
+      "label": "Population (thousands)",
+      "description": "Total population, both sexes, all ages (DOSM)."
+    },
+    "growthPct": {
+      "label": "Growth (2020-01-01 \u2192 2022-01-01, %)",
+      "description": "Percent change in total population between survey dates."
+    },
+    "pctFemale": {
+      "label": "Female share (%)",
+      "description": "Female \u00f7 (female + male), overall age & citizenship."
+    },
+    "pctNoncitizen": {
+      "label": "Non-citizen share (%)",
+      "description": "Non-citizen \u00f7 total population (both sexes, overall row, 2020-01-01)."
+    },
+    "income": {
+      "label": "Median monthly household income (RM)",
+      "description": "DOSM household income survey; median, latest file date 2024-01-01."
+    },
+    "householdExpenditure": {
+      "label": "Mean monthly household expenditure (RM)",
+      "description": "DOSM household expenditure survey; mean, latest file date 2024-01-01."
+    }
+  },
+  "stats": {
+    "dun": {
+      "population": {
+        "min": 5.9,
+        "max": 310.9
+      },
+      "growthPct": {
+        "min": -1.0815805206804805,
+        "max": 3.4600556341808577
+      },
+      "pctFemale": {
+        "min": 34.383839626122246,
+        "max": 54.164662773388294
+      },
+      "pctNoncitizen": {
+        "min": 0.1529051987767584,
+        "max": 74.26236027040163
+      },
+      "income": {
+        "min": 1794.0,
+        "max": 14057.0
+      },
+      "householdExpenditure": {
+        "min": 2043.0,
+        "max": 11335.0
+      }
+    },
+    "parlimen": {
+      "population": {
+        "min": 24.9,
+        "max": 691.9
+      },
+      "growthPct": {
+        "min": -1.8866395667616398,
+        "max": 10.162817530814452
+      },
+      "pctFemale": {
+        "min": 39.875052479783875,
+        "max": 51.85816622197079
+      },
+      "pctNoncitizen": {
+        "min": 0.22775152308831068,
+        "max": 63.166224715045324
+      },
+      "income": {
+        "min": 2851.0,
+        "max": 15867.0
+      },
+      "householdExpenditure": {
+        "min": 2500.0,
+        "max": 11762.0
+      }
+    }
+  },
+  "byDun": {
+    "10_N.01": {
+      "population": 18.5,
+      "growthPct": 0.8559123371313309,
+      "pctFemale": 48.85242326773156,
+      "pctNoncitizen": 2.8566755710625307,
+      "income": 6641.0,
+      "householdExpenditure": 4393.0
+    },
+    "10_N.02": {
+      "population": 29.9,
+      "growthPct": 0.46705419844763063,
+      "pctFemale": 48.80548368670407,
+      "pctNoncitizen": 1.7405329122005309,
+      "income": 6850.0,
+      "householdExpenditure": 4935.0
+    },
+    "10_N.03": {
+      "population": 39.1,
+      "growthPct": 0.6823741470323177,
+      "pctFemale": 48.45628942963822,
+      "pctNoncitizen": 3.9217200978498776,
+      "income": 7387.0,
+      "householdExpenditure": 6078.0
+    },
+    "10_N.04": {
+      "population": 20.2,
+      "growthPct": 0.3976143141152997,
+      "pctFemale": 44.46819085487078,
+      "pctNoncitizen": 8.49900596421471,
+      "income": 7695.0,
+      "householdExpenditure": 6744.0
+    },
+    "10_N.05": {
+      "population": 35.3,
+      "growthPct": 0.5182527478785667,
+      "pctFemale": 47.80454467794294,
+      "pctNoncitizen": 3.1294492852668143,
+      "income": 7659.0,
+      "householdExpenditure": 5664.0
+    },
+    "10_N.06": {
+      "population": 47.7,
+      "growthPct": 0.6074411541382009,
+      "pctFemale": 47.603982114232686,
+      "pctNoncitizen": 2.1977558424027674,
+      "income": 8090.0,
+      "householdExpenditure": 4804.0
+    },
+    "10_N.07": {
+      "population": 158.4,
+      "growthPct": 0.604644072963771,
+      "pctFemale": 46.502337279609776,
+      "pctNoncitizen": 4.579924800569077,
+      "income": 8822.0,
+      "householdExpenditure": 5576.0
+    },
+    "10_N.08": {
+      "population": 25.9,
+      "growthPct": 0.6920146178368605,
+      "pctFemale": 49.80561387139414,
+      "pctNoncitizen": 2.4065002721405797,
+      "income": 5786.0,
+      "householdExpenditure": 4304.0
+    },
+    "10_N.09": {
+      "population": 34.4,
+      "growthPct": 0.761570005858225,
+      "pctFemale": 49.73345049794962,
+      "pctNoncitizen": 4.835969537199766,
+      "income": 7603.0,
+      "householdExpenditure": 6503.0
+    },
+    "10_N.10": {
+      "population": 46.1,
+      "growthPct": 0.6616153896543537,
+      "pctFemale": 49.63207196977969,
+      "pctNoncitizen": 2.82114548987925,
+      "income": 6201.0,
+      "householdExpenditure": 4931.0
+    },
+    "10_N.11": {
+      "population": 38.7,
+      "growthPct": 0.6318745611982268,
+      "pctFemale": 45.58597914553918,
+      "pctNoncitizen": 9.553527316223313,
+      "income": 6423.0,
+      "householdExpenditure": 5247.0
+    },
+    "10_N.12": {
+      "population": 87.6,
+      "growthPct": 0.6757688594676525,
+      "pctFemale": 47.539419850135616,
+      "pctNoncitizen": 5.365926538868202,
+      "income": 8533.0,
+      "householdExpenditure": 5992.0
+    },
+    "10_N.13": {
+      "population": 103.2,
+      "growthPct": 0.6554307116104839,
+      "pctFemale": 47.62991573033708,
+      "pctNoncitizen": 5.144936017478152,
+      "income": 12863.0,
+      "householdExpenditure": 7586.0
+    },
+    "10_N.14": {
+      "population": 147.9,
+      "growthPct": 0.6142982509847082,
+      "pctFemale": 46.79143111764185,
+      "pctNoncitizen": 7.745056021551459,
+      "income": 10119.0,
+      "householdExpenditure": 6044.0
+    },
+    "10_N.15": {
+      "population": 114.5,
+      "growthPct": 0.6469533420062623,
+      "pctFemale": 48.01782637741289,
+      "pctNoncitizen": 6.367567947681165,
+      "income": 8626.0,
+      "householdExpenditure": 5749.0
+    },
+    "10_N.16": {
+      "population": 72.5,
+      "growthPct": 0.5603639591655519,
+      "pctFemale": 46.79039059032401,
+      "pctNoncitizen": 8.88814913448735,
+      "income": 8808.0,
+      "householdExpenditure": 7269.0
+    },
+    "10_N.17": {
+      "population": 177.6,
+      "growthPct": 0.6123986652994798,
+      "pctFemale": 47.946113449543674,
+      "pctNoncitizen": 9.049450767339492,
+      "income": 13016.0,
+      "householdExpenditure": 7631.0
+    },
+    "10_N.18": {
+      "population": 101.2,
+      "growthPct": 0.6044218228089749,
+      "pctFemale": 49.29716080801654,
+      "pctNoncitizen": 4.99741530141562,
+      "income": 9556.0,
+      "householdExpenditure": 6885.0
+    },
+    "10_N.19": {
+      "population": 124.2,
+      "growthPct": 0.5863487641323041,
+      "pctFemale": 47.83682658978263,
+      "pctNoncitizen": 10.359907998315462,
+      "income": 12635.0,
+      "householdExpenditure": 7845.0
+    },
+    "10_N.20": {
+      "population": 81.5,
+      "growthPct": 0.6259800229649538,
+      "pctFemale": 47.933772054375076,
+      "pctNoncitizen": 7.036410553998494,
+      "income": 10823.0,
+      "householdExpenditure": 6445.0
+    },
+    "10_N.21": {
+      "population": 102.8,
+      "growthPct": 0.6215435814613526,
+      "pctFemale": 45.83859443057799,
+      "pctNoncitizen": 9.24191259237508,
+      "income": 11181.0,
+      "householdExpenditure": 6370.0
+    },
+    "10_N.22": {
+      "population": 126.0,
+      "growthPct": 0.6004087889626942,
+      "pctFemale": 46.35283597342872,
+      "pctNoncitizen": 6.576552120592743,
+      "income": 10584.0,
+      "householdExpenditure": 6489.0
+    },
+    "10_N.23": {
+      "population": 113.9,
+      "growthPct": 0.6699545703629154,
+      "pctFemale": 47.03028053242828,
+      "pctNoncitizen": 4.732990401442436,
+      "income": 11089.0,
+      "householdExpenditure": 6233.0
+    },
+    "10_N.24": {
+      "population": 235.9,
+      "growthPct": 0.6283405921672901,
+      "pctFemale": 47.86692659122029,
+      "pctNoncitizen": 3.6907011564367584,
+      "income": 11681.0,
+      "householdExpenditure": 6752.0
+    },
+    "10_N.25": {
+      "population": 237.7,
+      "growthPct": 0.618015577378928,
+      "pctFemale": 46.796054859464945,
+      "pctNoncitizen": 8.191246190314933,
+      "income": 12942.0,
+      "householdExpenditure": 7414.0
+    },
+    "10_N.26": {
+      "population": 280.0,
+      "growthPct": 0.6238679814852046,
+      "pctFemale": 47.94835120604893,
+      "pctNoncitizen": 11.097015783572434,
+      "income": 12655.0,
+      "householdExpenditure": 6927.0
+    },
+    "10_N.27": {
+      "population": 174.2,
+      "growthPct": 0.6325640507206602,
+      "pctFemale": 45.36437422373704,
+      "pctNoncitizen": 8.976632679587535,
+      "income": 10945.0,
+      "householdExpenditure": 6756.0
+    },
+    "10_N.28": {
+      "population": 131.1,
+      "growthPct": 0.6510456653256647,
+      "pctFemale": 45.48720940945244,
+      "pctNoncitizen": 13.975985013665818,
+      "income": 10825.0,
+      "householdExpenditure": 7632.0
+    },
+    "10_N.29": {
+      "population": 246.5,
+      "growthPct": 0.6414103679025343,
+      "pctFemale": 47.900003674534254,
+      "pctNoncitizen": 7.070620465522662,
+      "income": 8603.0,
+      "householdExpenditure": 6883.0
+    },
+    "10_N.30": {
+      "population": 271.8,
+      "growthPct": 0.6103993692416466,
+      "pctFemale": 46.74570888132933,
+      "pctNoncitizen": 7.958882254739017,
+      "income": 12180.0,
+      "householdExpenditure": 8134.0
+    },
+    "10_N.31": {
+      "population": 209.3,
+      "growthPct": 0.6235486988168563,
+      "pctFemale": 45.27867386528079,
+      "pctNoncitizen": 11.920981908914776,
+      "income": 12054.0,
+      "householdExpenditure": 8930.0
+    },
+    "10_N.32": {
+      "population": 196.2,
+      "growthPct": 0.6189965793643842,
+      "pctFemale": 46.83347607350007,
+      "pctNoncitizen": 9.991640725564507,
+      "income": 12219.0,
+      "householdExpenditure": 11165.0
+    },
+    "10_N.33": {
+      "population": 90.4,
+      "growthPct": 0.581906383168119,
+      "pctFemale": 47.81868553690043,
+      "pctNoncitizen": 5.2182427094807355,
+      "income": 9009.0,
+      "householdExpenditure": 6432.0
+    },
+    "10_N.34": {
+      "population": 77.9,
+      "growthPct": 0.6199948333763937,
+      "pctFemale": 44.436838026349776,
+      "pctNoncitizen": 17.680185998450014,
+      "income": 13630.0,
+      "householdExpenditure": 9106.0
+    },
+    "10_N.35": {
+      "population": 55.2,
+      "growthPct": 0.5629338142865035,
+      "pctFemale": 48.92605345138547,
+      "pctNoncitizen": 2.3009236486855764,
+      "income": 6854.0,
+      "householdExpenditure": 7078.0
+    },
+    "10_N.36": {
+      "population": 126.1,
+      "growthPct": 0.6224066390041503,
+      "pctFemale": 47.45292052345994,
+      "pctNoncitizen": 12.53511011809767,
+      "income": 12780.0,
+      "householdExpenditure": 8662.0
+    },
+    "10_N.37": {
+      "population": 290.5,
+      "growthPct": 0.6137264137873678,
+      "pctFemale": 48.377019201462964,
+      "pctNoncitizen": 5.170264054750492,
+      "income": 10568.0,
+      "householdExpenditure": 7125.0
+    },
+    "10_N.38": {
+      "population": 170.4,
+      "growthPct": 0.633685118144187,
+      "pctFemale": 47.071051870050255,
+      "pctNoncitizen": 7.9284461426706905,
+      "income": 13214.0,
+      "householdExpenditure": 9014.0
+    },
+    "10_N.39": {
+      "population": 178.9,
+      "growthPct": 0.6384833909937386,
+      "pctFemale": 47.21570612887802,
+      "pctNoncitizen": 7.926757235676314,
+      "income": 9128.0,
+      "householdExpenditure": 8279.0
+    },
+    "10_N.40": {
+      "population": 294.5,
+      "growthPct": 0.6311228656463388,
+      "pctFemale": 47.42749946181996,
+      "pctNoncitizen": 7.599102008180337,
+      "income": 12457.0,
+      "householdExpenditure": 9040.0
+    },
+    "10_N.41": {
+      "population": 147.0,
+      "growthPct": 0.6215261615967931,
+      "pctFemale": 44.91347917750459,
+      "pctNoncitizen": 12.251868685485858,
+      "income": 8512.0,
+      "householdExpenditure": 7230.0
+    },
+    "10_N.42": {
+      "population": 115.7,
+      "growthPct": 0.5868289502282088,
+      "pctFemale": 43.35492284286025,
+      "pctNoncitizen": 14.242990654205606,
+      "income": 8913.0,
+      "householdExpenditure": 6616.0
+    },
+    "10_N.43": {
+      "population": 116.8,
+      "growthPct": 0.6514770259556723,
+      "pctFemale": 45.80848643617937,
+      "pctNoncitizen": 7.22312226396884,
+      "income": 8716.0,
+      "householdExpenditure": 6863.0
+    },
+    "10_N.44": {
+      "population": 83.5,
+      "growthPct": 0.6460633527795204,
+      "pctFemale": 45.1484981437732,
+      "pctNoncitizen": 11.060218890121016,
+      "income": 8482.0,
+      "householdExpenditure": 6725.0
+    },
+    "10_N.45": {
+      "population": 113.1,
+      "growthPct": 0.6684527677148799,
+      "pctFemale": 46.40984788471638,
+      "pctNoncitizen": 7.671630366091375,
+      "income": 8591.0,
+      "householdExpenditure": 6068.0
+    },
+    "10_N.46": {
+      "population": 101.2,
+      "growthPct": 0.6524506683641051,
+      "pctFemale": 43.30243475493316,
+      "pctNoncitizen": 10.955402609802674,
+      "income": 9022.0,
+      "householdExpenditure": 7264.0
+    },
+    "10_N.47": {
+      "population": 85.5,
+      "growthPct": 0.6545488792616281,
+      "pctFemale": 48.10110190242984,
+      "pctNoncitizen": 7.9923243548690905,
+      "income": 8568.0,
+      "householdExpenditure": 7776.0
+    },
+    "10_N.48": {
+      "population": 187.0,
+      "growthPct": 0.6220270764727438,
+      "pctFemale": 46.50459525193173,
+      "pctNoncitizen": 7.1296356083597,
+      "income": 8917.0,
+      "householdExpenditure": 6868.0
+    },
+    "10_N.49": {
+      "population": 153.4,
+      "growthPct": 0.6436205459949182,
+      "pctFemale": 47.43765541041472,
+      "pctNoncitizen": 5.77552667318379,
+      "income": 8913.0,
+      "householdExpenditure": 7068.0
+    },
+    "10_N.50": {
+      "population": 186.0,
+      "growthPct": 0.6324696614745422,
+      "pctFemale": 46.137823200653564,
+      "pctNoncitizen": 11.966066298402325,
+      "income": 9145.0,
+      "householdExpenditure": 6935.0
+    },
+    "10_N.51": {
+      "population": 141.2,
+      "growthPct": 0.6206842491573238,
+      "pctFemale": 48.04566411789437,
+      "pctNoncitizen": 4.110340699356512,
+      "income": 12602.0,
+      "householdExpenditure": 6297.0
+    },
+    "10_N.52": {
+      "population": 55.3,
+      "growthPct": 0.6662540503149228,
+      "pctFemale": 48.035824807951364,
+      "pctNoncitizen": 3.815487676120436,
+      "income": 10761.0,
+      "householdExpenditure": 5367.0
+    },
+    "10_N.53": {
+      "population": 52.2,
+      "growthPct": 0.7138722747443653,
+      "pctFemale": 48.17287285355972,
+      "pctNoncitizen": 2.76480802623963,
+      "income": 9624.0,
+      "householdExpenditure": 7061.0
+    },
+    "10_N.54": {
+      "population": 30.7,
+      "growthPct": 0.5568293481821098,
+      "pctFemale": 48.94202423845398,
+      "pctNoncitizen": 2.0275139207337043,
+      "income": 10120.0,
+      "householdExpenditure": 5927.0
+    },
+    "10_N.55": {
+      "population": 287.7,
+      "growthPct": 0.6236075504429662,
+      "pctFemale": 45.73180328556889,
+      "pctNoncitizen": 11.80762249184204,
+      "income": 11123.0,
+      "householdExpenditure": 8052.0
+    },
+    "10_N.56": {
+      "population": 68.2,
+      "growthPct": 0.5944215820759116,
+      "pctFemale": 47.53897665088426,
+      "pctNoncitizen": 5.535643170051772,
+      "income": 11445.0,
+      "householdExpenditure": 5769.0
+    },
+    "11_N.01": {
+      "population": 32.2,
+      "growthPct": 3.2382173773645446,
+      "pctFemale": 48.29432510420007,
+      "pctNoncitizen": 2.9496633536389867,
+      "income": 3959.0,
+      "householdExpenditure": 3687.0
+    },
+    "11_N.02": {
+      "population": 43.9,
+      "growthPct": 3.2771072999741238,
+      "pctFemale": 49.14014162373256,
+      "pctNoncitizen": 1.7738254875667536,
+      "income": 5441.0,
+      "householdExpenditure": 4946.0
+    },
+    "11_N.03": {
+      "population": 31.8,
+      "growthPct": 3.4179973332466163,
+      "pctFemale": 49.390224072327555,
+      "pctNoncitizen": 2.182184786497122,
+      "income": 6550.0,
+      "householdExpenditure": 3992.0
+    },
+    "11_N.04": {
+      "population": 24.1,
+      "growthPct": 3.083964241413234,
+      "pctFemale": 49.702724667436584,
+      "pctNoncitizen": 1.5184567346764188,
+      "income": 6373.0,
+      "householdExpenditure": 4191.0
+    },
+    "11_N.05": {
+      "population": 27.2,
+      "growthPct": 3.2532361538169505,
+      "pctFemale": 49.30342026344759,
+      "pctNoncitizen": 1.545002467448658,
+      "income": 5980.0,
+      "householdExpenditure": 4490.0
+    },
+    "11_N.06": {
+      "population": 38.2,
+      "growthPct": 3.1930412231887253,
+      "pctFemale": 49.4570209087471,
+      "pctNoncitizen": 2.034145550813118,
+      "income": 6062.0,
+      "householdExpenditure": 4312.0
+    },
+    "11_N.07": {
+      "population": 23.4,
+      "growthPct": 3.3888569787478438,
+      "pctFemale": 48.59276278001149,
+      "pctNoncitizen": 2.5847214244686962,
+      "income": 6137.0,
+      "householdExpenditure": 4318.0
+    },
+    "11_N.08": {
+      "population": 37.6,
+      "growthPct": 3.308055830311025,
+      "pctFemale": 49.214199362567314,
+      "pctNoncitizen": 1.3627871194636774,
+      "income": 8378.0,
+      "householdExpenditure": 5932.0
+    },
+    "11_N.09": {
+      "population": 50.3,
+      "growthPct": 3.18795388339555,
+      "pctFemale": 50.74262503590039,
+      "pctNoncitizen": 2.6484224346613052,
+      "income": 7409.0,
+      "householdExpenditure": 5420.0
+    },
+    "11_N.10": {
+      "population": 31.9,
+      "growthPct": 3.2663235246511944,
+      "pctFemale": 49.14700074455343,
+      "pctNoncitizen": 0.5017642679097472,
+      "income": 6379.0,
+      "householdExpenditure": 4990.0
+    },
+    "11_N.11": {
+      "population": 43.9,
+      "growthPct": 3.28925697614229,
+      "pctFemale": 51.01406992612113,
+      "pctNoncitizen": 0.8540774551785797,
+      "income": 7461.0,
+      "householdExpenditure": 5790.0
+    },
+    "11_N.12": {
+      "population": 22.8,
+      "growthPct": 3.256193107196238,
+      "pctFemale": 48.87459807073955,
+      "pctNoncitizen": 0.7653638875050949,
+      "income": 5260.0,
+      "householdExpenditure": 4347.0
+    },
+    "11_N.13": {
+      "population": 40.0,
+      "growthPct": 3.3431509326719286,
+      "pctFemale": 50.21702061695861,
+      "pctNoncitizen": 1.229783496098796,
+      "income": 7408.0,
+      "householdExpenditure": 6195.0
+    },
+    "11_N.14": {
+      "population": 16.9,
+      "growthPct": 3.155710187389364,
+      "pctFemale": 48.727339315143745,
+      "pctNoncitizen": 5.163889397546237,
+      "income": 5955.0,
+      "householdExpenditure": 4358.0
+    },
+    "11_N.15": {
+      "population": 27.2,
+      "growthPct": 3.3316871177297376,
+      "pctFemale": 50.54894958781293,
+      "pctNoncitizen": 4.004102875812028,
+      "income": 5493.0,
+      "householdExpenditure": 4893.0
+    },
+    "11_N.16": {
+      "population": 49.2,
+      "growthPct": 3.3201033201033265,
+      "pctFemale": 49.71334971334971,
+      "pctNoncitizen": 1.6086016086016084,
+      "income": 6969.0,
+      "householdExpenditure": 5536.0
+    },
+    "11_N.17": {
+      "population": 45.9,
+      "growthPct": 3.2295789852464916,
+      "pctFemale": 49.32304785894207,
+      "pctNoncitizen": 0.9783195394026629,
+      "income": 6693.0,
+      "householdExpenditure": 5049.0
+    },
+    "11_N.18": {
+      "population": 37.8,
+      "growthPct": 3.3605862568701954,
+      "pctFemale": 49.7142544639195,
+      "pctNoncitizen": 1.238686390856143,
+      "income": 6825.0,
+      "householdExpenditure": 5399.0
+    },
+    "11_N.19": {
+      "population": 41.1,
+      "growthPct": 3.266331658291468,
+      "pctFemale": 49.35175879396985,
+      "pctNoncitizen": 0.9045226130653266,
+      "income": 6321.0,
+      "householdExpenditure": 5456.0
+    },
+    "11_N.20": {
+      "population": 42.8,
+      "growthPct": 3.189719603635751,
+      "pctFemale": 48.07242568170311,
+      "pctNoncitizen": 1.8395737396629461,
+      "income": 5908.0,
+      "householdExpenditure": 4924.0
+    },
+    "11_N.21": {
+      "population": 21.2,
+      "growthPct": 3.4600556341808577,
+      "pctFemale": 47.53306329608121,
+      "pctNoncitizen": 3.865111512371285,
+      "income": 4418.0,
+      "householdExpenditure": 3863.0
+    },
+    "11_N.22": {
+      "population": 20.7,
+      "growthPct": 3.1338747446564583,
+      "pctFemale": 49.145533356584124,
+      "pctNoncitizen": 0.5580190324348563,
+      "income": 6127.0,
+      "householdExpenditure": 4767.0
+    },
+    "11_N.23": {
+      "population": 26.6,
+      "growthPct": 3.4375486078705877,
+      "pctFemale": 46.60522631824545,
+      "pctNoncitizen": 6.793435993156012,
+      "income": 7054.0,
+      "householdExpenditure": 5228.0
+    },
+    "11_N.24": {
+      "population": 26.4,
+      "growthPct": 3.2177346835046987,
+      "pctFemale": 46.83504711264027,
+      "pctNoncitizen": 5.387652969464753,
+      "income": 6564.0,
+      "householdExpenditure": 4579.0
+    },
+    "11_N.25": {
+      "population": 21.6,
+      "growthPct": 3.0632693959347415,
+      "pctFemale": 46.81267296497757,
+      "pctNoncitizen": 4.881190953335242,
+      "income": 5902.0,
+      "householdExpenditure": 5102.0
+    },
+    "11_N.26": {
+      "population": 43.9,
+      "growthPct": 3.243103407727941,
+      "pctFemale": 48.84880412031702,
+      "pctNoncitizen": 1.4322334846311233,
+      "income": 6138.0,
+      "householdExpenditure": 5060.0
+    },
+    "11_N.27": {
+      "population": 36.1,
+      "growthPct": 3.257915963502197,
+      "pctFemale": 51.78913646634823,
+      "pctNoncitizen": 0.7951717628214297,
+      "income": 7456.0,
+      "householdExpenditure": 6547.0
+    },
+    "11_N.28": {
+      "population": 59.7,
+      "growthPct": 3.314008825819861,
+      "pctFemale": 47.24236393527732,
+      "pctNoncitizen": 1.799775028121485,
+      "income": 7896.0,
+      "householdExpenditure": 6195.0
+    },
+    "11_N.29": {
+      "population": 39.3,
+      "growthPct": 3.382964171094845,
+      "pctFemale": 49.37654548324302,
+      "pctNoncitizen": 1.4915557426211394,
+      "income": 8029.0,
+      "householdExpenditure": 6206.0
+    },
+    "11_N.30": {
+      "population": 53.7,
+      "growthPct": 3.281147824749015,
+      "pctFemale": 45.88798707543179,
+      "pctNoncitizen": 3.9023733507712426,
+      "income": 7656.0,
+      "householdExpenditure": 4821.0
+    },
+    "11_N.31": {
+      "population": 51.8,
+      "growthPct": 3.2160363447973483,
+      "pctFemale": 48.397959590324,
+      "pctNoncitizen": 2.2217351452596343,
+      "income": 7356.0,
+      "householdExpenditure": 5953.0
+    },
+    "11_N.32": {
+      "population": 77.9,
+      "growthPct": 3.3320952936806925,
+      "pctFemale": 47.29532551599724,
+      "pctNoncitizen": 4.828354645301639,
+      "income": 7744.0,
+      "householdExpenditure": 5588.0
+    },
+    "12_N.01": {
+      "population": 9.4,
+      "growthPct": -0.3287032128088094,
+      "pctFemale": 48.838935425723676,
+      "pctNoncitizen": 28.257872972113248,
+      "income": 2565.0,
+      "householdExpenditure": 2403.0
+    },
+    "12_N.02": {
+      "population": 18.2,
+      "growthPct": -1.0815805206804805,
+      "pctFemale": 47.758030327735206,
+      "pctNoncitizen": 3.293657263981738,
+      "income": 2281.0,
+      "householdExpenditure": 2940.0
+    },
+    "12_N.03": {
+      "population": 19.2,
+      "growthPct": -0.8366904245429142,
+      "pctFemale": 48.626174981923356,
+      "pctNoncitizen": 7.158351409978309,
+      "income": 3445.0,
+      "householdExpenditure": 3996.0
+    },
+    "12_N.04": {
+      "population": 45.0,
+      "growthPct": -0.798024778448926,
+      "pctFemale": 49.41581059036197,
+      "pctNoncitizen": 9.397733785988272,
+      "income": 3689.0,
+      "householdExpenditure": 3421.0
+    },
+    "12_N.05": {
+      "population": 34.2,
+      "growthPct": -0.7458571552949993,
+      "pctFemale": 49.16272455524277,
+      "pctNoncitizen": 3.891807179963432,
+      "income": 2512.0,
+      "householdExpenditure": 2849.0
+    },
+    "12_N.06": {
+      "population": 34.8,
+      "growthPct": -0.7500784302541289,
+      "pctFemale": 48.46134101474489,
+      "pctNoncitizen": 3.639163790890682,
+      "income": 2877.0,
+      "householdExpenditure": 3483.0
+    },
+    "12_N.07": {
+      "population": 30.2,
+      "growthPct": -0.9121333420828212,
+      "pctFemale": 48.68429686987334,
+      "pctNoncitizen": 3.901174617757071,
+      "income": 3891.0,
+      "householdExpenditure": 3770.0
+    },
+    "12_N.08": {
+      "population": 19.2,
+      "growthPct": -0.8827628929843548,
+      "pctFemale": 50.44138144649217,
+      "pctNoncitizen": 3.9595271281813025,
+      "income": 4249.0,
+      "householdExpenditure": 3034.0
+    },
+    "12_N.09": {
+      "population": 20.0,
+      "growthPct": -0.9312462849217299,
+      "pctFemale": 50.36655438874579,
+      "pctNoncitizen": 1.703982563899346,
+      "income": 3170.0,
+      "householdExpenditure": 2887.0
+    },
+    "12_N.10": {
+      "population": 34.2,
+      "growthPct": -0.7487375935921864,
+      "pctFemale": 49.31510824772186,
+      "pctNoncitizen": 5.81867781066806,
+      "income": 4032.0,
+      "householdExpenditure": 3032.0
+    },
+    "12_N.11": {
+      "population": 33.0,
+      "growthPct": -0.6801902124841964,
+      "pctFemale": 49.25660627219647,
+      "pctNoncitizen": 2.880274483837958,
+      "income": 3419.0,
+      "householdExpenditure": 2771.0
+    },
+    "12_N.12": {
+      "population": 29.8,
+      "growthPct": -0.9571922361074191,
+      "pctFemale": 49.431667109811215,
+      "pctNoncitizen": 4.536692369050784,
+      "income": 4689.0,
+      "householdExpenditure": 3609.0
+    },
+    "12_N.13": {
+      "population": 46.4,
+      "growthPct": -0.8991691762243424,
+      "pctFemale": 49.50342794899725,
+      "pctNoncitizen": 7.020354114606693,
+      "income": 4306.0,
+      "householdExpenditure": 3196.0
+    },
+    "12_N.14": {
+      "population": 40.2,
+      "growthPct": -0.7456421905091096,
+      "pctFemale": 49.054367685546396,
+      "pctNoncitizen": 6.816947311243888,
+      "income": 4326.0,
+      "householdExpenditure": 3013.0
+    },
+    "12_N.15": {
+      "population": 17.4,
+      "growthPct": -0.9393680614859248,
+      "pctFemale": 48.48847139197267,
+      "pctNoncitizen": 0.8938229433532593,
+      "income": 3475.0,
+      "householdExpenditure": 2556.0
+    },
+    "12_N.16": {
+      "population": 162.7,
+      "growthPct": -0.8386357541627081,
+      "pctFemale": 49.43440844486701,
+      "pctNoncitizen": 20.205880201857678,
+      "income": 5118.0,
+      "householdExpenditure": 4064.0
+    },
+    "12_N.17": {
+      "population": 64.3,
+      "growthPct": -0.8098727342846211,
+      "pctFemale": 47.77323563440031,
+      "pctNoncitizen": 15.438488237562668,
+      "income": 6483.0,
+      "householdExpenditure": 4096.0
+    },
+    "12_N.18": {
+      "population": 106.5,
+      "growthPct": -0.7936507936507973,
+      "pctFemale": 49.06662195394589,
+      "pctNoncitizen": 11.500484387808331,
+      "income": 5543.0,
+      "householdExpenditure": 4120.0
+    },
+    "12_N.19": {
+      "population": 38.5,
+      "growthPct": -0.7731958762886525,
+      "pctFemale": 48.141752577319586,
+      "pctNoncitizen": 26.600515463917528,
+      "income": 14057.0,
+      "householdExpenditure": 9044.0
+    },
+    "12_N.20": {
+      "population": 20.8,
+      "growthPct": -0.9759581052130364,
+      "pctFemale": 45.370149964294214,
+      "pctNoncitizen": 20.585574863127825,
+      "income": 8622.0,
+      "householdExpenditure": 6040.0
+    },
+    "12_N.21": {
+      "population": 54.0,
+      "growthPct": -0.729819659172378,
+      "pctFemale": 49.28948287589389,
+      "pctNoncitizen": 7.5316653491920516,
+      "income": 7715.0,
+      "householdExpenditure": 5750.0
+    },
+    "12_N.22": {
+      "population": 36.9,
+      "growthPct": -0.8943678994440374,
+      "pctFemale": 49.49641447103376,
+      "pctNoncitizen": 29.514140681653377,
+      "income": 5142.0,
+      "householdExpenditure": 4000.0
+    },
+    "12_N.23": {
+      "population": 35.6,
+      "growthPct": -0.6807275973663647,
+      "pctFemale": 48.99564780716438,
+      "pctNoncitizen": 7.607967860729829,
+      "income": 5218.0,
+      "householdExpenditure": 3839.0
+    },
+    "12_N.24": {
+      "population": 41.8,
+      "growthPct": -0.7738688695817323,
+      "pctFemale": 47.77809428856288,
+      "pctNoncitizen": 7.990314769975787,
+      "income": 6928.0,
+      "householdExpenditure": 4488.0
+    },
+    "12_N.25": {
+      "population": 118.0,
+      "growthPct": -0.8119967049409025,
+      "pctFemale": 48.69458500748113,
+      "pctNoncitizen": 8.093909184136644,
+      "income": 6142.0,
+      "householdExpenditure": 4401.0
+    },
+    "12_N.26": {
+      "population": 59.0,
+      "growthPct": -0.8953017654074231,
+      "pctFemale": 43.189491542505834,
+      "pctNoncitizen": 17.26605412124368,
+      "income": 5461.0,
+      "householdExpenditure": 3843.0
+    },
+    "12_N.27": {
+      "population": 30.6,
+      "growthPct": -0.697712153172156,
+      "pctFemale": 47.5417815998702,
+      "pctNoncitizen": 7.5223105630374825,
+      "income": 4647.0,
+      "householdExpenditure": 3361.0
+    },
+    "12_N.28": {
+      "population": 51.2,
+      "growthPct": -0.7559604574529959,
+      "pctFemale": 47.499515409963166,
+      "pctNoncitizen": 9.587129288621824,
+      "income": 4754.0,
+      "householdExpenditure": 3493.0
+    },
+    "12_N.29": {
+      "population": 24.2,
+      "growthPct": -0.6568144499178987,
+      "pctFemale": 46.904761904761905,
+      "pctNoncitizen": 4.30623973727422,
+      "income": 5500.0,
+      "householdExpenditure": 3826.0
+    },
+    "12_N.30": {
+      "population": 31.6,
+      "growthPct": -0.7662353975631195,
+      "pctFemale": 48.266549428463755,
+      "pctNoncitizen": 9.775781936942595,
+      "income": 4045.0,
+      "householdExpenditure": 3361.0
+    },
+    "12_N.31": {
+      "population": 18.4,
+      "growthPct": -0.883430295195009,
+      "pctFemale": 48.761042878689935,
+      "pctNoncitizen": 7.783882783882784,
+      "income": 1794.0,
+      "householdExpenditure": 2384.0
+    },
+    "12_N.32": {
+      "population": 28.2,
+      "growthPct": -0.693735253723982,
+      "pctFemale": 48.84318766066838,
+      "pctNoncitizen": 8.916434834665635,
+      "income": 4297.0,
+      "householdExpenditure": 3841.0
+    },
+    "12_N.33": {
+      "population": 23.5,
+      "growthPct": -0.8857022353437404,
+      "pctFemale": 49.96625896246309,
+      "pctNoncitizen": 4.525516659637283,
+      "income": 3733.0,
+      "householdExpenditure": 2826.0
+    },
+    "12_N.34": {
+      "population": 28.5,
+      "growthPct": -0.8868022952529961,
+      "pctFemale": 48.81585811163276,
+      "pctNoncitizen": 7.0457311771865765,
+      "income": 3389.0,
+      "householdExpenditure": 3045.0
+    },
+    "12_N.35": {
+      "population": 37.5,
+      "growthPct": -0.8670825843290761,
+      "pctFemale": 47.99883684043566,
+      "pctNoncitizen": 10.835888759648938,
+      "income": 4606.0,
+      "householdExpenditure": 3341.0
+    },
+    "12_N.36": {
+      "population": 30.9,
+      "growthPct": -0.8884754787182891,
+      "pctFemale": 47.689001507521574,
+      "pctNoncitizen": 9.420406068576193,
+      "income": 2086.0,
+      "householdExpenditure": 2095.0
+    },
+    "12_N.37": {
+      "population": 20.9,
+      "growthPct": -1.0182334833057063,
+      "pctFemale": 47.880653563817184,
+      "pctNoncitizen": 9.812929197253139,
+      "income": 3616.0,
+      "householdExpenditure": 3041.0
+    },
+    "12_N.38": {
+      "population": 33.5,
+      "growthPct": -0.8641098484848531,
+      "pctFemale": 48.671283143939384,
+      "pctNoncitizen": 3.935842803030303,
+      "income": 5537.0,
+      "householdExpenditure": 3527.0
+    },
+    "12_N.39": {
+      "population": 31.7,
+      "growthPct": -0.9591651826162984,
+      "pctFemale": 49.161121004780206,
+      "pctNoncitizen": 4.230324616490144,
+      "income": 4854.0,
+      "householdExpenditure": 3508.0
+    },
+    "12_N.40": {
+      "population": 38.0,
+      "growthPct": -0.7806992349669691,
+      "pctFemale": 49.0535000913862,
+      "pctNoncitizen": 4.088879605211624,
+      "income": 4904.0,
+      "householdExpenditure": 3361.0
+    },
+    "12_N.41": {
+      "population": 59.1,
+      "growthPct": -0.7989794548140176,
+      "pctFemale": 48.618571236739626,
+      "pctNoncitizen": 15.791593930441788,
+      "income": 4978.0,
+      "householdExpenditure": 3745.0
+    },
+    "12_N.42": {
+      "population": 24.9,
+      "growthPct": -0.7335353213203678,
+      "pctFemale": 48.1821081167278,
+      "pctNoncitizen": 5.210492744378887,
+      "income": 4772.0,
+      "householdExpenditure": 3797.0
+    },
+    "12_N.43": {
+      "population": 24.9,
+      "growthPct": -0.9782868050584673,
+      "pctFemale": 49.065457726875046,
+      "pctNoncitizen": 3.567167740396087,
+      "income": 3828.0,
+      "householdExpenditure": 3144.0
+    },
+    "12_N.44": {
+      "population": 19.8,
+      "growthPct": -0.5774541802661232,
+      "pctFemale": 47.893547577203115,
+      "pctNoncitizen": 5.061511423550088,
+      "income": 4566.0,
+      "householdExpenditure": 3409.0
+    },
+    "12_N.45": {
+      "population": 33.0,
+      "growthPct": -0.9336255291044999,
+      "pctFemale": 47.308696826874005,
+      "pctNoncitizen": 18.957701660112278,
+      "income": 4716.0,
+      "householdExpenditure": 3562.0
+    },
+    "12_N.46": {
+      "population": 29.0,
+      "growthPct": -0.9326000068322335,
+      "pctFemale": 46.88962525193865,
+      "pctNoncitizen": 4.048098930755304,
+      "income": 4224.0,
+      "householdExpenditure": 3439.0
+    },
+    "12_N.47": {
+      "population": 33.9,
+      "growthPct": -0.8220941458705093,
+      "pctFemale": 45.76226558614435,
+      "pctNoncitizen": 38.100114098475764,
+      "income": 4696.0,
+      "householdExpenditure": 2474.0
+    },
+    "12_N.48": {
+      "population": 38.1,
+      "growthPct": -0.8741804558226624,
+      "pctFemale": 43.95358518055989,
+      "pctNoncitizen": 53.84795504214799,
+      "income": 3212.0,
+      "householdExpenditure": 2726.0
+    },
+    "12_N.49": {
+      "population": 28.2,
+      "growthPct": -0.8752504481704183,
+      "pctFemale": 48.5711272803965,
+      "pctNoncitizen": 29.2242258075855,
+      "income": 4735.0,
+      "householdExpenditure": 3360.0
+    },
+    "12_N.50": {
+      "population": 72.2,
+      "growthPct": -0.8037370337294687,
+      "pctFemale": 48.2915435872776,
+      "pctNoncitizen": 41.89874287284468,
+      "income": 4412.0,
+      "householdExpenditure": 2905.0
+    },
+    "12_N.51": {
+      "population": 22.8,
+      "growthPct": -0.9384775808133365,
+      "pctFemale": 49.48731317344457,
+      "pctNoncitizen": 30.43969412582552,
+      "income": 5815.0,
+      "householdExpenditure": 2843.0
+    },
+    "12_N.52": {
+      "population": 75.0,
+      "growthPct": -0.8605305944402536,
+      "pctFemale": 49.83146290201054,
+      "pctNoncitizen": 14.701722383048473,
+      "income": 5957.0,
+      "householdExpenditure": 4172.0
+    },
+    "12_N.53": {
+      "population": 87.8,
+      "growthPct": -0.8424999435321859,
+      "pctFemale": 47.228559166986656,
+      "pctNoncitizen": 27.07970998125268,
+      "income": 6031.0,
+      "householdExpenditure": 4202.0
+    },
+    "12_N.54": {
+      "population": 30.9,
+      "growthPct": -0.8089368258859861,
+      "pctFemale": 49.341936312275294,
+      "pctNoncitizen": 33.97534668721109,
+      "income": 3608.0,
+      "householdExpenditure": 3203.0
+    },
+    "12_N.55": {
+      "population": 100.6,
+      "growthPct": -0.8310085466715333,
+      "pctFemale": 48.78798931419615,
+      "pctNoncitizen": 30.753230878424336,
+      "income": 5460.0,
+      "householdExpenditure": 4572.0
+    },
+    "12_N.56": {
+      "population": 20.1,
+      "growthPct": -0.6376983538484245,
+      "pctFemale": 48.61832023332839,
+      "pctNoncitizen": 41.34658164021949,
+      "income": 2834.0,
+      "householdExpenditure": 2190.0
+    },
+    "12_N.57": {
+      "population": 46.1,
+      "growthPct": -0.9177466847206989,
+      "pctFemale": 45.51550712489522,
+      "pctNoncitizen": 41.88105831022847,
+      "income": 3463.0,
+      "householdExpenditure": 2387.0
+    },
+    "12_N.58": {
+      "population": 55.9,
+      "growthPct": -0.877737388066326,
+      "pctFemale": 44.53763631527618,
+      "pctNoncitizen": 58.46085645890593,
+      "income": 4798.0,
+      "householdExpenditure": 2453.0
+    },
+    "12_N.59": {
+      "population": 112.2,
+      "growthPct": -0.852737153713607,
+      "pctFemale": 44.98210577475368,
+      "pctNoncitizen": 74.26236027040163,
+      "income": 4357.0,
+      "householdExpenditure": 2632.0
+    },
+    "12_N.60": {
+      "population": 79.3,
+      "growthPct": -0.868804300268776,
+      "pctFemale": 45.851615725982874,
+      "pctNoncitizen": 43.28395524720295,
+      "income": 5208.0,
+      "householdExpenditure": 3513.0
+    },
+    "12_N.61": {
+      "population": 104.8,
+      "growthPct": -0.8561562839979199,
+      "pctFemale": 47.05453857433423,
+      "pctNoncitizen": 30.41010359018022,
+      "income": 5643.0,
+      "householdExpenditure": 3883.0
+    },
+    "12_N.62": {
+      "population": 45.0,
+      "growthPct": -0.8264462809917356,
+      "pctFemale": 48.02644628099174,
+      "pctNoncitizen": 39.65399449035812,
+      "income": 5470.0,
+      "householdExpenditure": 3195.0
+    },
+    "12_N.63": {
+      "population": 67.9,
+      "growthPct": -0.8397225264694979,
+      "pctFemale": 45.99780941949617,
+      "pctNoncitizen": 50.04454180357796,
+      "income": 4539.0,
+      "householdExpenditure": 2797.0
+    },
+    "12_N.64": {
+      "population": 33.6,
+      "growthPct": -0.8323003364618278,
+      "pctFemale": 47.84841508765715,
+      "pctNoncitizen": 42.77197331916652,
+      "income": 3092.0,
+      "householdExpenditure": 2043.0
+    },
+    "12_N.65": {
+      "population": 56.8,
+      "growthPct": -0.7530883612028525,
+      "pctFemale": 49.51512292289144,
+      "pctNoncitizen": 35.51921161608219,
+      "income": 4366.0,
+      "householdExpenditure": 3085.0
+    },
+    "12_N.66": {
+      "population": 74.9,
+      "growthPct": -0.7605268039324774,
+      "pctFemale": 48.54121949280547,
+      "pctNoncitizen": 38.459601982139546,
+      "income": 4495.0,
+      "householdExpenditure": 2559.0
+    },
+    "12_N.67": {
+      "population": 70.1,
+      "growthPct": -0.8079693226358933,
+      "pctFemale": 47.28672298396796,
+      "pctNoncitizen": 34.390343988340334,
+      "income": 4560.0,
+      "householdExpenditure": 2834.0
+    },
+    "12_N.68": {
+      "population": 98.2,
+      "growthPct": -0.7900426340142616,
+      "pctFemale": 47.27425188418096,
+      "pctNoncitizen": 39.22026226990766,
+      "income": 4360.0,
+      "householdExpenditure": 2601.0
+    },
+    "12_N.69": {
+      "population": 60.4,
+      "growthPct": -0.7851769111994505,
+      "pctFemale": 48.6908242714938,
+      "pctNoncitizen": 19.644206445678243,
+      "income": 6386.0,
+      "householdExpenditure": 4350.0
+    },
+    "12_N.70": {
+      "population": 29.6,
+      "growthPct": -0.9801625798681941,
+      "pctFemale": 49.12186799585187,
+      "pctNoncitizen": 16.244605760545948,
+      "income": 5393.0,
+      "householdExpenditure": 3472.0
+    },
+    "12_N.71": {
+      "population": 41.6,
+      "growthPct": -0.7893920965395435,
+      "pctFemale": 49.74124156352102,
+      "pctNoncitizen": 19.708568839283586,
+      "income": 3549.0,
+      "householdExpenditure": 2875.0
+    },
+    "12_N.72": {
+      "population": 63.9,
+      "growthPct": -0.8149010477299163,
+      "pctFemale": 46.87621265036865,
+      "pctNoncitizen": 30.545595653861078,
+      "income": 4934.0,
+      "householdExpenditure": 2949.0
+    },
+    "12_N.73": {
+      "population": 52.0,
+      "growthPct": -0.776613811132094,
+      "pctFemale": 45.12946743755605,
+      "pctNoncitizen": 58.807029595283076,
+      "income": 3506.0,
+      "householdExpenditure": 2378.0
+    },
+    "13_N.01": {
+      "population": 21.9,
+      "growthPct": 0.6248851314096638,
+      "pctFemale": 45.79580959382466,
+      "pctNoncitizen": 9.520308766770814,
+      "income": 3545.0,
+      "householdExpenditure": 3140.0
+    },
+    "13_N.02": {
+      "population": 29.9,
+      "growthPct": 0.7751937984496018,
+      "pctFemale": 48.10920121334681,
+      "pctNoncitizen": 1.7290192113245704,
+      "income": 4383.0,
+      "householdExpenditure": 3988.0
+    },
+    "13_N.03": {
+      "population": 16.1,
+      "growthPct": 0.46174965680769764,
+      "pctFemale": 47.83476850118558,
+      "pctNoncitizen": 4.586297266941221,
+      "income": 4444.0,
+      "householdExpenditure": 3625.0
+    },
+    "13_N.04": {
+      "population": 56.4,
+      "growthPct": 0.6298285367637904,
+      "pctFemale": 49.48703766481703,
+      "pctNoncitizen": 0.4407015540528485,
+      "income": 6734.0,
+      "householdExpenditure": 4716.0
+    },
+    "13_N.05": {
+      "population": 46.0,
+      "growthPct": 0.7049345417925538,
+      "pctFemale": 49.60812645036998,
+      "pctNoncitizen": 3.6034852664302295,
+      "income": 5441.0,
+      "householdExpenditure": 4300.0
+    },
+    "13_N.06": {
+      "population": 91.9,
+      "growthPct": 0.6880532912612851,
+      "pctFemale": 49.955079323341224,
+      "pctNoncitizen": 0.8107634323779471,
+      "income": 6459.0,
+      "householdExpenditure": 4811.0
+    },
+    "13_N.07": {
+      "population": 45.4,
+      "growthPct": 0.6986802705999727,
+      "pctFemale": 50.37373849395587,
+      "pctNoncitizen": 0.5234556947987136,
+      "income": 8257.0,
+      "householdExpenditure": 6405.0
+    },
+    "13_N.08": {
+      "population": 14.6,
+      "growthPct": 0.996126175982292,
+      "pctFemale": 50.43580520199226,
+      "pctNoncitizen": 1.5218594355285002,
+      "income": 7277.0,
+      "householdExpenditure": 5288.0
+    },
+    "13_N.09": {
+      "population": 14.3,
+      "growthPct": 0.8533747090768068,
+      "pctFemale": 49.08667748078144,
+      "pctNoncitizen": 5.169617039283447,
+      "income": 6155.0,
+      "householdExpenditure": 6198.0
+    },
+    "13_N.10": {
+      "population": 37.3,
+      "growthPct": 0.6557465526081308,
+      "pctFemale": 48.63048816687805,
+      "pctNoncitizen": 3.5054105836953875,
+      "income": 4695.0,
+      "householdExpenditure": 4292.0
+    },
+    "13_N.11": {
+      "population": 65.5,
+      "growthPct": 0.7010638952094015,
+      "pctFemale": 50.45200172191132,
+      "pctNoncitizen": 1.887952770432323,
+      "income": 7082.0,
+      "householdExpenditure": 5486.0
+    },
+    "13_N.12": {
+      "population": 66.9,
+      "growthPct": 0.7332901690934139,
+      "pctFemale": 48.94975381325944,
+      "pctNoncitizen": 2.181801755680364,
+      "income": 7089.0,
+      "householdExpenditure": 5600.0
+    },
+    "13_N.13": {
+      "population": 59.4,
+      "growthPct": 0.625095288915993,
+      "pctFemale": 49.5299080144331,
+      "pctNoncitizen": 1.787196557740848,
+      "income": 6785.0,
+      "householdExpenditure": 5027.0
+    },
+    "13_N.14": {
+      "population": 87.4,
+      "growthPct": 0.7225749945259581,
+      "pctFemale": 49.26878176391274,
+      "pctNoncitizen": 1.0417987161905202,
+      "income": 7101.0,
+      "householdExpenditure": 5360.0
+    },
+    "13_N.15": {
+      "population": 20.2,
+      "growthPct": 0.9142229105260521,
+      "pctFemale": 48.87845331468252,
+      "pctNoncitizen": 0.8492781136034371,
+      "income": 3834.0,
+      "householdExpenditure": 3552.0
+    },
+    "13_N.16": {
+      "population": 65.5,
+      "growthPct": 0.7289391935533537,
+      "pctFemale": 54.082982191738694,
+      "pctNoncitizen": 1.0242057023344509,
+      "income": 5975.0,
+      "householdExpenditure": 4523.0
+    },
+    "13_N.17": {
+      "population": 74.0,
+      "growthPct": 0.7104167233729901,
+      "pctFemale": 49.10041100737635,
+      "pctNoncitizen": 0.9186423147064429,
+      "income": 7513.0,
+      "householdExpenditure": 5475.0
+    },
+    "13_N.18": {
+      "population": 16.9,
+      "growthPct": 0.9196225964409407,
+      "pctFemale": 47.856204466738326,
+      "pctNoncitizen": 2.287113340499224,
+      "income": 4797.0,
+      "householdExpenditure": 4063.0
+    },
+    "13_N.19": {
+      "population": 38.5,
+      "growthPct": 0.7115203515747579,
+      "pctFemale": 47.31087161243068,
+      "pctNoncitizen": 0.9207910432143976,
+      "income": 5217.0,
+      "householdExpenditure": 4017.0
+    },
+    "13_N.20": {
+      "population": 26.0,
+      "growthPct": 0.7517631558552238,
+      "pctFemale": 48.75997829962024,
+      "pctNoncitizen": 1.0656436487638534,
+      "income": 3544.0,
+      "householdExpenditure": 3441.0
+    },
+    "13_N.21": {
+      "population": 22.1,
+      "growthPct": 0.6558571688832296,
+      "pctFemale": 49.46256148660958,
+      "pctNoncitizen": 0.6558571688832209,
+      "income": 3207.0,
+      "householdExpenditure": 3062.0
+    },
+    "13_N.22": {
+      "population": 18.2,
+      "growthPct": 0.9428729894619974,
+      "pctFemale": 47.82029950083194,
+      "pctNoncitizen": 3.838047698280643,
+      "income": 3400.0,
+      "householdExpenditure": 2868.0
+    },
+    "13_N.23": {
+      "population": 21.9,
+      "growthPct": 0.6526335141097503,
+      "pctFemale": 49.14054600606673,
+      "pctNoncitizen": 1.3098630388822503,
+      "income": 4674.0,
+      "householdExpenditure": 4047.0
+    },
+    "13_N.24": {
+      "population": 11.0,
+      "growthPct": 0.4199379222201878,
+      "pctFemale": 49.21489866715355,
+      "pctNoncitizen": 1.0133284644878582,
+      "income": 5030.0,
+      "householdExpenditure": 3686.0
+    },
+    "13_N.25": {
+      "population": 12.4,
+      "growthPct": 0.8704140567802905,
+      "pctFemale": 48.092410314813314,
+      "pctNoncitizen": 4.319531440657285,
+      "income": 3663.0,
+      "householdExpenditure": 3271.0
+    },
+    "13_N.26": {
+      "population": 10.5,
+      "growthPct": 0.5073226763664289,
+      "pctFemale": 45.438881975686805,
+      "pctNoncitizen": 15.449411314252897,
+      "income": 3118.0,
+      "householdExpenditure": 2876.0
+    },
+    "13_N.27": {
+      "population": 11.9,
+      "growthPct": 0.6597868380984705,
+      "pctFemale": 48.105227541871095,
+      "pctNoncitizen": 0.7443748942649298,
+      "income": 3151.0,
+      "householdExpenditure": 2670.0
+    },
+    "13_N.28": {
+      "population": 10.8,
+      "growthPct": 0.48381094157053756,
+      "pctFemale": 48.98585783401563,
+      "pctNoncitizen": 1.3770003721622628,
+      "income": 2799.0,
+      "householdExpenditure": 2409.0
+    },
+    "13_N.29": {
+      "population": 15.9,
+      "growthPct": 0.8307438645443607,
+      "pctFemale": 49.007546451899294,
+      "pctNoncitizen": 3.3990741327921876,
+      "income": 3578.0,
+      "householdExpenditure": 2754.0
+    },
+    "13_N.30": {
+      "population": 15.3,
+      "growthPct": 0.8902077151335416,
+      "pctFemale": 46.646884272997035,
+      "pctNoncitizen": 4.484009231783713,
+      "income": 2655.0,
+      "householdExpenditure": 2526.0
+    },
+    "13_N.31": {
+      "population": 18.8,
+      "growthPct": 0.6855184233076269,
+      "pctFemale": 45.39417309340189,
+      "pctNoncitizen": 6.383890317052271,
+      "income": 2833.0,
+      "householdExpenditure": 2459.0
+    },
+    "13_N.32": {
+      "population": 29.2,
+      "growthPct": 0.5994625508165076,
+      "pctFemale": 49.98621925170537,
+      "pctNoncitizen": 0.3410735202921519,
+      "income": 4162.0,
+      "householdExpenditure": 3644.0
+    },
+    "13_N.33": {
+      "population": 12.7,
+      "growthPct": 0.8176549972215588,
+      "pctFemale": 48.81320949432404,
+      "pctNoncitizen": 3.8659998412320395,
+      "income": 3265.0,
+      "householdExpenditure": 2819.0
+    },
+    "13_N.34": {
+      "population": 14.3,
+      "growthPct": 0.8249312557286954,
+      "pctFemale": 49.347810759359795,
+      "pctNoncitizen": 1.5300007050694493,
+      "income": 4638.0,
+      "householdExpenditure": 4154.0
+    },
+    "13_N.35": {
+      "population": 11.6,
+      "growthPct": 1.0717086346606197,
+      "pctFemale": 49.91722575585955,
+      "pctNoncitizen": 0.29624466323952253,
+      "income": 3959.0,
+      "householdExpenditure": 2849.0
+    },
+    "13_N.36": {
+      "population": 12.8,
+      "growthPct": 0.8747734258018808,
+      "pctFemale": 45.44881393332808,
+      "pctNoncitizen": 2.5297501773189377,
+      "income": 4741.0,
+      "householdExpenditure": 3111.0
+    },
+    "13_N.37": {
+      "population": 10.5,
+      "growthPct": 0.34403669724770247,
+      "pctFemale": 48.776758409785934,
+      "pctNoncitizen": 0.1529051987767584,
+      "income": 3329.0,
+      "householdExpenditure": 2613.0
+    },
+    "13_N.38": {
+      "population": 12.9,
+      "growthPct": 1.0338345864661627,
+      "pctFemale": 49.80419799498746,
+      "pctNoncitizen": 0.9006892230576441,
+      "income": 3674.0,
+      "householdExpenditure": 3084.0
+    },
+    "13_N.39": {
+      "population": 15.6,
+      "growthPct": 0.749160423663134,
+      "pctFemale": 50.755618703177475,
+      "pctNoncitizen": 1.2722810643244642,
+      "income": 3396.0,
+      "householdExpenditure": 3248.0
+    },
+    "13_N.40": {
+      "population": 13.2,
+      "growthPct": 0.8634522808894288,
+      "pctFemale": 50.087873462214404,
+      "pctNoncitizen": 0.3209291663482846,
+      "income": 3159.0,
+      "householdExpenditure": 3277.0
+    },
+    "13_N.41": {
+      "population": 18.9,
+      "growthPct": 0.8914749372764535,
+      "pctFemale": 49.26066300112101,
+      "pctNoncitizen": 2.220680083275503,
+      "income": 4282.0,
+      "householdExpenditure": 3125.0
+    },
+    "13_N.42": {
+      "population": 14.1,
+      "growthPct": 0.46312789454933734,
+      "pctFemale": 46.66191663697899,
+      "pctNoncitizen": 10.83006768792305,
+      "income": 3800.0,
+      "householdExpenditure": 2693.0
+    },
+    "13_N.43": {
+      "population": 14.5,
+      "growthPct": 0.6315497258657735,
+      "pctFemale": 44.708168505794994,
+      "pctNoncitizen": 14.28968006107294,
+      "income": 3355.0,
+      "householdExpenditure": 3095.0
+    },
+    "13_N.44": {
+      "population": 13.1,
+      "growthPct": 0.9322752138069222,
+      "pctFemale": 48.262578010632566,
+      "pctNoncitizen": 9.592418522228217,
+      "income": 4317.0,
+      "householdExpenditure": 3034.0
+    },
+    "13_N.45": {
+      "population": 24.3,
+      "growthPct": 0.5170630816959669,
+      "pctFemale": 49.9110651499483,
+      "pctNoncitizen": 0.8645294725956565,
+      "income": 5162.0,
+      "householdExpenditure": 4265.0
+    },
+    "13_N.46": {
+      "population": 19.1,
+      "growthPct": 0.8234797297297423,
+      "pctFemale": 49.39294763513513,
+      "pctNoncitizen": 2.898015202702703,
+      "income": 3540.0,
+      "householdExpenditure": 3105.0
+    },
+    "13_N.47": {
+      "population": 17.3,
+      "growthPct": 0.727802037845706,
+      "pctFemale": 48.02911208151383,
+      "pctNoncitizen": 0.2911208151382824,
+      "income": 3631.0,
+      "householdExpenditure": 3321.0
+    },
+    "13_N.48": {
+      "population": 18.1,
+      "growthPct": 0.8300373238259757,
+      "pctFemale": 49.69082502367556,
+      "pctNoncitizen": 0.16712160882402094,
+      "income": 3264.0,
+      "householdExpenditure": 3401.0
+    },
+    "13_N.49": {
+      "population": 10.2,
+      "growthPct": 0.40358302982575633,
+      "pctFemale": 49.69977359976376,
+      "pctNoncitizen": 3.051481445024116,
+      "income": 3161.0,
+      "householdExpenditure": 2758.0
+    },
+    "13_N.50": {
+      "population": 14.6,
+      "growthPct": 0.40574926071108774,
+      "pctFemale": 50.216628842583034,
+      "pctNoncitizen": 1.0797056598583317,
+      "income": 3782.0,
+      "householdExpenditure": 3295.0
+    },
+    "13_N.51": {
+      "population": 37.9,
+      "growthPct": 0.6212499336271486,
+      "pctFemale": 50.05840811341794,
+      "pctNoncitizen": 1.9646365422396859,
+      "income": 4808.0,
+      "householdExpenditure": 3726.0
+    },
+    "13_N.52": {
+      "population": 67.7,
+      "growthPct": 0.648192197906766,
+      "pctFemale": 49.201653187440535,
+      "pctNoncitizen": 2.270159372026641,
+      "income": 5454.0,
+      "householdExpenditure": 4357.0
+    },
+    "13_N.53": {
+      "population": 26.8,
+      "growthPct": 0.5930485699271874,
+      "pctFemale": 39.700472937467154,
+      "pctNoncitizen": 32.89918174311238,
+      "income": 4254.0,
+      "householdExpenditure": 3124.0
+    },
+    "13_N.54": {
+      "population": 42.3,
+      "growthPct": 0.7670684644337405,
+      "pctFemale": 50.39306303301729,
+      "pctNoncitizen": 1.388822716661108,
+      "income": 6580.0,
+      "householdExpenditure": 5447.0
+    },
+    "13_N.55": {
+      "population": 73.5,
+      "growthPct": 0.7484168105929854,
+      "pctFemale": 49.08572525152836,
+      "pctNoncitizen": 2.0821339474189218,
+      "income": 7103.0,
+      "householdExpenditure": 5250.0
+    },
+    "13_N.56": {
+      "population": 16.8,
+      "growthPct": 0.4244126965150428,
+      "pctFemale": 49.54271026361409,
+      "pctNoncitizen": 6.730826708111662,
+      "income": 4289.0,
+      "householdExpenditure": 2918.0
+    },
+    "13_N.57": {
+      "population": 27.2,
+      "growthPct": 0.882723833543504,
+      "pctFemale": 48.36807358504562,
+      "pctNoncitizen": 13.337289518581708,
+      "income": 6513.0,
+      "householdExpenditure": 3704.0
+    },
+    "13_N.58": {
+      "population": 17.2,
+      "growthPct": 0.5025125628140616,
+      "pctFemale": 45.93899731214211,
+      "pctNoncitizen": 12.136262708893303,
+      "income": 5015.0,
+      "householdExpenditure": 3551.0
+    },
+    "13_N.59": {
+      "population": 16.9,
+      "growthPct": 0.5055010407374206,
+      "pctFemale": 48.49836455545644,
+      "pctNoncitizen": 4.287838239666963,
+      "income": 4171.0,
+      "householdExpenditure": 3015.0
+    },
+    "13_N.60": {
+      "population": 34.8,
+      "growthPct": 0.811123986095,
+      "pctFemale": 44.782734646581694,
+      "pctNoncitizen": 10.837195828505214,
+      "income": 4588.0,
+      "householdExpenditure": 3137.0
+    },
+    "13_N.61": {
+      "population": 12.0,
+      "growthPct": 1.0356150543066374,
+      "pctFemale": 50.14734360528753,
+      "pctNoncitizen": 0.2441694030479077,
+      "income": 3131.0,
+      "householdExpenditure": 3970.0
+    },
+    "13_N.62": {
+      "population": 9.6,
+      "growthPct": 0.6922592825676416,
+      "pctFemale": 50.97545626179988,
+      "pctNoncitizen": 0.2727082022236207,
+      "income": 3080.0,
+      "householdExpenditure": 3038.0
+    },
+    "13_N.63": {
+      "population": 22.7,
+      "growthPct": 0.5759858218874568,
+      "pctFemale": 50.19051838723969,
+      "pctNoncitizen": 0.4430660168365087,
+      "income": 3312.0,
+      "householdExpenditure": 3580.0
+    },
+    "13_N.64": {
+      "population": 9.5,
+      "growthPct": 1.2361466325660662,
+      "pctFemale": 38.91730605285593,
+      "pctNoncitizen": 7.5127877237851655,
+      "income": 2641.0,
+      "householdExpenditure": 3184.0
+    },
+    "13_N.65": {
+      "population": 13.2,
+      "growthPct": 0.9483022330987976,
+      "pctFemale": 42.82655246252676,
+      "pctNoncitizen": 12.350871826246559,
+      "income": 3667.0,
+      "householdExpenditure": 2596.0
+    },
+    "13_N.66": {
+      "population": 21.1,
+      "growthPct": 0.7929683768032882,
+      "pctFemale": 42.07987006783224,
+      "pctNoncitizen": 19.934078532530812,
+      "income": 4670.0,
+      "householdExpenditure": 3756.0
+    },
+    "13_N.67": {
+      "population": 35.5,
+      "growthPct": 0.569421230063176,
+      "pctFemale": 46.24210317572736,
+      "pctNoncitizen": 5.546899345590527,
+      "income": 5713.0,
+      "householdExpenditure": 3431.0
+    },
+    "13_N.68": {
+      "population": 74.4,
+      "growthPct": 0.6534356102114589,
+      "pctFemale": 47.89967125289176,
+      "pctNoncitizen": 1.7911982358591392,
+      "income": 10211.0,
+      "householdExpenditure": 5878.0
+    },
+    "13_N.69": {
+      "population": 47.5,
+      "growthPct": 0.7444484506564277,
+      "pctFemale": 43.25436382531972,
+      "pctNoncitizen": 35.41114339646652,
+      "income": 4470.0,
+      "householdExpenditure": 2916.0
+    },
+    "13_N.70": {
+      "population": 79.3,
+      "growthPct": 0.7188762161201038,
+      "pctFemale": 43.150354357710775,
+      "pctNoncitizen": 20.24030279167831,
+      "income": 7306.0,
+      "householdExpenditure": 5175.0
+    },
+    "13_N.71": {
+      "population": 22.3,
+      "growthPct": 0.8684639044689713,
+      "pctFemale": 46.793016102768235,
+      "pctNoncitizen": 11.416681744165007,
+      "income": 6150.0,
+      "householdExpenditure": 5683.0
+    },
+    "13_N.72": {
+      "population": 49.2,
+      "growthPct": 0.6629020378099787,
+      "pctFemale": 48.01333988051395,
+      "pctNoncitizen": 7.091415009411572,
+      "income": 5531.0,
+      "householdExpenditure": 3431.0
+    },
+    "13_N.73": {
+      "population": 34.9,
+      "growthPct": 0.8320813590662103,
+      "pctFemale": 49.11013521322085,
+      "pctNoncitizen": 2.4211256211718477,
+      "income": 8329.0,
+      "householdExpenditure": 5033.0
+    },
+    "13_N.74": {
+      "population": 39.5,
+      "growthPct": 0.8218898361325303,
+      "pctFemale": 47.73852672418194,
+      "pctNoncitizen": 1.2200724896625657,
+      "income": 6457.0,
+      "householdExpenditure": 5052.0
+    },
+    "13_N.75": {
+      "population": 133.3,
+      "growthPct": 0.7292099595723001,
+      "pctFemale": 46.80923414062795,
+      "pctNoncitizen": 7.7840329466883285,
+      "income": 6935.0,
+      "householdExpenditure": 4503.0
+    },
+    "13_N.76": {
+      "population": 33.1,
+      "growthPct": 0.6017871254027123,
+      "pctFemale": 46.124855631876486,
+      "pctNoncitizen": 23.04419184244119,
+      "income": 4478.0,
+      "householdExpenditure": 2827.0
+    },
+    "13_N.77": {
+      "population": 16.1,
+      "growthPct": 0.9910927110776643,
+      "pctFemale": 46.31790239618618,
+      "pctNoncitizen": 1.3988207251285911,
+      "income": 4281.0,
+      "householdExpenditure": 2824.0
+    },
+    "13_N.78": {
+      "population": 14.8,
+      "growthPct": 0.9894234049812444,
+      "pctFemale": 47.294438758103034,
+      "pctNoncitizen": 1.364721937905152,
+      "income": 4369.0,
+      "householdExpenditure": 2787.0
+    },
+    "13_N.79": {
+      "population": 32.0,
+      "growthPct": 0.8413953928087463,
+      "pctFemale": 49.087700501055686,
+      "pctNoncitizen": 2.0483408439164275,
+      "income": 4380.0,
+      "householdExpenditure": 3644.0
+    },
+    "13_N.80": {
+      "population": 13.4,
+      "growthPct": 0.540216086434581,
+      "pctFemale": 47.216386554621856,
+      "pctNoncitizen": 4.164165666266507,
+      "income": 3304.0,
+      "householdExpenditure": 2904.0
+    },
+    "13_N.81": {
+      "population": 9.7,
+      "growthPct": 0.39329331401364603,
+      "pctFemale": 48.16808114262058,
+      "pctNoncitizen": 3.5913889463879105,
+      "income": 2965.0,
+      "householdExpenditure": 2774.0
+    },
+    "13_N.82": {
+      "population": 27.1,
+      "growthPct": 0.5864449558310492,
+      "pctFemale": 49.090639150768325,
+      "pctNoncitizen": 5.445030064583179,
+      "income": 4500.0,
+      "householdExpenditure": 3463.0
+    },
+    "1_N.01": {
+      "population": 32.1,
+      "growthPct": 0.4506196019526909,
+      "pctFemale": 44.47365127049693,
+      "pctNoncitizen": 10.07948429089999,
+      "income": 5457.0,
+      "householdExpenditure": 4357.0
+    },
+    "1_N.02": {
+      "population": 44.2,
+      "growthPct": 0.3291340369992127,
+      "pctFemale": 50.83418454204971,
+      "pctNoncitizen": 3.55237770968108,
+      "income": 7528.0,
+      "householdExpenditure": 5334.0
+    },
+    "1_N.03": {
+      "population": 32.8,
+      "growthPct": 0.28127675186498335,
+      "pctFemale": 48.755656108597286,
+      "pctNoncitizen": 5.24948024948025,
+      "income": 6073.0,
+      "householdExpenditure": 4135.0
+    },
+    "1_N.04": {
+      "population": 46.8,
+      "growthPct": 0.34520465704666536,
+      "pctFemale": 47.81620532172645,
+      "pctNoncitizen": 3.722206736851133,
+      "income": 6227.0,
+      "householdExpenditure": 5043.0
+    },
+    "1_N.05": {
+      "population": 20.5,
+      "growthPct": 0.11721039265481985,
+      "pctFemale": 47.29439343621801,
+      "pctNoncitizen": 5.670052744676695,
+      "income": 7882.0,
+      "householdExpenditure": 5699.0
+    },
+    "1_N.06": {
+      "population": 22.0,
+      "growthPct": 0.3283473184968952,
+      "pctFemale": 45.70868296242247,
+      "pctNoncitizen": 10.21981028821598,
+      "income": 5095.0,
+      "householdExpenditure": 4491.0
+    },
+    "1_N.07": {
+      "population": 34.8,
+      "growthPct": 0.37496394577443165,
+      "pctFemale": 45.872512258436686,
+      "pctNoncitizen": 7.409864436111911,
+      "income": 6730.0,
+      "householdExpenditure": 4990.0
+    },
+    "1_N.08": {
+      "population": 60.7,
+      "growthPct": 0.27753915284478686,
+      "pctFemale": 42.886407189585675,
+      "pctNoncitizen": 14.828520451992336,
+      "income": 5705.0,
+      "householdExpenditure": 4555.0
+    },
+    "1_N.09": {
+      "population": 39.2,
+      "growthPct": 0.38669364132244965,
+      "pctFemale": 46.93590104740198,
+      "pctNoncitizen": 5.050065302568568,
+      "income": 5302.0,
+      "householdExpenditure": 4383.0
+    },
+    "1_N.10": {
+      "population": 56.6,
+      "growthPct": 0.2994807818397761,
+      "pctFemale": 48.70195459942231,
+      "pctNoncitizen": 4.151973206216441,
+      "income": 7023.0,
+      "householdExpenditure": 4833.0
+    },
+    "1_N.11": {
+      "population": 52.3,
+      "growthPct": 0.38580395017178937,
+      "pctFemale": 48.885775158832224,
+      "pctNoncitizen": 3.907944490297319,
+      "income": 6681.0,
+      "householdExpenditure": 4635.0
+    },
+    "1_N.12": {
+      "population": 35.9,
+      "growthPct": 0.29333705824834994,
+      "pctFemale": 48.453694650090796,
+      "pctNoncitizen": 4.841458304232435,
+      "income": 7792.0,
+      "householdExpenditure": 6255.0
+    },
+    "1_N.13": {
+      "population": 67.1,
+      "growthPct": 0.3589590188453408,
+      "pctFemale": 46.696081364044275,
+      "pctNoncitizen": 7.270415794196829,
+      "income": 6662.0,
+      "householdExpenditure": 5337.0
+    },
+    "1_N.14": {
+      "population": 32.6,
+      "growthPct": 0.2336735948837797,
+      "pctFemale": 34.383839626122246,
+      "pctNoncitizen": 29.925593407944902,
+      "income": 7495.0,
+      "householdExpenditure": 6037.0
+    },
+    "1_N.15": {
+      "population": 60.0,
+      "growthPct": 0.24895156304823798,
+      "pctFemale": 48.36176504987385,
+      "pctNoncitizen": 4.487811398305793,
+      "income": 9383.0,
+      "householdExpenditure": 5937.0
+    },
+    "1_N.16": {
+      "population": 40.5,
+      "growthPct": 0.212797545405054,
+      "pctFemale": 44.195080912555056,
+      "pctNoncitizen": 12.396694214876032,
+      "income": 7534.0,
+      "householdExpenditure": 5874.0
+    },
+    "1_N.17": {
+      "population": 46.4,
+      "growthPct": 0.31564837635664117,
+      "pctFemale": 47.881264323085574,
+      "pctNoncitizen": 4.397457517187702,
+      "income": 7815.0,
+      "householdExpenditure": 5091.0
+    },
+    "1_N.18": {
+      "population": 36.3,
+      "growthPct": 0.42882833033612955,
+      "pctFemale": 47.71061004288284,
+      "pctNoncitizen": 3.0903306128095167,
+      "income": 8104.0,
+      "householdExpenditure": 4991.0
+    },
+    "1_N.19": {
+      "population": 42.2,
+      "growthPct": 0.26134473746733056,
+      "pctFemale": 46.421952957947255,
+      "pctNoncitizen": 4.594915656925635,
+      "income": 5208.0,
+      "householdExpenditure": 4123.0
+    },
+    "1_N.20": {
+      "population": 29.8,
+      "growthPct": 0.3535948812931484,
+      "pctFemale": 48.52668799461189,
+      "pctNoncitizen": 2.4717965987539987,
+      "income": 8028.0,
+      "householdExpenditure": 5095.0
+    },
+    "1_N.21": {
+      "population": 80.9,
+      "growthPct": 0.30998140111593303,
+      "pctFemale": 45.7743335399876,
+      "pctNoncitizen": 11.129572225666461,
+      "income": 8115.0,
+      "householdExpenditure": 5298.0
+    },
+    "1_N.22": {
+      "population": 94.8,
+      "growthPct": 0.31321425548124127,
+      "pctFemale": 46.21497502751206,
+      "pctNoncitizen": 9.220773723863541,
+      "income": 7910.0,
+      "householdExpenditure": 5115.0
+    },
+    "1_N.23": {
+      "population": 92.5,
+      "growthPct": 0.30035891263567766,
+      "pctFemale": 48.665734144410834,
+      "pctNoncitizen": 3.532741290133698,
+      "income": 7068.0,
+      "householdExpenditure": 5672.0
+    },
+    "1_N.24": {
+      "population": 47.4,
+      "growthPct": 0.2835018829602682,
+      "pctFemale": 46.062708923962255,
+      "pctNoncitizen": 6.596707993060551,
+      "income": 7395.0,
+      "householdExpenditure": 5238.0
+    },
+    "1_N.25": {
+      "population": 26.6,
+      "growthPct": 0.33570970540531175,
+      "pctFemale": 49.57564784429105,
+      "pctNoncitizen": 1.169325940175776,
+      "income": 7925.0,
+      "householdExpenditure": 4835.0
+    },
+    "1_N.26": {
+      "population": 47.0,
+      "growthPct": 0.41233148887986376,
+      "pctFemale": 43.758412203302925,
+      "pctNoncitizen": 13.222381267759095,
+      "income": 6469.0,
+      "householdExpenditure": 5120.0
+    },
+    "1_N.27": {
+      "population": 29.6,
+      "growthPct": 0.410461684589037,
+      "pctFemale": 43.274873638861564,
+      "pctNoncitizen": 14.118525051731742,
+      "income": 5886.0,
+      "householdExpenditure": 4746.0
+    },
+    "1_N.28": {
+      "population": 104.5,
+      "growthPct": 0.337980566117452,
+      "pctFemale": 46.286054460959406,
+      "pctNoncitizen": 7.911817797749357,
+      "income": 6661.0,
+      "householdExpenditure": 4786.0
+    },
+    "1_N.29": {
+      "population": 80.0,
+      "growthPct": 0.36759632152760285,
+      "pctFemale": 46.21927810606346,
+      "pctNoncitizen": 7.80483520895279,
+      "income": 6116.0,
+      "householdExpenditure": 4693.0
+    },
+    "1_N.30": {
+      "population": 32.5,
+      "growthPct": 0.28697503625760956,
+      "pctFemale": 37.479556885858,
+      "pctNoncitizen": 18.184342888882032,
+      "income": 4664.0,
+      "householdExpenditure": 3897.0
+    },
+    "1_N.31": {
+      "population": 31.3,
+      "growthPct": 0.275517396040245,
+      "pctFemale": 44.90613186390722,
+      "pctNoncitizen": 9.854552444415967,
+      "income": 5731.0,
+      "householdExpenditure": 4828.0
+    },
+    "1_N.32": {
+      "population": 33.4,
+      "growthPct": 0.46623552413897174,
+      "pctFemale": 48.545645961798755,
+      "pctNoncitizen": 3.3719356294179574,
+      "income": 5039.0,
+      "householdExpenditure": 4031.0
+    },
+    "1_N.33": {
+      "population": 45.1,
+      "growthPct": 0.33370411568409025,
+      "pctFemale": 44.75417130144605,
+      "pctNoncitizen": 6.678531701890988,
+      "income": 5605.0,
+      "householdExpenditure": 4629.0
+    },
+    "1_N.34": {
+      "population": 54.3,
+      "growthPct": 0.3084994365728751,
+      "pctFemale": 48.27554356861803,
+      "pctNoncitizen": 5.722941643729333,
+      "income": 6051.0,
+      "householdExpenditure": 4373.0
+    },
+    "1_N.35": {
+      "population": 40.2,
+      "growthPct": 0.3970929796958269,
+      "pctFemale": 47.3564596288804,
+      "pctNoncitizen": 4.470417821732724,
+      "income": 7331.0,
+      "householdExpenditure": 5265.0
+    },
+    "1_N.36": {
+      "population": 27.6,
+      "growthPct": 0.33444816053512544,
+      "pctFemale": 46.54282390577286,
+      "pctNoncitizen": 6.2200087247346225,
+      "income": 4938.0,
+      "householdExpenditure": 4039.0
+    },
+    "1_N.37": {
+      "population": 30.0,
+      "growthPct": 0.4385818072248827,
+      "pctFemale": 47.129130536676826,
+      "pctNoncitizen": 9.05286417355787,
+      "income": 5571.0,
+      "householdExpenditure": 4740.0
+    },
+    "1_N.38": {
+      "population": 40.7,
+      "growthPct": 0.4095327379483987,
+      "pctFemale": 47.2097498396408,
+      "pctNoncitizen": 4.993338925346623,
+      "income": 6990.0,
+      "householdExpenditure": 5490.0
+    },
+    "1_N.39": {
+      "population": 30.4,
+      "growthPct": 0.33996765356305236,
+      "pctFemale": 42.41013961778394,
+      "pctNoncitizen": 8.185628940159091,
+      "income": 6161.0,
+      "householdExpenditure": 6459.0
+    },
+    "1_N.40": {
+      "population": 203.7,
+      "growthPct": 0.3171538885824487,
+      "pctFemale": 45.65095343156568,
+      "pctNoncitizen": 7.80917579386967,
+      "income": 7926.0,
+      "householdExpenditure": 5957.0
+    },
+    "1_N.41": {
+      "population": 273.1,
+      "growthPct": 0.3265848918669745,
+      "pctFemale": 47.47677353229663,
+      "pctNoncitizen": 6.805015227158344,
+      "income": 9409.0,
+      "householdExpenditure": 7147.0
+    },
+    "1_N.42": {
+      "population": 153.4,
+      "growthPct": 0.34473059336836154,
+      "pctFemale": 47.12212097623518,
+      "pctNoncitizen": 6.075631406461573,
+      "income": 8188.0,
+      "householdExpenditure": 6198.0
+    },
+    "1_N.43": {
+      "population": 208.4,
+      "growthPct": 0.31384176983654005,
+      "pctFemale": 45.370833894911144,
+      "pctNoncitizen": 9.233301884976028,
+      "income": 8430.0,
+      "householdExpenditure": 5734.0
+    },
+    "1_N.44": {
+      "population": 99.6,
+      "growthPct": 0.3344481605351106,
+      "pctFemale": 48.46979892815409,
+      "pctNoncitizen": 6.567070959422976,
+      "income": 7733.0,
+      "householdExpenditure": 6141.0
+    },
+    "1_N.45": {
+      "population": 78.8,
+      "growthPct": 0.3118833938005096,
+      "pctFemale": 47.697791356374516,
+      "pctNoncitizen": 7.9205652090891725,
+      "income": 10014.0,
+      "householdExpenditure": 7554.0
+    },
+    "1_N.46": {
+      "population": 190.4,
+      "growthPct": 0.33832565688929894,
+      "pctFemale": 48.3062637675355,
+      "pctNoncitizen": 3.9276341445419956,
+      "income": 10764.0,
+      "householdExpenditure": 8333.0
+    },
+    "1_N.47": {
+      "population": 102.5,
+      "growthPct": 0.37407704812080633,
+      "pctFemale": 47.338373254470326,
+      "pctNoncitizen": 10.223466969584207,
+      "income": 8431.0,
+      "householdExpenditure": 5837.0
+    },
+    "1_N.48": {
+      "population": 138.3,
+      "growthPct": 0.33954379244298694,
+      "pctFemale": 47.12621161994312,
+      "pctNoncitizen": 3.8525161065645133,
+      "income": 8183.0,
+      "householdExpenditure": 6402.0
+    },
+    "1_N.49": {
+      "population": 310.9,
+      "growthPct": 0.3340164265083078,
+      "pctFemale": 47.417423716779886,
+      "pctNoncitizen": 8.1393510076969,
+      "income": 10421.0,
+      "householdExpenditure": 7444.0
+    },
+    "1_N.50": {
+      "population": 77.6,
+      "growthPct": 0.28819933571991546,
+      "pctFemale": 47.66144978481977,
+      "pctNoncitizen": 5.996613980898716,
+      "income": 9374.0,
+      "householdExpenditure": 7228.0
+    },
+    "1_N.51": {
+      "population": 81.9,
+      "growthPct": 0.31109913529138583,
+      "pctFemale": 47.57857090365726,
+      "pctNoncitizen": 6.286897092325406,
+      "income": 7688.0,
+      "householdExpenditure": 5356.0
+    },
+    "1_N.52": {
+      "population": 128.8,
+      "growthPct": 0.32637228250287126,
+      "pctFemale": 42.226653476760575,
+      "pctNoncitizen": 28.490976079014807,
+      "income": 8114.0,
+      "householdExpenditure": 5943.0
+    },
+    "1_N.53": {
+      "population": 29.1,
+      "growthPct": 0.23077188027417136,
+      "pctFemale": 47.9626631763855,
+      "pctNoncitizen": 5.17686770226983,
+      "income": 4689.0,
+      "householdExpenditure": 4148.0
+    },
+    "1_N.54": {
+      "population": 52.9,
+      "growthPct": 0.2938667172243836,
+      "pctFemale": 47.45663096028059,
+      "pctNoncitizen": 5.318039624608968,
+      "income": 5512.0,
+      "householdExpenditure": 4449.0
+    },
+    "1_N.55": {
+      "population": 51.9,
+      "growthPct": 0.36549283518013587,
+      "pctFemale": 44.17628744367737,
+      "pctNoncitizen": 12.34940341513411,
+      "income": 7202.0,
+      "householdExpenditure": 6005.0
+    },
+    "1_N.56": {
+      "population": 40.0,
+      "growthPct": 0.4293354088729302,
+      "pctFemale": 45.87360968138793,
+      "pctNoncitizen": 6.630846870370835,
+      "income": 5404.0,
+      "householdExpenditure": 4368.0
+    },
+    "2_N.01": {
+      "population": 45.4,
+      "growthPct": 1.8965323757154053,
+      "pctFemale": 47.71630568959712,
+      "pctNoncitizen": 5.471888676916172,
+      "income": 5016.0,
+      "householdExpenditure": 4080.0
+    },
+    "2_N.02": {
+      "population": 50.5,
+      "growthPct": 1.8494241978097365,
+      "pctFemale": 48.77478167920457,
+      "pctNoncitizen": 3.3983421737288992,
+      "income": 5169.0,
+      "householdExpenditure": 4577.0
+    },
+    "2_N.03": {
+      "population": 32.7,
+      "growthPct": 2.005802164893785,
+      "pctFemale": 50.47883457591165,
+      "pctNoncitizen": 1.347599588233459,
+      "income": 5025.0,
+      "householdExpenditure": 4465.0
+    },
+    "2_N.04": {
+      "population": 34.7,
+      "growthPct": 1.971847541802578,
+      "pctFemale": 50.330600370272414,
+      "pctNoncitizen": 0.7258514796203238,
+      "income": 4704.0,
+      "householdExpenditure": 4184.0
+    },
+    "2_N.05": {
+      "population": 78.0,
+      "growthPct": 1.858260313148859,
+      "pctFemale": 51.77141961685624,
+      "pctNoncitizen": 5.236559280201627,
+      "income": 4771.0,
+      "householdExpenditure": 4374.0
+    },
+    "2_N.06": {
+      "population": 96.6,
+      "growthPct": 1.900883984894188,
+      "pctFemale": 49.93143315259816,
+      "pctNoncitizen": 2.339711808265997,
+      "income": 6067.0,
+      "householdExpenditure": 4649.0
+    },
+    "2_N.07": {
+      "population": 35.1,
+      "growthPct": 1.9607843137255028,
+      "pctFemale": 48.41830065359478,
+      "pctNoncitizen": 3.7037037037037033,
+      "income": 4126.0,
+      "householdExpenditure": 4199.0
+    },
+    "2_N.08": {
+      "population": 32.1,
+      "growthPct": 1.7078039352365306,
+      "pctFemale": 47.3875986185482,
+      "pctNoncitizen": 6.460505053705523,
+      "income": 3881.0,
+      "householdExpenditure": 3443.0
+    },
+    "2_N.09": {
+      "population": 48.5,
+      "growthPct": 1.9250168123739004,
+      "pctFemale": 44.962592468056485,
+      "pctNoncitizen": 4.123234700739744,
+      "income": 5209.0,
+      "householdExpenditure": 4247.0
+    },
+    "2_N.10": {
+      "population": 42.2,
+      "growthPct": 1.9619213298540754,
+      "pctFemale": 51.03894848748429,
+      "pctNoncitizen": 3.6194065912824973,
+      "income": 5840.0,
+      "householdExpenditure": 4968.0
+    },
+    "2_N.11": {
+      "population": 44.9,
+      "growthPct": 1.8487013723488661,
+      "pctFemale": 50.29828739934218,
+      "pctNoncitizen": 3.005557445843257,
+      "income": 5049.0,
+      "householdExpenditure": 5095.0
+    },
+    "2_N.12": {
+      "population": 57.2,
+      "growthPct": 1.8591067739867584,
+      "pctFemale": 50.865446256855904,
+      "pctNoncitizen": 9.849348244176936,
+      "income": 4988.0,
+      "householdExpenditure": 4374.0
+    },
+    "2_N.13": {
+      "population": 14.8,
+      "growthPct": 1.872246696035244,
+      "pctFemale": 50.37857929515419,
+      "pctNoncitizen": 2.340308370044053,
+      "income": 3583.0,
+      "householdExpenditure": 3387.0
+    },
+    "2_N.14": {
+      "population": 49.2,
+      "growthPct": 1.8085502627984984,
+      "pctFemale": 50.2089972271655,
+      "pctNoncitizen": 1.3760708521292886,
+      "income": 5010.0,
+      "householdExpenditure": 4711.0
+    },
+    "2_N.15": {
+      "population": 45.3,
+      "growthPct": 1.8755903386857287,
+      "pctFemale": 48.659650069716186,
+      "pctNoncitizen": 3.5465299329825033,
+      "income": 5537.0,
+      "householdExpenditure": 4549.0
+    },
+    "2_N.16": {
+      "population": 64.4,
+      "growthPct": 1.8391131774119642,
+      "pctFemale": 49.71456583961921,
+      "pctNoncitizen": 2.188592121700903,
+      "income": 4807.0,
+      "householdExpenditure": 4167.0
+    },
+    "2_N.17": {
+      "population": 65.6,
+      "growthPct": 1.8696813466674849,
+      "pctFemale": 50.8789365799118,
+      "pctNoncitizen": 2.219081930554693,
+      "income": 5221.0,
+      "householdExpenditure": 4215.0
+    },
+    "2_N.18": {
+      "population": 44.4,
+      "growthPct": 1.9143368681999635,
+      "pctFemale": 49.79341688472662,
+      "pctNoncitizen": 1.230317219850342,
+      "income": 4935.0,
+      "householdExpenditure": 4123.0
+    },
+    "2_N.19": {
+      "population": 56.8,
+      "growthPct": 1.7975876839256593,
+      "pctFemale": 44.79989963618116,
+      "pctNoncitizen": 2.4660824058641144,
+      "income": 3768.0,
+      "householdExpenditure": 3672.0
+    },
+    "2_N.20": {
+      "population": 36.5,
+      "growthPct": 1.935375764515312,
+      "pctFemale": 48.15818136118636,
+      "pctNoncitizen": 0.7763845058228839,
+      "income": 4695.0,
+      "householdExpenditure": 3561.0
+    },
+    "2_N.21": {
+      "population": 38.0,
+      "growthPct": 1.772992661631579,
+      "pctFemale": 49.30098023461353,
+      "pctNoncitizen": 0.8248968878890138,
+      "income": 4666.0,
+      "householdExpenditure": 4111.0
+    },
+    "2_N.22": {
+      "population": 54.0,
+      "growthPct": 1.7811704834605604,
+      "pctFemale": 50.04429365752521,
+      "pctNoncitizen": 1.8735274714918482,
+      "income": 4953.0,
+      "householdExpenditure": 3579.0
+    },
+    "2_N.23": {
+      "population": 30.6,
+      "growthPct": 1.6982950579946254,
+      "pctFemale": 47.864668151151584,
+      "pctNoncitizen": 5.709727807504404,
+      "income": 3899.0,
+      "householdExpenditure": 3590.0
+    },
+    "2_N.24": {
+      "population": 38.2,
+      "growthPct": 1.7283161566935656,
+      "pctFemale": 49.79894010811962,
+      "pctNoncitizen": 1.0572288354504542,
+      "income": 4479.0,
+      "householdExpenditure": 3750.0
+    },
+    "2_N.25": {
+      "population": 153.4,
+      "growthPct": 1.8375909501301186,
+      "pctFemale": 48.0993414413936,
+      "pctNoncitizen": 5.876573370864093,
+      "income": 5253.0,
+      "householdExpenditure": 4671.0
+    },
+    "2_N.26": {
+      "population": 66.9,
+      "growthPct": 1.7877519969570352,
+      "pctFemale": 50.48003042982122,
+      "pctNoncitizen": 4.056295169265881,
+      "income": 4232.0,
+      "householdExpenditure": 3600.0
+    },
+    "2_N.27": {
+      "population": 62.5,
+      "growthPct": 1.9010662927576822,
+      "pctFemale": 49.396745687546876,
+      "pctNoncitizen": 2.613558548276649,
+      "income": 4187.0,
+      "householdExpenditure": 3340.0
+    },
+    "2_N.28": {
+      "population": 93.1,
+      "growthPct": 1.8053778608842046,
+      "pctFemale": 47.31708383907971,
+      "pctNoncitizen": 11.920305306783016,
+      "income": 4982.0,
+      "householdExpenditure": 3738.0
+    },
+    "2_N.29": {
+      "population": 124.9,
+      "growthPct": 1.8295069136446647,
+      "pctFemale": 48.13543569006,
+      "pctNoncitizen": 8.30697234542134,
+      "income": 5246.0,
+      "householdExpenditure": 3724.0
+    },
+    "2_N.30": {
+      "population": 44.1,
+      "growthPct": 1.76062025520917,
+      "pctFemale": 49.46119943697071,
+      "pctNoncitizen": 1.0729861319426817,
+      "income": 3549.0,
+      "householdExpenditure": 2886.0
+    },
+    "2_N.31": {
+      "population": 48.8,
+      "growthPct": 1.8959325148250106,
+      "pctFemale": 49.20237200367494,
+      "pctNoncitizen": 0.7475152426292491,
+      "income": 3264.0,
+      "householdExpenditure": 2994.0
+    },
+    "2_N.32": {
+      "population": 52.3,
+      "growthPct": 1.9473304613945055,
+      "pctFemale": 47.839223406951135,
+      "pctNoncitizen": 3.818639012884739,
+      "income": 3372.0,
+      "householdExpenditure": 3259.0
+    },
+    "2_N.33": {
+      "population": 104.8,
+      "growthPct": 1.8157795027737025,
+      "pctFemale": 49.370937812709485,
+      "pctNoncitizen": 9.74730644800886,
+      "income": 5936.0,
+      "householdExpenditure": 4116.0
+    },
+    "2_N.34": {
+      "population": 162.0,
+      "growthPct": 1.882947813290064,
+      "pctFemale": 48.24597813918972,
+      "pctNoncitizen": 3.8206105429983777,
+      "income": 5091.0,
+      "householdExpenditure": 4113.0
+    },
+    "2_N.35": {
+      "population": 77.2,
+      "growthPct": 1.8496530251457834,
+      "pctFemale": 48.98018417372489,
+      "pctNoncitizen": 4.325971661521412,
+      "income": 4692.0,
+      "householdExpenditure": 3862.0
+    },
+    "2_N.36": {
+      "population": 45.2,
+      "growthPct": 1.7742952355219395,
+      "pctFemale": 48.79762226425291,
+      "pctNoncitizen": 2.9383950283707105,
+      "income": 4310.0,
+      "householdExpenditure": 3006.0
+    },
+    "3_N.01": {
+      "population": 43.3,
+      "growthPct": 2.021582394797599,
+      "pctFemale": 49.43216625041233,
+      "pctNoncitizen": 1.4231186089251213,
+      "income": 3234.0,
+      "householdExpenditure": 3905.0
+    },
+    "3_N.02": {
+      "population": 43.5,
+      "growthPct": 2.136651796196282,
+      "pctFemale": 50.525945057525234,
+      "pctNoncitizen": 0.6550833528997417,
+      "income": 3662.0,
+      "householdExpenditure": 3972.0
+    },
+    "3_N.03": {
+      "population": 50.7,
+      "growthPct": 2.0469778395024516,
+      "pctFemale": 51.20665016202726,
+      "pctNoncitizen": 0.426705311676026,
+      "income": 5122.0,
+      "householdExpenditure": 4514.0
+    },
+    "3_N.04": {
+      "population": 46.2,
+      "growthPct": 2.146852683013119,
+      "pctFemale": 50.4344557695284,
+      "pctNoncitizen": 0.7649959097039509,
+      "income": 4035.0,
+      "householdExpenditure": 4320.0
+    },
+    "3_N.05": {
+      "population": 35.2,
+      "growthPct": 2.020114192968735,
+      "pctFemale": 49.920296785786746,
+      "pctNoncitizen": 3.335941802162131,
+      "income": 4224.0,
+      "householdExpenditure": 3614.0
+    },
+    "3_N.06": {
+      "population": 50.2,
+      "growthPct": 1.9682720237248912,
+      "pctFemale": 51.71335134366558,
+      "pctNoncitizen": 2.039365440474498,
+      "income": 5149.0,
+      "householdExpenditure": 4572.0
+    },
+    "3_N.07": {
+      "population": 77.5,
+      "growthPct": 2.054253357914146,
+      "pctFemale": 48.57255728206479,
+      "pctNoncitizen": 1.7553331577561233,
+      "income": 5049.0,
+      "householdExpenditure": 4489.0
+    },
+    "3_N.08": {
+      "population": 68.1,
+      "growthPct": 2.0071899340922545,
+      "pctFemale": 50.16327142001199,
+      "pctNoncitizen": 1.163870581186339,
+      "income": 4729.0,
+      "householdExpenditure": 4557.0
+    },
+    "3_N.09": {
+      "population": 20.8,
+      "growthPct": 2.080879466038474,
+      "pctFemale": 52.46859049862584,
+      "pctNoncitizen": 4.8144876325088335,
+      "income": 4439.0,
+      "householdExpenditure": 4157.0
+    },
+    "3_N.10": {
+      "population": 44.6,
+      "growthPct": 2.1413031031718823,
+      "pctFemale": 54.164662773388294,
+      "pctNoncitizen": 2.807740753463873,
+      "income": 5469.0,
+      "householdExpenditure": 4524.0
+    },
+    "3_N.11": {
+      "population": 42.7,
+      "growthPct": 1.9847619957486518,
+      "pctFemale": 49.73369318588932,
+      "pctNoncitizen": 0.49678759941722994,
+      "income": 4358.0,
+      "householdExpenditure": 4040.0
+    },
+    "3_N.12": {
+      "population": 38.1,
+      "growthPct": 1.9452545955636527,
+      "pctFemale": 49.637438792711315,
+      "pctNoncitizen": 0.5592272496187087,
+      "income": 4822.0,
+      "householdExpenditure": 4528.0
+    },
+    "3_N.13": {
+      "population": 34.9,
+      "growthPct": 1.9454343634982674,
+      "pctFemale": 48.85493953379681,
+      "pctNoncitizen": 0.937664310334755,
+      "income": 3096.0,
+      "householdExpenditure": 3362.0
+    },
+    "3_N.14": {
+      "population": 33.7,
+      "growthPct": 2.1552638758374174,
+      "pctFemale": 50.177331837885355,
+      "pctNoncitizen": 0.2546303313225621,
+      "income": 3535.0,
+      "householdExpenditure": 3012.0
+    },
+    "3_N.15": {
+      "population": 42.6,
+      "growthPct": 1.9870720612880015,
+      "pctFemale": 49.10222647833373,
+      "pctNoncitizen": 2.530524299736653,
+      "income": 3197.0,
+      "householdExpenditure": 3033.0
+    },
+    "3_N.16": {
+      "population": 43.1,
+      "growthPct": 2.15933063120719,
+      "pctFemale": 48.60508663395672,
+      "pctNoncitizen": 1.5335751025148736,
+      "income": 3792.0,
+      "householdExpenditure": 3701.0
+    },
+    "3_N.17": {
+      "population": 44.4,
+      "growthPct": 1.9986216402480987,
+      "pctFemale": 49.0650126349644,
+      "pctNoncitizen": 2.3110498506776938,
+      "income": 4202.0,
+      "householdExpenditure": 3907.0
+    },
+    "3_N.18": {
+      "population": 61.1,
+      "growthPct": 2.1022024664951084,
+      "pctFemale": 49.729287122756595,
+      "pctNoncitizen": 1.864910932121253,
+      "income": 4758.0,
+      "householdExpenditure": 4494.0
+    },
+    "3_N.19": {
+      "population": 54.3,
+      "growthPct": 1.9622570650643032,
+      "pctFemale": 51.56323349920196,
+      "pctNoncitizen": 2.0054454980752983,
+      "income": 4803.0,
+      "householdExpenditure": 4383.0
+    },
+    "3_N.20": {
+      "population": 56.9,
+      "growthPct": 2.0481365902650666,
+      "pctFemale": 50.81602639979913,
+      "pctNoncitizen": 0.9648839628394131,
+      "income": 4150.0,
+      "householdExpenditure": 3546.0
+    },
+    "3_N.21": {
+      "population": 56.7,
+      "growthPct": 2.0096072540165237,
+      "pctFemale": 51.55713077739597,
+      "pctNoncitizen": 0.6800640483601101,
+      "income": 4294.0,
+      "householdExpenditure": 3567.0
+    },
+    "3_N.22": {
+      "population": 46.9,
+      "growthPct": 2.067464635473331,
+      "pctFemale": 52.42219804134929,
+      "pctNoncitizen": 0.5331882480957563,
+      "income": 3725.0,
+      "householdExpenditure": 3624.0
+    },
+    "3_N.23": {
+      "population": 34.2,
+      "growthPct": 1.973880374500585,
+      "pctFemale": 50.39954678275389,
+      "pctNoncitizen": 1.1062078835947284,
+      "income": 4801.0,
+      "householdExpenditure": 4598.0
+    },
+    "3_N.24": {
+      "population": 25.9,
+      "growthPct": 2.2139784521883263,
+      "pctFemale": 49.18110422668614,
+      "pctNoncitizen": 2.340265993133115,
+      "income": 5475.0,
+      "householdExpenditure": 4621.0
+    },
+    "3_N.25": {
+      "population": 50.6,
+      "growthPct": 2.0758104536926902,
+      "pctFemale": 45.381372173246454,
+      "pctNoncitizen": 1.2023158701660244,
+      "income": 3937.0,
+      "householdExpenditure": 3717.0
+    },
+    "3_N.26": {
+      "population": 69.9,
+      "growthPct": 2.1004352779644218,
+      "pctFemale": 48.878209809821506,
+      "pctNoncitizen": 3.1229002950541904,
+      "income": 4380.0,
+      "householdExpenditure": 4150.0
+    },
+    "3_N.27": {
+      "population": 31.0,
+      "growthPct": 2.205664171969274,
+      "pctFemale": 47.9080808413834,
+      "pctNoncitizen": 2.3342454914114272,
+      "income": 3014.0,
+      "householdExpenditure": 2821.0
+    },
+    "3_N.28": {
+      "population": 28.2,
+      "growthPct": 1.8896556707735652,
+      "pctFemale": 48.22777035083283,
+      "pctNoncitizen": 2.753188568125158,
+      "income": 2996.0,
+      "householdExpenditure": 3139.0
+    },
+    "3_N.29": {
+      "population": 36.3,
+      "growthPct": 2.037947997189021,
+      "pctFemale": 50.948699929725926,
+      "pctNoncitizen": 1.0063246661981728,
+      "income": 4433.0,
+      "householdExpenditure": 3434.0
+    },
+    "3_N.30": {
+      "population": 44.1,
+      "growthPct": 2.1684737281067554,
+      "pctFemale": 50.5444351774627,
+      "pctNoncitizen": 0.4702993235103327,
+      "income": 5120.0,
+      "householdExpenditure": 3934.0
+    },
+    "3_N.31": {
+      "population": 33.9,
+      "growthPct": 2.1453537423164883,
+      "pctFemale": 49.701699409425096,
+      "pctNoncitizen": 0.5514041219717969,
+      "income": 4169.0,
+      "householdExpenditure": 3832.0
+    },
+    "3_N.32": {
+      "population": 24.4,
+      "growthPct": 2.1091396049547946,
+      "pctFemale": 50.67375292936056,
+      "pctNoncitizen": 0.48962169400736527,
+      "income": 4873.0,
+      "householdExpenditure": 3771.0
+    },
+    "3_N.33": {
+      "population": 34.1,
+      "growthPct": 2.1141522429178985,
+      "pctFemale": 49.80834880517458,
+      "pctNoncitizen": 0.8115230280888783,
+      "income": 4088.0,
+      "householdExpenditure": 3218.0
+    },
+    "3_N.34": {
+      "population": 30.4,
+      "growthPct": 2.105934907466493,
+      "pctFemale": 47.46918348839552,
+      "pctNoncitizen": 1.7129614079871025,
+      "income": 4045.0,
+      "householdExpenditure": 3436.0
+    },
+    "3_N.35": {
+      "population": 48.4,
+      "growthPct": 2.1571193380894056,
+      "pctFemale": 52.42306555785385,
+      "pctNoncitizen": 0.5382244923804297,
+      "income": 4323.0,
+      "householdExpenditure": 3553.0
+    },
+    "3_N.36": {
+      "population": 24.3,
+      "growthPct": 1.9808628504280734,
+      "pctFemale": 49.13547087460131,
+      "pctNoncitizen": 2.6187678361591407,
+      "income": 3484.0,
+      "householdExpenditure": 3815.0
+    },
+    "3_N.37": {
+      "population": 38.2,
+      "growthPct": 2.029914529914544,
+      "pctFemale": 50.63568376068376,
+      "pctNoncitizen": 2.9967948717948723,
+      "income": 2824.0,
+      "householdExpenditure": 2939.0
+    },
+    "3_N.38": {
+      "population": 18.0,
+      "growthPct": 1.786926034833742,
+      "pctFemale": 48.4053381587876,
+      "pctNoncitizen": 1.6342456457814971,
+      "income": 3146.0,
+      "householdExpenditure": 3173.0
+    },
+    "3_N.39": {
+      "population": 31.6,
+      "growthPct": 2.093564228482811,
+      "pctFemale": 49.7092271904885,
+      "pctNoncitizen": 4.05143447919359,
+      "income": 2942.0,
+      "householdExpenditure": 2741.0
+    },
+    "3_N.40": {
+      "population": 31.2,
+      "growthPct": 2.2179995413294877,
+      "pctFemale": 50.24407823608426,
+      "pctNoncitizen": 2.027978901156505,
+      "income": 3791.0,
+      "householdExpenditure": 3146.0
+    },
+    "3_N.41": {
+      "population": 26.7,
+      "growthPct": 2.2166073274376963,
+      "pctFemale": 49.28984342100225,
+      "pctNoncitizen": 4.023582558095019,
+      "income": 2806.0,
+      "householdExpenditure": 2618.0
+    },
+    "3_N.42": {
+      "population": 17.8,
+      "growthPct": 2.2342197461374953,
+      "pctFemale": 49.089655964620064,
+      "pctNoncitizen": 4.7556142668428,
+      "income": 3080.0,
+      "householdExpenditure": 2826.0
+    },
+    "3_N.43": {
+      "population": 32.9,
+      "growthPct": 2.047146401985101,
+      "pctFemale": 46.63151364764268,
+      "pctNoncitizen": 7.050248138957817,
+      "income": 3308.0,
+      "householdExpenditure": 3276.0
+    },
+    "3_N.44": {
+      "population": 30.6,
+      "growthPct": 1.915070774354714,
+      "pctFemale": 44.44296419650291,
+      "pctNoncitizen": 10.384679433805163,
+      "income": 4169.0,
+      "householdExpenditure": 3994.0
+    },
+    "3_N.45": {
+      "population": 51.3,
+      "growthPct": 2.1302010750547486,
+      "pctFemale": 47.50746565797332,
+      "pctNoncitizen": 4.517220784391799,
+      "income": 4028.0,
+      "householdExpenditure": 3588.0
+    },
+    "4_N.01": {
+      "population": 19.3,
+      "growthPct": 0.699154753208809,
+      "pctFemale": 53.568819785036005,
+      "pctNoncitizen": 3.208807262861317,
+      "income": 7075.0,
+      "householdExpenditure": 6606.0
+    },
+    "4_N.02": {
+      "population": 23.4,
+      "growthPct": 0.7795340023256703,
+      "pctFemale": 48.580903570351865,
+      "pctNoncitizen": 12.007407726430937,
+      "income": 5334.0,
+      "householdExpenditure": 4512.0
+    },
+    "4_N.03": {
+      "population": 16.5,
+      "growthPct": 0.7018614586511958,
+      "pctFemale": 48.58101922490082,
+      "pctNoncitizen": 3.240768996032957,
+      "income": 6475.0,
+      "householdExpenditure": 5287.0
+    },
+    "4_N.04": {
+      "population": 20.0,
+      "growthPct": 0.9234495635060798,
+      "pctFemale": 47.529898571933195,
+      "pctNoncitizen": 3.941060705454912,
+      "income": 7234.0,
+      "householdExpenditure": 6247.0
+    },
+    "4_N.05": {
+      "population": 17.3,
+      "growthPct": 1.157759326394576,
+      "pctFemale": 49.017658753362184,
+      "pctNoncitizen": 2.5611039644486024,
+      "income": 5290.0,
+      "householdExpenditure": 4834.0
+    },
+    "4_N.06": {
+      "population": 47.5,
+      "growthPct": 0.9607209658221353,
+      "pctFemale": 50.244431219180406,
+      "pctNoncitizen": 12.204557048121067,
+      "income": 5602.0,
+      "householdExpenditure": 4683.0
+    },
+    "4_N.07": {
+      "population": 28.6,
+      "growthPct": 1.0029665206950222,
+      "pctFemale": 47.9799406695861,
+      "pctNoncitizen": 5.043085181522814,
+      "income": 6181.0,
+      "householdExpenditure": 7352.0
+    },
+    "4_N.08": {
+      "population": 25.2,
+      "growthPct": 0.904941138784332,
+      "pctFemale": 45.451269320092905,
+      "pctNoncitizen": 8.284616000640666,
+      "income": 5349.0,
+      "householdExpenditure": 4744.0
+    },
+    "4_N.09": {
+      "population": 53.8,
+      "growthPct": 0.8831967597367221,
+      "pctFemale": 46.335014719946,
+      "pctNoncitizen": 6.999943745429316,
+      "income": 7231.0,
+      "householdExpenditure": 6800.0
+    },
+    "4_N.10": {
+      "population": 17.6,
+      "growthPct": 1.1145581983224326,
+      "pctFemale": 45.49006089854073,
+      "pctNoncitizen": 12.93232218775135,
+      "income": 5886.0,
+      "householdExpenditure": 5058.0
+    },
+    "4_N.11": {
+      "population": 43.6,
+      "growthPct": 0.8815567227376854,
+      "pctFemale": 42.71500960225827,
+      "pctNoncitizen": 4.100048589740624,
+      "income": 6543.0,
+      "householdExpenditure": 5450.0
+    },
+    "4_N.12": {
+      "population": 25.9,
+      "growthPct": 0.8920571851505559,
+      "pctFemale": 46.24284211756457,
+      "pctNoncitizen": 7.989560204121384,
+      "income": 5690.0,
+      "householdExpenditure": 5295.0
+    },
+    "4_N.13": {
+      "population": 91.3,
+      "growthPct": 0.9085081456265641,
+      "pctFemale": 47.882358142310835,
+      "pctNoncitizen": 4.938217025133182,
+      "income": 9656.0,
+      "householdExpenditure": 7280.0
+    },
+    "4_N.14": {
+      "population": 39.0,
+      "growthPct": 0.8664166558903422,
+      "pctFemale": 48.121039699987065,
+      "pctNoncitizen": 4.554506659769817,
+      "income": 5101.0,
+      "householdExpenditure": 5128.0
+    },
+    "4_N.15": {
+      "population": 31.6,
+      "growthPct": 1.0262476421880544,
+      "pctFemale": 48.33914127689504,
+      "pctNoncitizen": 12.298986540490425,
+      "income": 7724.0,
+      "householdExpenditure": 6777.0
+    },
+    "4_N.16": {
+      "population": 72.1,
+      "growthPct": 0.9917077543702354,
+      "pctFemale": 46.768545495293594,
+      "pctNoncitizen": 12.845977140295831,
+      "income": 8811.0,
+      "householdExpenditure": 7045.0
+    },
+    "4_N.17": {
+      "population": 50.6,
+      "growthPct": 0.915418519774243,
+      "pctFemale": 48.39951337229014,
+      "pctNoncitizen": 2.239684090863764,
+      "income": 7998.0,
+      "householdExpenditure": 6394.0
+    },
+    "4_N.18": {
+      "population": 31.2,
+      "growthPct": 1.032997636086911,
+      "pctFemale": 48.55088889608497,
+      "pctNoncitizen": 0.5310708850102004,
+      "income": 7872.0,
+      "householdExpenditure": 6115.0
+    },
+    "4_N.19": {
+      "population": 85.2,
+      "growthPct": 0.901242316938867,
+      "pctFemale": 47.275548028754486,
+      "pctNoncitizen": 9.046767488956526,
+      "income": 7888.0,
+      "householdExpenditure": 8198.0
+    },
+    "4_N.20": {
+      "population": 35.7,
+      "growthPct": 0.9187279151943543,
+      "pctFemale": 46.688339222614836,
+      "pctNoncitizen": 10.920141342756184,
+      "income": 4604.0,
+      "householdExpenditure": 4816.0
+    },
+    "4_N.21": {
+      "population": 36.4,
+      "growthPct": 1.068999028182696,
+      "pctFemale": 50.162432319866724,
+      "pctNoncitizen": 1.4327363598500624,
+      "income": 6194.0,
+      "householdExpenditure": 5645.0
+    },
+    "4_N.22": {
+      "population": 19.5,
+      "growthPct": 1.1883140470136433,
+      "pctFemale": 44.585127912407245,
+      "pctNoncitizen": 13.860204452285815,
+      "income": 6958.0,
+      "householdExpenditure": 6362.0
+    },
+    "4_N.23": {
+      "population": 40.7,
+      "growthPct": 0.9700066982559861,
+      "pctFemale": 48.58964499243345,
+      "pctNoncitizen": 1.6373514599717187,
+      "income": 5852.0,
+      "householdExpenditure": 5359.0
+    },
+    "4_N.24": {
+      "population": 38.0,
+      "growthPct": 1.0342718885432531,
+      "pctFemale": 47.621706415676265,
+      "pctNoncitizen": 7.037834676025631,
+      "income": 6062.0,
+      "householdExpenditure": 5661.0
+    },
+    "4_N.25": {
+      "population": 21.3,
+      "growthPct": 1.0724115023251355,
+      "pctFemale": 42.84426307298092,
+      "pctNoncitizen": 12.854702476985857,
+      "income": 6415.0,
+      "householdExpenditure": 5522.0
+    },
+    "4_N.26": {
+      "population": 26.7,
+      "growthPct": 1.0865861507590922,
+      "pctFemale": 46.21209253019346,
+      "pctNoncitizen": 10.19573694771514,
+      "income": 8138.0,
+      "householdExpenditure": 7644.0
+    },
+    "4_N.27": {
+      "population": 27.2,
+      "growthPct": 0.9801009801009777,
+      "pctFemale": 45.893970893970895,
+      "pctNoncitizen": 7.729432729432729,
+      "income": 5947.0,
+      "householdExpenditure": 4653.0
+    },
+    "4_N.28": {
+      "population": 22.7,
+      "growthPct": 0.902342534560161,
+      "pctFemale": 47.806374183224435,
+      "pctNoncitizen": 3.796061697115171,
+      "income": 7227.0,
+      "householdExpenditure": 5471.0
+    },
+    "5_N.01": {
+      "population": 16.5,
+      "growthPct": 0.8495813214351161,
+      "pctFemale": 43.64647637674959,
+      "pctNoncitizen": 6.674408654727706,
+      "income": 3741.0,
+      "householdExpenditure": 3828.0
+    },
+    "5_N.02": {
+      "population": 11.1,
+      "growthPct": 0.4161389542247093,
+      "pctFemale": 45.49484349556721,
+      "pctNoncitizen": 5.726433870092274,
+      "income": 3622.0,
+      "householdExpenditure": 3466.0
+    },
+    "5_N.03": {
+      "population": 18.3,
+      "growthPct": 0.8431145643908209,
+      "pctFemale": 48.388163332782284,
+      "pctNoncitizen": 3.036314542348598,
+      "income": 3768.0,
+      "householdExpenditure": 3539.0
+    },
+    "5_N.04": {
+      "population": 18.8,
+      "growthPct": 0.8691919733876973,
+      "pctFemale": 47.49973173087241,
+      "pctNoncitizen": 6.315055263440284,
+      "income": 3758.0,
+      "householdExpenditure": 3948.0
+    },
+    "5_N.05": {
+      "population": 29.2,
+      "growthPct": 0.887952181874712,
+      "pctFemale": 47.78702967902429,
+      "pctNoncitizen": 3.7349272708426904,
+      "income": 4116.0,
+      "householdExpenditure": 4319.0
+    },
+    "5_N.06": {
+      "population": 22.9,
+      "growthPct": 0.7656428760010539,
+      "pctFemale": 47.843879257238406,
+      "pctNoncitizen": 3.718208219660301,
+      "income": 4488.0,
+      "householdExpenditure": 3236.0
+    },
+    "5_N.07": {
+      "population": 24.9,
+      "growthPct": 0.8423780981694412,
+      "pctFemale": 46.86538150008099,
+      "pctNoncitizen": 10.286732544953832,
+      "income": 4173.0,
+      "householdExpenditure": 3922.0
+    },
+    "5_N.08": {
+      "population": 32.299,
+      "growthPct": 0.8776313323755349,
+      "pctFemale": 49.990630270472856,
+      "pctNoncitizen": 1.0462864638640765,
+      "income": 4759.0,
+      "householdExpenditure": 4735.0
+    },
+    "5_N.09": {
+      "population": 38.3,
+      "growthPct": 0.6596756813582424,
+      "pctFemale": 48.001261531183474,
+      "pctNoncitizen": 6.410155326026966,
+      "income": 4497.0,
+      "householdExpenditure": 4325.0
+    },
+    "5_N.10": {
+      "population": 120.5,
+      "growthPct": 0.741558191835336,
+      "pctFemale": 47.63696253751682,
+      "pctNoncitizen": 11.352444968356282,
+      "income": 6901.0,
+      "householdExpenditure": 5541.0
+    },
+    "5_N.11": {
+      "population": 27.4,
+      "growthPct": 0.5836790132520793,
+      "pctFemale": 49.605374252046545,
+      "pctNoncitizen": 5.484380162255424,
+      "income": 4245.0,
+      "householdExpenditure": 4042.0
+    },
+    "5_N.12": {
+      "population": 17.7,
+      "growthPct": 0.8087481489919094,
+      "pctFemale": 46.765007404032346,
+      "pctNoncitizen": 7.956487071420436,
+      "income": 5388.0,
+      "householdExpenditure": 4496.0
+    },
+    "5_N.13": {
+      "population": 45.3,
+      "growthPct": 0.765192632796499,
+      "pctFemale": 49.757540706468546,
+      "pctNoncitizen": 4.58893139959071,
+      "income": 6168.0,
+      "householdExpenditure": 5119.0
+    },
+    "5_N.14": {
+      "population": 25.3,
+      "growthPct": 0.7847667609449037,
+      "pctFemale": 50.487989483328676,
+      "pctNoncitizen": 8.33764888658726,
+      "income": 5756.0,
+      "householdExpenditure": 4582.0
+    },
+    "5_N.15": {
+      "population": 19.9,
+      "growthPct": 0.9281330831262355,
+      "pctFemale": 51.01688897905361,
+      "pctNoncitizen": 2.8300451387127867,
+      "income": 3996.0,
+      "householdExpenditure": 3684.0
+    },
+    "5_N.16": {
+      "population": 8.7,
+      "growthPct": 0.43869776033246916,
+      "pctFemale": 48.32602170399446,
+      "pctNoncitizen": 0.36942969291156774,
+      "income": 4110.0,
+      "householdExpenditure": 3813.0
+    },
+    "5_N.17": {
+      "population": 8.1,
+      "growthPct": 0.9471585244267264,
+      "pctFemale": 47.39531405782652,
+      "pctNoncitizen": 4.8479561316051845,
+      "income": 3941.0,
+      "householdExpenditure": 3634.0
+    },
+    "5_N.18": {
+      "population": 22.3,
+      "growthPct": 0.5364951985933897,
+      "pctFemale": 48.703845633650424,
+      "pctNoncitizen": 0.49141156845949235,
+      "income": 4602.0,
+      "householdExpenditure": 4381.0
+    },
+    "5_N.19": {
+      "population": 12.5,
+      "growthPct": 0.6441223832528187,
+      "pctFemale": 46.666666666666664,
+      "pctNoncitizen": 5.684380032206119,
+      "income": 2858.0,
+      "householdExpenditure": 3376.0
+    },
+    "5_N.20": {
+      "population": 59.8,
+      "growthPct": 0.6818755787524101,
+      "pctFemale": 47.825574543311724,
+      "pctNoncitizen": 6.141931138984763,
+      "income": 7056.0,
+      "householdExpenditure": 5778.0
+    },
+    "5_N.21": {
+      "population": 87.7,
+      "growthPct": 0.7756391841424845,
+      "pctFemale": 48.365412237862685,
+      "pctNoncitizen": 5.542085607584028,
+      "income": 7946.0,
+      "householdExpenditure": 6962.0
+    },
+    "5_N.22": {
+      "population": 14.8,
+      "growthPct": 0.8586615783017665,
+      "pctFemale": 49.400299850074965,
+      "pctNoncitizen": 1.6423606378628868,
+      "income": 7569.0,
+      "householdExpenditure": 6304.0
+    },
+    "5_N.23": {
+      "population": 45.4,
+      "growthPct": 0.8104807372044011,
+      "pctFemale": 51.30009992228267,
+      "pctNoncitizen": 2.995447984900633,
+      "income": 5764.0,
+      "householdExpenditure": 6267.0
+    },
+    "5_N.24": {
+      "population": 50.8,
+      "growthPct": 0.6817821468209808,
+      "pctFemale": 47.96654510860948,
+      "pctNoncitizen": 5.761455525606469,
+      "income": 6618.0,
+      "householdExpenditure": 6212.0
+    },
+    "5_N.25": {
+      "population": 110.0,
+      "growthPct": 0.7925963256517111,
+      "pctFemale": 46.82549136390709,
+      "pctNoncitizen": 7.425665460209831,
+      "income": 6035.0,
+      "householdExpenditure": 5655.0
+    },
+    "5_N.26": {
+      "population": 33.5,
+      "growthPct": 0.6096645343424422,
+      "pctFemale": 49.836321590533686,
+      "pctNoncitizen": 3.321620566417396,
+      "income": 4956.0,
+      "householdExpenditure": 4410.0
+    },
+    "5_N.27": {
+      "population": 54.2,
+      "growthPct": 0.7847075012086804,
+      "pctFemale": 48.18699096284726,
+      "pctNoncitizen": 1.5768529882107925,
+      "income": 6449.0,
+      "householdExpenditure": 5519.0
+    },
+    "5_N.28": {
+      "population": 14.1,
+      "growthPct": 0.7214801057218307,
+      "pctFemale": 48.06057575541111,
+      "pctNoncitizen": 4.728909207800557,
+      "income": 4255.0,
+      "householdExpenditure": 3969.0
+    },
+    "5_N.29": {
+      "population": 14.7,
+      "growthPct": 0.8991694694213634,
+      "pctFemale": 49.15230969867527,
+      "pctNoncitizen": 4.825314022925388,
+      "income": 4240.0,
+      "householdExpenditure": 5060.0
+    },
+    "5_N.30": {
+      "population": 37.7,
+      "growthPct": 0.8857609248307502,
+      "pctFemale": 49.98260590328882,
+      "pctNoncitizen": 3.031924857502208,
+      "income": 5430.0,
+      "householdExpenditure": 4905.0
+    },
+    "5_N.31": {
+      "population": 35.2,
+      "growthPct": 0.8798326311867771,
+      "pctFemale": 43.438512022468686,
+      "pctNoncitizen": 4.708680824234087,
+      "income": 6162.0,
+      "householdExpenditure": 4643.0
+    },
+    "5_N.32": {
+      "population": 22.6,
+      "growthPct": 0.5964568681563266,
+      "pctFemale": 46.314430695272854,
+      "pctNoncitizen": 8.029911866820974,
+      "income": 4074.0,
+      "householdExpenditure": 4318.0
+    },
+    "5_N.33": {
+      "population": 19.8,
+      "growthPct": 0.7274762171236744,
+      "pctFemale": 46.5177799257262,
+      "pctNoncitizen": 4.207152668260671,
+      "income": 5232.0,
+      "householdExpenditure": 4507.0
+    },
+    "5_N.34": {
+      "population": 29.1,
+      "growthPct": 0.91902202184845,
+      "pctFemale": 43.83214843072654,
+      "pctNoncitizen": 6.162649557829027,
+      "income": 4954.0,
+      "householdExpenditure": 4574.0
+    },
+    "5_N.35": {
+      "population": 27.5,
+      "growthPct": 0.7178435394081509,
+      "pctFemale": 46.04453559917961,
+      "pctNoncitizen": 9.62862584236742,
+      "income": 4247.0,
+      "householdExpenditure": 4154.0
+    },
+    "5_N.36": {
+      "population": 32.2,
+      "growthPct": 0.6753376688344206,
+      "pctFemale": 50.372061030515255,
+      "pctNoncitizen": 1.3381690845422711,
+      "income": 4276.0,
+      "householdExpenditure": 4090.0
+    },
+    "6_N.01": {
+      "population": 39.5,
+      "growthPct": 1.271664444672347,
+      "pctFemale": 43.018664752333095,
+      "pctNoncitizen": 13.508870885037433,
+      "income": 5655.0,
+      "householdExpenditure": 4672.0
+    },
+    "6_N.02": {
+      "population": 29.4,
+      "growthPct": 1.3897989447184147,
+      "pctFemale": 48.67400075869918,
+      "pctNoncitizen": 2.2760975273304136,
+      "income": 3650.0,
+      "householdExpenditure": 3911.0
+    },
+    "6_N.03": {
+      "population": 27.7,
+      "growthPct": 1.3204579538388408,
+      "pctFemale": 45.019934891546875,
+      "pctNoncitizen": 8.197081092944146,
+      "income": 4603.0,
+      "householdExpenditure": 4047.0
+    },
+    "6_N.04": {
+      "population": 24.7,
+      "growthPct": 1.5040683816881717,
+      "pctFemale": 48.20826826662283,
+      "pctNoncitizen": 1.6314621517218706,
+      "income": 5474.0,
+      "householdExpenditure": 5268.0
+    },
+    "6_N.05": {
+      "population": 16.4,
+      "growthPct": 1.3597033374536394,
+      "pctFemale": 45.7725587144623,
+      "pctNoncitizen": 6.334981458590852,
+      "income": 4314.0,
+      "householdExpenditure": 3707.0
+    },
+    "6_N.06": {
+      "population": 22.8,
+      "growthPct": 1.3108198178182702,
+      "pctFemale": 45.021106420795384,
+      "pctNoncitizen": 9.304598978004888,
+      "income": 3660.0,
+      "householdExpenditure": 3742.0
+    },
+    "6_N.07": {
+      "population": 51.2,
+      "growthPct": 1.301887539076414,
+      "pctFemale": 48.5220212892248,
+      "pctNoncitizen": 2.9658501840053817,
+      "income": 4452.0,
+      "householdExpenditure": 4920.0
+    },
+    "6_N.08": {
+      "population": 23.2,
+      "growthPct": 1.4784358323856224,
+      "pctFemale": 45.73528125273379,
+      "pctNoncitizen": 7.47091243110839,
+      "income": 4897.0,
+      "householdExpenditure": 5063.0
+    },
+    "6_N.09": {
+      "population": 27.0,
+      "growthPct": 1.2107808224313095,
+      "pctFemale": 47.13423548375005,
+      "pctNoncitizen": 4.025939948270046,
+      "income": 4146.0,
+      "householdExpenditure": 3462.0
+    },
+    "6_N.10": {
+      "population": 47.6,
+      "growthPct": 1.3067722300259745,
+      "pctFemale": 47.758906908440814,
+      "pctNoncitizen": 3.6095858340782363,
+      "income": 3872.0,
+      "householdExpenditure": 3812.0
+    },
+    "6_N.11": {
+      "population": 31.5,
+      "growthPct": 1.2601260126012583,
+      "pctFemale": 45.47061849042046,
+      "pctNoncitizen": 7.142857142857142,
+      "income": 4790.0,
+      "householdExpenditure": 3827.0
+    },
+    "6_N.12": {
+      "population": 119.3,
+      "growthPct": 1.3593882752761208,
+      "pctFemale": 46.78249787595582,
+      "pctNoncitizen": 5.014443500424809,
+      "income": 5505.0,
+      "householdExpenditure": 4667.0
+    },
+    "6_N.13": {
+      "population": 133.0,
+      "growthPct": 1.3364216814226648,
+      "pctFemale": 48.637672767170045,
+      "pctNoncitizen": 2.85951571857428,
+      "income": 6608.0,
+      "householdExpenditure": 6050.0
+    },
+    "6_N.14": {
+      "population": 29.0,
+      "growthPct": 1.4056927057836248,
+      "pctFemale": 48.734177215189874,
+      "pctNoncitizen": 3.696062661724596,
+      "income": 5097.0,
+      "householdExpenditure": 4009.0
+    },
+    "6_N.15": {
+      "population": 70.4,
+      "growthPct": 1.346001583531278,
+      "pctFemale": 49.02468869214712,
+      "pctNoncitizen": 1.1271863528395594,
+      "income": 5099.0,
+      "householdExpenditure": 4396.0
+    },
+    "6_N.16": {
+      "population": 30.6,
+      "growthPct": 1.3782136231115836,
+      "pctFemale": 46.44182348263981,
+      "pctNoncitizen": 1.262258150013252,
+      "income": 4986.0,
+      "householdExpenditure": 4639.0
+    },
+    "6_N.17": {
+      "population": 19.2,
+      "growthPct": 1.378108664660221,
+      "pctFemale": 47.53154865621205,
+      "pctNoncitizen": 4.694017635566819,
+      "income": 5234.0,
+      "householdExpenditure": 4064.0
+    },
+    "6_N.18": {
+      "population": 49.4,
+      "growthPct": 1.3894875110317502,
+      "pctFemale": 48.792151550602384,
+      "pctNoncitizen": 4.396281017178745,
+      "income": 6228.0,
+      "householdExpenditure": 5606.0
+    },
+    "6_N.19": {
+      "population": 61.2,
+      "growthPct": 1.3597442819523429,
+      "pctFemale": 49.12303946736448,
+      "pctNoncitizen": 1.6247370774607066,
+      "income": 5578.0,
+      "householdExpenditure": 4949.0
+    },
+    "6_N.20": {
+      "population": 51.4,
+      "growthPct": 1.3307047806801324,
+      "pctFemale": 45.02907836372597,
+      "pctNoncitizen": 4.262198127156235,
+      "income": 5211.0,
+      "householdExpenditure": 4251.0
+    },
+    "6_N.21": {
+      "population": 60.5,
+      "growthPct": 1.3655022199882678,
+      "pctFemale": 46.737036106224345,
+      "pctNoncitizen": 4.0026807405545775,
+      "income": 5093.0,
+      "householdExpenditure": 4242.0
+    },
+    "6_N.22": {
+      "population": 29.9,
+      "growthPct": 1.4659970137097822,
+      "pctFemale": 43.559114972173205,
+      "pctNoncitizen": 12.34220171032985,
+      "income": 3443.0,
+      "householdExpenditure": 3522.0
+    },
+    "6_N.23": {
+      "population": 21.5,
+      "growthPct": 1.2813265498398267,
+      "pctFemale": 48.55850763143018,
+      "pctNoncitizen": 2.850009421518749,
+      "income": 4681.0,
+      "householdExpenditure": 3637.0
+    },
+    "6_N.24": {
+      "population": 22.3,
+      "growthPct": 1.3912885332363414,
+      "pctFemale": 43.46185323269982,
+      "pctNoncitizen": 10.043648267709376,
+      "income": 3571.0,
+      "householdExpenditure": 2829.0
+    },
+    "6_N.25": {
+      "population": 19.1,
+      "growthPct": 1.3477661042131026,
+      "pctFemale": 46.895893027698186,
+      "pctNoncitizen": 4.7171813647458345,
+      "income": 4044.0,
+      "householdExpenditure": 3661.0
+    },
+    "6_N.26": {
+      "population": 21.4,
+      "growthPct": 1.4602692964157018,
+      "pctFemale": 47.226436563626024,
+      "pctNoncitizen": 3.323534989569505,
+      "income": 4381.0,
+      "householdExpenditure": 4071.0
+    },
+    "6_N.27": {
+      "population": 15.0,
+      "growthPct": 1.248734390820118,
+      "pctFemale": 47.661154235572056,
+      "pctNoncitizen": 4.0904488693891325,
+      "income": 3562.0,
+      "householdExpenditure": 2814.0
+    },
+    "6_N.28": {
+      "population": 13.2,
+      "growthPct": 1.6949152542372794,
+      "pctFemale": 48.13559322033898,
+      "pctNoncitizen": 2.4422187981510013,
+      "income": 4938.0,
+      "householdExpenditure": 3849.0
+    },
+    "6_N.29": {
+      "population": 40.8,
+      "growthPct": 1.3614230348802412,
+      "pctFemale": 50.4496670972871,
+      "pctNoncitizen": 2.094305873000099,
+      "income": 4895.0,
+      "householdExpenditure": 4029.0
+    },
+    "6_N.30": {
+      "population": 52.7,
+      "growthPct": 1.3110846245530434,
+      "pctFemale": 48.754277365527315,
+      "pctNoncitizen": 3.5180129955015573,
+      "income": 4657.0,
+      "householdExpenditure": 3930.0
+    },
+    "6_N.31": {
+      "population": 39.0,
+      "growthPct": 1.369791802042994,
+      "pctFemale": 47.27211291035272,
+      "pctNoncitizen": 3.579133418241364,
+      "income": 4659.0,
+      "householdExpenditure": 3570.0
+    },
+    "6_N.32": {
+      "population": 52.0,
+      "growthPct": 1.3842854357574592,
+      "pctFemale": 48.96471046987717,
+      "pctNoncitizen": 2.2947943068824332,
+      "income": 4704.0,
+      "householdExpenditure": 3691.0
+    },
+    "6_N.33": {
+      "population": 30.3,
+      "growthPct": 1.175370642446909,
+      "pctFemale": 45.97301990116202,
+      "pctNoncitizen": 7.169093094697475,
+      "income": 4473.0,
+      "householdExpenditure": 4531.0
+    },
+    "6_N.34": {
+      "population": 52.6,
+      "growthPct": 1.3897723549027616,
+      "pctFemale": 40.47109620463,
+      "pctNoncitizen": 6.283852811349486,
+      "income": 5883.0,
+      "householdExpenditure": 5292.0
+    },
+    "6_N.35": {
+      "population": 21.8,
+      "growthPct": 1.192962911386536,
+      "pctFemale": 44.97516594717542,
+      "pctNoncitizen": 9.042380355567934,
+      "income": 5498.0,
+      "householdExpenditure": 4413.0
+    },
+    "6_N.36": {
+      "population": 14.6,
+      "growthPct": 1.1710900145520096,
+      "pctFemale": 46.19222507102765,
+      "pctNoncitizen": 7.86501281962442,
+      "income": 4352.0,
+      "householdExpenditure": 3459.0
+    },
+    "6_N.37": {
+      "population": 24.4,
+      "growthPct": 1.20701812601102,
+      "pctFemale": 49.25546476419594,
+      "pctNoncitizen": 1.9245924758388984,
+      "income": 5052.0,
+      "householdExpenditure": 4064.0
+    },
+    "6_N.38": {
+      "population": 42.9,
+      "growthPct": 1.2700061375761218,
+      "pctFemale": 48.0690241253954,
+      "pctNoncitizen": 4.142863887446295,
+      "income": 4242.0,
+      "householdExpenditure": 3756.0
+    },
+    "6_N.39": {
+      "population": 31.9,
+      "growthPct": 1.2955671281595253,
+      "pctFemale": 42.49333163978154,
+      "pctNoncitizen": 13.31449256954147,
+      "income": 3855.0,
+      "householdExpenditure": 2782.0
+    },
+    "6_N.40": {
+      "population": 30.5,
+      "growthPct": 1.4772424807026852,
+      "pctFemale": 45.807825392600485,
+      "pctNoncitizen": 8.524088368379026,
+      "income": 5304.0,
+      "householdExpenditure": 3855.0
+    },
+    "6_N.41": {
+      "population": 35.1,
+      "growthPct": 1.1964826293786914,
+      "pctFemale": 46.05449041372351,
+      "pctNoncitizen": 8.1043678823699,
+      "income": 4752.0,
+      "householdExpenditure": 4187.0
+    },
+    "6_N.42": {
+      "population": 36.6,
+      "growthPct": 1.2280119482243683,
+      "pctFemale": 44.79201239075119,
+      "pctNoncitizen": 9.057971014492754,
+      "income": 4322.0,
+      "householdExpenditure": 3893.0
+    },
+    "7_N.01": {
+      "population": 28.2,
+      "growthPct": -0.024816534902688866,
+      "pctFemale": 49.50544191158223,
+      "pctNoncitizen": 0.9394831070301698,
+      "income": 6048.0,
+      "householdExpenditure": 5243.0
+    },
+    "7_N.02": {
+      "population": 25.2,
+      "growthPct": 0.02381519409383277,
+      "pctFemale": 46.45153608001905,
+      "pctNoncitizen": 6.934190680320712,
+      "income": 7393.0,
+      "householdExpenditure": 5018.0
+    },
+    "7_N.03": {
+      "population": 63.6,
+      "growthPct": -0.0659941548034342,
+      "pctFemale": 48.73982590113447,
+      "pctNoncitizen": 3.9910750762075358,
+      "income": 6537.0,
+      "householdExpenditure": 5179.0
+    },
+    "7_N.04": {
+      "population": 39.5,
+      "growthPct": -0.15419226005409353,
+      "pctFemale": 48.44670256060262,
+      "pctNoncitizen": 4.469047799600617,
+      "income": 6174.0,
+      "householdExpenditure": 5139.0
+    },
+    "7_N.05": {
+      "population": 37.5,
+      "growthPct": -0.021328783192925967,
+      "pctFemale": 49.54676335715048,
+      "pctNoncitizen": 0.9304681667910845,
+      "income": 6062.0,
+      "householdExpenditure": 4763.0
+    },
+    "7_N.06": {
+      "population": 29.8,
+      "growthPct": -0.10056989607776597,
+      "pctFemale": 49.00435802883004,
+      "pctNoncitizen": 3.8149513912168955,
+      "income": 6188.0,
+      "householdExpenditure": 5416.0
+    },
+    "7_N.07": {
+      "population": 49.4,
+      "growthPct": -0.08696883279736112,
+      "pctFemale": 49.14548065449103,
+      "pctNoncitizen": 6.55300042473151,
+      "income": 7091.0,
+      "householdExpenditure": 5119.0
+    },
+    "7_N.08": {
+      "population": 34.3,
+      "growthPct": -0.1688107573199832,
+      "pctFemale": 52.38663484486873,
+      "pctNoncitizen": 8.571511729437104,
+      "income": 8111.0,
+      "householdExpenditure": 6224.0
+    },
+    "7_N.09": {
+      "population": 28.9,
+      "growthPct": -0.038047801874728594,
+      "pctFemale": 48.4971118259486,
+      "pctNoncitizen": 8.197571858462178,
+      "income": 7138.0,
+      "householdExpenditure": 5412.0
+    },
+    "7_N.10": {
+      "population": 93.7,
+      "growthPct": -0.14493371413955802,
+      "pctFemale": 47.20256617929153,
+      "pctNoncitizen": 9.480370007246687,
+      "income": 6630.0,
+      "householdExpenditure": 5134.0
+    },
+    "7_N.11": {
+      "population": 34.3,
+      "growthPct": -0.026232183975051275,
+      "pctFemale": 49.494301786703204,
+      "pctNoncitizen": 1.4923197994695272,
+      "income": 6530.0,
+      "householdExpenditure": 5512.0
+    },
+    "7_N.12": {
+      "population": 31.8,
+      "growthPct": -0.13817359628187564,
+      "pctFemale": 50.01884185403844,
+      "pctNoncitizen": 0.9891973370179625,
+      "income": 5144.0,
+      "householdExpenditure": 4445.0
+    },
+    "7_N.13": {
+      "population": 28.1,
+      "growthPct": -0.09954493742889182,
+      "pctFemale": 45.80844709897611,
+      "pctNoncitizen": 9.36433447098976,
+      "income": 7891.0,
+      "householdExpenditure": 6064.0
+    },
+    "7_N.14": {
+      "population": 95.1,
+      "growthPct": -0.06725232230676219,
+      "pctFemale": 46.972594678659995,
+      "pctNoncitizen": 5.240427052246648,
+      "income": 7072.0,
+      "householdExpenditure": 5969.0
+    },
+    "7_N.15": {
+      "population": 39.6,
+      "growthPct": -0.13869625520110887,
+      "pctFemale": 49.40612785272979,
+      "pctNoncitizen": 2.198966082461228,
+      "income": 6656.0,
+      "householdExpenditure": 4755.0
+    },
+    "7_N.16": {
+      "population": 26.4,
+      "growthPct": -0.13240022697181822,
+      "pctFemale": 44.91393985246832,
+      "pctNoncitizen": 14.064686968034804,
+      "income": 8318.0,
+      "householdExpenditure": 5349.0
+    },
+    "7_N.17": {
+      "population": 76.0,
+      "growthPct": -0.07888509071785732,
+      "pctFemale": 43.78779910596897,
+      "pctNoncitizen": 30.851958979752826,
+      "income": 6427.0,
+      "householdExpenditure": 5097.0
+    },
+    "7_N.18": {
+      "population": 61.9,
+      "growthPct": -0.1177932325367505,
+      "pctFemale": 53.35872073322253,
+      "pctNoncitizen": 15.714908105142564,
+      "income": 7003.0,
+      "householdExpenditure": 6668.0
+    },
+    "7_N.19": {
+      "population": 37.4,
+      "growthPct": 0.008022033852983163,
+      "pctFemale": 47.50648447736449,
+      "pctNoncitizen": 2.173971174158355,
+      "income": 6872.0,
+      "householdExpenditure": 5312.0
+    },
+    "7_N.20": {
+      "population": 56.7,
+      "growthPct": -0.17957114186119635,
+      "pctFemale": 47.28882785817401,
+      "pctNoncitizen": 1.0721453469948241,
+      "income": 7041.0,
+      "householdExpenditure": 4820.0
+    },
+    "7_N.21": {
+      "population": 27.8,
+      "growthPct": -0.12574097359439604,
+      "pctFemale": 48.66894197952219,
+      "pctNoncitizen": 1.1532243578228847,
+      "income": 5439.0,
+      "householdExpenditure": 4237.0
+    },
+    "7_N.22": {
+      "population": 47.7,
+      "growthPct": -0.03562671584549722,
+      "pctFemale": 49.74956514449777,
+      "pctNoncitizen": 12.766938407695369,
+      "income": 9670.0,
+      "householdExpenditure": 7752.0
+    },
+    "7_N.23": {
+      "population": 14.7,
+      "growthPct": -0.29842647856755616,
+      "pctFemale": 49.74226804123711,
+      "pctNoncitizen": 4.245794899620185,
+      "income": 8092.0,
+      "householdExpenditure": 5701.0
+    },
+    "7_N.24": {
+      "population": 28.2,
+      "growthPct": -0.2758328028856334,
+      "pctFemale": 51.02553221585685,
+      "pctNoncitizen": 6.669495721055236,
+      "income": 6132.0,
+      "householdExpenditure": 8685.0
+    },
+    "7_N.25": {
+      "population": 33.1,
+      "growthPct": 0.03626692456479828,
+      "pctFemale": 50.23573500967118,
+      "pctNoncitizen": 16.392649903288202,
+      "income": 10532.0,
+      "householdExpenditure": 11335.0
+    },
+    "7_N.26": {
+      "population": 5.9,
+      "growthPct": 0.0,
+      "pctFemale": 38.79661016949152,
+      "pctNoncitizen": 25.389830508474574,
+      "income": 7487.0,
+      "householdExpenditure": 7207.0
+    },
+    "7_N.27": {
+      "population": 21.1,
+      "growthPct": 0.0806336859080919,
+      "pctFemale": 43.10581985485937,
+      "pctNoncitizen": 25.167196319309397,
+      "income": 3498.0,
+      "householdExpenditure": 3155.0
+    },
+    "7_N.28": {
+      "population": 7.8,
+      "growthPct": -0.33222591362125997,
+      "pctFemale": 35.38205980066445,
+      "pctNoncitizen": 32.94147712752364,
+      "income": 7741.0,
+      "householdExpenditure": 5552.0
+    },
+    "7_N.29": {
+      "population": 23.3,
+      "growthPct": -0.12430880020575213,
+      "pctFemale": 49.20485232971837,
+      "pctNoncitizen": 3.583522654207209,
+      "income": 7560.0,
+      "householdExpenditure": 5379.0
+    },
+    "7_N.30": {
+      "population": 55.4,
+      "growthPct": -0.11178825141539202,
+      "pctFemale": 51.00970033536475,
+      "pctNoncitizen": 5.3748512495041645,
+      "income": 6965.0,
+      "householdExpenditure": 5252.0
+    },
+    "7_N.31": {
+      "population": 34.9,
+      "growthPct": -0.09732638690101025,
+      "pctFemale": 49.825385011736415,
+      "pctNoncitizen": 1.823438483998397,
+      "income": 7227.0,
+      "householdExpenditure": 5822.0
+    },
+    "7_N.32": {
+      "population": 38.0,
+      "growthPct": -0.1182809830463969,
+      "pctFemale": 48.64502562754633,
+      "pctNoncitizen": 5.551320804310684,
+      "income": 9841.0,
+      "householdExpenditure": 7609.0
+    },
+    "7_N.33": {
+      "population": 27.7,
+      "growthPct": 0.07948551195895102,
+      "pctFemale": 48.78242647590144,
+      "pctNoncitizen": 8.129200086711467,
+      "income": 7054.0,
+      "householdExpenditure": 4980.0
+    },
+    "7_N.34": {
+      "population": 135.1,
+      "growthPct": -0.13453378867847632,
+      "pctFemale": 49.391641164382555,
+      "pctNoncitizen": 11.552165106961754,
+      "income": 6993.0,
+      "householdExpenditure": 5047.0
+    },
+    "7_N.35": {
+      "population": 83.8,
+      "growthPct": -0.09418328783128999,
+      "pctFemale": 51.64701534353057,
+      "pctNoncitizen": 8.564718225062292,
+      "income": 8467.0,
+      "householdExpenditure": 6477.0
+    },
+    "7_N.36": {
+      "population": 41.5,
+      "growthPct": -0.1347579170276191,
+      "pctFemale": 45.89228992203292,
+      "pctNoncitizen": 6.239772836654154,
+      "income": 8250.0,
+      "householdExpenditure": 5674.0
+    },
+    "7_N.37": {
+      "population": 63.1,
+      "growthPct": -0.1076494427558223,
+      "pctFemale": 51.01792046605876,
+      "pctNoncitizen": 10.150709219858156,
+      "income": 9313.0,
+      "householdExpenditure": 6588.0
+    },
+    "7_N.38": {
+      "population": 85.2,
+      "growthPct": -0.14181737204204722,
+      "pctFemale": 48.98090739677219,
+      "pctNoncitizen": 3.259455468173135,
+      "income": 10159.0,
+      "householdExpenditure": 6664.0
+    },
+    "7_N.39": {
+      "population": 27.3,
+      "growthPct": -0.03661662394726478,
+      "pctFemale": 48.79165140974002,
+      "pctNoncitizen": 1.006957158549982,
+      "income": 7494.0,
+      "householdExpenditure": 5516.0
+    },
+    "7_N.40": {
+      "population": 19.7,
+      "growthPct": -0.06594632983311356,
+      "pctFemale": 49.053923806625065,
+      "pctNoncitizen": 0.95368538527875,
+      "income": 7023.0,
+      "householdExpenditure": 5562.0
+    },
+    "8_N.01": {
+      "population": 23.1,
+      "growthPct": 0.9747781614722321,
+      "pctFemale": 47.012283079075054,
+      "pctNoncitizen": 3.3527123311623033,
+      "income": 4487.0,
+      "householdExpenditure": 3405.0
+    },
+    "8_N.02": {
+      "population": 34.3,
+      "growthPct": 1.081543040697838,
+      "pctFemale": 48.00047151740194,
+      "pctNoncitizen": 1.8683877051837445,
+      "income": 3736.0,
+      "householdExpenditure": 3123.0
+    },
+    "8_N.03": {
+      "population": 22.9,
+      "growthPct": 0.9433130565106174,
+      "pctFemale": 47.443357136559996,
+      "pctNoncitizen": 3.6762761174292518,
+      "income": 3467.0,
+      "householdExpenditure": 3213.0
+    },
+    "8_N.04": {
+      "population": 14.9,
+      "growthPct": 1.0717677384344015,
+      "pctFemale": 50.59693393026726,
+      "pctNoncitizen": 2.611585944919278,
+      "income": 3266.0,
+      "householdExpenditure": 3367.0
+    },
+    "8_N.05": {
+      "population": 22.4,
+      "growthPct": 1.0556708472435181,
+      "pctFemale": 49.386447712713164,
+      "pctNoncitizen": 2.2647297663087613,
+      "income": 4014.0,
+      "householdExpenditure": 3961.0
+    },
+    "8_N.06": {
+      "population": 19.1,
+      "growthPct": 0.796875824581771,
+      "pctFemale": 48.503878832656085,
+      "pctNoncitizen": 2.9764103646630424,
+      "income": 3315.0,
+      "householdExpenditure": 3048.0
+    },
+    "8_N.07": {
+      "population": 25.2,
+      "growthPct": 1.184501104195937,
+      "pctFemale": 49.006223649869504,
+      "pctNoncitizen": 3.06765709696848,
+      "income": 3741.0,
+      "householdExpenditure": 3016.0
+    },
+    "8_N.08": {
+      "population": 43.1,
+      "growthPct": 1.0456229193041635,
+      "pctFemale": 48.8324658883106,
+      "pctNoncitizen": 5.331270220846814,
+      "income": 4657.0,
+      "householdExpenditure": 4071.0
+    },
+    "8_N.09": {
+      "population": 31.0,
+      "growthPct": 0.9377442042198498,
+      "pctFemale": 47.9747330033863,
+      "pctNoncitizen": 2.324824172961709,
+      "income": 4771.0,
+      "householdExpenditure": 3866.0
+    },
+    "8_N.10": {
+      "population": 34.0,
+      "growthPct": 1.1152416356877324,
+      "pctFemale": 48.16951672862454,
+      "pctNoncitizen": 3.194052044609666,
+      "income": 5200.0,
+      "householdExpenditure": 3970.0
+    },
+    "8_N.11": {
+      "population": 30.8,
+      "growthPct": 1.1461035762372342,
+      "pctFemale": 49.187218810548096,
+      "pctNoncitizen": 2.387442120127418,
+      "income": 3826.0,
+      "householdExpenditure": 3131.0
+    },
+    "8_N.12": {
+      "population": 29.2,
+      "growthPct": 1.003113109650637,
+      "pctFemale": 48.19785541335178,
+      "pctNoncitizen": 2.940159114493255,
+      "income": 4352.0,
+      "householdExpenditure": 3844.0
+    },
+    "8_N.13": {
+      "population": 46.9,
+      "growthPct": 1.1059132946730725,
+      "pctFemale": 47.12311639036799,
+      "pctNoncitizen": 6.206480263867031,
+      "income": 5648.0,
+      "householdExpenditure": 4047.0
+    },
+    "8_N.14": {
+      "population": 45.4,
+      "growthPct": 1.124846864906995,
+      "pctFemale": 49.21260719456511,
+      "pctNoncitizen": 3.0805212161710656,
+      "income": 3903.0,
+      "householdExpenditure": 3782.0
+    },
+    "8_N.15": {
+      "population": 16.7,
+      "growthPct": 1.0223216986268253,
+      "pctFemale": 46.07101808723005,
+      "pctNoncitizen": 7.186498094489142,
+      "income": 3821.0,
+      "householdExpenditure": 3706.0
+    },
+    "8_N.16": {
+      "population": 40.6,
+      "growthPct": 0.9573542210617878,
+      "pctFemale": 48.64602760164117,
+      "pctNoncitizen": 3.687678726843217,
+      "income": 5926.0,
+      "householdExpenditure": 4996.0
+    },
+    "8_N.17": {
+      "population": 36.8,
+      "growthPct": 0.9768411809899971,
+      "pctFemale": 47.719789265722746,
+      "pctNoncitizen": 4.124135660190977,
+      "income": 5196.0,
+      "householdExpenditure": 4858.0
+    },
+    "8_N.18": {
+      "population": 54.6,
+      "growthPct": 1.0119697334098092,
+      "pctFemale": 48.49129558026382,
+      "pctNoncitizen": 3.535418940669343,
+      "income": 4860.0,
+      "householdExpenditure": 4359.0
+    },
+    "8_N.19": {
+      "population": 17.1,
+      "growthPct": 1.2973165096854522,
+      "pctFemale": 49.36318938451514,
+      "pctNoncitizen": 2.002251051477993,
+      "income": 3191.0,
+      "householdExpenditure": 3253.0
+    },
+    "8_N.20": {
+      "population": 21.6,
+      "growthPct": 0.8733012655863315,
+      "pctFemale": 50.058375753047216,
+      "pctNoncitizen": 2.4751319292018867,
+      "income": 3724.0,
+      "householdExpenditure": 4600.0
+    },
+    "8_N.21": {
+      "population": 39.1,
+      "growthPct": 1.0257602769811085,
+      "pctFemale": 47.73790145466759,
+      "pctNoncitizen": 3.875668552825362,
+      "income": 3769.0,
+      "householdExpenditure": 3297.0
+    },
+    "8_N.22": {
+      "population": 48.6,
+      "growthPct": 1.0142999667442623,
+      "pctFemale": 49.15197871632857,
+      "pctNoncitizen": 2.9410542068506818,
+      "income": 4477.0,
+      "householdExpenditure": 4434.0
+    },
+    "8_N.23": {
+      "population": 147.0,
+      "growthPct": 1.0364831056003145,
+      "pctFemale": 48.65490886096829,
+      "pctNoncitizen": 5.47452780908916,
+      "income": 5528.0,
+      "householdExpenditure": 4966.0
+    },
+    "8_N.24": {
+      "population": 114.8,
+      "growthPct": 0.9905519292010402,
+      "pctFemale": 47.84559353941974,
+      "pctNoncitizen": 4.689726762496262,
+      "income": 5720.0,
+      "householdExpenditure": 5359.0
+    },
+    "8_N.25": {
+      "population": 47.4,
+      "growthPct": 0.9907318632150768,
+      "pctFemale": 47.457121551081286,
+      "pctNoncitizen": 7.531692766592095,
+      "income": 5843.0,
+      "householdExpenditure": 6074.0
+    },
+    "8_N.26": {
+      "population": 55.7,
+      "growthPct": 1.074254191768901,
+      "pctFemale": 48.30877549539087,
+      "pctNoncitizen": 4.9285040284532196,
+      "income": 4434.0,
+      "householdExpenditure": 4059.0
+    },
+    "8_N.27": {
+      "population": 33.0,
+      "growthPct": 1.0503108062590059,
+      "pctFemale": 48.761368159965706,
+      "pctNoncitizen": 7.113329454634536,
+      "income": 3165.0,
+      "householdExpenditure": 3737.0
+    },
+    "8_N.28": {
+      "population": 71.0,
+      "growthPct": 1.0402880359760271,
+      "pctFemale": 47.91159686348176,
+      "pctNoncitizen": 6.186227212568843,
+      "income": 4417.0,
+      "householdExpenditure": 4086.0
+    },
+    "8_N.29": {
+      "population": 23.4,
+      "growthPct": 0.9142659996549929,
+      "pctFemale": 49.21942383991719,
+      "pctNoncitizen": 6.520614110746939,
+      "income": 7335.0,
+      "householdExpenditure": 5632.0
+    },
+    "8_N.30": {
+      "population": 41.9,
+      "growthPct": 0.9127911177476404,
+      "pctFemale": 48.38274608029671,
+      "pctNoncitizen": 4.862599648370704,
+      "income": 4619.0,
+      "householdExpenditure": 3551.0
+    },
+    "8_N.31": {
+      "population": 46.0,
+      "growthPct": 1.0789074688523141,
+      "pctFemale": 47.90920477268233,
+      "pctNoncitizen": 5.9219055571425425,
+      "income": 4623.0,
+      "householdExpenditure": 4131.0
+    },
+    "8_N.32": {
+      "population": 46.0,
+      "growthPct": 1.0345054800237135,
+      "pctFemale": 45.9706999934108,
+      "pctNoncitizen": 6.516725603461531,
+      "income": 3943.0,
+      "householdExpenditure": 4034.0
+    },
+    "8_N.33": {
+      "population": 46.7,
+      "growthPct": 1.1063240165407409,
+      "pctFemale": 47.06098854705665,
+      "pctNoncitizen": 5.7459568295481604,
+      "income": 6310.0,
+      "householdExpenditure": 4587.0
+    },
+    "8_N.34": {
+      "population": 27.0,
+      "growthPct": 1.1501142621661056,
+      "pctFemale": 50.590042333195974,
+      "pctNoncitizen": 2.244034016408796,
+      "income": 4523.0,
+      "householdExpenditure": 4528.0
+    },
+    "8_N.35": {
+      "population": 25.4,
+      "growthPct": 1.2113484220592863,
+      "pctFemale": 49.59754542556583,
+      "pctNoncitizen": 2.032196365954734,
+      "income": 3743.0,
+      "householdExpenditure": 3264.0
+    },
+    "8_N.36": {
+      "population": 22.5,
+      "growthPct": 1.0509296685529588,
+      "pctFemale": 43.35309440402408,
+      "pctNoncitizen": 11.636575945387587,
+      "income": 4059.0,
+      "householdExpenditure": 3399.0
+    },
+    "8_N.37": {
+      "population": 47.6,
+      "growthPct": 0.9458370445773379,
+      "pctFemale": 47.39152563939433,
+      "pctNoncitizen": 6.368494719429953,
+      "income": 3966.0,
+      "householdExpenditure": 3704.0
+    },
+    "8_N.38": {
+      "population": 50.9,
+      "growthPct": 1.120470438652257,
+      "pctFemale": 47.63986013986014,
+      "pctNoncitizen": 5.8963763509218055,
+      "income": 5547.0,
+      "householdExpenditure": 4544.0
+    },
+    "8_N.39": {
+      "population": 11.4,
+      "growthPct": 0.6178287731685814,
+      "pctFemale": 48.27007943512798,
+      "pctNoncitizen": 5.436893203883495,
+      "income": 3794.0,
+      "householdExpenditure": 3273.0
+    },
+    "8_N.40": {
+      "population": 50.2,
+      "growthPct": 1.0914656248741423,
+      "pctFemale": 48.53397237101776,
+      "pctNoncitizen": 3.383140682266704,
+      "income": 5255.0,
+      "householdExpenditure": 4359.0
+    },
+    "8_N.41": {
+      "population": 30.1,
+      "growthPct": 1.111894924250069,
+      "pctFemale": 47.37478585105311,
+      "pctNoncitizen": 4.497967684504014,
+      "income": 4294.0,
+      "householdExpenditure": 3684.0
+    },
+    "8_N.42": {
+      "population": 38.2,
+      "growthPct": 0.9940778341793697,
+      "pctFemale": 48.89752538071067,
+      "pctNoncitizen": 4.037119289340101,
+      "income": 4388.0,
+      "householdExpenditure": 3985.0
+    },
+    "8_N.43": {
+      "population": 37.3,
+      "growthPct": 0.9226440109310153,
+      "pctFemale": 49.29245921155875,
+      "pctNoncitizen": 3.660813333694093,
+      "income": 3664.0,
+      "householdExpenditure": 3414.0
+    },
+    "8_N.44": {
+      "population": 76.8,
+      "growthPct": 1.0154153732835156,
+      "pctFemale": 48.62550639238176,
+      "pctNoncitizen": 5.250697111590466,
+      "income": 4988.0,
+      "householdExpenditure": 4061.0
+    },
+    "8_N.45": {
+      "population": 100.0,
+      "growthPct": 1.0131620150105558,
+      "pctFemale": 48.382274210329605,
+      "pctNoncitizen": 5.392082588361263,
+      "income": 5992.0,
+      "householdExpenditure": 5332.0
+    },
+    "8_N.46": {
+      "population": 41.6,
+      "growthPct": 0.9439227390745261,
+      "pctFemale": 49.78039843731043,
+      "pctNoncitizen": 6.090606876804737,
+      "income": 5145.0,
+      "householdExpenditure": 3882.0
+    },
+    "8_N.47": {
+      "population": 35.0,
+      "growthPct": 1.0363442163909868,
+      "pctFemale": 46.698998296815915,
+      "pctNoncitizen": 3.3226523483733152,
+      "income": 4668.0,
+      "householdExpenditure": 3683.0
+    },
+    "8_N.48": {
+      "population": 44.9,
+      "growthPct": 1.0078286691262495,
+      "pctFemale": 45.73022586160353,
+      "pctNoncitizen": 4.474489336812742,
+      "income": 3851.0,
+      "householdExpenditure": 3539.0
+    },
+    "8_N.49": {
+      "population": 39.7,
+      "growthPct": 1.0203821980203145,
+      "pctFemale": 46.01643807730477,
+      "pctNoncitizen": 8.056184635741367,
+      "income": 3769.0,
+      "householdExpenditure": 3115.0
+    },
+    "8_N.50": {
+      "population": 41.6,
+      "growthPct": 1.00519594036809,
+      "pctFemale": 47.574418491720486,
+      "pctNoncitizen": 5.208080415675229,
+      "income": 4554.0,
+      "householdExpenditure": 3703.0
+    },
+    "8_N.51": {
+      "population": 96.0,
+      "growthPct": 0.9845998485231078,
+      "pctFemale": 46.0616006059076,
+      "pctNoncitizen": 7.9798872338635025,
+      "income": 6534.0,
+      "householdExpenditure": 5152.0
+    },
+    "8_N.52": {
+      "population": 29.6,
+      "growthPct": 1.1758271807492522,
+      "pctFemale": 43.68676510801203,
+      "pctNoncitizen": 3.7975116215477165,
+      "income": 4416.0,
+      "householdExpenditure": 3466.0
+    },
+    "8_N.53": {
+      "population": 20.6,
+      "growthPct": 0.886429306038498,
+      "pctFemale": 46.255938096870565,
+      "pctNoncitizen": 7.017973456094814,
+      "income": 3884.0,
+      "householdExpenditure": 3441.0
+    },
+    "8_N.54": {
+      "population": 56.7,
+      "growthPct": 1.1127755189385875,
+      "pctFemale": 45.7700263927527,
+      "pctNoncitizen": 10.318139667593979,
+      "income": 4280.0,
+      "householdExpenditure": 3620.0
+    },
+    "8_N.55": {
+      "population": 38.4,
+      "growthPct": 1.100521299562949,
+      "pctFemale": 47.82002000947818,
+      "pctNoncitizen": 7.785266705281449,
+      "income": 4238.0,
+      "householdExpenditure": 3880.0
+    },
+    "8_N.56": {
+      "population": 65.8,
+      "growthPct": 1.1016701750072964,
+      "pctFemale": 44.610727839835285,
+      "pctNoncitizen": 12.797504724736108,
+      "income": 4840.0,
+      "householdExpenditure": 4027.0
+    },
+    "8_N.57": {
+      "population": 25.6,
+      "growthPct": 1.2097730687119512,
+      "pctFemale": 44.88020874515695,
+      "pctNoncitizen": 4.5979283624575,
+      "income": 4495.0,
+      "householdExpenditure": 3970.0
+    },
+    "8_N.58": {
+      "population": 28.8,
+      "growthPct": 1.180438448566618,
+      "pctFemale": 45.517144463181566,
+      "pctNoncitizen": 6.759415401911187,
+      "income": 3946.0,
+      "householdExpenditure": 4498.0
+    },
+    "8_N.59": {
+      "population": 69.9,
+      "growthPct": 1.0276199973984488,
+      "pctFemale": 53.348075561144114,
+      "pctNoncitizen": 3.114656954140109,
+      "income": 5014.0,
+      "householdExpenditure": 4477.0
+    },
+    "9_N.01": {
+      "population": 19.0,
+      "growthPct": 1.6260162601625934,
+      "pctFemale": 47.234702610184,
+      "pctNoncitizen": 2.690415062045357,
+      "income": 4983.0,
+      "householdExpenditure": 3676.0
+    },
+    "9_N.02": {
+      "population": 18.4,
+      "growthPct": 1.494842517513361,
+      "pctFemale": 49.8041811462298,
+      "pctNoncitizen": 5.896629709305532,
+      "income": 6232.0,
+      "householdExpenditure": 3501.0
+    },
+    "9_N.03": {
+      "population": 24.7,
+      "growthPct": 1.9018936424769939,
+      "pctFemale": 47.95577375304262,
+      "pctNoncitizen": 3.494368579561863,
+      "income": 4725.0,
+      "householdExpenditure": 3857.0
+    },
+    "9_N.04": {
+      "population": 12.1,
+      "growthPct": 1.8261381805941306,
+      "pctFemale": 49.30573087604141,
+      "pctNoncitizen": 0.7573844988639232,
+      "income": 4342.0,
+      "householdExpenditure": 3969.0
+    },
+    "9_N.05": {
+      "population": 14.1,
+      "growthPct": 1.7977041368854145,
+      "pctFemale": 50.30683705147643,
+      "pctNoncitizen": 1.552234495704281,
+      "income": 4801.0,
+      "householdExpenditure": 3993.0
+    },
+    "9_N.06": {
+      "population": 28.5,
+      "growthPct": 1.7748098418026634,
+      "pctFemale": 50.68742634717709,
+      "pctNoncitizen": 2.1819090811698745,
+      "income": 4926.0,
+      "householdExpenditure": 3921.0
+    },
+    "9_N.07": {
+      "population": 20.7,
+      "growthPct": 1.8650656955858362,
+      "pctFemale": 50.73077112346833,
+      "pctNoncitizen": 3.1445302888637365,
+      "income": 5868.0,
+      "householdExpenditure": 4590.0
+    },
+    "9_N.08": {
+      "population": 16.7,
+      "growthPct": 1.7114318777026543,
+      "pctFemale": 50.7765393751142,
+      "pctNoncitizen": 0.9622997746513186,
+      "income": 5342.0,
+      "householdExpenditure": 5239.0
+    },
+    "9_N.09": {
+      "population": 20.2,
+      "growthPct": 1.6096579476861181,
+      "pctFemale": 49.70321931589537,
+      "pctNoncitizen": 3.2947686116700203,
+      "income": 4564.0,
+      "householdExpenditure": 3615.0
+    },
+    "9_N.10": {
+      "population": 16.4,
+      "growthPct": 1.6612943218447627,
+      "pctFemale": 50.57649392511778,
+      "pctNoncitizen": 1.3203570543020082,
+      "income": 5363.0,
+      "householdExpenditure": 4165.0
+    },
+    "9_N.11": {
+      "population": 40.3,
+      "growthPct": 1.721439749608751,
+      "pctFemale": 51.08788934322783,
+      "pctNoncitizen": 0.633550406380938,
+      "income": 5424.0,
+      "householdExpenditure": 4348.0
+    },
+    "9_N.12": {
+      "population": 21.0,
+      "growthPct": 1.941747572815527,
+      "pctFemale": 50.44660194174757,
+      "pctNoncitizen": 4.548543689320388,
+      "income": 6483.0,
+      "householdExpenditure": 4851.0
+    },
+    "9_N.13": {
+      "population": 12.4,
+      "growthPct": 1.881521649823359,
+      "pctFemale": 50.30810944047326,
+      "pctNoncitizen": 0.8051926711034427,
+      "income": 4809.0,
+      "householdExpenditure": 3859.0
+    },
+    "9_N.14": {
+      "population": 14.9,
+      "growthPct": 1.4019327616714272,
+      "pctFemale": 50.79624336463863,
+      "pctNoncitizen": 0.7009663808357153,
+      "income": 3438.0,
+      "householdExpenditure": 3322.0
+    },
+    "9_N.15": {
+      "population": 10.4,
+      "growthPct": 1.4733144697043592,
+      "pctFemale": 50.05366377207533,
+      "pctNoncitizen": 0.40003902819787296,
+      "income": 4188.0,
+      "householdExpenditure": 3547.0
+    }
+  },
+  "byParlimen": {
+    "P.001": {
+      "population": 88.3,
+      "growthPct": 1.7304546187700123,
+      "pctFemale": 48.746514896656606,
+      "pctNoncitizen": 3.1383211594737204,
+      "income": 4818.0,
+      "householdExpenditure": 3828.0
+    },
+    "P.002": {
+      "population": 102.5,
+      "growthPct": 1.7319239739963324,
+      "pctFemale": 50.49873455411643,
+      "pctNoncitizen": 2.2589449655103966,
+      "income": 5093.0,
+      "householdExpenditure": 4250.0
+    },
+    "P.003": {
+      "population": 99.0,
+      "growthPct": 1.7137221057822776,
+      "pctFemale": 50.70172194139646,
+      "pctNoncitizen": 1.4691982081946329,
+      "income": 4910.0,
+      "householdExpenditure": 4100.0
+    },
+    "P.004": {
+      "population": 95.9,
+      "growthPct": 1.8717202404979927,
+      "pctFemale": 48.273810788417,
+      "pctNoncitizen": 4.379740381142578,
+      "income": 5083.0,
+      "householdExpenditure": 4356.0
+    },
+    "P.005": {
+      "population": 67.3,
+      "growthPct": 1.8370002723723613,
+      "pctFemale": 50.40250582574222,
+      "pctNoncitizen": 1.0274490814998638,
+      "income": 4721.0,
+      "householdExpenditure": 4314.0
+    },
+    "P.006": {
+      "population": 174.6,
+      "growthPct": 1.8818380743982461,
+      "pctFemale": 50.753610503282275,
+      "pctNoncitizen": 3.6341356673960608,
+      "income": 5429.0,
+      "householdExpenditure": 4551.0
+    },
+    "P.007": {
+      "population": 67.2,
+      "growthPct": 1.8397841966477715,
+      "pctFemale": 47.92531749158912,
+      "pctNoncitizen": 5.022277452793016,
+      "income": 3954.0,
+      "householdExpenditure": 3872.0
+    },
+    "P.008": {
+      "population": 135.5,
+      "growthPct": 1.8360552244526873,
+      "pctFemale": 48.62051601945031,
+      "pctNoncitizen": 3.5962031309889753,
+      "income": 5271.0,
+      "householdExpenditure": 4776.0
+    },
+    "P.009": {
+      "population": 121.2,
+      "growthPct": 1.8401814973531616,
+      "pctFemale": 50.53945046634737,
+      "pctNoncitizen": 5.491975464246702,
+      "income": 4681.0,
+      "householdExpenditure": 4362.0
+    },
+    "P.010": {
+      "population": 175.3,
+      "growthPct": 1.8599759440787116,
+      "pctFemale": 49.87768668034097,
+      "pctNoncitizen": 2.5508573553594154,
+      "income": 5311.0,
+      "householdExpenditure": 4296.0
+    },
+    "P.011": {
+      "population": 101.2,
+      "growthPct": 1.8487767076275912,
+      "pctFemale": 46.98932198101909,
+      "pctNoncitizen": 1.9242575204049797,
+      "income": 4592.0,
+      "householdExpenditure": 3914.0
+    },
+    "P.012": {
+      "population": 128.5,
+      "growthPct": 1.8225039619651324,
+      "pctFemale": 49.289223454833596,
+      "pctNoncitizen": 1.2519809825673534,
+      "income": 4802.0,
+      "householdExpenditure": 3718.0
+    },
+    "P.013": {
+      "population": 68.9,
+      "growthPct": 1.8628030751034967,
+      "pctFemale": 48.93849793021881,
+      "pctNoncitizen": 3.126848018923714,
+      "income": 4438.0,
+      "householdExpenditure": 3675.0
+    },
+    "P.014": {
+      "population": 220.4,
+      "growthPct": 1.8686707617502585,
+      "pctFemale": 48.82254791848658,
+      "pctNoncitizen": 5.323608665307802,
+      "income": 4843.0,
+      "householdExpenditure": 4259.0
+    },
+    "P.015": {
+      "population": 280.5,
+      "growthPct": 1.8374304292420385,
+      "pctFemale": 48.144598259505734,
+      "pctNoncitizen": 8.238847802961818,
+      "income": 4995.0,
+      "householdExpenditure": 3662.0
+    },
+    "P.016": {
+      "population": 145.2,
+      "growthPct": 1.873289833719208,
+      "pctFemale": 48.7904300848944,
+      "pctNoncitizen": 1.9518697818003226,
+      "income": 3367.0,
+      "householdExpenditure": 3041.0
+    },
+    "P.017": {
+      "population": 266.8,
+      "growthPct": 1.8565532933491637,
+      "pctFemale": 48.68804330812371,
+      "pctNoncitizen": 6.149570316526494,
+      "income": 5414.0,
+      "householdExpenditure": 4114.0
+    },
+    "P.018": {
+      "population": 122.4,
+      "growthPct": 1.8218118292987373,
+      "pctFemale": 48.912736045254135,
+      "pctNoncitizen": 3.8133266783129525,
+      "income": 4465.0,
+      "householdExpenditure": 3561.0
+    },
+    "P.019": {
+      "population": 183.6,
+      "growthPct": 2.0317432089983583,
+      "pctFemale": 50.43291246165473,
+      "pctNoncitizen": 0.800804694793936,
+      "income": 3904.0,
+      "householdExpenditure": 4181.0
+    },
+    "P.020": {
+      "population": 163.0,
+      "growthPct": 2.0829941004797234,
+      "pctFemale": 49.83215802196976,
+      "pctNoncitizen": 2.1844508185427807,
+      "income": 4868.0,
+      "householdExpenditure": 4318.0
+    },
+    "P.021": {
+      "population": 133.5,
+      "growthPct": 2.0634398819580984,
+      "pctFemale": 51.85816622197079,
+      "pctNoncitizen": 2.281328124402719,
+      "income": 4858.0,
+      "householdExpenditure": 4436.0
+    },
+    "P.022": {
+      "population": 115.8,
+      "growthPct": 2.048010151926397,
+      "pctFemale": 49.43688533258134,
+      "pctNoncitizen": 0.6503577849060594,
+      "income": 4016.0,
+      "householdExpenditure": 3878.0
+    },
+    "P.023": {
+      "population": 119.4,
+      "growthPct": 2.096658343879342,
+      "pctFemale": 49.22615179395971,
+      "pctNoncitizen": 1.5288846324862333,
+      "income": 3476.0,
+      "householdExpenditure": 3307.0
+    },
+    "P.024": {
+      "population": 159.8,
+      "growthPct": 2.025832072375773,
+      "pctFemale": 50.16823408480019,
+      "pctNoncitizen": 2.0366858842983646,
+      "income": 4750.0,
+      "householdExpenditure": 4318.0
+    },
+    "P.025": {
+      "population": 160.5,
+      "growthPct": 2.040167587465273,
+      "pctFemale": 51.54713238519686,
+      "pctNoncitizen": 0.7381223337635339,
+      "income": 4187.0,
+      "householdExpenditure": 3579.0
+    },
+    "P.026": {
+      "population": 110.7,
+      "growthPct": 2.076571259958699,
+      "pctFemale": 47.82107553850693,
+      "pctNoncitizen": 1.4384774269696077,
+      "income": 4516.0,
+      "householdExpenditure": 4221.0
+    },
+    "P.027": {
+      "population": 129.1,
+      "growthPct": 2.079544556021187,
+      "pctFemale": 48.503202340476,
+      "pctNoncitizen": 2.852850478374318,
+      "income": 3665.0,
+      "householdExpenditure": 3598.0
+    },
+    "P.028": {
+      "population": 138.6,
+      "growthPct": 2.044572715961204,
+      "pctFemale": 50.46715210236853,
+      "pctNoncitizen": 0.6339132547506682,
+      "income": 4853.0,
+      "householdExpenditure": 3745.0
+    },
+    "P.029": {
+      "population": 112.8,
+      "growthPct": 2.0398932561400294,
+      "pctFemale": 50.29897326880456,
+      "pctNoncitizen": 0.937174906146818,
+      "income": 4156.0,
+      "householdExpenditure": 3411.0
+    },
+    "P.030": {
+      "population": 80.6,
+      "growthPct": 2.087344209139726,
+      "pctFemale": 49.68335191002128,
+      "pctNoncitizen": 2.577515452426791,
+      "income": 3157.0,
+      "householdExpenditure": 3282.0
+    },
+    "P.031": {
+      "population": 107.2,
+      "growthPct": 2.0884321997581092,
+      "pctFemale": 49.65764187149428,
+      "pctNoncitizen": 3.5730951269915336,
+      "income": 2994.0,
+      "householdExpenditure": 2863.0
+    },
+    "P.032": {
+      "population": 114.8,
+      "growthPct": 2.0489799546646448,
+      "pctFemale": 46.43850837815014,
+      "pctNoncitizen": 6.809191519623094,
+      "income": 3774.0,
+      "householdExpenditure": 3655.0
+    },
+    "P.033": {
+      "population": 132.0,
+      "growthPct": 3.2661842362605102,
+      "pctFemale": 49.0968120477215,
+      "pctNoncitizen": 2.112262859378056,
+      "income": 5422.0,
+      "householdExpenditure": 4315.0
+    },
+    "P.034": {
+      "population": 126.4,
+      "growthPct": 3.2764114715254555,
+      "pctFemale": 49.191927445052706,
+      "pctNoncitizen": 1.831031947054498,
+      "income": 6137.0,
+      "householdExpenditure": 4644.0
+    },
+    "P.035": {
+      "population": 148.9,
+      "growthPct": 3.245042296491476,
+      "pctFemale": 50.194841214810715,
+      "pctNoncitizen": 1.3715157398419082,
+      "income": 6933.0,
+      "householdExpenditure": 5222.0
+    },
+    "P.036": {
+      "population": 133.3,
+      "growthPct": 3.308507257945769,
+      "pctFemale": 49.90971161968829,
+      "pctNoncitizen": 2.435073741968984,
+      "income": 6764.0,
+      "householdExpenditure": 5512.0
+    },
+    "P.037": {
+      "population": 167.6,
+      "growthPct": 3.2579230124698,
+      "pctFemale": 49.09864951451525,
+      "pctNoncitizen": 1.2389718566711025,
+      "income": 6338.0,
+      "householdExpenditure": 5160.0
+    },
+    "P.038": {
+      "population": 94.9,
+      "growthPct": 3.315007348538459,
+      "pctFemale": 47.43127755701922,
+      "pctNoncitizen": 4.386260954765663,
+      "income": 6133.0,
+      "householdExpenditure": 4590.0
+    },
+    "P.039": {
+      "population": 161.3,
+      "growthPct": 3.2485197631621174,
+      "pctFemale": 48.639462313970235,
+      "pctNoncitizen": 1.8883021283405348,
+      "income": 7156.0,
+      "householdExpenditure": 5833.0
+    },
+    "P.040": {
+      "population": 222.6,
+      "growthPct": 3.255373825272982,
+      "pctFemale": 47.5795752892171,
+      "pctNoncitizen": 3.409839411453647,
+      "income": 7709.0,
+      "householdExpenditure": 5644.0
+    },
+    "P.041": {
+      "population": 116.9,
+      "growthPct": -0.12217731944669966,
+      "pctFemale": 48.431772938150935,
+      "pctNoncitizen": 3.889168937911707,
+      "income": 6537.0,
+      "householdExpenditure": 5151.0
+    },
+    "P.042": {
+      "population": 106.8,
+      "growthPct": -0.09261078214015449,
+      "pctFemale": 48.98829736480229,
+      "pctNoncitizen": 3.044930261274661,
+      "income": 6153.0,
+      "householdExpenditure": 5122.0
+    },
+    "P.043": {
+      "population": 112.6,
+      "growthPct": -0.09936830151182569,
+      "pctFemale": 49.96717297182199,
+      "pctNoncitizen": 7.5901412449428625,
+      "income": 7231.0,
+      "householdExpenditure": 5484.0
+    },
+    "P.044": {
+      "population": 159.8,
+      "growthPct": -0.11813312165210918,
+      "pctFemale": 48.25456750151573,
+      "pctNoncitizen": 6.0772928138809545,
+      "income": 6415.0,
+      "householdExpenditure": 5082.0
+    },
+    "P.045": {
+      "population": 162.8,
+      "growthPct": -0.09021338226539387,
+      "pctFemale": 47.36386677876855,
+      "pctNoncitizen": 5.212124187619287,
+      "income": 7337.0,
+      "householdExpenditure": 5714.0
+    },
+    "P.046": {
+      "population": 164.3,
+      "growthPct": -0.10214753021863096,
+      "pctFemale": 47.57521219933361,
+      "pctNoncitizen": 22.44995987061313,
+      "income": 7038.0,
+      "householdExpenditure": 5742.0
+    },
+    "P.047": {
+      "population": 121.9,
+      "growthPct": -0.10980546405100246,
+      "pctFemale": 47.670321385843295,
+      "pctNoncitizen": 1.428290476424603,
+      "income": 6470.0,
+      "householdExpenditure": 4926.0
+    },
+    "P.048": {
+      "population": 123.7,
+      "growthPct": -0.10256244599319642,
+      "pctFemale": 50.16999523528794,
+      "pctNoncitizen": 11.328708601516633,
+      "income": 8661.0,
+      "householdExpenditure": 8661.0
+    },
+    "P.049": {
+      "population": 34.8,
+      "growthPct": -0.02585538222873493,
+      "pctFemale": 40.6389152230745,
+      "pctNoncitizen": 26.952799563331325,
+      "income": 5650.0,
+      "householdExpenditure": 4860.0
+    },
+    "P.050": {
+      "population": 113.6,
+      "growthPct": -0.10991426687183997,
+      "pctFemale": 50.275664981314584,
+      "pctNoncitizen": 3.916465157177402,
+      "income": 7308.0,
+      "householdExpenditure": 5439.0
+    },
+    "P.051": {
+      "population": 200.8,
+      "growthPct": -0.10198751274843117,
+      "pctFemale": 49.16643864580483,
+      "pctNoncitizen": 9.94502624312828,
+      "income": 7498.0,
+      "householdExpenditure": 5615.0
+    },
+    "P.052": {
+      "population": 188.4,
+      "growthPct": -0.1076334946952079,
+      "pctFemale": 50.16834302741737,
+      "pctNoncitizen": 8.583638648377809,
+      "income": 8727.0,
+      "householdExpenditure": 6275.0
+    },
+    "P.053": {
+      "population": 132.2,
+      "growthPct": -0.10880735054101846,
+      "pctFemale": 48.95272925104274,
+      "pctNoncitizen": 2.4511878135767398,
+      "income": 8892.0,
+      "householdExpenditure": 6288.0
+    },
+    "P.054": {
+      "population": 57.4,
+      "growthPct": 1.0385495511353569,
+      "pctFemale": 47.60253476500616,
+      "pctNoncitizen": 2.466115120577363,
+      "income": 4004.0,
+      "householdExpenditure": 3254.0
+    },
+    "P.055": {
+      "population": 37.8,
+      "growthPct": 0.9939083039435714,
+      "pctFemale": 48.685476114139156,
+      "pctNoncitizen": 3.2569199529763817,
+      "income": 3436.0,
+      "householdExpenditure": 3289.0
+    },
+    "P.056": {
+      "population": 66.7,
+      "growthPct": 1.029990911844906,
+      "pctFemale": 48.98970009088155,
+      "pctNoncitizen": 2.771887306876704,
+      "income": 3762.0,
+      "householdExpenditure": 3406.0
+    },
+    "P.057": {
+      "population": 74.1,
+      "growthPct": 1.0004634299266617,
+      "pctFemale": 48.47340730038438,
+      "pctNoncitizen": 4.072731237903116,
+      "income": 4712.0,
+      "householdExpenditure": 3973.0
+    },
+    "P.058": {
+      "population": 93.9,
+      "growthPct": 0.9829436689394119,
+      "pctFemale": 48.51160389736089,
+      "pctNoncitizen": 2.850966812208289,
+      "income": 4502.0,
+      "householdExpenditure": 3692.0
+    },
+    "P.059": {
+      "population": 108.9,
+      "growthPct": 1.0082272082216461,
+      "pctFemale": 47.83189411295484,
+      "pctNoncitizen": 5.0550490200625156,
+      "income": 4459.0,
+      "householdExpenditure": 3865.0
+    },
+    "P.060": {
+      "population": 132.1,
+      "growthPct": 1.0618764918293695,
+      "pctFemale": 48.32379582593794,
+      "pctNoncitizen": 3.746404308709224,
+      "income": 5225.0,
+      "householdExpenditure": 4681.0
+    },
+    "P.061": {
+      "population": 38.7,
+      "growthPct": 1.0602183109625685,
+      "pctFemale": 49.751919360735364,
+      "pctNoncitizen": 2.2666736303337336,
+      "income": 3456.0,
+      "householdExpenditure": 3984.0
+    },
+    "P.062": {
+      "population": 87.7,
+      "growthPct": 1.0194090882912,
+      "pctFemale": 48.521568853308764,
+      "pctNoncitizen": 3.3577146806427463,
+      "income": 3981.0,
+      "householdExpenditure": 4055.0
+    },
+    "P.063": {
+      "population": 261.8,
+      "growthPct": 1.0163370195164545,
+      "pctFemale": 48.2999313181513,
+      "pctNoncitizen": 5.130302585987359,
+      "income": 5546.0,
+      "householdExpenditure": 5136.0
+    },
+    "P.064": {
+      "population": 136.1,
+      "growthPct": 1.039346696362291,
+      "pctFemale": 48.12175204157387,
+      "pctNoncitizen": 6.365256124721603,
+      "income": 4609.0,
+      "householdExpenditure": 4682.0
+    },
+    "P.065": {
+      "population": 136.4,
+      "growthPct": 1.0535050156321748,
+      "pctFemale": 48.28120138096578,
+      "pctNoncitizen": 5.836506689979108,
+      "income": 4715.0,
+      "householdExpenditure": 4099.0
+    },
+    "P.066": {
+      "population": 138.6,
+      "growthPct": 1.0005319652837927,
+      "pctFemale": 46.9805504747608,
+      "pctNoncitizen": 6.060031917917028,
+      "income": 4504.0,
+      "householdExpenditure": 4207.0
+    },
+    "P.067": {
+      "population": 52.3,
+      "growthPct": 0.9866960165285981,
+      "pctFemale": 50.10909652628936,
+      "pctNoncitizen": 2.14138137442314,
+      "income": 4180.0,
+      "householdExpenditure": 3967.0
+    },
+    "P.068": {
+      "population": 121.0,
+      "growthPct": 1.038778850329002,
+      "pctFemale": 46.7450482648051,
+      "pctNoncitizen": 7.149537392698487,
+      "income": 5006.0,
+      "householdExpenditure": 4061.0
+    },
+    "P.069": {
+      "population": 61.6,
+      "growthPct": 1.0034760936577718,
+      "pctFemale": 48.484947858595135,
+      "pctNoncitizen": 3.764675018036335,
+      "income": 4828.0,
+      "householdExpenditure": 4056.0
+    },
+    "P.070": {
+      "population": 105.6,
+      "growthPct": 1.002372025403615,
+      "pctFemale": 48.6035656898003,
+      "pctNoncitizen": 4.035312571734639,
+      "income": 4110.0,
+      "householdExpenditure": 3659.0
+    },
+    "P.071": {
+      "population": 218.5,
+      "growthPct": 1.0470041991157857,
+      "pctFemale": 48.734253315821604,
+      "pctNoncitizen": 5.4754989918422465,
+      "income": 5506.0,
+      "householdExpenditure": 4726.0
+    },
+    "P.072": {
+      "population": 79.9,
+      "growthPct": 1.0203178536659403,
+      "pctFemale": 46.15452694928755,
+      "pctNoncitizen": 3.97000998824169,
+      "income": 4328.0,
+      "householdExpenditure": 3599.0
+    },
+    "P.073": {
+      "population": 81.3,
+      "growthPct": 1.0126110455364326,
+      "pctFemale": 46.8136919922967,
+      "pctNoncitizen": 6.59874510778406,
+      "income": 4203.0,
+      "householdExpenditure": 3461.0
+    },
+    "P.074": {
+      "population": 125.6,
+      "growthPct": 1.0296010296010305,
+      "pctFemale": 45.50273487773488,
+      "pctNoncitizen": 6.995656370656371,
+      "income": 5786.0,
+      "householdExpenditure": 4795.0
+    },
+    "P.075": {
+      "population": 77.3,
+      "growthPct": 1.0523563631609814,
+      "pctFemale": 45.89973200862801,
+      "pctNoncitizen": 9.437218118831296,
+      "income": 4134.0,
+      "householdExpenditure": 3547.0
+    },
+    "P.076": {
+      "population": 104.1,
+      "growthPct": 1.0042206374617926,
+      "pctFemale": 45.79343132974337,
+      "pctNoncitizen": 10.950371125018192,
+      "income": 4541.0,
+      "householdExpenditure": 3962.0
+    },
+    "P.077": {
+      "population": 124.2,
+      "growthPct": 1.019138327897387,
+      "pctFemale": 49.793000235874,
+      "pctNoncitizen": 4.263625789974542,
+      "income": 4664.0,
+      "householdExpenditure": 4329.0
+    },
+    "P.078": {
+      "population": 68.9,
+      "growthPct": 1.3220393817737988,
+      "pctFemale": 45.43021426155497,
+      "pctNoncitizen": 8.718989426626077,
+      "income": 4940.0,
+      "householdExpenditure": 4427.0
+    },
+    "P.079": {
+      "population": 68.8,
+      "growthPct": 1.3956641563379701,
+      "pctFemale": 46.34282935168673,
+      "pctNoncitizen": 5.398434851812006,
+      "income": 4703.0,
+      "householdExpenditure": 4385.0
+    },
+    "P.080": {
+      "population": 97.2,
+      "growthPct": 1.346067626604382,
+      "pctFemale": 47.03625311493187,
+      "pctNoncitizen": 5.527114243710184,
+      "income": 4427.0,
+      "householdExpenditure": 4675.0
+    },
+    "P.081": {
+      "population": 106.2,
+      "growthPct": 1.3639270408796347,
+      "pctFemale": 46.92042645388514,
+      "pctNoncitizen": 4.7646772484752455,
+      "income": 4231.0,
+      "householdExpenditure": 3722.0
+    },
+    "P.082": {
+      "population": 252.3,
+      "growthPct": 1.3472801330409059,
+      "pctFemale": 47.76055851469796,
+      "pctNoncitizen": 3.8783511283571532,
+      "income": 5824.0,
+      "householdExpenditure": 5470.0
+    },
+    "P.083": {
+      "population": 130.0,
+      "growthPct": 1.3668935725591909,
+      "pctFemale": 48.35200823411074,
+      "pctNoncitizen": 1.7318143894204152,
+      "income": 5082.0,
+      "householdExpenditure": 4360.0
+    },
+    "P.084": {
+      "population": 129.8,
+      "growthPct": 1.373778711506482,
+      "pctFemale": 48.76172476003781,
+      "pctNoncitizen": 3.133371341992018,
+      "income": 5578.0,
+      "householdExpenditure": 4943.0
+    },
+    "P.085": {
+      "population": 163.3,
+      "growthPct": 1.361836306531114,
+      "pctFemale": 45.85800652986233,
+      "pctNoncitizen": 5.457897285017318,
+      "income": 4824.0,
+      "householdExpenditure": 4021.0
+    },
+    "P.086": {
+      "population": 62.8,
+      "growthPct": 1.4015371697991263,
+      "pctFemale": 45.788929793967576,
+      "pctNoncitizen": 6.134147129109346,
+      "income": 4109.0,
+      "householdExpenditure": 3566.0
+    },
+    "P.087": {
+      "population": 69.0,
+      "growthPct": 1.4005025937954694,
+      "pctFemale": 49.401149205696065,
+      "pctNoncitizen": 2.5952650374006203,
+      "income": 4640.0,
+      "householdExpenditure": 3747.0
+    },
+    "P.088": {
+      "population": 143.7,
+      "growthPct": 1.3534958844979106,
+      "pctFemale": 48.42820970369796,
+      "pctNoncitizen": 3.0920927345695124,
+      "income": 4659.0,
+      "householdExpenditure": 3755.0
+    },
+    "P.089": {
+      "population": 119.4,
+      "growthPct": 1.3573738762828869,
+      "pctFemale": 43.394368468858495,
+      "pctNoncitizen": 7.207069549494487,
+      "income": 5015.0,
+      "householdExpenditure": 4631.0
+    },
+    "P.090": {
+      "population": 99.3,
+      "growthPct": 1.364800996294523,
+      "pctFemale": 46.56860243153027,
+      "pctNoncitizen": 6.545328338250156,
+      "income": 4269.0,
+      "householdExpenditure": 3548.0
+    },
+    "P.091": {
+      "population": 102.2,
+      "growthPct": 1.2914159984935103,
+      "pctFemale": 45.528608382806226,
+      "pctNoncitizen": 8.571117079794245,
+      "income": 4760.0,
+      "householdExpenditure": 3966.0
+    },
+    "P.092": {
+      "population": 48.4,
+      "growthPct": 0.6153334442042229,
+      "pctFemale": 48.82338267087976,
+      "pctNoncitizen": 2.1661400299351405,
+      "income": 6767.0,
+      "householdExpenditure": 4755.0
+    },
+    "P.093": {
+      "population": 59.3,
+      "growthPct": 0.5851920956661841,
+      "pctFemale": 47.09524213383089,
+      "pctNoncitizen": 5.483843609532695,
+      "income": 7625.0,
+      "householdExpenditure": 6349.0
+    },
+    "P.094": {
+      "population": 241.5,
+      "growthPct": 0.6342248039403576,
+      "pctFemale": 46.910550133762264,
+      "pctNoncitizen": 3.8970238938569364,
+      "income": 8506.0,
+      "householdExpenditure": 5463.0
+    },
+    "P.095": {
+      "population": 60.2,
+      "growthPct": 0.5646319869032124,
+      "pctFemale": 49.764458253984166,
+      "pctNoncitizen": 3.7920550599712675,
+      "income": 6142.0,
+      "householdExpenditure": 5072.0
+    },
+    "P.096": {
+      "population": 172.3,
+      "growthPct": 0.6037392126867097,
+      "pctFemale": 47.66036457907582,
+      "pctNoncitizen": 5.625751754580595,
+      "income": 7765.0,
+      "householdExpenditure": 5663.0
+    },
+    "P.097": {
+      "population": 365.6,
+      "growthPct": 0.6361326657289473,
+      "pctFemale": 47.412115423258065,
+      "pctNoncitizen": 6.579885435562321,
+      "income": 9930.0,
+      "householdExpenditure": 6285.0
+    },
+    "P.098": {
+      "population": 351.4,
+      "growthPct": 0.6279942841924657,
+      "pctFemale": 48.096687637991224,
+      "pctNoncitizen": 7.8489262815464755,
+      "income": 10570.0,
+      "householdExpenditure": 7357.0
+    },
+    "P.099": {
+      "population": 205.7,
+      "growthPct": 0.6020472541069769,
+      "pctFemale": 47.87522802967687,
+      "pctNoncitizen": 9.0434246756232,
+      "income": 11221.0,
+      "householdExpenditure": 7259.0
+    },
+    "P.100": {
+      "population": 228.8,
+      "growthPct": 0.609903567518128,
+      "pctFemale": 46.12181361663581,
+      "pctNoncitizen": 7.77396191070871,
+      "income": 10846.0,
+      "householdExpenditure": 6428.0
+    },
+    "P.101": {
+      "population": 349.7,
+      "growthPct": 0.6131156691189293,
+      "pctFemale": 47.59457834271756,
+      "pctNoncitizen": 4.029991167221472,
+      "income": 11411.0,
+      "householdExpenditure": 6533.0
+    },
+    "P.102": {
+      "population": 691.9,
+      "growthPct": 0.6240465148070982,
+      "pctFemale": 46.901945727877326,
+      "pctNoncitizen": 9.564883531192873,
+      "income": 12653.0,
+      "householdExpenditure": 7111.0
+    },
+    "P.103": {
+      "population": 377.5,
+      "growthPct": 0.6181016629306966,
+      "pctFemale": 47.0623512384689,
+      "pctNoncitizen": 9.46796346296854,
+      "income": 8879.0,
+      "householdExpenditure": 7137.0
+    },
+    "P.104": {
+      "population": 481.1,
+      "growthPct": 0.6161194928830516,
+      "pctFemale": 46.10753020993237,
+      "pctNoncitizen": 9.682445404618594,
+      "income": 12180.0,
+      "householdExpenditure": 8513.0
+    },
+    "P.105": {
+      "population": 364.6,
+      "growthPct": 0.6376107538160043,
+      "pctFemale": 46.565734632476754,
+      "pctNoncitizen": 10.450467857241435,
+      "income": 10993.0,
+      "householdExpenditure": 9727.0
+    },
+    "P.106": {
+      "population": 471.9,
+      "growthPct": 0.6314254092749709,
+      "pctFemale": 48.19432804693148,
+      "pctNoncitizen": 6.802590528832107,
+      "income": 10608.0,
+      "householdExpenditure": 7498.0
+    },
+    "P.107": {
+      "population": 349.3,
+      "growthPct": 0.6361425789128032,
+      "pctFemale": 47.14513731229761,
+      "pctNoncitizen": 7.927581160038261,
+      "income": 10998.0,
+      "householdExpenditure": 8613.0
+    },
+    "P.108": {
+      "population": 441.5,
+      "growthPct": 0.6279273837878484,
+      "pctFemale": 46.59038849445578,
+      "pctNoncitizen": 9.148366363149437,
+      "income": 10831.0,
+      "householdExpenditure": 8339.0
+    },
+    "P.109": {
+      "population": 316.0,
+      "growthPct": 0.6263672926093705,
+      "pctFemale": 44.73542589473081,
+      "pctNoncitizen": 10.808099785691313,
+      "income": 8819.0,
+      "householdExpenditure": 6732.0
+    },
+    "P.110": {
+      "population": 299.7,
+      "growthPct": 0.6255099265705737,
+      "pctFemale": 45.84319611062428,
+      "pctNoncitizen": 8.871631127093007,
+      "income": 8655.0,
+      "householdExpenditure": 7092.0
+    },
+    "P.111": {
+      "population": 526.4,
+      "growthPct": 0.6320087785369218,
+      "pctFemale": 46.64687417557838,
+      "pctNoncitizen": 8.443989034475639,
+      "income": 8948.0,
+      "householdExpenditure": 6959.0
+    },
+    "P.112": {
+      "population": 248.6,
+      "growthPct": 0.6098918221074677,
+      "pctFemale": 48.07015981836798,
+      "pctNoncitizen": 3.7625509423577363,
+      "income": 10635.0,
+      "householdExpenditure": 6159.0
+    },
+    "P.113": {
+      "population": 386.6,
+      "growthPct": 0.6131520596287761,
+      "pctFemale": 46.305732815606746,
+      "pctNoncitizen": 9.923902520273575,
+      "income": 11112.0,
+      "householdExpenditure": 7397.0
+    },
+    "P.114": {
+      "population": 104.2,
+      "growthPct": -1.8823152760383761,
+      "pctFemale": 41.160462904547124,
+      "pctNoncitizen": 16.97661936553075,
+      "income": 10570.0,
+      "householdExpenditure": 8315.0
+    },
+    "P.115": {
+      "population": 215.1,
+      "growthPct": -1.839986857236739,
+      "pctFemale": 39.875052479783875,
+      "pctNoncitizen": 21.259332274610735,
+      "income": 9929.0,
+      "householdExpenditure": 6823.0
+    },
+    "P.116": {
+      "population": 211.6,
+      "growthPct": -1.855287569573284,
+      "pctFemale": 46.28803339517626,
+      "pctNoncitizen": 9.433209647495362,
+      "income": 9974.0,
+      "householdExpenditure": 7139.0
+    },
+    "P.117": {
+      "population": 249.0,
+      "growthPct": -1.8583844077015563,
+      "pctFemale": 47.895867410283195,
+      "pctNoncitizen": 14.066570758528268,
+      "income": 15867.0,
+      "householdExpenditure": 11762.0
+    },
+    "P.118": {
+      "population": 144.4,
+      "growthPct": -1.8321492912743418,
+      "pctFemale": 48.10088718175329,
+      "pctNoncitizen": 4.44066759577144,
+      "income": 11180.0,
+      "householdExpenditure": 10654.0
+    },
+    "P.119": {
+      "population": 119.8,
+      "growthPct": -1.8804874852575075,
+      "pctFemale": 48.10640807233652,
+      "pctNoncitizen": 12.522932774210457,
+      "income": 10669.0,
+      "householdExpenditure": 8285.0
+    },
+    "P.120": {
+      "population": 118.3,
+      "growthPct": -1.849347459947398,
+      "pctFemale": 43.522305835110224,
+      "pctNoncitizen": 21.25297646209626,
+      "income": 10966.0,
+      "householdExpenditure": 9320.0
+    },
+    "P.121": {
+      "population": 145.3,
+      "growthPct": -1.8866395667616398,
+      "pctFemale": 49.130282118114174,
+      "pctNoncitizen": 6.788256107607331,
+      "income": 10331.0,
+      "householdExpenditure": 7234.0
+    },
+    "P.122": {
+      "population": 316.5,
+      "growthPct": -1.8638123970965406,
+      "pctFemale": 48.9791045886807,
+      "pctNoncitizen": 3.793358986205121,
+      "income": 10932.0,
+      "householdExpenditure": 7076.0
+    },
+    "P.123": {
+      "population": 133.3,
+      "growthPct": -1.8575646245481223,
+      "pctFemale": 47.259300707538486,
+      "pctNoncitizen": 8.766556474234848,
+      "income": 10228.0,
+      "householdExpenditure": 7354.0
+    },
+    "P.124": {
+      "population": 187.8,
+      "growthPct": -1.8388233203357762,
+      "pctFemale": 49.1020186286706,
+      "pctNoncitizen": 3.2260425051484956,
+      "income": 9360.0,
+      "householdExpenditure": 6228.0
+    },
+    "P.125": {
+      "population": 120.3,
+      "growthPct": 10.162817530814452,
+      "pctFemale": 50.940458965953006,
+      "pctNoncitizen": 2.583286020402557,
+      "income": 10769.0,
+      "householdExpenditure": 9186.0
+    },
+    "P.126": {
+      "population": 64.7,
+      "growthPct": 0.778816199376947,
+      "pctFemale": 46.42367601246106,
+      "pctNoncitizen": 5.378504672897195,
+      "income": 3736.0,
+      "householdExpenditure": 3726.0
+    },
+    "P.127": {
+      "population": 109.2,
+      "growthPct": 0.7575268271528598,
+      "pctFemale": 48.23997268843595,
+      "pctNoncitizen": 4.429824966091217,
+      "income": 4484.0,
+      "householdExpenditure": 4210.0
+    },
+    "P.128": {
+      "population": 274.6,
+      "growthPct": 0.763246734184662,
+      "pctFemale": 48.44084837810069,
+      "pctNoncitizen": 8.463599001908118,
+      "income": 5934.0,
+      "householdExpenditure": 4970.0
+    },
+    "P.129": {
+      "population": 71.5,
+      "growthPct": 0.698552194242571,
+      "pctFemale": 48.79584248774717,
+      "pctNoncitizen": 2.5266182186919046,
+      "income": 3996.0,
+      "householdExpenditure": 3809.0
+    },
+    "P.130": {
+      "population": 258.5,
+      "growthPct": 0.7463413683574724,
+      "pctFemale": 48.736286220940435,
+      "pctNoncitizen": 5.054075647446266,
+      "income": 7335.0,
+      "householdExpenditure": 6453.0
+    },
+    "P.131": {
+      "population": 211.8,
+      "growthPct": 0.7568657859558858,
+      "pctFemale": 47.73297051981599,
+      "pctNoncitizen": 5.099686502480864,
+      "income": 5960.0,
+      "householdExpenditure": 5318.0
+    },
+    "P.132": {
+      "population": 129.9,
+      "growthPct": 0.7335949253222063,
+      "pctFemale": 46.95085069094406,
+      "pctNoncitizen": 4.738123672007073,
+      "income": 5342.0,
+      "householdExpenditure": 4709.0
+    },
+    "P.133": {
+      "population": 88.8,
+      "growthPct": 0.7682443856881773,
+      "pctFemale": 46.891276965150986,
+      "pctNoncitizen": 5.485514564869557,
+      "income": 4367.0,
+      "householdExpenditure": 4238.0
+    },
+    "P.134": {
+      "population": 96.6,
+      "growthPct": 0.9520425545256,
+      "pctFemale": 49.44037454670861,
+      "pctNoncitizen": 5.385153988441722,
+      "income": 6391.0,
+      "householdExpenditure": 5576.0
+    },
+    "P.135": {
+      "population": 172.7,
+      "growthPct": 0.9510559819492153,
+      "pctFemale": 47.46745541377073,
+      "pctNoncitizen": 8.898540389190579,
+      "income": 6281.0,
+      "householdExpenditure": 5761.0
+    },
+    "P.136": {
+      "population": 199.9,
+      "growthPct": 0.9427721642352631,
+      "pctFemale": 46.58869986315411,
+      "pctNoncitizen": 5.075921689819374,
+      "income": 7316.0,
+      "householdExpenditure": 6258.0
+    },
+    "P.137": {
+      "population": 185.4,
+      "growthPct": 0.9292678545181328,
+      "pctFemale": 47.78080819628402,
+      "pctNoncitizen": 7.7874497122917035,
+      "income": 8240.0,
+      "householdExpenditure": 6646.0
+    },
+    "P.138": {
+      "population": 217.4,
+      "growthPct": 0.9242882145128634,
+      "pctFemale": 47.666996272207754,
+      "pctNoncitizen": 7.125514718512226,
+      "income": 6736.0,
+      "householdExpenditure": 6645.0
+    },
+    "P.139": {
+      "population": 135.8,
+      "growthPct": 0.9432770142197748,
+      "pctFemale": 46.28152619098944,
+      "pctNoncitizen": 8.165404256268072,
+      "income": 6401.0,
+      "householdExpenditure": 5761.0
+    },
+    "P.140": {
+      "population": 76.3,
+      "growthPct": 0.3802081277709825,
+      "pctFemale": 48.160134717343546,
+      "pctNoncitizen": 6.296457091736722,
+      "income": 6631.0,
+      "householdExpenditure": 4963.0
+    },
+    "P.141": {
+      "population": 79.6,
+      "growthPct": 0.31885263463016894,
+      "pctFemale": 48.20346074835848,
+      "pctNoncitizen": 4.351771333509773,
+      "income": 6172.0,
+      "householdExpenditure": 4785.0
+    },
+    "P.142": {
+      "population": 42.5,
+      "growthPct": 0.22639373643995028,
+      "pctFemale": 46.474389208565235,
+      "pctNoncitizen": 8.02282803509103,
+      "income": 6068.0,
+      "householdExpenditure": 4824.0
+    },
+    "P.143": {
+      "population": 95.5,
+      "growthPct": 0.3130186340623115,
+      "pctFemale": 43.973866095250095,
+      "pctNoncitizen": 12.126846074662296,
+      "income": 6384.0,
+      "householdExpenditure": 4743.0
+    },
+    "P.144": {
+      "population": 148.1,
+      "growthPct": 0.3530312578347777,
+      "pctFemale": 48.2995548147094,
+      "pctNoncitizen": 4.303457809037871,
+      "income": 6355.0,
+      "householdExpenditure": 4675.0
+    },
+    "P.145": {
+      "population": 135.6,
+      "growthPct": 0.31143890693080456,
+      "pctFemale": 44.19917294846093,
+      "pctNoncitizen": 12.078059461898668,
+      "income": 7094.0,
+      "householdExpenditure": 5711.0
+    },
+    "P.146": {
+      "population": 100.6,
+      "growthPct": 0.33411459631974644,
+      "pctFemale": 46.682291926395045,
+      "pctNoncitizen": 7.6756595023188545,
+      "income": 8895.0,
+      "householdExpenditure": 5914.0
+    },
+    "P.147": {
+      "population": 82.7,
+      "growthPct": 0.3652956953361108,
+      "pctFemale": 47.80640541754148,
+      "pctNoncitizen": 3.824075534897268,
+      "income": 7920.0,
+      "householdExpenditure": 5041.0
+    },
+    "P.148": {
+      "population": 72.0,
+      "growthPct": 0.2995054677161014,
+      "pctFemale": 47.29260987671519,
+      "pctNoncitizen": 3.7166538970537024,
+      "income": 6902.0,
+      "householdExpenditure": 4622.0
+    },
+    "P.149": {
+      "population": 175.7,
+      "growthPct": 0.3117256814003633,
+      "pctFemale": 46.01208079746966,
+      "pctNoncitizen": 10.09968370690935,
+      "income": 8083.0,
+      "householdExpenditure": 5216.0
+    },
+    "P.150": {
+      "population": 166.5,
+      "growthPct": 0.30120481927710846,
+      "pctFemale": 48.0698795180723,
+      "pctNoncitizen": 4.0277108433734945,
+      "income": 7217.0,
+      "householdExpenditure": 5388.0
+    },
+    "P.151": {
+      "population": 76.5,
+      "growthPct": 0.2805232939202457,
+      "pctFemale": 43.57155965707993,
+      "pctNoncitizen": 13.568675772749916,
+      "income": 6141.0,
+      "householdExpenditure": 5022.0
+    },
+    "P.152": {
+      "population": 184.5,
+      "growthPct": 0.35081993962634156,
+      "pctFemale": 46.257104783661035,
+      "pctNoncitizen": 7.865437437110767,
+      "income": 6384.0,
+      "householdExpenditure": 4749.0
+    },
+    "P.153": {
+      "population": 63.8,
+      "growthPct": 0.2813536410933417,
+      "pctFemale": 41.12321403310228,
+      "pctNoncitizen": 14.097546407632699,
+      "income": 5388.0,
+      "householdExpenditure": 4432.0
+    },
+    "P.154": {
+      "population": 78.4,
+      "growthPct": 0.262165100070353,
+      "pctFemale": 46.3661359421958,
+      "pctNoncitizen": 5.272715646780486,
+      "income": 5335.0,
+      "householdExpenditure": 4274.0
+    },
+    "P.155": {
+      "population": 94.5,
+      "growthPct": 0.3461677320704158,
+      "pctFemale": 47.88476649606048,
+      "pctNoncitizen": 5.190392252638732,
+      "income": 6426.0,
+      "householdExpenditure": 4693.0
+    },
+    "P.156": {
+      "population": 57.6,
+      "growthPct": 0.38865747599212047,
+      "pctFemale": 46.848040155462996,
+      "pctNoncitizen": 7.694720881189326,
+      "income": 5222.0,
+      "householdExpenditure": 4382.0
+    },
+    "P.157": {
+      "population": 71.1,
+      "growthPct": 0.3797772161906386,
+      "pctFemale": 45.15678163515975,
+      "pctNoncitizen": 6.358797701571345,
+      "income": 6903.0,
+      "householdExpenditure": 5861.0
+    },
+    "P.158": {
+      "population": 476.8,
+      "growthPct": 0.32255553194310055,
+      "pctFemale": 46.69669890819266,
+      "pctNoncitizen": 7.234038971777969,
+      "income": 9118.0,
+      "householdExpenditure": 6686.0
+    },
+    "P.159": {
+      "population": 361.8,
+      "growthPct": 0.32693603533904864,
+      "pctFemale": 46.11323245179843,
+      "pctNoncitizen": 7.894714950044507,
+      "income": 8263.0,
+      "householdExpenditure": 5923.0
+    },
+    "P.160": {
+      "population": 178.4,
+      "growthPct": 0.32447996041006966,
+      "pctFemale": 48.1287572473752,
+      "pctNoncitizen": 7.164989905692738,
+      "income": 8544.0,
+      "householdExpenditure": 6676.0
+    },
+    "P.161": {
+      "population": 292.8,
+      "growthPct": 0.3165727911853099,
+      "pctFemale": 47.96763008949006,
+      "pctNoncitizen": 6.130343022379367,
+      "income": 10140.0,
+      "householdExpenditure": 7525.0
+    },
+    "P.162": {
+      "population": 449.2,
+      "growthPct": 0.33571813078934765,
+      "pctFemale": 47.32776855775222,
+      "pctNoncitizen": 6.819567698689069,
+      "income": 9239.0,
+      "householdExpenditure": 7055.0
+    },
+    "P.163": {
+      "population": 288.3,
+      "growthPct": 0.3117562733991228,
+      "pctFemale": 45.21022671918276,
+      "pctNoncitizen": 16.127124187554802,
+      "income": 8145.0,
+      "householdExpenditure": 6168.0
+    },
+    "P.164": {
+      "population": 82.0,
+      "growthPct": 0.27146665362321676,
+      "pctFemale": 47.636283597055446,
+      "pctNoncitizen": 5.267920467607425,
+      "income": 5358.0,
+      "householdExpenditure": 4360.0
+    },
+    "P.165": {
+      "population": 91.8,
+      "growthPct": 0.28402883985142113,
+      "pctFemale": 44.914791348044574,
+      "pctNoncitizen": 9.861262835918723,
+      "income": 6609.0,
+      "householdExpenditure": 5347.0
+    },
+    "P.166": {
+      "population": 96.8,
+      "growthPct": 1.7661900756938527,
+      "pctFemale": 48.60176619007569,
+      "pctNoncitizen": 11.387720773759462,
+      "income": 7383.0,
+      "householdExpenditure": 4497.0
+    },
+    "P.167": {
+      "population": 91.8,
+      "growthPct": -0.8146595501004871,
+      "pctFemale": 48.862285800721736,
+      "pctNoncitizen": 9.637616958748406,
+      "income": 3100.0,
+      "householdExpenditure": 3345.0
+    },
+    "P.168": {
+      "population": 99.2,
+      "growthPct": -0.7980159603192082,
+      "pctFemale": 48.77097541950839,
+      "pctNoncitizen": 3.8060761215224304,
+      "income": 2851.0,
+      "householdExpenditure": 3367.0
+    },
+    "P.169": {
+      "population": 106.4,
+      "growthPct": -0.7860652909746925,
+      "pctFemale": 49.6983486101657,
+      "pctNoncitizen": 3.797916880355828,
+      "income": 3512.0,
+      "householdExpenditure": 2920.0
+    },
+    "P.170": {
+      "population": 133.9,
+      "growthPct": -0.7971787577050686,
+      "pctFemale": 49.220602181128505,
+      "pctNoncitizen": 5.6084044570886675,
+      "income": 4149.0,
+      "householdExpenditure": 3173.0
+    },
+    "P.171": {
+      "population": 333.5,
+      "growthPct": -0.8187287548363839,
+      "pctFemale": 48.99673757557553,
+      "pctNoncitizen": 16.50751071365906,
+      "income": 5569.0,
+      "householdExpenditure": 4087.0
+    },
+    "P.172": {
+      "population": 113.3,
+      "growthPct": -0.7898285494124455,
+      "pctFemale": 48.17866587275179,
+      "pctNoncitizen": 16.411271256195164,
+      "income": 9009.0,
+      "householdExpenditure": 6907.0
+    },
+    "P.173": {
+      "population": 114.3,
+      "growthPct": -0.7838337543293195,
+      "pctFemale": 48.712273117887555,
+      "pctNoncitizen": 14.827738860967163,
+      "income": 5916.0,
+      "householdExpenditure": 4150.0
+    },
+    "P.174": {
+      "population": 177.0,
+      "growthPct": -0.8397806150174485,
+      "pctFemale": 46.85852581807181,
+      "pctNoncitizen": 11.1530036582838,
+      "income": 6093.0,
+      "householdExpenditure": 4249.0
+    },
+    "P.175": {
+      "population": 105.9,
+      "growthPct": -0.810190605535517,
+      "pctFemale": 47.376012738256925,
+      "pctNoncitizen": 7.786259541984733,
+      "income": 5028.0,
+      "householdExpenditure": 3546.0
+    },
+    "P.176": {
+      "population": 50.0,
+      "growthPct": -0.809395334073959,
+      "pctFemale": 48.44865894302492,
+      "pctNoncitizen": 9.042215521345817,
+      "income": 3268.0,
+      "householdExpenditure": 3056.0
+    },
+    "P.177": {
+      "population": 51.7,
+      "growthPct": -0.7810850749419397,
+      "pctFemale": 49.35421344541041,
+      "pctNoncitizen": 6.9184562534784195,
+      "income": 4070.0,
+      "householdExpenditure": 3444.0
+    },
+    "P.178": {
+      "population": 66.0,
+      "growthPct": -0.8755988765901181,
+      "pctFemale": 48.35168136010694,
+      "pctNoncitizen": 9.199044801225538,
+      "income": 4202.0,
+      "householdExpenditure": 3233.0
+    },
+    "P.179": {
+      "population": 85.4,
+      "growthPct": -0.7945727429022785,
+      "pctFemale": 48.12160215603364,
+      "pctNoncitizen": 7.363737744528601,
+      "income": 3470.0,
+      "householdExpenditure": 2905.0
+    },
+    "P.180": {
+      "population": 128.8,
+      "growthPct": -0.8330638579633773,
+      "pctFemale": 48.88052232025993,
+      "pctNoncitizen": 9.491692459309219,
+      "income": 4888.0,
+      "householdExpenditure": 3571.0
+    },
+    "P.181": {
+      "population": 49.8,
+      "growthPct": -0.8560621142743375,
+      "pctFemale": 48.6243280907824,
+      "pctNoncitizen": 4.387816046187538,
+      "income": 4161.0,
+      "householdExpenditure": 3504.0
+    },
+    "P.182": {
+      "population": 81.8,
+      "growthPct": -0.8472829973696628,
+      "pctFemale": 47.30117940823526,
+      "pctNoncitizen": 10.312852276997296,
+      "income": 4377.0,
+      "householdExpenditure": 3465.0
+    },
+    "P.183": {
+      "population": 100.2,
+      "growthPct": -0.8568658104604908,
+      "pctFemale": 45.865078265687764,
+      "pctNoncitizen": 41.59064373775552,
+      "income": 4489.0,
+      "householdExpenditure": 2725.0
+    },
+    "P.184": {
+      "population": 170.1,
+      "growthPct": -0.7885588969507523,
+      "pctFemale": 49.13153535683457,
+      "pctNoncitizen": 28.360124116370766,
+      "income": 5534.0,
+      "householdExpenditure": 3432.0
+    },
+    "P.185": {
+      "population": 118.7,
+      "growthPct": -0.8337649751875474,
+      "pctFemale": 47.77857608314257,
+      "pctNoncitizen": 28.87433373991211,
+      "income": 5652.0,
+      "householdExpenditure": 3880.0
+    },
+    "P.186": {
+      "population": 120.7,
+      "growthPct": -0.7988690906699933,
+      "pctFemale": 48.759780393188244,
+      "pctNoncitizen": 32.51446511933724,
+      "income": 5080.0,
+      "householdExpenditure": 3993.0
+    },
+    "P.187": {
+      "population": 214.3,
+      "growthPct": -0.826981724953365,
+      "pctFemale": 44.980956744274295,
+      "pctNoncitizen": 63.166224715045324,
+      "income": 4151.0,
+      "householdExpenditure": 2500.0
+    },
+    "P.188": {
+      "population": 297.1,
+      "growthPct": -0.8178935069270534,
+      "pctFemale": 46.63895843765649,
+      "pctNoncitizen": 39.73660490736104,
+      "income": 5312.0,
+      "householdExpenditure": 3420.0
+    },
+    "P.189": {
+      "population": 165.2,
+      "growthPct": -0.8325979818353176,
+      "pctFemale": 48.73489527994382,
+      "pctNoncitizen": 38.326520076596616,
+      "income": 4059.0,
+      "householdExpenditure": 2567.0
+    },
+    "P.190": {
+      "population": 228.6,
+      "growthPct": -0.8376313814628018,
+      "pctFemale": 47.6521595794058,
+      "pctNoncitizen": 32.57002312053476,
+      "income": 5002.0,
+      "householdExpenditure": 3202.0
+    },
+    "P.191": {
+      "population": 187.1,
+      "growthPct": -0.8247816130947393,
+      "pctFemale": 47.38359765923161,
+      "pctNoncitizen": 33.721694512763975,
+      "income": 4650.0,
+      "householdExpenditure": 2871.0
+    },
+    "P.192": {
+      "population": 51.8,
+      "growthPct": 0.7115915542248312,
+      "pctFemale": 47.13030291247035,
+      "pctNoncitizen": 5.025858381615274,
+      "income": 4000.0,
+      "householdExpenditure": 3508.0
+    },
+    "P.193": {
+      "population": 118.6,
+      "growthPct": 0.721012985027719,
+      "pctFemale": 49.30913537889274,
+      "pctNoncitizen": 2.2318281798031436,
+      "income": 5957.0,
+      "householdExpenditure": 4385.0
+    },
+    "P.194": {
+      "population": 151.9,
+      "growthPct": 0.7207601466717177,
+      "pctFemale": 50.126315370690854,
+      "pctNoncitizen": 0.7930350831824843,
+      "income": 7196.0,
+      "householdExpenditure": 5349.0
+    },
+    "P.195": {
+      "population": 117.1,
+      "growthPct": 0.7051943584451266,
+      "pctFemale": 49.705022359821115,
+      "pctNoncitizen": 2.803577571379429,
+      "income": 6212.0,
+      "householdExpenditure": 5172.0
+    },
+    "P.196": {
+      "population": 213.7,
+      "growthPct": 0.6988130074404857,
+      "pctFemale": 49.24157819590325,
+      "pctNoncitizen": 1.605903391339996,
+      "income": 6945.0,
+      "householdExpenditure": 5350.0
+    },
+    "P.197": {
+      "population": 159.6,
+      "growthPct": 0.6806669147936285,
+      "pctFemale": 51.11625589038676,
+      "pctNoncitizen": 0.9531860132096063,
+      "income": 6614.0,
+      "householdExpenditure": 4894.0
+    },
+    "P.198": {
+      "population": 81.3,
+      "growthPct": 0.6437236939836544,
+      "pctFemale": 47.88685318148057,
+      "pctNoncitizen": 1.2503094825451846,
+      "income": 4797.0,
+      "householdExpenditure": 3831.0
+    },
+    "P.199": {
+      "population": 62.2,
+      "growthPct": 0.7385332987820729,
+      "pctFemale": 48.86952578388183,
+      "pctNoncitizen": 1.8155610261725834,
+      "income": 3532.0,
+      "householdExpenditure": 3329.0
+    },
+    "P.200": {
+      "population": 33.9,
+      "growthPct": 0.6113848162877544,
+      "pctFemale": 47.63459369620704,
+      "pctNoncitizen": 6.695554104588353,
+      "income": 3789.0,
+      "householdExpenditure": 3269.0
+    },
+    "P.201": {
+      "population": 38.6,
+      "growthPct": 0.6807689298103831,
+      "pctFemale": 48.72323221784606,
+      "pctNoncitizen": 2.013615378596208,
+      "income": 3151.0,
+      "householdExpenditure": 2630.0
+    },
+    "P.202": {
+      "population": 63.3,
+      "growthPct": 0.6951624962219392,
+      "pctFemale": 47.8166807183876,
+      "pctNoncitizen": 3.1353896568728827,
+      "income": 3350.0,
+      "householdExpenditure": 3060.0
+    },
+    "P.203": {
+      "population": 27.0,
+      "growthPct": 0.8215085884988754,
+      "pctFemale": 49.09634055265123,
+      "pctNoncitizen": 2.628827483196415,
+      "income": 4169.0,
+      "householdExpenditure": 3564.0
+    },
+    "P.204": {
+      "population": 34.9,
+      "growthPct": 0.7796708056598209,
+      "pctFemale": 47.93531619982674,
+      "pctNoncitizen": 1.0713254403696215,
+      "income": 4070.0,
+      "householdExpenditure": 2869.0
+    },
+    "P.205": {
+      "population": 41.6,
+      "growthPct": 0.6313650547908822,
+      "pctFemale": 50.25036890103776,
+      "pctNoncitizen": 0.8563342122450954,
+      "income": 3435.0,
+      "householdExpenditure": 3197.0
+    },
+    "P.206": {
+      "population": 33.0,
+      "growthPct": 0.7080078124999979,
+      "pctFemale": 48.14758300781249,
+      "pctNoncitizen": 5.908203125,
+      "income": 4030.0,
+      "householdExpenditure": 2925.0
+    },
+    "P.207": {
+      "population": 27.6,
+      "growthPct": 0.7740616328318962,
+      "pctFemale": 46.39258069227399,
+      "pctNoncitizen": 12.063677523002774,
+      "income": 3873.0,
+      "householdExpenditure": 3062.0
+    },
+    "P.208": {
+      "population": 43.4,
+      "growthPct": 0.6516848720981443,
+      "pctFemale": 49.68343421693452,
+      "pctNoncitizen": 1.7579257403928663,
+      "income": 4240.0,
+      "householdExpenditure": 3835.0
+    },
+    "P.209": {
+      "population": 35.4,
+      "growthPct": 0.7800489665774666,
+      "pctFemale": 48.878323748790066,
+      "pctNoncitizen": 0.22775152308831068,
+      "income": 3513.0,
+      "householdExpenditure": 3360.0
+    },
+    "P.210": {
+      "population": 24.9,
+      "growthPct": 0.8097165991902806,
+      "pctFemale": 50.00404858299595,
+      "pctNoncitizen": 1.890688259109312,
+      "income": 3511.0,
+      "householdExpenditure": 3240.0
+    },
+    "P.211": {
+      "population": 105.7,
+      "growthPct": 0.7338225483655733,
+      "pctFemale": 49.509196607261984,
+      "pctNoncitizen": 2.1604879443438483,
+      "income": 5004.0,
+      "householdExpenditure": 4026.0
+    },
+    "P.212": {
+      "population": 142.6,
+      "growthPct": 0.7247093392854492,
+      "pctFemale": 47.70720612541851,
+      "pctNoncitizen": 7.675844434712588,
+      "income": 6376.0,
+      "householdExpenditure": 4876.0
+    },
+    "P.213": {
+      "population": 61.2,
+      "growthPct": 0.6496176301291063,
+      "pctFemale": 48.007565167338214,
+      "pctNoncitizen": 11.181646246196859,
+      "income": 5169.0,
+      "householdExpenditure": 3413.0
+    },
+    "P.214": {
+      "population": 51.7,
+      "growthPct": 0.7110158761079224,
+      "pctFemale": 45.99980520112983,
+      "pctNoncitizen": 8.691925586831596,
+      "income": 4283.0,
+      "householdExpenditure": 3088.0
+    },
+    "P.215": {
+      "population": 44.3,
+      "growthPct": 0.7253132034287432,
+      "pctFemale": 50.349014347104436,
+      "pctNoncitizen": 0.3524249107569178,
+      "income": 3219.0,
+      "householdExpenditure": 3571.0
+    },
+    "P.216": {
+      "population": 43.7,
+      "growthPct": 0.7051666128958024,
+      "pctFemale": 41.62096142323824,
+      "pctNoncitizen": 14.96289809651104,
+      "income": 4078.0,
+      "householdExpenditure": 3271.0
+    },
+    "P.217": {
+      "population": 236.7,
+      "growthPct": 0.6809897107176123,
+      "pctFemale": 45.128647931297024,
+      "pctNoncitizen": 15.276117720619824,
+      "income": 7468.0,
+      "householdExpenditure": 4723.0
+    },
+    "P.218": {
+      "population": 71.5,
+      "growthPct": 0.7269243773244751,
+      "pctFemale": 47.633269469176156,
+      "pctNoncitizen": 8.438521356925504,
+      "income": 5590.0,
+      "householdExpenditure": 3855.0
+    },
+    "P.219": {
+      "population": 207.6,
+      "growthPct": 0.7155852031534236,
+      "pctFemale": 47.37222559126744,
+      "pctNoncitizen": 5.635900545785325,
+      "income": 6947.0,
+      "householdExpenditure": 4744.0
+    },
+    "P.220": {
+      "population": 63.9,
+      "growthPct": 0.6315060079686236,
+      "pctFemale": 46.443251074820076,
+      "pctNoncitizen": 12.606497740121892,
+      "income": 4384.0,
+      "householdExpenditure": 2822.0
+    },
+    "P.221": {
+      "population": 45.4,
+      "growthPct": 0.7523135305474771,
+      "pctFemale": 48.53420918310734,
+      "pctNoncitizen": 2.6741528150729015,
+      "income": 4060.0,
+      "householdExpenditure": 3457.0
+    },
+    "P.222": {
+      "population": 36.9,
+      "growthPct": 0.8086547918260283,
+      "pctFemale": 48.84712053327505,
+      "pctNoncitizen": 4.955742541798711,
+      "income": 3929.0,
+      "householdExpenditure": 3241.0
+    }
+  },
+  "householdIncomeReferenceDate": "2024-01-01",
+  "householdExpenditureReferenceDate": "2024-01-01"
+}
