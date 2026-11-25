@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0d;
+  --foreground: #f4f1ea;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------------------------------------------------------------- map shell */
+
+.leaflet-container {
+  background: #0b0b0d;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: grab;
+}
+.leaflet-container:active {
+  cursor: grabbing;
+}
+.leaflet-container:focus {
+  outline: none;
+}
+.leaflet-container a {
+  color: inherit;
+}
+.leaflet-marker-icon:focus {
+  outline: none;
+}
+
+/* ------------------------------------------------------------------- pins */
+
+.pin-root {
+  background: transparent;
+  border: 0;
+}
+
+.pin-svg {
+  display: block;
+  filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.55));
+  transform-origin: 50% 92%;
+  transition: transform 0.18s ease;
+}
+
+.pin-root:hover .pin-svg {
+  transform: scale(1.08);
+}
+
+.pin-root.is-active .pin-svg {
+  transform: scale(1.16);
+  filter: drop-shadow(0 0 10px rgba(233, 166, 61, 0.55))
+    drop-shadow(0 6px 12px rgba(0, 0, 0, 0.55));
+}
+
+.me-dot {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #62a2ff;
+  box-shadow:
+    0 0 0 3px rgba(98, 162, 255, 0.22),
+    0 0 20px rgba(98, 162, 255, 0.75);
+}
+
+.me-dot__pulse {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(98, 162, 255, 0.6);
+  animation: me-pulse 2.2s ease-out infinite;
+}
+
+@keyframes me-pulse {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+/* ----------------------------------------------------------------- popups */
+
+.loc-popup .leaflet-popup-content-wrapper {
+  background: rgba(16, 16, 19, 0.94);
+  backdrop-filter: blur(18px);
+  color: #f4f1ea;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.95);
+}
+
+.loc-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 16px;
+  width: 228px !important;
+  line-height: 1.5;
+}
+
+.loc-popup .leaflet-popup-tip {
+  background: rgba(16, 16, 19, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.loc-popup a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------ attribution */
+
+.leaflet-control-attribution {
+  background: rgba(10, 10, 12, 0.55) !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 8px 0 0 0;
+  font-size: 10px !important;
+  padding: 2px 8px !important;
+}
+
+.leaflet-control-attribution a {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .me-dot__pulse {
+    animation: none;
+  }
+  .pin-svg,
+  .pin-root:hover .pin-svg,
+  .pin-root.is-active .pin-svg {
+    transition: none;
+  }
+}
