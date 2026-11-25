@@ -177,8 +177,16 @@ body {
 }
 
 .loc-popup a {
-  color: inherit;
   text-decoration: none;
+}
+
+/* Leaflet's `.leaflet-container a` is unlayered, so utility colours lose to it. */
+.loc-popup a.popup-cta {
+  color: var(--primary-foreground);
+}
+
+.loc-popup a:not(.popup-cta) {
+  color: inherit;
 }
 
 /* ------------------------------------------------------------ attribution */

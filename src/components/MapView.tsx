@@ -5,6 +5,16 @@ import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { LOCATIONS, STATES, type Location } from "@/lib/locations";
 import { loadBorders } from "@/lib/malaysia-borders";
+import {
+  DISTRICT_INCOME,
+  INCOME_YEAR,
+  PARLIMEN_INCOME,
+  POPULATION_YEAR,
+  STATE_NAME_BY_CODE,
+  STATE_POPULATION,
+  slugKey,
+  stateKey,
+} from "@/lib/area-stats";
 
 const START_CENTER: [number, number] = [4.1, 102.4];
 const START_ZOOM = 7;
@@ -34,6 +44,8 @@ const BASEMAP = {
 /* ---------- boundary overlays ---------- */
 
 type BorderLevel = "off" | "state" | "district" | "dun" | "parlimen";
+type Metric = "population" | "income";
+type Shade = "off" | Metric;
 
 const BORDER_OPTIONS: { id: BorderLevel; label: string }[] = [
   { id: "off", label: "Off" },
@@ -43,12 +55,72 @@ const BORDER_OPTIONS: { id: BorderLevel; label: string }[] = [
   { id: "parlimen", label: "Parliament" },
 ];
 
-const BORDER_STYLE: Record<Exclude<BorderLevel, "off">, L.PathOptions> = {
-  state: { color: "#191713", weight: 1.3, opacity: 0.55, fill: true, fillColor: "#191713", fillOpacity: 0 },
-  district: { color: "#191713", weight: 0.9, opacity: 0.38, fill: true, fillColor: "#191713", fillOpacity: 0 },
-  dun: { color: "#191713", weight: 0.5, opacity: 0.3, fill: true, fillColor: "#191713", fillOpacity: 0 },
-  parlimen: { color: "#191713", weight: 1, opacity: 0.45, fill: true, fillColor: "#191713", fillOpacity: 0 },
+/** Which DOSM series exists for each boundary level (null = no published data). */
+const METRIC_BY_LEVEL: Record<BorderLevel, Metric | null> = {
+  off: null,
+  state: "population",
+  district: "income",
+  dun: null,
+  parlimen: "income",
 };
+
+const BORDER_WEIGHT: Record<BorderLevel, number> = {
+  off: 0,
+  state: 1.2,
+  district: 0.7,
+  dun: 0.35,
+  parlimen: 0.9,
+};
+
+const RAMP = ["#efece5", "#cfc7b8", "#a89d88", "#6f6350", "#2b241c"];
+
+const BORDER_LABEL: Record<BorderLevel, string> = {
+  off: "Off",
+  state: "State",
+  district: "District",
+  dun: "DUN",
+  parlimen: "Parliament",
+};
+
+const SHADE_LABEL: Record<Shade, string> = {
+  off: "Off",
+  population: "Population",
+  income: "Income",
+};
+
+type ShadeData = {
+  level: BorderLevel;
+  metric: Metric;
+  min: number;
+  max: number;
+  entries: { label: string; value: number }[];
+};
+
+function valueFor(
+  props: Record<string, unknown>,
+  level: BorderLevel,
+  metric: Metric | null,
+): number | null {
+  if (!metric) return null;
+  if (metric === "population") {
+    return STATE_POPULATION[stateKey(String(props.name ?? ""))] ?? null;
+  }
+  if (level === "district") {
+    const stateName = STATE_NAME_BY_CODE[String(props.state ?? "")] ?? "";
+    return DISTRICT_INCOME[`${stateKey(stateName)}|${slugKey(String(props.name ?? ""))}`] ?? null;
+  }
+  if (level === "parlimen") {
+    return PARLIMEN_INCOME[slugKey(String(props.parlimen ?? ""))] ?? null;
+  }
+  return null;
+}
+
+function fmtValue(value: number, metric: Metric) {
+  if (metric === "population") {
+    return value >= 1_000_000 ? `${(value / 1_000_000).toFixed(2)}M` : `${Math.round(value / 1000)}k`;
+  }
+  return `RM ${Math.round(value).toLocaleString("en-MY")}`;
+}
 
 function borderLabel(props: Record<string, unknown>) {
   return (props.dun ?? props.parlimen ?? props.name ?? "") as string;
@@ -78,6 +150,71 @@ function BorderChips({
           {option.label}
         </button>
       ))}
+    </div>
+  );
+}
+
+function ShadeChips({
+  value,
+  level,
+  onChange,
+}: {
+  value: Shade;
+  level: BorderLevel;
+  onChange: (shade: Shade) => void;
+}) {
+  const options: { id: Shade; label: string }[] = [
+    { id: "off", label: "Off" },
+    { id: "population", label: "Population" },
+    { id: "income", label: "Income" },
+  ];
+  const supports = (id: Shade) =>
+    id === "off" || id === METRIC_BY_LEVEL[level];
+
+  return (
+    <div className="flex flex-wrap gap-1">
+      {options.map((option) => {
+        const enabled = supports(option.id);
+        return (
+          <button
+            key={option.id}
+            type="button"
+            disabled={!enabled}
+            onClick={() => onChange(option.id)}
+            aria-pressed={value === option.id}
+            title={enabled ? undefined : "DOSM publishes no data at this level"}
+            className={`rounded-md border px-2 py-1 text-[10.5px] transition ${
+              value === option.id
+                ? "border-primary bg-primary font-medium text-primary-foreground"
+                : enabled
+                  ? "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                  : "cursor-not-allowed text-muted-foreground/40"
+            }`}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function ShadeLegend({ data }: { data: ShadeData }) {
+  return (
+    <div className="mt-2">
+      <div className="flex h-1.5 overflow-hidden rounded-full">
+        {RAMP.map((colour) => (
+          <span key={colour} className="flex-1" style={{ background: colour }} />
+        ))}
+      </div>
+      <div className="mt-1 flex justify-between font-mono text-[9px] text-muted-foreground">
+        <span>{fmtValue(data.min, data.metric)}</span>
+        <span>{fmtValue(data.max, data.metric)}</span>
+      </div>
+      <p className="mt-1 text-[9.5px] leading-relaxed text-muted-foreground">
+        {data.metric === "population" ? "Population" : "Median household income"} ·{" "}
+        {data.metric === "population" ? POPULATION_YEAR : INCOME_YEAR} · DOSM
+      </p>
     </div>
   );
 }
@@ -169,7 +306,10 @@ export default function MapView() {
   const [locating, setLocating] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [collapsed, setCollapsed] = useState(false);
+  const [layersOpen, setLayersOpen] = useState(true);
   const [borderLevel, setBorderLevel] = useState<BorderLevel>("state");
+  const [shade, setShade] = useState<Shade>("population");
+  const [shadeData, setShadeData] = useState<ShadeData | null>(null);
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
   const borderLayerRef = useRef<L.GeoJSON | null>(null);
 
@@ -201,41 +341,116 @@ export default function MapView() {
     return () => observer.disconnect();
   }, [map]);
 
-  // Boundary overlay: swap the layer whenever the level changes.
+  // At street level a filled choropleth would swallow the basemap — fade the
+  // vector pane rather than repainting hundreds of paths on every zoom.
+  useEffect(() => {
+    if (!map) return;
+    const apply = () => {
+      const pane = map.getPane("overlayPane");
+      if (!pane) return;
+      const zoom = map.getZoom();
+      pane.style.transition = "opacity 200ms ease";
+      pane.style.opacity = zoom >= 13 ? "0.15" : zoom >= 11 ? "0.45" : "1";
+    };
+    map.on("zoomend", apply);
+    apply();
+    return () => {
+      map.off("zoomend", apply);
+    };
+  }, [map]);
+
+  // Boundary overlay + choropleth for the selected level.
   useEffect(() => {
     if (!map) return;
     borderLayerRef.current?.remove();
     borderLayerRef.current = null;
     if (borderLevel === "off") return;
 
-    const style = BORDER_STYLE[borderLevel];
+    const level = borderLevel;
+    const metric = METRIC_BY_LEVEL[level] === shade ? shade : null;
     let cancelled = false;
 
-    loadBorders(borderLevel)
+    loadBorders(level)
       .then((collection) => {
         if (cancelled) return;
-        const layer = L.geoJSON(collection as unknown as GeoJSON.FeatureCollection, {
-          style: () => ({ ...style }),
+        const geo = collection as unknown as GeoJSON.FeatureCollection;
+
+        const values = geo.features
+          .map((feature) => valueFor(feature.properties ?? {}, level, metric))
+          .filter((value): value is number => value != null)
+          .sort((a, b) => a - b);
+
+        const breaks = values.length
+          ? [0.2, 0.4, 0.6, 0.8].map(
+              (q) => values[Math.min(values.length - 1, Math.floor(q * values.length))],
+            )
+          : [];
+
+        const colourOf = (value: number | null) => {
+          if (value == null || !breaks.length) return null;
+          const index = breaks.reduce((acc, brk) => acc + (value > brk ? 1 : 0), 0);
+          return RAMP[Math.min(index, RAMP.length - 1)];
+        };
+
+        const entries: { label: string; value: number }[] = [];
+        const baseWeight = BORDER_WEIGHT[level];
+
+        const layer = L.geoJSON(geo, {
+          style: (feature) => {
+            const value = feature ? valueFor(feature.properties ?? {}, level, metric) : null;
+            const fill = colourOf(value);
+            return fill
+              ? {
+                  color: "#ffffff",
+                  weight: 0.6,
+                  opacity: 0.9,
+                  fill: true,
+                  fillColor: fill,
+                  fillOpacity: 0.9,
+                }
+              : { color: "#191713", weight: baseWeight, opacity: 0.4, fill: false };
+          },
           onEachFeature: (feature, featureLayer) => {
-            const label = borderLabel(feature.properties ?? {});
+            const props = feature.properties ?? {};
+            const label = borderLabel(props);
+            const value = valueFor(props, level, metric);
+            const fill = colourOf(value);
+
             if (label) {
-              featureLayer.bindTooltip(label, {
-                className: "border-tip",
-                sticky: true,
-                direction: "top",
-                opacity: 1,
-              });
+              featureLayer.bindTooltip(
+                value != null && metric ? `${label} · ${fmtValue(value, metric)}` : label,
+                { className: "border-tip", sticky: true, direction: "top", opacity: 1 },
+              );
+              if (value != null) entries.push({ label, value });
             }
+
             const path = featureLayer as L.Path;
             featureLayer.on("mouseover", () =>
-              path.setStyle({ weight: 2, opacity: 0.9, fillOpacity: 0.06 }),
+              path.setStyle({ weight: 1.6, opacity: 1, fillOpacity: fill ? 1 : 0 }),
             );
-            featureLayer.on("mouseout", () => path.setStyle({ ...style }));
+            featureLayer.on("mouseout", () =>
+              path.setStyle({
+                weight: fill ? 0.6 : baseWeight,
+                opacity: fill ? 0.9 : 0.4,
+                fillOpacity: fill ? 0.9 : 0,
+              }),
+            );
           },
         }).addTo(map);
 
         layer.bringToBack();
         borderLayerRef.current = layer;
+
+        if (metric && values.length) {
+          entries.sort((a, b) => b.value - a.value);
+          setShadeData({
+            level,
+            metric,
+            min: values[0],
+            max: values[values.length - 1],
+            entries: entries.slice(0, 6),
+          });
+        }
       })
       .catch(() => {
         if (!cancelled) setToast("Couldn't load the boundary file.");
@@ -244,7 +459,7 @@ export default function MapView() {
     return () => {
       cancelled = true;
     };
-  }, [map, borderLevel]);
+  }, [map, borderLevel, shade]);
 
   useEffect(() => {
     if (!toast) return;
@@ -286,6 +501,15 @@ export default function MapView() {
     map.once("locationfound", onFound);
     map.once("locationerror", onError);
   }, [map, locating]);
+
+  const changeBorders = (level: BorderLevel) => {
+    setBorderLevel(level);
+    setShade(METRIC_BY_LEVEL[level] ?? "off");
+  };
+
+  const shadeView =
+    shadeData && shadeData.level === borderLevel && shadeData.metric === shade ? shadeData : null;
+  const metricAvailable = METRIC_BY_LEVEL[borderLevel] !== null;
 
   const controlBtn =
     "grid h-8 w-8 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground active:scale-95 disabled:opacity-40";
@@ -331,10 +555,57 @@ export default function MapView() {
           </div>
 
           <div className="border-b px-5 py-3">
-            <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-              Borders
-            </p>
-            <BorderChips value={borderLevel} onChange={setBorderLevel} />
+            <button
+              type="button"
+              onClick={() => setLayersOpen((open) => !open)}
+              aria-expanded={layersOpen}
+              aria-controls="border-controls"
+              className="flex w-full items-center justify-between gap-2"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                Borders
+              </span>
+              <span className="flex items-center gap-1.5">
+                {!layersOpen ? (
+                  <span className="font-mono text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
+                    {BORDER_LABEL[borderLevel]}
+                    {shade !== "off" ? ` · ${SHADE_LABEL[shade]}` : ""}
+                  </span>
+                ) : null}
+                <svg
+                  viewBox="0 0 24 24"
+                  className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${
+                    layersOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+
+            {layersOpen ? (
+              <div id="border-controls" className="mt-2.5 space-y-3">
+                <BorderChips value={borderLevel} onChange={changeBorders} />
+
+                <div>
+                  <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                    Shade by
+                  </p>
+                  <ShadeChips value={shade} level={borderLevel} onChange={setShade} />
+                  {!metricAvailable && borderLevel !== "off" ? (
+                    <p className="mt-1.5 text-[9.5px] leading-relaxed text-muted-foreground">
+                      DOSM publishes no population or income data for DUN seats — borders only.
+                    </p>
+                  ) : null}
+                  {shadeView ? <ShadeLegend data={shadeView} /> : null}
+                </div>
+              </div>
+            ) : null}
           </div>
 
           <div className="flex-1 overflow-y-auto px-2 py-2">
@@ -415,7 +686,7 @@ export default function MapView() {
               eventHandlers={{ click: () => setActiveId(loc.id) }}
             >
               <Popup className="loc-popup" closeButton={false} offset={[0, -4]}>
-                <div className="w-[236px]">
+                <div>
                   <p className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">
                     {loc.kind} · {loc.state}
                   </p>
@@ -448,7 +719,7 @@ export default function MapView() {
                       href={`https://www.google.com/maps/dir/?api=1&destination=${loc.coords[0]},${loc.coords[1]}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex-1 rounded-md bg-primary px-2.5 py-2 text-center text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
+                      className="popup-cta flex-1 rounded-md bg-primary px-2.5 py-2 text-center text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
                     >
                       Directions
                     </a>
@@ -493,6 +764,38 @@ export default function MapView() {
           </button>
         )}
 
+        {/* concentration bars */}
+        {shadeView ? (
+          <div className="pointer-events-none absolute right-3 top-3 z-[1000] hidden w-[236px] rounded-xl border bg-card p-3 shadow-sm md:block">
+            <div className="flex items-baseline justify-between gap-2">
+              <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                {shadeView.metric === "population" ? "Population" : "Median income"}
+              </p>
+              <p className="font-mono text-[9px] text-muted-foreground">
+                {shadeView.metric === "population" ? POPULATION_YEAR : INCOME_YEAR}
+              </p>
+            </div>
+            <ul className="mt-2 space-y-1.5">
+              {shadeView.entries.map((entry) => (
+                <li key={entry.label}>
+                  <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
+                    <span className="truncate">{entry.label}</span>
+                    <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
+                      {fmtValue(entry.value, shadeView.metric)}
+                    </span>
+                  </div>
+                  <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full rounded-full bg-foreground"
+                      style={{ width: `${Math.max(4, (entry.value / shadeView.max) * 100)}%` }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
         {/* compact header on small screens — the panel needs a real width */}
         <div className="pointer-events-none absolute inset-x-0 top-0 z-[1000] p-3 md:hidden">
           <div className="pointer-events-auto space-y-2 rounded-lg border bg-card px-3 py-2 shadow-sm">
@@ -509,7 +812,42 @@ export default function MapView() {
                 </p>
               </div>
             </div>
-            <BorderChips value={borderLevel} onChange={setBorderLevel} />
+            <button
+              type="button"
+              onClick={() => setLayersOpen((open) => !open)}
+              aria-expanded={layersOpen}
+              className="flex w-full items-center justify-between gap-2"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
+                Borders · {BORDER_LABEL[borderLevel]}
+              </span>
+              <svg
+                viewBox="0 0 24 24"
+                className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${
+                  layersOpen ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {layersOpen ? <BorderChips value={borderLevel} onChange={changeBorders} /> : null}
+            {layersOpen && shadeView ? (
+              <div className="flex items-center gap-2">
+                <div className="flex h-1.5 flex-1 overflow-hidden rounded-full">
+                  {RAMP.map((colour) => (
+                    <span key={colour} className="flex-1" style={{ background: colour }} />
+                  ))}
+                </div>
+                <span className="font-mono text-[9px] text-muted-foreground">
+                  {fmtValue(shadeView.min, shadeView.metric)}–{fmtValue(shadeView.max, shadeView.metric)}
+                </span>
+              </div>
+            ) : null}
           </div>
         </div>
 
