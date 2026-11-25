@@ -6,12 +6,14 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { LOCATIONS, STATES, type Location } from "@/lib/locations";
 import { loadBorders } from "@/lib/malaysia-borders";
 import {
-  DISTRICT_INCOME,
-  INCOME_YEAR,
-  PARLIMEN_INCOME,
+  DISTRICT_POPULATION,
+  DUN_POPULATION,
+  PARLIMEN_POPULATION,
   POPULATION_YEAR,
   STATE_NAME_BY_CODE,
   STATE_POPULATION,
+  districtKey,
+  dunKey,
   slugKey,
   stateKey,
 } from "@/lib/area-stats";
@@ -44,8 +46,7 @@ const BASEMAP = {
 /* ---------- boundary overlays ---------- */
 
 type BorderLevel = "off" | "state" | "district" | "dun" | "parlimen";
-type Metric = "population" | "income";
-type Shade = "off" | Metric;
+type Shade = "off" | "population";
 
 const BORDER_OPTIONS: { id: BorderLevel; label: string }[] = [
   { id: "off", label: "Off" },
@@ -54,15 +55,6 @@ const BORDER_OPTIONS: { id: BorderLevel; label: string }[] = [
   { id: "dun", label: "DUN" },
   { id: "parlimen", label: "Parliament" },
 ];
-
-/** Which DOSM series exists for each boundary level (null = no published data). */
-const METRIC_BY_LEVEL: Record<BorderLevel, Metric | null> = {
-  off: null,
-  state: "population",
-  district: "income",
-  dun: null,
-  parlimen: "income",
-};
 
 const BORDER_WEIGHT: Record<BorderLevel, number> = {
   off: 0,
@@ -85,41 +77,34 @@ const BORDER_LABEL: Record<BorderLevel, string> = {
 const SHADE_LABEL: Record<Shade, string> = {
   off: "Off",
   population: "Population",
-  income: "Income",
 };
 
 type ShadeData = {
   level: BorderLevel;
-  metric: Metric;
   min: number;
   max: number;
   entries: { label: string; value: number }[];
 };
 
-function valueFor(
-  props: Record<string, unknown>,
-  level: BorderLevel,
-  metric: Metric | null,
-): number | null {
-  if (!metric) return null;
-  if (metric === "population") {
+function valueFor(props: Record<string, unknown>, level: BorderLevel): number | null {
+  if (level === "state") {
     return STATE_POPULATION[stateKey(String(props.name ?? ""))] ?? null;
   }
   if (level === "district") {
     const stateName = STATE_NAME_BY_CODE[String(props.state ?? "")] ?? "";
-    return DISTRICT_INCOME[`${stateKey(stateName)}|${slugKey(String(props.name ?? ""))}`] ?? null;
+    return DISTRICT_POPULATION[districtKey(stateName, String(props.name ?? ""))] ?? null;
   }
   if (level === "parlimen") {
-    return PARLIMEN_INCOME[slugKey(String(props.parlimen ?? ""))] ?? null;
+    return PARLIMEN_POPULATION[slugKey(String(props.parlimen ?? ""))] ?? null;
+  }
+  if (level === "dun") {
+    return DUN_POPULATION[dunKey(String(props.state ?? ""), String(props.dun ?? ""))] ?? null;
   }
   return null;
 }
 
-function fmtValue(value: number, metric: Metric) {
-  if (metric === "population") {
-    return value >= 1_000_000 ? `${(value / 1_000_000).toFixed(2)}M` : `${Math.round(value / 1000)}k`;
-  }
-  return `RM ${Math.round(value).toLocaleString("en-MY")}`;
+function fmtValue(value: number) {
+  return value >= 1_000_000 ? `${(value / 1_000_000).toFixed(2)}M` : `${Math.round(value / 1000)}k`;
 }
 
 function borderLabel(props: Record<string, unknown>) {
@@ -166,10 +151,8 @@ function ShadeChips({
   const options: { id: Shade; label: string }[] = [
     { id: "off", label: "Off" },
     { id: "population", label: "Population" },
-    { id: "income", label: "Income" },
   ];
-  const supports = (id: Shade) =>
-    id === "off" || id === METRIC_BY_LEVEL[level];
+  const supports = (id: Shade) => id === "off" || level !== "off";
 
   return (
     <div className="flex flex-wrap gap-1">
@@ -182,7 +165,6 @@ function ShadeChips({
             disabled={!enabled}
             onClick={() => onChange(option.id)}
             aria-pressed={value === option.id}
-            title={enabled ? undefined : "DOSM publishes no data at this level"}
             className={`rounded-md border px-2 py-1 text-[10.5px] transition ${
               value === option.id
                 ? "border-primary bg-primary font-medium text-primary-foreground"
@@ -208,12 +190,11 @@ function ShadeLegend({ data }: { data: ShadeData }) {
         ))}
       </div>
       <div className="mt-1 flex justify-between font-mono text-[9px] text-muted-foreground">
-        <span>{fmtValue(data.min, data.metric)}</span>
-        <span>{fmtValue(data.max, data.metric)}</span>
+        <span>{fmtValue(data.min)}</span>
+        <span>{fmtValue(data.max)}</span>
       </div>
       <p className="mt-1 text-[9.5px] leading-relaxed text-muted-foreground">
-        {data.metric === "population" ? "Population" : "Median household income"} ·{" "}
-        {data.metric === "population" ? POPULATION_YEAR : INCOME_YEAR} · DOSM
+        Population · {POPULATION_YEAR} · DOSM
       </p>
     </div>
   );
@@ -367,7 +348,7 @@ export default function MapView() {
     if (borderLevel === "off") return;
 
     const level = borderLevel;
-    const metric = METRIC_BY_LEVEL[level] === shade ? shade : null;
+    const shaded = shade === "population";
     let cancelled = false;
 
     loadBorders(level)
@@ -376,7 +357,7 @@ export default function MapView() {
         const geo = collection as unknown as GeoJSON.FeatureCollection;
 
         const values = geo.features
-          .map((feature) => valueFor(feature.properties ?? {}, level, metric))
+          .map((feature) => (shaded ? valueFor(feature.properties ?? {}, level) : null))
           .filter((value): value is number => value != null)
           .sort((a, b) => a - b);
 
@@ -397,7 +378,7 @@ export default function MapView() {
 
         const layer = L.geoJSON(geo, {
           style: (feature) => {
-            const value = feature ? valueFor(feature.properties ?? {}, level, metric) : null;
+            const value = feature && shaded ? valueFor(feature.properties ?? {}, level) : null;
             const fill = colourOf(value);
             return fill
               ? {
@@ -413,12 +394,12 @@ export default function MapView() {
           onEachFeature: (feature, featureLayer) => {
             const props = feature.properties ?? {};
             const label = borderLabel(props);
-            const value = valueFor(props, level, metric);
+            const value = shaded ? valueFor(props, level) : null;
             const fill = colourOf(value);
 
             if (label) {
               featureLayer.bindTooltip(
-                value != null && metric ? `${label} · ${fmtValue(value, metric)}` : label,
+                value != null ? `${label} · ${fmtValue(value)}` : label,
                 { className: "border-tip", sticky: true, direction: "top", opacity: 1 },
               );
               if (value != null) entries.push({ label, value });
@@ -441,11 +422,10 @@ export default function MapView() {
         layer.bringToBack();
         borderLayerRef.current = layer;
 
-        if (metric && values.length) {
+        if (shaded && values.length) {
           entries.sort((a, b) => b.value - a.value);
           setShadeData({
             level,
-            metric,
             min: values[0],
             max: values[values.length - 1],
             entries: entries.slice(0, 6),
@@ -504,12 +484,10 @@ export default function MapView() {
 
   const changeBorders = (level: BorderLevel) => {
     setBorderLevel(level);
-    setShade(METRIC_BY_LEVEL[level] ?? "off");
+    setShade(level === "off" ? "off" : "population");
   };
 
-  const shadeView =
-    shadeData && shadeData.level === borderLevel && shadeData.metric === shade ? shadeData : null;
-  const metricAvailable = METRIC_BY_LEVEL[borderLevel] !== null;
+  const shadeView = shadeData && shadeData.level === borderLevel && shade === "population" ? shadeData : null;
 
   const controlBtn =
     "grid h-8 w-8 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground active:scale-95 disabled:opacity-40";
@@ -597,11 +575,6 @@ export default function MapView() {
                     Shade by
                   </p>
                   <ShadeChips value={shade} level={borderLevel} onChange={setShade} />
-                  {!metricAvailable && borderLevel !== "off" ? (
-                    <p className="mt-1.5 text-[9.5px] leading-relaxed text-muted-foreground">
-                      DOSM publishes no population or income data for DUN seats — borders only.
-                    </p>
-                  ) : null}
                   {shadeView ? <ShadeLegend data={shadeView} /> : null}
                 </div>
               </div>
@@ -769,11 +742,9 @@ export default function MapView() {
           <div className="pointer-events-none absolute right-3 top-3 z-[1000] hidden w-[236px] rounded-xl border bg-card p-3 shadow-sm md:block">
             <div className="flex items-baseline justify-between gap-2">
               <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-                {shadeView.metric === "population" ? "Population" : "Median income"}
+                Population
               </p>
-              <p className="font-mono text-[9px] text-muted-foreground">
-                {shadeView.metric === "population" ? POPULATION_YEAR : INCOME_YEAR}
-              </p>
+              <p className="font-mono text-[9px] text-muted-foreground">{POPULATION_YEAR}</p>
             </div>
             <ul className="mt-2 space-y-1.5">
               {shadeView.entries.map((entry) => (
@@ -781,7 +752,7 @@ export default function MapView() {
                   <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
                     <span className="truncate">{entry.label}</span>
                     <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
-                      {fmtValue(entry.value, shadeView.metric)}
+                      {fmtValue(entry.value)}
                     </span>
                   </div>
                   <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
@@ -844,7 +815,7 @@ export default function MapView() {
                   ))}
                 </div>
                 <span className="font-mono text-[9px] text-muted-foreground">
-                  {fmtValue(shadeView.min, shadeView.metric)}–{fmtValue(shadeView.max, shadeView.metric)}
+                  {fmtValue(shadeView.min)}–{fmtValue(shadeView.max)}
                 </span>
               </div>
             ) : null}
