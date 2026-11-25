@@ -178,7 +178,7 @@ function CatchmentWidget({
   const share = statePopulation ? row.served / statePopulation : 0;
 
   return (
-    <div className="pointer-events-auto absolute right-3 top-3 z-[1050] flex max-h-[calc(100dvh-1.5rem)] w-[380px] max-w-[calc(100vw-1.5rem)] flex-col overflow-hidden rounded-xl border bg-card shadow-xl">
+    <div className="pointer-events-auto absolute right-3 top-3 z-[1050] flex max-h-[calc(100dvh-1.5rem)] w-[460px] max-w-[calc(100vw-1.5rem)] flex-col overflow-hidden rounded-xl border bg-card shadow-xl">
       <div className="flex items-start gap-2 border-b px-4 pb-3 pt-4">
         <div className="min-w-0 flex-1">
           <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
@@ -217,27 +217,68 @@ function CatchmentWidget({
         </div>
 
         <div className="mt-4">
-          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-            Districts contributing
-          </p>
-          <ul className="mt-1.5 space-y-1">
-            {row.contributions.slice(0, 8).map((district) => (
-              <li
-                key={district.key}
-                className="flex items-baseline justify-between gap-2 border-b border-border/60 pb-1 text-[10.5px] last:border-0"
-              >
-                <span className="truncate">{district.name}</span>
-                <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
-                  {fmtValue(district.population)}
-                </span>
-              </li>
-            ))}
-            {row.contributions.length === 0 ? (
-              <li className="text-[10.5px] text-muted-foreground">
-                No district centre falls inside this radius.
-              </li>
-            ) : null}
-          </ul>
+          <div className="flex items-baseline justify-between">
+            <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+              Districts contributing
+            </p>
+            <p className="font-mono text-[9px] text-muted-foreground">
+              {row.contributions.length}
+            </p>
+          </div>
+
+          <div className="mt-1.5 max-h-[300px] overflow-y-auto">
+            <table className="w-full border-collapse text-[10.5px]">
+              <thead className="sticky top-0 z-10 bg-card">
+                <tr className="border-b">
+                  <th className="py-1 pr-2 text-left font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                    District
+                  </th>
+                  <th className="px-2 py-1 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                    People
+                  </th>
+                  <th className="py-1 pl-2 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
+                    Share
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {row.contributions.map((district) => (
+                  <tr
+                    key={district.key}
+                    className="border-b border-border/50 last:border-0 hover:bg-secondary/50"
+                  >
+                    <td className="max-w-[210px] truncate py-1 pr-2">{district.name}</td>
+                    <td className="px-2 py-1 text-right font-mono tabular-nums">
+                      {fmtValue(district.population)}
+                    </td>
+                    <td className="py-1 pl-2 text-right font-mono tabular-nums text-muted-foreground">
+                      {row.served ? `${Math.round((district.population / row.served) * 100)}%` : "—"}
+                    </td>
+                  </tr>
+                ))}
+                {row.contributions.length === 0 ? (
+                  <tr>
+                    <td colSpan={3} className="py-2 text-[10.5px] text-muted-foreground">
+                      No district centre falls inside this radius.
+                    </td>
+                  </tr>
+                ) : null}
+              </tbody>
+              {row.contributions.length ? (
+                <tfoot>
+                  <tr className="border-t">
+                    <td className="py-1 pr-2 font-medium">Total served</td>
+                    <td className="px-2 py-1 text-right font-mono font-medium tabular-nums">
+                      {fmtValue(row.served)}
+                    </td>
+                    <td className="py-1 pl-2 text-right font-mono tabular-nums text-muted-foreground">
+                      100%
+                    </td>
+                  </tr>
+                </tfoot>
+              ) : null}
+            </table>
+          </div>
         </div>
 
         <p className="mt-3 text-[9.5px] leading-relaxed text-muted-foreground">
