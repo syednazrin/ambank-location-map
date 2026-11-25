@@ -1,10 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0b0d;
-  --foreground: #f4f1ea;
+  --background: #f6f4ef;
+  --foreground: #191713;
+  --card: #ffffff;
+  --card-foreground: #191713;
+  --muted: #f1eee8;
+  --muted-foreground: #78716a;
+  --primary: #191713;
+  --primary-foreground: #faf9f7;
+  --secondary: #f1eee8;
+  --secondary-foreground: #191713;
+  --accent: #f1eee8;
+  --accent-foreground: #191713;
+  --destructive: #dc2626;
+  --border: #e6e1d9;
+  --input: #e6e1d9;
+  --ring: #b6ada0;
 
   --radius: 0.75rem;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
 }
 
 @theme inline {
@@ -58,7 +80,7 @@ body {
 /* ---------------------------------------------------------------- map shell */
 
 .leaflet-container {
-  background: #0b0b0d;
+  background: #eceae5;
   font-family: inherit;
   -webkit-tap-highlight-color: transparent;
   cursor: grab;
@@ -85,7 +107,7 @@ body {
 
 .pin-svg {
   display: block;
-  filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 4px 7px rgba(25, 23, 19, 0.28));
   transform-origin: 50% 92%;
   transition: transform 0.18s ease;
 }
@@ -96,8 +118,7 @@ body {
 
 .pin-root.is-active .pin-svg {
   transform: scale(1.16);
-  filter: drop-shadow(0 0 10px rgba(233, 166, 61, 0.55))
-    drop-shadow(0 6px 12px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 8px 14px rgba(25, 23, 19, 0.35));
 }
 
 .me-dot {
@@ -134,25 +155,24 @@ body {
 /* ----------------------------------------------------------------- popups */
 
 .loc-popup .leaflet-popup-content-wrapper {
-  background: rgba(16, 16, 19, 0.94);
-  backdrop-filter: blur(18px);
-  color: #f4f1ea;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  background: #ffffff;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   padding: 0;
-  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 16px 40px -16px rgba(25, 23, 19, 0.3);
 }
 
 .loc-popup .leaflet-popup-content {
   margin: 0;
-  padding: 16px;
-  width: 228px !important;
+  padding: 14px;
+  width: 236px !important;
   line-height: 1.5;
 }
 
 .loc-popup .leaflet-popup-tip {
-  background: rgba(16, 16, 19, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  border: 1px solid var(--border);
   box-shadow: none;
 }
 
@@ -164,16 +184,16 @@ body {
 /* ------------------------------------------------------------ attribution */
 
 .leaflet-control-attribution {
-  background: rgba(10, 10, 12, 0.55) !important;
-  color: rgba(255, 255, 255, 0.45) !important;
-  backdrop-filter: blur(10px);
-  border-radius: 8px 0 0 0;
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #7a736a !important;
+  backdrop-filter: blur(8px);
+  border-radius: 6px 0 0 0;
   font-size: 10px !important;
   padding: 2px 8px !important;
 }
 
 .leaflet-control-attribution a {
-  color: rgba(255, 255, 255, 0.62) !important;
+  color: #4a453e !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -184,39 +204,6 @@ body {
   .pin-root:hover .pin-svg,
   .pin-root.is-active .pin-svg {
     transition: none;
-  }
-}
-
-/* ------------------------------------------------------- light card surface */
-/* Scoped design tokens for the /tracker demo. Utilities read these vars inline,
-   so redefining them here only affects the element (and its children) below. */
-
-.tracker-theme {
-  --background: #f6f4ef;
-  --foreground: #191713;
-  --card: #ffffff;
-  --card-foreground: #191713;
-  --muted: #f1eee8;
-  --muted-foreground: #78716a;
-  --primary: #191713;
-  --primary-foreground: #faf9f7;
-  --secondary: #f1eee8;
-  --secondary-foreground: #191713;
-  --accent: #f1eee8;
-  --accent-foreground: #191713;
-  --destructive: #dc2626;
-  --border: #e6e1d9;
-  --input: #e6e1d9;
-  --ring: #b6ada0;
-
-  color: var(--foreground);
-}
-
-@layer base {
-  .tracker-theme *,
-  .tracker-theme *::before,
-  .tracker-theme *::after {
-    border-color: var(--border);
   }
 }
 

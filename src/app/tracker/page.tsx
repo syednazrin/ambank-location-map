@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TrackerPage() {
   return (
-    <main className="tracker-theme h-dvh overflow-y-auto bg-background text-foreground">
+    <main className="h-dvh overflow-y-auto bg-background text-foreground">
       <div className="mx-auto flex min-h-full w-full max-w-[460px] flex-col justify-center gap-6 px-4 py-10">
         <header className="flex items-center justify-between gap-4">
           <Link
@@ -19,7 +19,7 @@ export default function TrackerPage() {
             className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
           >
             <ArrowLeft className="size-3.5" />
-            AmBank map
+            Network map
           </Link>
           <span className="rounded-full border px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
             Live demo

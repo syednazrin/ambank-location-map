@@ -1,83 +1,93 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import L from "leaflet";
-import {
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-  useMap,
-} from "react-leaflet";
-import { LOCATIONS, type Location } from "@/lib/locations";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { LOCATIONS, STATES, type Location } from "@/lib/locations";
+import { loadBorders } from "@/lib/malaysia-borders";
 
-const CENTER: [number, number] = [3.139, 101.6869];
-const START_ZOOM = 12;
+const START_CENTER: [number, number] = [4.1, 102.4];
+const START_ZOOM = 7;
 
-const TYPE_CODE: Record<Location["type"], string> = {
-  "Head Office": "HQ",
-  Branch: "BR",
-  "Business Centre": "BC",
-  ATM: "ATM",
+const KIND_CODE: Record<Location["kind"], string> = {
+  Hospital: "HOSP",
+  "Specialist Centre": "SPEC",
+  Physiotherapy: "PHYS",
 };
 
-const BASEMAPS = {
-  midnight: {
-    label: "Midnight",
-    swatch: "#1a1d22",
-    layers: [
-      {
-        url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        maxNativeZoom: 16,
-      },
-      {
-        url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
-        maxNativeZoom: 16,
-      },
-    ],
-    attribution:
-      'Tiles &copy; <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
-  },
-  paper: {
-    label: "Paper",
-    swatch: "#eceae5",
-    layers: [
-      {
-        url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        maxNativeZoom: 16,
-      },
-      {
-        url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
-        maxNativeZoom: 16,
-      },
-    ],
-    attribution:
-      'Tiles &copy; <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
-  },
-  streets: {
-    label: "Streets",
-    swatch: "#e8dfc9",
-    layers: [
-      {
-        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
-        maxNativeZoom: 19,
-      },
-    ],
-    attribution:
-      'Tiles &copy; <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
-  },
-} as const;
+/** Paper basemap — keyless Esri light canvas plus its label layer. */
+const BASEMAP = {
+  layers: [
+    {
+      url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      maxNativeZoom: 16,
+    },
+    {
+      url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+      maxNativeZoom: 16,
+    },
+  ],
+  attribution:
+    'Tiles &copy; <a href="https://www.esri.com/">Esri</a> — Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+};
 
-type BasemapKey = keyof typeof BASEMAPS;
+/* ---------- boundary overlays ---------- */
+
+type BorderLevel = "off" | "state" | "district" | "dun" | "parlimen";
+
+const BORDER_OPTIONS: { id: BorderLevel; label: string }[] = [
+  { id: "off", label: "Off" },
+  { id: "state", label: "State" },
+  { id: "district", label: "District" },
+  { id: "dun", label: "DUN" },
+  { id: "parlimen", label: "Parliament" },
+];
+
+const BORDER_STYLE: Record<Exclude<BorderLevel, "off">, L.PathOptions> = {
+  state: { color: "#191713", weight: 1.3, opacity: 0.55, fill: true, fillColor: "#191713", fillOpacity: 0 },
+  district: { color: "#191713", weight: 0.9, opacity: 0.38, fill: true, fillColor: "#191713", fillOpacity: 0 },
+  dun: { color: "#191713", weight: 0.5, opacity: 0.3, fill: true, fillColor: "#191713", fillOpacity: 0 },
+  parlimen: { color: "#191713", weight: 1, opacity: 0.45, fill: true, fillColor: "#191713", fillOpacity: 0 },
+};
+
+function borderLabel(props: Record<string, unknown>) {
+  return (props.dun ?? props.parlimen ?? props.name ?? "") as string;
+}
+
+function BorderChips({
+  value,
+  onChange,
+}: {
+  value: BorderLevel;
+  onChange: (level: BorderLevel) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-1">
+      {BORDER_OPTIONS.map((option) => (
+        <button
+          key={option.id}
+          type="button"
+          onClick={() => onChange(option.id)}
+          aria-pressed={value === option.id}
+          className={`rounded-md border px-2 py-1 text-[10.5px] transition ${
+            value === option.id
+              ? "border-primary bg-primary font-medium text-primary-foreground"
+              : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+          }`}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 /* ---------- custom pin ---------- */
 
 const PIN_SVG = `<svg class="pin-svg" viewBox="0 0 26 34" width="26" height="34" aria-hidden="true">
   <path d="M13 1C6.4 1 1 6.3 1 12.9 1 21 13 33 13 33s12-12 12-20.1C25 6.3 19.6 1 13 1Z"
-    fill="#e9a63d" stroke="rgba(255,255,255,.55)" stroke-width="1.1" />
-  <path d="M13 1C6.4 1 1 6.3 1 12.9 1 15.9 2.6 19.4 5 23c2.4-6.9 7.7-11.4 7.7-11.4S18.7 7 13 1Z"
-    fill="rgba(255,255,255,.22)" />
-  <circle cx="13" cy="12.6" r="4" fill="#17130d" />
+    fill="#191713" stroke="rgba(255,255,255,.92)" stroke-width="1.2" />
+  <circle cx="13" cy="12.6" r="3.7" fill="#ffffff" />
 </svg>`;
 
 const iconCache = new Map<string, L.DivIcon>();
@@ -140,12 +150,12 @@ function CoordsHud({ map }: { map: L.Map | null }) {
     `${Math.abs(v).toFixed(4)}°${v >= 0 ? posLabel : negLabel}`;
 
   return (
-    <div className="pointer-events-auto hidden items-center gap-2.5 rounded-full border border-white/10 bg-[#0e0e11]/85 px-3.5 py-2 font-mono text-[11px] tracking-tight text-stone-300 backdrop-blur-xl md:flex">
+    <div className="pointer-events-auto hidden items-center gap-2.5 rounded-full border bg-card px-3 py-1.5 font-mono text-[10.5px] text-muted-foreground shadow-sm md:flex">
       <span className="tabular-nums">
         {pos ? `${fmt(pos.lat, "N", "S")}  ${fmt(pos.lng, "E", "W")}` : "— hover the map"}
       </span>
-      <span className="h-3 w-px bg-white/15" />
-      <span className="tabular-nums text-amber-200/80">z{zoom}</span>
+      <span className="h-3 w-px bg-border" />
+      <span className="tabular-nums">z{zoom}</span>
     </div>
   );
 }
@@ -154,14 +164,87 @@ function CoordsHud({ map }: { map: L.Map | null }) {
 
 export default function MapView() {
   const [map, setMap] = useState<L.Map | null>(null);
-  const [basemap, setBasemap] = useState<BasemapKey>("midnight");
   const [activeId, setActiveId] = useState<string | null>(null);
   const [me, setMe] = useState<L.LatLng | null>(null);
   const [locating, setLocating] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const [collapsed, setCollapsed] = useState(false);
+  const [borderLevel, setBorderLevel] = useState<BorderLevel>("state");
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
+  const borderLayerRef = useRef<L.GeoJSON | null>(null);
 
-  const handleReady = useCallback((instance: L.Map) => setMap(instance), []);
+  const fitAll = useCallback((instance: L.Map) => {
+    const bounds = L.latLngBounds(LOCATIONS.map((loc) => loc.coords));
+    const wide = window.matchMedia("(min-width: 768px)").matches;
+    instance.fitBounds(bounds, {
+      paddingTopLeft: wide ? [32, 32] : [16, 124],
+      paddingBottomRight: wide ? [32, 56] : [16, 64],
+      maxZoom: 9,
+      animate: false,
+    });
+  }, []);
+
+  const handleReady = useCallback(
+    (instance: L.Map) => {
+      setMap(instance);
+      fitAll(instance);
+    },
+    [fitAll],
+  );
+
+  // The map sits beside a collapsible panel, so its size changes with the window
+  // and with the panel width — watch the container itself.
+  useEffect(() => {
+    if (!map) return;
+    const observer = new ResizeObserver(() => map.invalidateSize());
+    observer.observe(map.getContainer());
+    return () => observer.disconnect();
+  }, [map]);
+
+  // Boundary overlay: swap the layer whenever the level changes.
+  useEffect(() => {
+    if (!map) return;
+    borderLayerRef.current?.remove();
+    borderLayerRef.current = null;
+    if (borderLevel === "off") return;
+
+    const style = BORDER_STYLE[borderLevel];
+    let cancelled = false;
+
+    loadBorders(borderLevel)
+      .then((collection) => {
+        if (cancelled) return;
+        const layer = L.geoJSON(collection as unknown as GeoJSON.FeatureCollection, {
+          style: () => ({ ...style }),
+          onEachFeature: (feature, featureLayer) => {
+            const label = borderLabel(feature.properties ?? {});
+            if (label) {
+              featureLayer.bindTooltip(label, {
+                className: "border-tip",
+                sticky: true,
+                direction: "top",
+                opacity: 1,
+              });
+            }
+            const path = featureLayer as L.Path;
+            featureLayer.on("mouseover", () =>
+              path.setStyle({ weight: 2, opacity: 0.9, fillOpacity: 0.06 }),
+            );
+            featureLayer.on("mouseout", () => path.setStyle({ ...style }));
+          },
+        }).addTo(map);
+
+        layer.bringToBack();
+        borderLayerRef.current = layer;
+      })
+      .catch(() => {
+        if (!cancelled) setToast("Couldn't load the boundary file.");
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [map, borderLevel]);
 
   useEffect(() => {
     if (!toast) return;
@@ -182,8 +265,8 @@ export default function MapView() {
   const resetView = useCallback(() => {
     setActiveId(null);
     map?.closePopup();
-    map?.flyTo(CENTER, START_ZOOM, { duration: 0.8 });
-  }, [map]);
+    if (map) fitAll(map);
+  }, [map, fitAll]);
 
   const locate = useCallback(() => {
     if (!map || locating) return;
@@ -193,7 +276,7 @@ export default function MapView() {
     const onFound = (e: L.LocationEvent) => {
       setLocating(false);
       setMe(e.latlng);
-      map.flyTo(e.latlng, 15, { duration: 1 });
+      map.flyTo(e.latlng, 14, { duration: 1 });
     };
     const onError = () => {
       setLocating(false);
@@ -204,182 +287,237 @@ export default function MapView() {
     map.once("locationerror", onError);
   }, [map, locating]);
 
-  const current = useMemo(
-    () => BASEMAPS[basemap],
-    [basemap],
-  );
-
   const controlBtn =
-    "grid h-9 w-9 place-items-center rounded-lg text-stone-300 transition hover:bg-white/10 hover:text-white active:scale-95 disabled:opacity-40";
+    "grid h-8 w-8 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground active:scale-95 disabled:opacity-40";
 
   return (
-    <div className="relative h-dvh w-full overflow-hidden bg-[#0b0b0d]">
-      <MapContainer
-        center={CENTER}
-        zoom={START_ZOOM}
-        zoomControl={false}
-        minZoom={3}
-        maxZoom={19}
-        worldCopyJump
-        className="absolute inset-0 h-full w-full"
-        zoomSnap={0.5}
-        preferCanvas
+    <div className="flex h-dvh w-full overflow-hidden bg-background text-foreground">
+      {/* ---------- side panel ---------- */}
+      <aside
+        className={`hidden shrink-0 overflow-hidden bg-card transition-[width] duration-300 ease-out md:flex md:flex-col ${
+          collapsed ? "w-0" : "w-[340px] border-r"
+        }`}
+        aria-hidden={collapsed}
       >
-        {current.layers.map((layer) => (
-          <TileLayer
-            key={`${basemap}-${layer.url}`}
-            url={layer.url}
-            attribution={current.attribution}
-            maxZoom={19}
-            maxNativeZoom={layer.maxNativeZoom}
-          />
-        ))}
-
-        <MapBridge onReady={handleReady} />
-
-        {LOCATIONS.map((loc) => (
-          <Marker
-            key={loc.id}
-            position={loc.coords}
-            icon={pinIcon(activeId === loc.id)}
-            ref={(instance) => {
-              markerRefs.current[loc.id] = instance;
-            }}
-            eventHandlers={{ click: () => setActiveId(loc.id) }}
-          >
-            <Popup className="loc-popup" closeButton={false} offset={[0, -4]}>
-              <div className="w-[228px]">
-                <p className="text-[9.5px] font-medium uppercase tracking-[0.2em] text-amber-300/80">
-                  {loc.type}
-                </p>
-                <h3 className="mt-1.5 text-[15px] font-semibold leading-tight text-stone-50">
-                  {loc.name}
-                </h3>
-                <p className="mt-1.5 text-[11.5px] leading-relaxed text-stone-400">
-                  {loc.address}
-                </p>
-
-                <div className="mt-3 space-y-1 border-t border-white/10 pt-2.5 text-[11px] text-stone-400">
-                  <p className="flex items-center gap-2">
-                    <span className="text-stone-500">Hours</span>
-                    <span className="text-stone-300">{loc.hours}</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <span className="text-stone-500">Phone</span>
-                    <span className="text-stone-300">{loc.phone}</span>
-                  </p>
-                </div>
-
-                <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${loc.coords[0]},${loc.coords[1]}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-amber-300/90 px-3 py-2 text-[11.5px] font-semibold text-stone-900 transition hover:bg-amber-200"
-                >
-                  Get directions
-                  <span aria-hidden>↗</span>
-                </a>
+        <div className="flex h-full w-[340px] shrink-0 flex-col">
+          <div className="border-b px-5 pb-4 pt-5">
+            <div className="flex items-start gap-2.5">
+              <div className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-foreground text-[11px] font-semibold text-background">
+                AO
               </div>
-            </Popup>
-          </Marker>
-        ))}
-
-        {me && (
-          <Marker
-            position={me}
-            icon={L.divIcon({
-              className: "pin-root",
-              html: '<span class="me-dot"><span class="me-dot__pulse"></span></span>',
-              iconSize: [18, 18],
-              iconAnchor: [9, 9],
-            })}
-          />
-        )}
-      </MapContainer>
-
-      {/* ---------- overlays ---------- */}
-      <div className="pointer-events-none absolute inset-0 z-[1000] flex flex-col justify-between p-4 pb-10 sm:p-6 sm:pb-9">
-        <div className="flex items-start justify-between gap-4">
-          <header className="pointer-events-auto w-[15.5rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-[#0e0e11]/90 p-4 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:w-[16.5rem]">
-            <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-200 to-amber-500 text-[12px] font-bold text-stone-900">
-                AB
-              </div>
-              <div className="min-w-0">
-                <p className="text-[9.5px] font-medium uppercase tracking-[0.22em] text-amber-200/70">
-                  AmBank
+              <div className="min-w-0 flex-1">
+                <p className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">
+                  Asia OneHealthcare
                 </p>
-                <h1 className="truncate text-[15px] font-semibold text-stone-50">
-                  Location Explorer
+                <h1 className="truncate text-[15px] font-semibold leading-tight">
+                  Hospital network
                 </h1>
               </div>
+              <button
+                type="button"
+                onClick={() => setCollapsed(true)}
+                aria-label="Collapse panel"
+                className="grid h-7 w-7 shrink-0 place-items-center rounded-md text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 6l-6 6 6 6" />
+                </svg>
+              </button>
             </div>
-
-            <p className="mt-3 text-[11px] leading-relaxed text-stone-400">
-              Drag to pan, scroll to zoom, pick a spot below to fly there.
+            <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
+              {LOCATIONS.length} hospitals and specialist centres across {STATES.length} states.
+              Pick a name to fly there.
             </p>
+          </div>
 
-            <ul className="-mx-1 mt-3 max-h-[34vh] space-y-0.5 overflow-y-auto">
-              {LOCATIONS.map((loc) => (
-                <li key={loc.id}>
-                  <button
-                    type="button"
-                    onClick={() => focus(loc)}
-                    className={`group flex w-full items-center gap-2.5 rounded-lg px-2 py-1.5 text-left transition ${
-                      activeId === loc.id
-                        ? "bg-white/10"
-                        : "hover:bg-white/[0.06]"
-                    }`}
-                  >
-                    <span
-                      className={`h-1.5 w-1.5 shrink-0 rounded-full transition ${
-                        activeId === loc.id
-                          ? "bg-amber-300"
-                          : "bg-stone-500 group-hover:bg-amber-300/70"
-                      }`}
-                    />
-                    <span className="min-w-0 flex-1 truncate text-[11.5px] text-stone-300 group-hover:text-stone-100">
-                      {loc.name}
-                    </span>
-                    <span className="shrink-0 text-[9.5px] uppercase tracking-wider text-stone-500">
-                      {TYPE_CODE[loc.type]}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </header>
+          <div className="border-b px-5 py-3">
+            <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+              Borders
+            </p>
+            <BorderChips value={borderLevel} onChange={setBorderLevel} />
+          </div>
 
-          <div className="pointer-events-auto space-y-2">
-            <div className="rounded-xl border border-white/10 bg-[#0e0e11]/90 p-1.5 backdrop-blur-xl">
-              {(Object.keys(BASEMAPS) as BasemapKey[]).map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setBasemap(key)}
-                  aria-pressed={basemap === key}
-                  title={BASEMAPS[key].label}
-                  className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-[11px] transition ${
-                    basemap === key
-                      ? "bg-white/12 text-stone-50"
-                      : "text-stone-400 hover:bg-white/[0.07] hover:text-stone-200"
-                  }`}
-                >
-                  <span
-                    className="h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/25"
-                    style={{ background: BASEMAPS[key].swatch }}
-                  />
-                  <span className="hidden sm:inline">{BASEMAPS[key].label}</span>
-                </button>
-              ))}
+          <div className="flex-1 overflow-y-auto px-2 py-2">
+            {STATES.map((state) => (
+              <div key={state} className="mb-1.5">
+                <p className="px-2 pb-1 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+                  {state}
+                </p>
+                <ul className="space-y-px">
+                  {LOCATIONS.filter((loc) => loc.state === state).map((loc) => (
+                    <li key={loc.id}>
+                      <button
+                        type="button"
+                        onClick={() => focus(loc)}
+                        className={`group flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left transition ${
+                          activeId === loc.id ? "bg-secondary" : "hover:bg-secondary/60"
+                        }`}
+                      >
+                        <span
+                          className={`h-1.5 w-1.5 shrink-0 rounded-full transition ${
+                            activeId === loc.id
+                              ? "bg-foreground"
+                              : "bg-border group-hover:bg-muted-foreground"
+                          }`}
+                        />
+                        <span className="min-w-0 flex-1 truncate text-[11.5px]">{loc.name}</span>
+                        <span className="shrink-0 font-mono text-[9px] uppercase text-muted-foreground">
+                          {KIND_CODE[loc.kind]}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between gap-3 border-t px-5 py-3 font-mono text-[9.5px] uppercase tracking-[0.14em] text-muted-foreground">
+            <span>{LOCATIONS.length} locations</span>
+            <span>Malaysia</span>
+          </div>
+        </div>
+      </aside>
+
+      {/* ---------- map ---------- */}
+      <div className="relative flex-1">
+        <MapContainer
+          center={START_CENTER}
+          zoom={START_ZOOM}
+          zoomControl={false}
+          minZoom={3}
+          maxZoom={19}
+          worldCopyJump
+          className="absolute inset-0 h-full w-full"
+          zoomSnap={0.5}
+          preferCanvas
+        >
+          {BASEMAP.layers.map((layer) => (
+            <TileLayer
+              key={layer.url}
+              url={layer.url}
+              attribution={BASEMAP.attribution}
+              maxZoom={19}
+              maxNativeZoom={layer.maxNativeZoom}
+            />
+          ))}
+
+          <MapBridge onReady={handleReady} />
+
+          {LOCATIONS.map((loc) => (
+            <Marker
+              key={loc.id}
+              position={loc.coords}
+              icon={pinIcon(activeId === loc.id)}
+              ref={(instance) => {
+                markerRefs.current[loc.id] = instance;
+              }}
+              eventHandlers={{ click: () => setActiveId(loc.id) }}
+            >
+              <Popup className="loc-popup" closeButton={false} offset={[0, -4]}>
+                <div className="w-[236px]">
+                  <p className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">
+                    {loc.kind} · {loc.state}
+                  </p>
+                  <h3 className="mt-1 text-[15px] font-semibold leading-tight">{loc.name}</h3>
+                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-muted-foreground">
+                    {loc.address}
+                  </p>
+
+                  <div className="mt-3 space-y-1 border-t pt-2.5 text-[11px]">
+                    <p className="flex gap-2">
+                      <span className="w-11 shrink-0 text-muted-foreground">Phone</span>
+                      <a href={`tel:${loc.phone.replace(/\s/g, "")}`} className="hover:underline">
+                        {loc.phone}
+                      </a>
+                    </p>
+                    <p className="flex gap-2">
+                      <span className="w-11 shrink-0 text-muted-foreground">Email</span>
+                      <a
+                        href={`mailto:${loc.email}`}
+                        className="truncate hover:underline"
+                        title={loc.email}
+                      >
+                        {loc.email}
+                      </a>
+                    </p>
+                  </div>
+
+                  <div className="mt-3 flex gap-1.5">
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${loc.coords[0]},${loc.coords[1]}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 rounded-md bg-primary px-2.5 py-2 text-center text-[11px] font-medium text-primary-foreground transition hover:bg-primary/90"
+                    >
+                      Directions
+                    </a>
+                    <a
+                      href={loc.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-md border px-2.5 py-2 text-[11px] font-medium transition hover:bg-secondary"
+                    >
+                      Website ↗
+                    </a>
+                  </div>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+
+          {me && (
+            <Marker
+              position={me}
+              icon={L.divIcon({
+                className: "pin-root",
+                html: '<span class="me-dot"><span class="me-dot__pulse"></span></span>',
+                iconSize: [18, 18],
+                iconAnchor: [9, 9],
+              })}
+            />
+          )}
+        </MapContainer>
+
+        {/* reopen the panel once collapsed */}
+        {collapsed && (
+          <button
+            type="button"
+            onClick={() => setCollapsed(false)}
+            aria-label="Open panel"
+            className="absolute left-3 top-3 z-[1000] hidden h-9 w-9 place-items-center rounded-lg border bg-card text-muted-foreground shadow-sm transition hover:bg-secondary hover:text-foreground md:grid"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 6l6 6-6 6" />
+            </svg>
+          </button>
+        )}
+
+        {/* compact header on small screens — the panel needs a real width */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-[1000] p-3 md:hidden">
+          <div className="pointer-events-auto space-y-2 rounded-lg border bg-card px-3 py-2 shadow-sm">
+            <div className="flex items-center gap-2.5">
+              <div className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-foreground text-[10px] font-semibold text-background">
+                AO
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-[12.5px] font-semibold leading-tight">
+                  Hospital network
+                </p>
+                <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {LOCATIONS.length} locations · Malaysia
+                </p>
+              </div>
             </div>
+            <BorderChips value={borderLevel} onChange={setBorderLevel} />
           </div>
         </div>
 
-        <div className="flex items-end justify-between gap-3">
+        {/* bottom controls */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1000] flex items-end justify-between gap-3 p-3 pb-9">
           <CoordsHud map={map} />
 
-          <div className="pointer-events-auto ml-auto flex flex-col gap-1 rounded-xl border border-white/10 bg-[#0e0e11]/90 p-1.5 backdrop-blur-xl">
+          <div className="pointer-events-auto ml-auto flex flex-col gap-0.5 rounded-xl border bg-card p-1 shadow-sm">
             <button
               type="button"
               onClick={() => map?.zoomIn()}
@@ -400,7 +538,7 @@ export default function MapView() {
                 <path d="M5 12h14" />
               </svg>
             </button>
-            <span className="mx-1 h-px bg-white/10" />
+            <span className="mx-1 my-0.5 h-px bg-border" />
             <button
               type="button"
               onClick={locate}
@@ -409,7 +547,7 @@ export default function MapView() {
               aria-label="Find my location"
             >
               {locating ? (
-                <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-white/25 border-t-amber-300" />
+                <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-border border-t-foreground" />
               ) : (
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="3.2" />
@@ -422,7 +560,7 @@ export default function MapView() {
               type="button"
               onClick={resetView}
               className={controlBtn}
-              aria-label="Reset view"
+              aria-label="Fit all locations"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 12a9 9 0 1 0 3-6.7" />
@@ -431,15 +569,15 @@ export default function MapView() {
             </button>
           </div>
         </div>
-      </div>
 
-      {toast && (
-        <div className="pointer-events-none absolute inset-x-0 bottom-24 z-[1100] flex justify-center px-4">
-          <p className="rounded-full border border-white/10 bg-black/70 px-4 py-2 text-[11.5px] text-stone-200 shadow-2xl backdrop-blur-xl">
-            {toast}
-          </p>
-        </div>
-      )}
+        {toast && (
+          <div className="pointer-events-none absolute inset-x-0 bottom-24 z-[1100] flex justify-center px-4">
+            <p className="rounded-full border bg-card px-3.5 py-1.5 text-[11.5px] shadow-sm">
+              {toast}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

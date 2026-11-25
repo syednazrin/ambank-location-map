@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AmBank · Location Explorer",
+  title: "Asia OneHealthcare · Hospital network",
   description:
-    "A full-screen interactive map of AmBank branches, business centres and ATMs across the Klang Valley.",
+    "A full-screen map of Asia OneHealthcare hospitals, medical centres and specialist clinics across Malaysia.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b0b0d",
+  themeColor: "#f6f4ef",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored assets (MapLibre worker copied into public/ by a prebuild script)
+    "public/**",
   ]),
 ]);
 
