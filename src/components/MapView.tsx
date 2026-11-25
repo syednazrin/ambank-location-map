@@ -86,7 +86,6 @@ type ShadeData = {
   level: BorderLevel;
   min: number;
   max: number;
-  entries: { label: string; value: number }[];
 };
 
 function valueFor(props: Record<string, unknown>, level: BorderLevel): number | null {
@@ -339,9 +338,18 @@ function PanelAnalytics({
       </div>
 
       <section>
-        <h2 className="px-1 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-          Catchment by hospital
-        </h2>
+        <div className="flex items-baseline justify-between px-1">
+          <h2 className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+            Catchment by hospital
+          </h2>
+          <span className="font-mono text-[8.5px] uppercase tracking-[0.1em] text-muted-foreground">
+            {rows.length} sites
+          </span>
+        </div>
+        <p className="mt-1 px-1 text-[9.5px] leading-relaxed text-muted-foreground">
+          Tap a row to open its full catchment table.
+        </p>
+
         <table className="mt-1.5 w-full border-collapse">
           <thead>
             <tr className="border-b">
@@ -351,39 +359,70 @@ function PanelAnalytics({
               <th className="px-1 pb-1 text-right font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-muted-foreground">
                 Served
               </th>
+              <th className="w-4 pb-1">
+                <span className="sr-only">Open</span>
+              </th>
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
-              <tr
-                key={row.loc.id}
-                onClick={() => onSelect(row.loc.id)}
-                className={`cursor-pointer border-b border-border/50 transition last:border-0 ${
-                  selectedId === row.loc.id ? "bg-secondary" : "hover:bg-secondary/60"
-                }`}
-              >
-                <td className="px-1 py-1.5">
-                  <span className="block truncate text-[10.5px] leading-tight">{row.loc.name}</span>
-                  <span className="mt-0.5 block truncate font-mono text-[8.5px] uppercase tracking-[0.08em] text-muted-foreground">
-                    {row.loc.state}
-                  </span>
-                  <span className="mt-1 block h-0.5 overflow-hidden rounded-full bg-secondary">
-                    <span
-                      className="block h-full rounded-full bg-foreground/70"
-                      style={{ width: `${Math.max(2, (row.served / max) * 100)}%` }}
-                    />
-                  </span>
-                </td>
-                <td className="px-1 py-1.5 text-right align-middle font-mono text-[10px] tabular-nums">
-                  {fmtValue(row.served)}
-                </td>
-              </tr>
-            ))}
+            {rows.map((row) => {
+              const selected = selectedId === row.loc.id;
+              return (
+                <tr
+                  key={row.loc.id}
+                  onClick={() => onSelect(row.loc.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      onSelect(row.loc.id);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-expanded={selected}
+                  aria-label={`Open ${row.loc.name} catchment table`}
+                  title="Open catchment table"
+                  className={`cursor-pointer border-b border-border/50 outline-none transition last:border-0 focus-visible:bg-secondary ${
+                    selected ? "bg-secondary" : "hover:bg-secondary/60"
+                  }`}
+                >
+                  <td className="px-1 py-1.5">
+                    <span className="block truncate text-[10.5px] leading-tight">
+                      {row.loc.name}
+                    </span>
+                    <span className="mt-0.5 block truncate font-mono text-[8.5px] uppercase tracking-[0.08em] text-muted-foreground">
+                      {row.loc.state}
+                    </span>
+                    <span className="mt-1 block h-0.5 overflow-hidden rounded-full bg-secondary">
+                      <span
+                        className="block h-full rounded-full bg-foreground/70"
+                        style={{ width: `${Math.max(2, (row.served / max) * 100)}%` }}
+                      />
+                    </span>
+                  </td>
+                  <td className="px-1 py-1.5 text-right align-middle font-mono text-[10px] tabular-nums">
+                    {fmtValue(row.served)}
+                  </td>
+                  <td className="pl-1 pr-0.5 text-right align-middle">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className={`ml-auto h-3 w-3 text-muted-foreground transition-transform ${
+                        selected ? "rotate-90" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 6l6 6-6 6" />
+                    </svg>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
-        <p className="mt-2 px-1 text-[9px] leading-relaxed text-muted-foreground">
-          Population served: each district is split between the hospitals in range. Click a row for the breakdown.
-        </p>
       </section>
 
       <section className="px-1">
@@ -737,7 +776,6 @@ export default function MapView() {
           return RAMP[Math.min(index, RAMP.length - 1)];
         };
 
-        const entries: { label: string; value: number }[] = [];
         const baseWeight = BORDER_WEIGHT[level];
 
         if (!map.getPane("choropleth")) {
@@ -772,7 +810,6 @@ export default function MapView() {
                 value != null ? `${label} · ${fmtValue(value)}` : label,
                 { className: "border-tip", sticky: true, direction: "top", opacity: 1 },
               );
-              if (value != null) entries.push({ label, value });
             }
 
             const path = featureLayer as L.Path;
@@ -793,12 +830,10 @@ export default function MapView() {
         fadeChoropleth(map);
 
         if (shaded && values.length) {
-          entries.sort((a, b) => b.value - a.value);
           setShadeData({
             level,
             min: values[0],
             max: values[values.length - 1],
-            entries: entries.slice(0, 6),
           });
         }
       })
@@ -1366,36 +1401,6 @@ export default function MapView() {
             onClose={() => setSelectedHospitalId(null)}
             onFocus={() => focus(selectedRow.loc)}
           />
-        ) : null}
-
-        {/* concentration bars */}
-        {shadeView && !selectedRow ? (
-          <div className="pointer-events-none absolute right-3 top-3 z-[1000] hidden w-[236px] rounded-xl border bg-card p-3 shadow-sm md:block">
-            <div className="flex items-baseline justify-between gap-2">
-              <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-                Population
-              </p>
-              <p className="font-mono text-[9px] text-muted-foreground">{POPULATION_YEAR}</p>
-            </div>
-            <ul className="mt-2 space-y-1.5">
-              {shadeView.entries.map((entry) => (
-                <li key={entry.label}>
-                  <div className="flex items-baseline justify-between gap-2 text-[10.5px]">
-                    <span className="truncate">{entry.label}</span>
-                    <span className="shrink-0 font-mono text-[9.5px] text-muted-foreground">
-                      {fmtValue(entry.value)}
-                    </span>
-                  </div>
-                  <div className="mt-1 h-1 overflow-hidden rounded-full bg-secondary">
-                    <div
-                      className="h-full rounded-full bg-foreground"
-                      style={{ width: `${Math.max(4, (entry.value / shadeView.max) * 100)}%` }}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
         ) : null}
 
         {/* compact header on small screens — the panel needs a real width */}
