@@ -1,0 +1,181 @@
+{
+  "dataset": "Malaysia administrative & electoral boundaries",
+  "source": {
+    "repository": "https://github.com/mptwaktusolat/jakim.geojson",
+    "branch": "master",
+    "raw": "https://raw.githubusercontent.com/mptwaktusolat/jakim.geojson/master/",
+    "retrieved": "2026-11-25",
+    "note": "Compiled by the waktusolat project for JAKIM prayer-time zones; includes district, DUN and parliamentary boundaries. The upstream repo declares no licence — confirm terms with the owner before redistribution."
+  },
+  "crs": "WGS84 (EPSG:4326), [longitude, latitude]",
+  "bbox": [
+    99.6406,
+    0.854,
+    119.269,
+    7.3806
+  ],
+  "levels": [
+    {
+      "level": "country",
+      "label": "Country outline",
+      "file": "malaysia.geojson",
+      "path": "/data/malaysia/malaysia.geojson",
+      "sizeBytes": 278915,
+      "features": 1,
+      "properties": [
+        "name",
+        "iso",
+        "abr"
+      ],
+      "bbox": [
+        99.64083,
+        0.855,
+        119.26945,
+        7.38056
+      ]
+    },
+    {
+      "level": "state",
+      "label": "States / federal territories (16)",
+      "file": "malaysia.state.geojson",
+      "path": "/data/malaysia/malaysia.state.geojson",
+      "sizeBytes": 359369,
+      "features": 16,
+      "properties": [
+        "state_id",
+        "name",
+        "state"
+      ],
+      "bbox": [
+        99.6409,
+        0.85539,
+        119.26899,
+        7.36098
+      ]
+    },
+    {
+      "level": "district",
+      "label": "Districts / daerah (160)",
+      "file": "malaysia.district.geojson",
+      "path": "/data/malaysia/malaysia.district.geojson",
+      "sizeBytes": 875162,
+      "features": 160,
+      "properties": [
+        "name",
+        "code_state",
+        "state"
+      ],
+      "bbox": [
+        99.6409,
+        0.85539,
+        119.26899,
+        7.36098
+      ]
+    },
+    {
+      "level": "district-jakim",
+      "label": "Districts with JAKIM zone codes (170)",
+      "file": "malaysia.district-jakim.geojson",
+      "path": "/data/malaysia/malaysia.district-jakim.geojson",
+      "sizeBytes": 1455975,
+      "features": 170,
+      "properties": [
+        "name",
+        "code_state",
+        "state",
+        "jakim_code"
+      ],
+      "bbox": [
+        99.6409,
+        0.85539,
+        119.26899,
+        7.36098
+      ]
+    },
+    {
+      "level": "dun",
+      "label": "State assembly seats / DUN (613)",
+      "file": "malaysia.dun.geojson",
+      "path": "/data/malaysia/malaysia.dun.geojson",
+      "sizeBytes": 2144632,
+      "features": 613,
+      "properties": [
+        "state",
+        "parlimen",
+        "dun",
+        "code_state",
+        "code_parlimen",
+        "code_dun",
+        "code_state_dun"
+      ],
+      "bbox": [
+        99.64062,
+        0.85396,
+        119.26903,
+        7.37064
+      ]
+    },
+    {
+      "level": "parlimen",
+      "label": "Parliamentary seats (222)",
+      "file": "malaysia.parlimen.geojson",
+      "path": "/data/malaysia/malaysia.parlimen.geojson",
+      "sizeBytes": 1281139,
+      "features": 222,
+      "properties": [
+        "state",
+        "parlimen",
+        "code_state",
+        "code_parlimen"
+      ],
+      "bbox": [
+        99.6406,
+        0.85399,
+        119.26903,
+        7.37064
+      ]
+    }
+  ],
+  "counts": {
+    "states": 16,
+    "districts": 160,
+    "parlimen": 222,
+    "dun": 613,
+    "dunByState": {
+      "Johor": 56,
+      "Kedah": 36,
+      "Kelantan": 45,
+      "Melaka": 28,
+      "Negeri Sembilan": 36,
+      "Pahang": 42,
+      "Pulau Pinang": 40,
+      "Perak": 59,
+      "Perlis": 15,
+      "Selangor": 56,
+      "Terengganu": 32,
+      "Sabah": 73,
+      "Sarawak": 82,
+      "W.P. Kuala Lumpur": 11,
+      "W.P. Putrajaya": 1,
+      "W.P. Labuan": 1
+    },
+    "parlimenByState": {
+      "Perlis": 3,
+      "Kedah": 15,
+      "Kelantan": 14,
+      "Terengganu": 8,
+      "Pulau Pinang": 13,
+      "Perak": 24,
+      "Pahang": 14,
+      "Selangor": 22,
+      "W.P. Kuala Lumpur": 11,
+      "W.P. Putrajaya": 1,
+      "Negeri Sembilan": 8,
+      "Melaka": 6,
+      "Johor": 26,
+      "W.P. Labuan": 1,
+      "Sabah": 25,
+      "Sarawak": 31
+    }
+  }
+}

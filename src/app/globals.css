@@ -3,11 +3,28 @@
 :root {
   --background: #0b0b0d;
   --foreground: #f4f1ea;
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -169,3 +186,62 @@ body {
     transition: none;
   }
 }
+
+/* ------------------------------------------------------- light card surface */
+/* Scoped design tokens for the /tracker demo. Utilities read these vars inline,
+   so redefining them here only affects the element (and its children) below. */
+
+.tracker-theme {
+  --background: #f6f4ef;
+  --foreground: #191713;
+  --card: #ffffff;
+  --card-foreground: #191713;
+  --muted: #f1eee8;
+  --muted-foreground: #78716a;
+  --primary: #191713;
+  --primary-foreground: #faf9f7;
+  --secondary: #f1eee8;
+  --secondary-foreground: #191713;
+  --accent: #f1eee8;
+  --accent-foreground: #191713;
+  --destructive: #dc2626;
+  --border: #e6e1d9;
+  --input: #e6e1d9;
+  --ring: #b6ada0;
+
+  color: var(--foreground);
+}
+
+@layer base {
+  .tracker-theme *,
+  .tracker-theme *::before,
+  .tracker-theme *::after {
+    border-color: var(--border);
+  }
+}
+
+/* ------------------------------------------------------------- maplibre bits */
+
+.maplibregl-map {
+  font-family: inherit;
+  background: #eceae5;
+}
+
+.maplibregl-canvas:focus {
+  outline: none;
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.maplibregl-ctrl-attrib a {
+  color: #6b645c;
+}
+
+.maplibregl-marker {
+  will-change: transform;
+}
+

@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="h-full overflow-hidden bg-[#0b0b0d]">{children}</body>
+      <body className="h-full overflow-hidden bg-background text-foreground">{children}</body>
     </html>
   );
 }

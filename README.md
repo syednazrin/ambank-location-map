@@ -37,13 +37,46 @@ src/
 ├─ app/
 │  ├─ layout.tsx      # fonts, metadata, Leaflet CSS
 │  ├─ page.tsx        # renders the map shell
-│  └─ globals.css     # map / pin / popup theming
+│  ├─ tracker/        # /tracker — MapLibre delivery-tracker demo
+│  └─ globals.css     # map / pin / popup theming + light card tokens
 ├─ components/
 │  ├─ MapClient.tsx   # client-only dynamic import (no SSR for Leaflet)
-│  └─ MapView.tsx     # map, markers, overlay UI
+│  ├─ MapView.tsx     # map, markers, overlay UI
+│  ├─ maps/           # map-kit, DeliveryTrackerCard, demo
+│  └─ ui/             # shadcn-style Card + Button primitives
 └─ lib/
-   └─ locations.ts    # demo location data — replace with your API
+   ├─ locations.ts    # demo location data — replace with your API
+   ├─ delivery-demo.ts# OSRM route + demo order data
+   └─ malaysia-borders.ts # typed loader for the boundary GeoJSON
 ```
+
+## `/tracker` — delivery tracker pattern
+
+`src/components/maps/delivery-tracker-card.tsx` is the reusable card: MapLibre map,
+route split into travelled/remaining at the driver, ETA pill, step bar, driver row
+with message/call actions. `src/app/tracker/page.tsx` runs it as a live demo —
+the driver is interpolated along a real OSRM route, so the ETA counts down and
+the step advances by itself.
+
+- Basemap: OpenFreeMap (no API key). `mapStyle` accepts any MapLibre style URL/object.
+- Route: any `[lng, lat][]` from OSRM, Mapbox or Google Directions.
+- The MapLibre web worker is served from `public/maplibre/`; `npm run dev`/`build`
+  re-copy it from `node_modules` via `predev` / `prebuild`.
+
+## Boundary data
+
+`public/data/malaysia/` holds country, state, district, JAKIM-zone, DUN and
+parliamentary boundaries (~6.1 MB total) from
+[mptwaktusolat/jakim.geojson](https://github.com/mptwaktusolat/jakim.geojson).
+See `public/data/malaysia/README.md` for the licence caveat and per-file schema,
+and `src/lib/malaysia-borders.ts` for typed loading:
+
+```ts
+import { loadBorders } from "@/lib/malaysia-borders";
+const dun = await loadBorders("dun");
+```
+
+Regenerate with `node scripts/fetch-malaysia-borders.mjs`.
 
 ## Editing the data
 

@@ -1,0 +1,753 @@
+[
+  {
+    "id": "alty-orthopaedic-hospital",
+    "name": "ALTY Orthopaedic Hospital",
+    "country": "Malaysia",
+    "state": "Kuala Lumpur",
+    "address": "Ground Floor, Menara ALTY, 187 Jalan Ampang, 50450 Kuala Lumpur, Kuala Lumpur",
+    "phone": "+60327870500",
+    "email": "info@altyortho.com",
+    "website": "https://www.altyortho.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/ALTY-Ortho-Hospital-1.webp",
+    "lat": 3.1599191,
+    "lng": 101.7226834,
+    "geocode": {
+      "query": "ALTY Orthopaedic Hospital, 50450 Kuala Lumpur, Kuala Lumpur, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "alty-physio",
+    "name": "ALTY Physio",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "Lvl 3A & 8, Menara ALTY, 187 Jln Ampang, Taman U Thant, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+60122381599",
+    "email": "info@tonikasia.com",
+    "website": "https://tags.my/alty-physio/",
+    "image": "https://asiaonehealth.com/storage/our-brands/ALTY-Physio.webp",
+    "lat": 3.1599191,
+    "lng": 101.7226834,
+    "geocode": {
+      "query": "Menara ALTY, 187 Jalan Ampang, 50450 Kuala Lumpur (same building as ALTY Orthopaedic Hospital)",
+      "source": "derived",
+      "type": "building",
+      "label": "Hospital Ortopedik ALTY, Jalan Ampang, Kampung Datuk Keramat, Kuala Lumpur, 54000, Malaysia",
+      "confidence": "high",
+      "note": "Address names Menara ALTY; coordinates copied from ALTY Orthopaedic Hospital"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Wilayah Persekutuan Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "ara-damansara-medical-centre",
+    "name": "Ara Damansara Medical Centre",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "2, Jalan Lapangan Terbang Subang, Seksyen U2, 40150 Shah Alam, Selangor",
+    "phone": "+60356391888",
+    "email": "healthcare@asia1health.com",
+    "website": "https://aradamansaramedicalcentre.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/ADMC%20Hospital%20Building%20WEBP.webp",
+    "lat": 3.1146633,
+    "lng": 101.5649901,
+    "geocode": {
+      "query": "Ara Damansara Medical Centre, 40150 Shah Alam, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Ara Damansara Medical Centre, Lot 2, Jalan Lapangan Terbang Subang, Seksyen U3, Shah Alam, Petaling, Selangor, 40150, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "beacon-hospital",
+    "name": "Beacon Hospital",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "1 Jalan 215, Off Jalan Templer, Seksyen 51, 46050 Petaling Jaya, Selangor",
+    "phone": "+60376207979",
+    "email": "info@beaconhospital.com.my",
+    "website": "https://www.beaconhospital.com.my/",
+    "image": "https://asiaonehealth.com/storage/our-brands/beacon-resize-1.webp",
+    "lat": 3.0914561,
+    "lng": 101.6379512,
+    "geocode": {
+      "query": "Beacon Hospital, 46050 Petaling Jaya, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Beacon Hospital, 1, Seksyen 51, Petaling Jaya, Petaling, Selangor, 46050, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "bukit-tinggi-medical-centre",
+    "name": "Bukit Tinggi Medical Centre",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Lot 83211, Persiaran Batu Nilam, Bandar Bukit Tinggi 1, 41200 Klang, Selangor",
+    "phone": "+60356391515",
+    "email": "btmc.info@asia1health.com",
+    "website": "https://bukittinggimedicalcentre.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/BTMC-resize-1.webp",
+    "lat": 3.0101193,
+    "lng": 101.4316994,
+    "geocode": {
+      "query": "Bukit Tinggi Medical Centre, 41200 Klang, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Bukit Tinggi Medical Centre, Jalan Batu Nilam 13, Bandar Bukit Tinggi 1, Bandar Bukit Tinggi, Pelabuhan Klang, Bandaraya Klang, Klang, Selangor, 41200, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "cardiac-vascular-sentral-kuala-lumpur",
+    "name": "Cardiac Vascular Sentral Kuala Lumpur (CVSKL)",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "Jalan Stesen Sentral 5, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+60322767000",
+    "email": "info@cvskl.com",
+    "website": "https://www.cvskl.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/CVS-resized-1.jpg",
+    "lat": 3.1324921,
+    "lng": 101.6832782,
+    "geocode": {
+      "query": "Jalan Stesen Sentral 5, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "source": "nominatim",
+      "type": "tertiary",
+      "label": "Jalan Stesen Sentral 5, KL Sentral, Bangsar, Kuala Lumpur, 50470, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Wilayah Persekutuan Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "columbia-asia-binh-duong",
+    "name": "Columbia Asia Binh Duong",
+    "country": "Vietnam",
+    "state": "Bình Dương",
+    "address": "Đường 22 tháng 12, Khu Phố Hòa Lân 1, Thuận Giao, Thuận An, Bình Dương",
+    "phone": "+842743819933",
+    "email": "customercare.binhduong@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/vietnam/hospitals/binh-duong/binh-duong-overview",
+    "image": "https://asiaonehealth.com/storage/our-brands/Binh-Duong-Resize.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "Đường 22 tháng 12, Khu Phố Hòa Lân 1, Thuận Giao, Thuận An, Bình Dương",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "columbia-asia-extended-care-hospital-shah-alam",
+    "name": "Columbia Asia Extended Care Hospital Shah Alam",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Lot 2, Jalan Baung 17/22, Seksyen 17, 40200 Shah Alam, Selangor",
+    "phone": "+60355417833",
+    "email": "customercare.shahalam@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/shah-alam/",
+    "image": "https://asiaonehealth.com/storage/our-brands/Columbia-Asia-Extended-Care-Hospital-Shah-Alam.webp",
+    "lat": 3.0474714,
+    "lng": 101.5047777,
+    "geocode": {
+      "query": "Lot 2, Jalan Baung 17/22, Seksyen 17, 40200 Shah Alam, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "residential",
+      "label": "Jalan Baung 17/22, Seksyen 17, Shah Alam, Petaling, Selangor, 40200, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-batu-kawan",
+    "name": "Columbia Asia Hospital Batu Kawan",
+    "country": "Malaysia",
+    "state": "Pulau Pinang",
+    "address": "PMT 856, Jalan Cassia Barat 3/1, Bandar Cassia, 14110 Bandar Cassia, Pulau Pinang",
+    "phone": "+6043059999",
+    "email": "customercare.batukawan@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia//hospitals/batu-kawan/",
+    "image": "https://asiaonehealth.com/storage/our-brands/cah-batu-kawan.webp",
+    "lat": 5.239174,
+    "lng": 100.4367344,
+    "geocode": {
+      "query": "Columbia Asia Hospital Batu Kawan, 14110 Bandar Cassia, Pulau Pinang, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital, Persiaran Cassia Barat 3, Bandar Cassia, Batu Kawan, Seberang Perai Selatan, Seberang Perai, Pulau Pinang, 14110, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-bukit-jalil",
+    "name": "Columbia Asia Hospital Bukit Jalil",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "No.9, Jalan Jalil Perkasa 7, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+60386571888",
+    "email": "customercare.bukitjalil@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-jalil/",
+    "image": "https://asiaonehealth.com/storage/our-brands/cah-bukit-jalil.webp",
+    "lat": 3.058976,
+    "lng": 101.6869635,
+    "geocode": {
+      "query": "No.9, Jalan Jalil Perkasa 7, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "source": "nominatim",
+      "type": "tertiary",
+      "label": "Jalan Jalil Perkasa 7, Bukit Jalil, Kuala Lumpur, 57000, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Wilayah Persekutuan Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-bukit-rimau",
+    "name": "Columbia Asia Hospital Bukit Rimau",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "3, Persiaran Anggerik Eria Bukit Rimau, Seksyen 32, 40460 Shah Alam, Selangor",
+    "phone": "+60351259999",
+    "email": "customercare.bukitrimau@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/bukit-rimau/",
+    "image": "https://asiaonehealth.com/storage/our-brands/Bukit-Rimau-Hospital-resize-1.jpg",
+    "lat": 2.9971982,
+    "lng": 101.5287721,
+    "geocode": {
+      "query": "Columbia Asia Hospital Bukit Rimau, 40460 Shah Alam, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital Bukit Rimau, 3, Persiaran Anggerik Eria, Kota Kemuning, Seksyen 31, Shah Alam, Klang, Selangor, 40460, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-cheras",
+    "name": "Columbia Asia Hospital Cheras",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Persiaran Suakasih, Tun Hussein Onn, 43200 Cheras, Selangor",
+    "phone": "+60390869999",
+    "email": "customercare.cheras@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/cheras/",
+    "image": "https://asiaonehealth.com/storage/our-brands/Cheras-Hospital-resize.webp",
+    "lat": 3.0362348,
+    "lng": 101.7599576,
+    "geocode": {
+      "query": "Persiaran Suakasih, Tun Hussein Onn, 43200 Cheras, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "tertiary",
+      "label": "Persiaran Suakasih, Cheras, Majlis Perbandaran Kajang, Hulu Langat, Selangor, 43200, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-iskandar-puteri",
+    "name": "Columbia Asia Hospital Iskandar Puteri",
+    "country": "Malaysia",
+    "state": "Johor",
+    "address": "Persiaran Afiat, Taman Kesihatan Afiat, 79250 Iskandar Puteri, Johor",
+    "phone": "+6072339999",
+    "email": "customercare.iskandarputeri@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/iskandar-puteri/",
+    "image": "https://asiaonehealth.com/storage/our-brands/cah-iskandar-puteri.webp",
+    "lat": 1.4790971,
+    "lng": 103.6367075,
+    "geocode": {
+      "query": "Columbia Asia Hospital Iskandar Puteri, 79250 Iskandar Puteri, Johor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital Iskandar Puteri, Persiaran Afiat, Afiat Healthpark, Pulai, Iskandar Puteri, Johor Bahru, Johor, 79250, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-klang",
+    "name": "Columbia Asia Hospital Klang",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Jalan Mahkota 1 / KU 2, Mutiara Bukit Raja 2, KM2 off Jalan Meru, Batu Dua Belas, 41050 Klang, Selangor",
+    "phone": "+60333467999",
+    "email": "customercare.klang@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/klang/",
+    "image": "https://asiaonehealth.com/storage/our-brands/klang-hospital-footer-2-1024x754-resized.webp",
+    "lat": 3.085915,
+    "lng": 101.4465895,
+    "geocode": {
+      "query": "Columbia Asia Hospital Klang, 41050 Klang, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital, Jalan Mahkota 1/KU 2, Bandar Bukit Raja, Bandaraya Klang, Klang, Selangor, 41050, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-petaling-jaya",
+    "name": "Columbia Asia Hospital Petaling Jaya",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Lot 69, Jln 13/6, Seksyen 13, 46200 Petaling Jaya, Selangor",
+    "phone": "+60379499999",
+    "email": "customercare.pj@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/petaling-jaya/",
+    "image": "https://asiaonehealth.com/storage/our-brands/cah-petaling%20jaya.webp",
+    "lat": 3.1180471,
+    "lng": 101.6378698,
+    "geocode": {
+      "query": "Lot 69, Jln 13/6, Seksyen 13, 46200 Petaling Jaya, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital, Lot 69, Jalan 13/6, Seksyen 13, Petaling Jaya, Petaling, Selangor, 46200, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-puchong",
+    "name": "Columbia Asia Hospital Puchong",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "Lebuh Puteri, Bandar Puteri, 47100 Puchong, Selangor",
+    "phone": "+60380648688",
+    "email": "customercare.puchong@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/puchong",
+    "image": "https://asiaonehealth.com/storage/our-brands/puchong-hospital-footer-2-1024x754-resized.webp",
+    "lat": 3.0130408,
+    "lng": 101.6196164,
+    "geocode": {
+      "query": "Lebuh Puteri, Bandar Puteri, 47100 Puchong, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "secondary",
+      "label": "Lebuh Puteri, Bandar Puteri Puchong, Puchong, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47100, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-seremban",
+    "name": "Columbia Asia Hospital Seremban",
+    "country": "Malaysia",
+    "state": "Negeri Sembilan",
+    "address": "292 & Lot PT1904, Jln Haruan 2, Oakland Commercial Centre, 70300 Seremban, Negeri Sembilan",
+    "phone": "+6066033988",
+    "email": "customercare.seremban@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/seremban/",
+    "image": "https://asiaonehealth.com/storage/our-brands/hospital-footer-seremban-1024x455-resized.webp",
+    "lat": 2.7104486,
+    "lng": 101.9176371,
+    "geocode": {
+      "query": "Columbia Asia Hospital Seremban, 70300 Seremban, Negeri Sembilan, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital, Jalan Haruan 2, Rasah, Seremban, Negeri Sembilan, 70300, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-setapak",
+    "name": "Columbia Asia Hospital Setapak",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "No. 1, Jalan Danau Saujana, Taman Danau Kota, 53300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+60341459999",
+    "email": "customercare.setapak@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/setapak/",
+    "image": "https://asiaonehealth.com/storage/our-brands/setapak-hospital-footer-3-1024x754-resized.webp",
+    "lat": 3.2018268,
+    "lng": 101.7173923,
+    "geocode": {
+      "query": "No. 1, Jalan Danau Saujana, Taman Danau Kota, 53300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "source": "nominatim",
+      "type": "tertiary",
+      "label": "Jalan Danau Saujana, Taman Danau Kota, Setapak, Kuala Lumpur, 53300, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Wilayah Persekutuan Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-taiping",
+    "name": "Columbia Asia Hospital Taiping",
+    "country": "Malaysia",
+    "state": "Perak",
+    "address": "5, Jalan Perwira, 34000 Taiping, Perak",
+    "phone": "+6058208888",
+    "email": "customercare.taiping@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/taiping/",
+    "image": "https://asiaonehealth.com/storage/our-brands/taiping-hospital-footer-2-1024x754-resized.webp",
+    "lat": 4.8642893,
+    "lng": 100.7336322,
+    "geocode": {
+      "query": "5, Jalan Perwira, 34000 Taiping, Perak, Malaysia",
+      "source": "nominatim",
+      "type": "residential",
+      "label": "Jalan Perwira, Taman Zenith, Kampung Melayu Assam Kumbang, Taiping, Larut, Matang dan Selama, Perak, 34000, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "columbia-asia-hospital-tebrau",
+    "name": "Columbia Asia Hospital Tebrau",
+    "country": "Malaysia",
+    "state": "Johor",
+    "address": "5, Kota, Persiaran Southkey 1, Southkey, 80150 Johor Bahru, Johor",
+    "phone": "+6072729999",
+    "email": "customercare.tebrau@columbiaasia.com",
+    "website": "https://www.columbiaasia.com/malaysia/hospitals/tebrau/",
+    "image": "https://asiaonehealth.com/storage/our-brands/tebrau-hospital-footer-2-1024x754-resized.webp",
+    "lat": 1.4998475,
+    "lng": 103.7659066,
+    "geocode": {
+      "query": "Columbia Asia Hospital Tebrau, 80150 Johor Bahru, Johor, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Columbia Asia Hospital, Jalan Seri Setanggi Utama, Kampung Dato' Hajah Hasnah Ahmad, Tebrau, Johor Bahru, Johor, 81100, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "hospital-picaso",
+    "name": "Hospital Picaso",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "110, Jalan Professor Khoo Kay Kim, Seksyen 19, 46300 Petaling Jaya, Selangor",
+    "phone": "+60374572888",
+    "email": "info@picasohospital.com",
+    "website": "https://www.hospitalpicaso.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/hospital-picaso-building.webp",
+    "lat": 3.1129675,
+    "lng": 101.6334444,
+    "geocode": {
+      "query": "110, Jalan Professor Khoo Kay Kim, Seksyen 19, 46300 Petaling Jaya, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "building",
+      "label": "Quill 9 Annexe, 110, Jalan Professor Khoo Kay Kim, Seksyen 19, Petaling Jaya, Petaling, Selangor, 57300, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "northern-heart-hospital",
+    "name": "Northern Heart Hospital",
+    "country": "Malaysia",
+    "state": "Penang",
+    "address": "2, Peel Hwy, Georgetown, 10350 George Town, Penang",
+    "phone": "+6042175588",
+    "email": "info@nhearthospital.com",
+    "website": "https://nhearthospital.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/Northern-Heart-Hospital-Penang-1.webp",
+    "lat": 5.4244421,
+    "lng": 100.316119,
+    "geocode": {
+      "query": "Northern Heart Hospital, 10350 George Town, Penang, Malaysia",
+      "source": "nominatim",
+      "type": "building",
+      "label": "Northern Heart Hospital, Lebuhraya Peel, Kampung Sireh, Pulau Tikus, Central George Town, Timur Laut, George Town, Pulau Pinang, 10450, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "parkcity-medical-centre",
+    "name": "ParkCity Medical Centre",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "2, Jalan Intisari, Desa Parkcity, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+60356391616",
+    "email": "pmc@asia1health.com",
+    "website": "https://parkcitymedicalcentre.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/parkcity-medical-centre-pmc-building-new.webp",
+    "lat": 3.1890565,
+    "lng": 101.6384401,
+    "geocode": {
+      "query": "2, Jalan Intisari, Desa Parkcity, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "source": "nominatim",
+      "type": "amenity",
+      "label": "Pusat Perubatan ParkCity, 2, Jalan Intisari, ParkCity Heights, Desa ParkCity, Kepong, Kuala Lumpur, 52200, Malaysia",
+      "confidence": "high"
+    },
+    "validation": {
+      "checked": false,
+      "reason": "unknown state \"Wilayah Persekutuan Kuala Lumpur\""
+    }
+  },
+  {
+    "id": "subang-jaya-medical-centre",
+    "name": "Subang Jaya Medical Centre",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "No. 1, Jalan SS 12/1A, SS 12, 47500 Subang Jaya, Selangor",
+    "phone": "+60356391212",
+    "email": "healthcare@asia1health.com",
+    "website": "https://subangjayamedicalcentre.com/",
+    "image": "https://asiaonehealth.com/storage/our-brands/sjmc-building%20(1).webp",
+    "lat": 3.0777724,
+    "lng": 101.5941732,
+    "geocode": {
+      "query": "No. 1, Jalan SS 12/1A, SS 12, 47500 Subang Jaya, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "residential",
+      "label": "Jalan SS 12/1A, SS 12, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47500, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "tags-cheras",
+    "name": "TAGS Cheras",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "Menara PGRM 2, Lot 3.01, Level 3, No 8 Jalan Pudu Ulu, Taman Pertama, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+0392008789",
+    "email": "cheras.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-cheras/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-CHERAS-1-resized-1.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "Menara PGRM 2, Lot 3.01, Level 3, No 8 Jalan Pudu Ulu, Taman Pertama, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "tags-hartamas",
+    "name": "TAGS Hartamas",
+    "country": "Malaysia",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
+    "address": "A-G-05 & A-01-06, Galeria Hartamas, Jalan 26A/70A, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "phone": "+0362031599",
+    "email": "hartamas.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-hartamas/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-HARTAMAS-3-resized-1.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "A-G-05 & A-01-06, Galeria Hartamas, Jalan 26A/70A, Desa Sri Hartamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "tags-johor-bahru",
+    "name": "TAGS Johor Bahru",
+    "country": "Malaysia",
+    "state": "Johor",
+    "address": "No 43 & 44, Jalan Harimau Tarum, Taman Century, 80250 Johor Bahru, Johor",
+    "phone": "+6073313033",
+    "email": "johor_bahru.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-johor-bahru/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-JOHOR-2-resized-1.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "No 43 & 44, Jalan Harimau Tarum, Taman Century, 80250 Johor Bahru, Johor",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "tags-kuching",
+    "name": "TAGS Kuching",
+    "country": "Malaysia",
+    "state": "Sarawak",
+    "address": "No 50, Heights Drive Commercial Centre, Tabuan Jaya Baru, 93350 Kuching, Sarawak",
+    "phone": "+6082573689",
+    "email": "kuching.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-kuching/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-KUCHING-4-resized-1.webp",
+    "lat": 1.5061255,
+    "lng": 110.3745001,
+    "geocode": {
+      "query": "TAGS Kuching, 93350 Kuching, Sarawak, Malaysia",
+      "source": "nominatim",
+      "type": "healthcare",
+      "label": "Tags Chiropractic & Rehabilitation, Jalan Setia Raja, Kampung Stampin, Stutong Baru, Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "tags-melaka",
+    "name": "TAGS Melaka",
+    "country": "Malaysia",
+    "state": "Melaka",
+    "address": "No 9955, Jalan Penghulu Abas, Bukit Baru, 75150 Melaka, Melaka",
+    "phone": "+6062868066",
+    "email": "melaka.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-melaka/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-MELAKA-3-resized-1.webp",
+    "lat": 2.217686,
+    "lng": 102.273318,
+    "geocode": {
+      "source": "nominatim",
+      "type": "secondary",
+      "label": "Jalan Penghulu Abas, Bukit Baru, Bandaraya Melaka, Melaka Tengah, Melaka, 75150, Malaysia",
+      "confidence": "medium",
+      "retried": true
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  },
+  {
+    "id": "tags-penang",
+    "name": "TAGS Penang",
+    "country": "Malaysia",
+    "state": "Penang",
+    "address": "4F, Jalan Masjid Negeri, Greenlane, 11600 George Town, Penang",
+    "phone": "+6046423599",
+    "email": "penang.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-penang/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-PENANG-3-resized-1.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "4F, Jalan Masjid Negeri, Greenlane, 11600 George Town, Penang",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "tags-seremban",
+    "name": "TAGS Seremban",
+    "country": "Malaysia",
+    "state": "Negeri Sembilan",
+    "address": "No 249, Jalan S2 B12, Seksyen B, Uptown Avenue, Seremban 2, 70300 Seremban, Negeri Sembilan",
+    "phone": "+6066031559",
+    "email": "seremban.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-seremban/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-SEREMBAN-1-resized-1.webp",
+    "lat": null,
+    "lng": null,
+    "geocode": {
+      "query": "No 249, Jalan S2 B12, Seksyen B, Uptown Avenue, Seremban 2, 70300 Seremban, Negeri Sembilan",
+      "source": null,
+      "type": null,
+      "label": null,
+      "confidence": "none",
+      "note": "automatic match rejected (wrong place); needs precise geocoding"
+    }
+  },
+  {
+    "id": "tags-subang-jaya",
+    "name": "TAGS Subang Jaya",
+    "country": "Malaysia",
+    "state": "Selangor",
+    "address": "No 131, Jalan SS 17/1A, SS 17, 47500 Subang Jaya, Selangor",
+    "phone": "+60356311301",
+    "email": "subang.enquiry@tonikasia.com",
+    "website": "https://tags.my/tags-subang-jaya/",
+    "image": "https://asiaonehealth.com/storage/our-brands/TAGS-SUBANG-4-resized-1.webp",
+    "lat": 3.0791956,
+    "lng": 101.5807735,
+    "geocode": {
+      "query": "No 131, Jalan SS 17/1A, SS 17, 47500 Subang Jaya, Selangor, Malaysia",
+      "source": "nominatim",
+      "type": "residential",
+      "label": "Jalan SS 17/1A, SS 17, Pusat Bandar Subang Jaya, Majlis Bandaraya Subang Jaya, Petaling, Selangor, 47200, Malaysia",
+      "confidence": "medium"
+    },
+    "validation": {
+      "checked": true,
+      "insideState": true
+    }
+  }
+]
