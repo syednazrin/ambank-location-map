@@ -6,12 +6,22 @@ import { CircleMarker, MapContainer, Marker, Popup, TileLayer, Tooltip, useMap }
 import { LOCATIONS, STATES, type Location } from "@/lib/locations";
 import publicHospitalsGeocoded from "@/data/public-hospitals.geocoded.json";
 import swastaBerlesenGeocoded from "@/data/swasta-berlesen.geocoded.json";
+import kkmBedUtilisation from "@/data/kkmnow-hospital-bed-utilisation-by-facility.json";
+import refPublicMalaysia from "@/data/reference/malaysia_public_hospitals.json";
 import {
+  ASIA_BED_RANGE,
+  ASIA_SPECIALIST_RANGE,
   CAPACITY_BY_ID,
   CAPACITY_REPORTED,
   CAPACITY_TOTALS,
+  numericRange,
+  scaledRadius,
+  SIZE_LABEL,
   SOURCE_LABEL,
+  type SizeMode,
 } from "@/lib/capacity";
+import { mergePublicHospitalBedTotals, publicHospitalStableKey } from "@/lib/public-hospital-bed-merge";
+import { CapacityWidget } from "@/components/maps/capacity-widget";
 import { loadBorders } from "@/lib/malaysia-borders";
 import {
   DISTRICT_CENTROID,
@@ -670,11 +680,18 @@ type MapSite = {
   name: string;
   state: string;
   coords: [number, number];
+  beds: number | null;
 };
 
 function titleCase(value: string): string {
   return value.toLowerCase().replace(/\b[a-z]/g, (char) => char.toUpperCase());
 }
+
+const PUBLIC_BED_TOTALS = mergePublicHospitalBedTotals(
+  publicHospitalsGeocoded.locations as never,
+  kkmBedUtilisation as never,
+  refPublicMalaysia as never,
+);
 
 const PUBLIC_SITES: MapSite[] = publicHospitalsGeocoded.locations.flatMap((row, index) =>
   typeof row.lat === "number" && typeof row.lon === "number"
@@ -684,6 +701,7 @@ const PUBLIC_SITES: MapSite[] = publicHospitalsGeocoded.locations.flatMap((row, 
           name: row.name,
           state: row.stateTitle ?? "",
           coords: [row.lat, row.lon] as [number, number],
+          beds: PUBLIC_BED_TOTALS.get(publicHospitalStableKey(row)) ?? null,
         },
       ]
     : [],
@@ -697,10 +715,17 @@ const PRIVATE_SITES: MapSite[] = swastaBerlesenGeocoded.hospitals.flatMap((row, 
           name: titleCase(String(row.NAMA_PENUH_FASILITI ?? "")),
           state: titleCase(String(row.NEGERI ?? "")),
           coords: [row.lat, row.lon] as [number, number],
+          beds:
+            typeof row.TOTAL_BEDS === "number" && Number.isFinite(row.TOTAL_BEDS)
+              ? row.TOTAL_BEDS
+              : null,
         },
       ]
     : [],
 );
+
+const PUBLIC_BED_RANGE = numericRange(PUBLIC_SITES.map((site) => site.beds));
+const PRIVATE_BED_RANGE = numericRange(PRIVATE_SITES.map((site) => site.beds));
 
 function LayerLegend({
   showAsiaOne,
@@ -709,6 +734,8 @@ function LayerLegend({
   onToggleAsiaOne,
   onTogglePublic,
   onTogglePrivate,
+  sizeBy,
+  onSizeChange,
 }: {
   showAsiaOne: boolean;
   showPublic: boolean;
@@ -716,6 +743,8 @@ function LayerLegend({
   onToggleAsiaOne: () => void;
   onTogglePublic: () => void;
   onTogglePrivate: () => void;
+  sizeBy: SizeMode;
+  onSizeChange: (mode: SizeMode) => void;
 }) {
   const rows = [
     {
@@ -787,6 +816,39 @@ function LayerLegend({
       <p className="mt-1.5 border-t pt-1.5 text-[9px] leading-relaxed text-muted-foreground">
         Tap a row to show or hide.
       </p>
+
+      <div className="mt-2 border-t pt-2">
+        <p className="font-mono text-[8.5px] uppercase tracking-[0.14em] text-muted-foreground">
+          Bubble size
+        </p>
+        <div className="mt-1 grid grid-cols-3 gap-1">
+          {(Object.keys(SIZE_LABEL) as SizeMode[]).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => onSizeChange(mode)}
+              aria-pressed={sizeBy === mode}
+              title={
+                mode === "none"
+                  ? "Uniform dots"
+                  : mode === "beds"
+                    ? "Scale by licensed beds"
+                    : "Scale by specialists (Asia One only)"
+              }
+              className={`rounded border px-1 py-1 text-[9px] font-medium transition ${
+                sizeBy === mode
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border text-muted-foreground hover:bg-secondary hover:text-foreground"
+              }`}
+            >
+              {SIZE_LABEL[mode]}
+            </button>
+          ))}
+        </div>
+        <p className="mt-1 text-[8px] leading-relaxed text-muted-foreground">
+          Spec. applies to Asia One; public/private stay uniform.
+        </p>
+      </div>
     </div>
   );
 }
@@ -862,6 +924,8 @@ export default function MapView() {
   const [showAsiaOne, setShowAsiaOne] = useState(true);
   const [showPublic, setShowPublic] = useState(true);
   const [showPrivate, setShowPrivate] = useState(true);
+  const [sizeBy, setSizeBy] = useState<SizeMode>("beds");
+  const [capacityOpen, setCapacityOpen] = useState(true);
   const [catchmentKm, setCatchmentKm] = useState(10);
   const [selectedHospitalId, setSelectedHospitalId] = useState<string | null>(null);
   const [borderLevel, setBorderLevel] = useState<BorderLevel>("parlimen");
@@ -1545,45 +1609,57 @@ export default function MapView() {
           <MapBridge onReady={handleReady} />
 
           {showPublic
-            ? PUBLIC_SITES.map((site) => (
-                <CircleMarker
-                  key={site.id}
-                  center={site.coords}
-                  radius={4.5}
-                  pathOptions={{
-                    color: "#ffffff",
-                    weight: 1,
-                    opacity: 0.85,
-                    fillColor: SERIES.public.fill,
-                    fillOpacity: 0.9,
-                  }}
-                >
-                  <Tooltip direction="top" offset={[0, -4]} opacity={1}>
-                    {`${site.name} · ${site.state}`}
-                  </Tooltip>
-                </CircleMarker>
-              ))
+            ? PUBLIC_SITES.map((site) => {
+                const radius =
+                  sizeBy === "beds"
+                    ? scaledRadius(site.beds, PUBLIC_BED_RANGE, 4.5, 4, 11)
+                    : 4.5;
+                return (
+                  <CircleMarker
+                    key={site.id}
+                    center={site.coords}
+                    radius={radius}
+                    pathOptions={{
+                      color: "#ffffff",
+                      weight: 1,
+                      opacity: 0.85,
+                      fillColor: SERIES.public.fill,
+                      fillOpacity: 0.9,
+                    }}
+                  >
+                    <Tooltip direction="top" offset={[0, -4]} opacity={1}>
+                      {`${site.name} · ${site.state}${site.beds != null ? ` · ${site.beds} beds` : ""}`}
+                    </Tooltip>
+                  </CircleMarker>
+                );
+              })
             : null}
 
           {showPrivate
-            ? PRIVATE_SITES.map((site) => (
-                <CircleMarker
-                  key={site.id}
-                  center={site.coords}
-                  radius={4.5}
-                  pathOptions={{
-                    color: "#ffffff",
-                    weight: 1,
-                    opacity: 0.85,
-                    fillColor: SERIES.private.fill,
-                    fillOpacity: 0.9,
-                  }}
-                >
-                  <Tooltip direction="top" offset={[0, -4]} opacity={1}>
-                    {`${site.name} · ${site.state}`}
-                  </Tooltip>
-                </CircleMarker>
-              ))
+            ? PRIVATE_SITES.map((site) => {
+                const radius =
+                  sizeBy === "beds"
+                    ? scaledRadius(site.beds, PRIVATE_BED_RANGE, 4.5, 4, 11)
+                    : 4.5;
+                return (
+                  <CircleMarker
+                    key={site.id}
+                    center={site.coords}
+                    radius={radius}
+                    pathOptions={{
+                      color: "#ffffff",
+                      weight: 1,
+                      opacity: 0.85,
+                      fillColor: SERIES.private.fill,
+                      fillOpacity: 0.9,
+                    }}
+                  >
+                    <Tooltip direction="top" offset={[0, -4]} opacity={1}>
+                      {`${site.name} · ${site.state}${site.beds != null ? ` · ${site.beds} beds` : ""}`}
+                    </Tooltip>
+                  </CircleMarker>
+                );
+              })
             : null}
 
           {showAsiaOne
@@ -1591,11 +1667,24 @@ export default function MapView() {
             const active = activeId === loc.id;
             const hovered = hoverId === loc.id;
             const capacity = CAPACITY_BY_ID.get(loc.id);
+            const base =
+              sizeBy === "beds"
+                ? scaledRadius(capacity?.beds?.value ?? null, ASIA_BED_RANGE, 5.5, 4.5, 13)
+                : sizeBy === "specialists"
+                  ? scaledRadius(
+                      capacity?.specialists?.value ?? null,
+                      ASIA_SPECIALIST_RANGE,
+                      5.5,
+                      4.5,
+                      13,
+                    )
+                  : 6;
+            const radius = active ? Math.max(base + 2.5, 9) : hovered ? base + 1 : base;
             return (
               <CircleMarker
                 key={loc.id}
                 center={loc.coords}
-                radius={active ? 9 : hovered ? 8 : 6}
+                radius={radius}
                 pathOptions={{
                   color: "#ffffff",
                   weight: active ? 2.5 : 1.5,
@@ -1732,6 +1821,8 @@ export default function MapView() {
             onToggleAsiaOne={() => setShowAsiaOne((value) => !value)}
             onTogglePublic={() => setShowPublic((value) => !value)}
             onTogglePrivate={() => setShowPrivate((value) => !value)}
+            sizeBy={sizeBy}
+            onSizeChange={setSizeBy}
           />
         </div>
 
@@ -1807,6 +1898,13 @@ export default function MapView() {
           </div>
         </div>
 
+        {/* capacity widget */}
+        {capacityOpen ? (
+          <div className="pointer-events-none absolute bottom-20 left-3 z-[1040] hidden md:block">
+            <CapacityWidget onClose={() => setCapacityOpen(false)} />
+          </div>
+        ) : null}
+
         {/* bottom controls */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1000] flex items-end justify-between gap-3 p-3 pb-9">
           <CoordsHud map={map} />
@@ -1833,6 +1931,18 @@ export default function MapView() {
               </svg>
             </button>
             <span className="mx-1 my-0.5 h-px bg-border" />
+            <button
+              type="button"
+              onClick={() => setCapacityOpen((open) => !open)}
+              className={controlBtn}
+              aria-label="Capacity widget"
+              aria-pressed={capacityOpen}
+              title="Beds & specialists vs market"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                <path d="M5 20v-7M12 20V5M19 20v-4" />
+              </svg>
+            </button>
             <button
               type="button"
               onClick={locate}

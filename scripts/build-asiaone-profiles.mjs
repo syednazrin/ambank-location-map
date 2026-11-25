@@ -18,6 +18,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { mergePublicHospitalBedTotals } from "../src/lib/public-hospital-bed-merge.ts";
 
 const ROOT = process.cwd();
 const read = async (p) => JSON.parse(await readFile(path.join(ROOT, p), "utf8"));
@@ -217,10 +218,10 @@ await writeFile(
 );
 
 const pad = (v, n) => String(v ?? "—").padEnd(n);
-console.log(`\n${"site".padEnd(46)} ${"beds".padEnd(6)} ${"src".padEnd(7)} ${"spec".padEnd(6)} src`);
+console.log(`\n${"site".padEnd(46)} ${"beds".padEnd(10)} ${"spec".padEnd(10)} src`);
 for (const p of out) {
   console.log(
-    `${p.name.slice(0, 44).padEnd(46)} ${pad(p.beds?.value, 6)} ${pad(p.beds?.source, 7)} ${pad(p.specialists?.value, 6)} ${p.specialists?.source ?? ""}`,
+    `${p.name.slice(0, 44).padEnd(46)} ${pad(p.beds?.value, 6)}${pad(p.beds?.source ?? "", 4)} ${pad(p.specialists?.value, 6)}${pad(p.specialists?.source ?? "", 4)}`,
   );
 }
 
@@ -228,3 +229,102 @@ const withBeds = out.filter((p) => p.beds).length;
 const withSpec = out.filter((p) => p.specialists).length;
 console.log(`\nbeds: ${withBeds}/${out.length} · specialists: ${withSpec}/${out.length}`);
 console.log("wrote src/data/asiaone-profiles.json");
+
+/* ---------- cohort summary: Asia One vs licensed private vs public ---------- */
+
+const [pubDoc, kkmDoc, refDoc, payloadDoc, swastaDoc] = await Promise.all([
+  read("src/data/public-hospitals.geocoded.json"),
+  read("src/data/kkmnow-hospital-bed-utilisation-by-facility.json"),
+  read("src/data/reference/malaysia_public_hospitals.json"),
+  read("src/data/intelligence-payload.production.json"),
+  read("src/data/swasta-berlesen.geocoded.json"),
+]);
+
+const mergedPublicBeds = mergePublicHospitalBedTotals(
+  pubDoc.locations,
+  kkmDoc,
+  refDoc,
+);
+
+let publicBeds = 0;
+let publicBedSites = 0;
+for (const value of mergedPublicBeds.values()) {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    publicBeds += value;
+    publicBedSites += 1;
+  }
+}
+
+let privateBeds = 0;
+let privateBedSites = 0;
+const swastaRows = swastaDoc.hospitals ?? [];
+for (const row of swastaRows) {
+  if (typeof row.TOTAL_BEDS === "number" && Number.isFinite(row.TOTAL_BEDS)) {
+    privateBeds += row.TOTAL_BEDS;
+    privateBedSites += 1;
+  }
+}
+
+const specByKind = {
+  public: { total: 0, sites: 0 },
+  private: { total: 0, sites: 0 },
+};
+for (const hospital of payloadDoc.hospitals ?? []) {
+  const bucket = specByKind[hospital.kind];
+  if (!bucket) continue;
+  const n = hospital.specialistTotal ?? 0;
+  bucket.total += n;
+  if (n > 0) bucket.sites += 1;
+}
+
+const asiaBeds = out.reduce((sum, p) => sum + (p.beds?.value ?? 0), 0);
+const asiaSpec = out.reduce((sum, p) => sum + (p.specialists?.value ?? 0), 0);
+
+const cohorts = [
+  {
+    key: "asia-one",
+    label: "Asia One",
+    sites: out.length,
+    beds: asiaBeds,
+    bedsSites: withBeds,
+    specialists: asiaSpec,
+    specialistSites: withSpec,
+    bedsNote: "published figures + MOH register",
+    specialistsNote: "published figures + NSR matches",
+  },
+  {
+    key: "private",
+    label: "Private · MOH licensed",
+    sites: swastaRows.length,
+    beds: privateBeds,
+    bedsSites: privateBedSites,
+    specialists: specByKind.private.total,
+    specialistSites: specByKind.private.sites,
+    bedsNote: "MOH licensed register",
+    specialistsNote: "NSR establishment matches",
+  },
+  {
+    key: "public",
+    label: "Public · MOH",
+    sites: pubDoc.locations.length,
+    beds: publicBeds,
+    bedsSites: publicBedSites,
+    specialists: specByKind.public.total,
+    specialistSites: specByKind.public.sites,
+    bedsNote: "reference + KKMNOW wards/ICU",
+    specialistsNote: "NSR establishment matches",
+  },
+];
+
+await writeFile(
+  path.join(ROOT, "src", "data", "cohort-summary.json"),
+  JSON.stringify({ generatedAt: new Date().toISOString(), cohorts }, null, 2),
+  "utf8",
+);
+
+for (const c of cohorts) {
+  console.log(
+    `${c.label.padEnd(22)} sites ${String(c.sites).padStart(4)} · beds ${String(c.beds).padStart(6)} (${c.bedsSites}) · specialists ${String(c.specialists).padStart(6)} (${c.specialistSites})`,
+  );
+}
+console.log("wrote src/data/cohort-summary.json");

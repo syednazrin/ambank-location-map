@@ -1,4 +1,5 @@
 import doc from "@/data/asiaone-profiles.json";
+import summary from "@/data/cohort-summary.json";
 import { LOCATIONS, type Location } from "@/lib/locations";
 
 export type CapacitySource = "site" | "moh" | "nsr" | "listed";
@@ -79,4 +80,64 @@ export const CAPACITY_TOTALS = {
 /** Rows that carry at least one figure — the ones worth showing in the table. */
 export const CAPACITY_REPORTED = CAPACITY_ROWS.filter(
   (row) => row.beds != null || row.specialists != null,
+);
+
+/* ---------- cohort comparison (Asia One vs licensed private vs public) ---------- */
+
+export type CohortKey = "asia-one" | "private" | "public";
+
+export type Cohort = {
+  key: CohortKey;
+  label: string;
+  sites: number;
+  beds: number;
+  bedsSites: number;
+  specialists: number;
+  specialistSites: number;
+  bedsNote: string;
+  specialistsNote: string;
+};
+
+export const COHORTS = (summary as { cohorts: Cohort[] }).cohorts;
+
+export const COHORT_BY_KEY = new Map(COHORTS.map((cohort) => [cohort.key, cohort]));
+
+export const MAX_COHORT_BEDS = Math.max(...COHORTS.map((cohort) => cohort.beds));
+export const MAX_COHORT_SPECIALISTS = Math.max(...COHORTS.map((cohort) => cohort.specialists));
+
+/* ---------- bubble sizing ---------- */
+
+export type SizeMode = "beds" | "specialists" | "none";
+
+export const SIZE_LABEL: Record<SizeMode, string> = {
+  beds: "Beds",
+  specialists: "Spec.",
+  none: "None",
+};
+
+/** Positive min/max of a value list, for square-root marker scaling. */
+export function numericRange(values: Array<number | null | undefined>): { min: number; max: number } {
+  const nums = values.filter((value): value is number => typeof value === "number" && value > 0);
+  if (!nums.length) return { min: 0, max: 1 };
+  return { min: Math.min(...nums), max: Math.max(...nums) };
+}
+
+/** Area-true circle radius: sqrt of the value, clamped between lo and hi pixels. */
+export function scaledRadius(
+  value: number | null | undefined,
+  range: { min: number; max: number },
+  fallback: number,
+  lo = 4.5,
+  hi = 14,
+): number {
+  if (value == null || !(value > 0)) return fallback;
+  if (!(range.max > range.min)) return (lo + hi) / 2;
+  const t =
+    (Math.sqrt(value) - Math.sqrt(range.min)) / (Math.sqrt(range.max) - Math.sqrt(range.min));
+  return lo + Math.min(1, Math.max(0, t)) * (hi - lo);
+}
+
+export const ASIA_BED_RANGE = numericRange(CAPACITY_ROWS.map((row) => row.beds?.value));
+export const ASIA_SPECIALIST_RANGE = numericRange(
+  CAPACITY_ROWS.map((row) => row.specialists?.value),
 );

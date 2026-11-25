@@ -52,6 +52,7 @@ JSON is enabled in `tsconfig.json` (`resolveJsonModule`), so static imports get 
 | --- | --- |
 | `intelligence-payload.production.json` | Ready-to-render bundle (≈0.7 MB): 367 hospitals, 4,500 specialist points, `specialtyTotals`, `stateBeds`, `utilization`, `corridors`, `narrative` |
 | `asiaone-profiles.json` | Bed + specialist figures for the 32 Asia One sites. Each value carries its `source`: `site` (published on the brand website), `moh` (licensed private register `TOTAL_BEDS`), `nsr` (National Specialist Register rows naming the establishment), or `listed` (doctor profiles on the site) |
+| `cohort-summary.json` | Totals for the capacity widget: Asia One vs licensed private vs public — sites, beds, specialists, and how many sites report each |
 
 Rebuild the Asia One figures with:
 

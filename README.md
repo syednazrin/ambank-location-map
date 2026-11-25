@@ -12,6 +12,8 @@ just the map with a floating glass UI on top.
 - **Custom pins + popups** — circular markers with a white ring, dark glass popups, one-tap Google Maps directions.
 - **Three map layers** — Asia One (primary, dark), MOH public hospitals (blue) and MOH-licensed private hospitals (amber), colour-coded with a toggleable legend. Public/private points carry a hover label.
 - **Capacity analytics** — licensed beds and specialist counts per Asia One site, with the source of every figure (brand site, MOH register, NSR, doctor profiles) and network totals.
+- **Capacity widget** — opens with the map: Asia One vs licensed private vs public, beds and specialists side by side with bars. Close it, reopen from the chart button in the map controls.
+- **Bubble sizing** — a switch in the legend scales the dots by licensed beds (all cohorts) or specialists (Asia One), or keeps them uniform.
 - **Location list** — click any branch in the panel to fly to it and open its popup.
 - **Find my location** — geolocation with a pulsing "you are here" dot.
 - **Live coordinate HUD** — lat/lng and zoom level follow the cursor.

@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-25T13:15:11.963Z",
+  "cohorts": [
+    {
+      "key": "asia-one",
+      "label": "Asia One",
+      "sites": 32,
+      "beds": 1688,
+      "bedsSites": 12,
+      "specialists": 790,
+      "specialistSites": 20,
+      "bedsNote": "published figures + MOH register",
+      "specialistsNote": "published figures + NSR matches"
+    },
+    {
+      "key": "private",
+      "label": "Private · MOH licensed",
+      "sites": 224,
+      "beds": 21191,
+      "bedsSites": 224,
+      "specialists": 10696,
+      "specialistSites": 175,
+      "bedsNote": "MOH licensed register",
+      "specialistsNote": "NSR establishment matches"
+    },
+    {
+      "key": "public",
+      "label": "Public · MOH",
+      "sites": 143,
+      "beds": 31244,
+      "bedsSites": 102,
+      "specialists": 8603,
+      "specialistSites": 84,
+      "bedsNote": "reference + KKMNOW wards/ICU",
+      "specialistsNote": "NSR establishment matches"
+    }
+  ]
+}
