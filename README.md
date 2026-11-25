@@ -119,8 +119,10 @@ At street zoom the vector pane fades so the basemap stays readable.
 
 - KPIs: locations, states, population, share of population inside the radius.
 - **Catchment by hospital** — a table of all 26 sites, ranked by population served. Each
-  district is assigned to its *nearest* hospital inside the radius, so the column adds up
-  instead of counting the same people once per nearby site.
+  district's population is split between every hospital in range using inverse-square
+  distance weighting, and distance is measured to the district's equal-area circle so a site
+  inside a large district (Puchong, Iskandar Puteri) isn't scored as "out of range". Totals
+  add up across sites and no hospital shows zero just because a neighbour is closer.
 - Click a row to open the detail widget over the map: population served, share of state,
   overlapping population in radius, neighbouring hospitals, and the districts behind the number.
 - **Coverage by state** — share of each state's population inside the radius.

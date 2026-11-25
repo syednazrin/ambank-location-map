@@ -9,6 +9,7 @@ import {
   DISTRICT_CENTROID,
   DISTRICT_NAME,
   DISTRICT_POPULATION,
+  DISTRICT_RADIUS_KM,
   DUN_POPULATION,
   PARLIMEN_POPULATION,
   POPULATION_YEAR,
@@ -106,7 +107,10 @@ function valueFor(props: Record<string, unknown>, level: BorderLevel): number | 
 }
 
 function fmtValue(value: number) {
-  return value >= 1_000_000 ? `${(value / 1_000_000).toFixed(2)}M` : `${Math.round(value / 1000)}k`;
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(2)}M`;
+  if (value >= 10_000) return `${Math.round(value / 1000)}k`;
+  if (value >= 1_000) return `${(value / 1000).toFixed(1)}k`;
+  return `${Math.round(value)}`;
 }
 
 /** Great-circle distance in kilometres. */
@@ -119,6 +123,16 @@ function haversineKm(a: [number, number], b: [number, number]) {
   const h =
     Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+/**
+ * Distance from a point to a district, measured to the edge of an equal-area circle
+ * around the district centroid. Without this, a hospital sitting 12 km from a large
+ * district's centroid but inside its boundary would score as "out of range".
+ */
+function districtDistanceKm(key: string, centre: [number, number], point: [number, number]) {
+  const radius = DISTRICT_RADIUS_KM[key] ?? 0;
+  return Math.max(0, haversineKm(centre, point) - radius);
 }
 
 function Kpi({ label, value }: { label: string; value: string | number }) {
@@ -142,9 +156,9 @@ type Analytics = {
 
 type CatchmentRow = {
   loc: Location;
-  assigned: number;
+  served: number;
   within: number;
-  districts: { key: string; name: string; population: number }[];
+  contributions: { key: string; name: string; population: number }[];
 };
 
 function CatchmentWidget({
@@ -161,7 +175,7 @@ function CatchmentWidget({
   onFocus: () => void;
 }) {
   const statePopulation = STATE_POPULATION[stateKey(row.loc.state)] ?? 0;
-  const share = statePopulation ? row.assigned / statePopulation : 0;
+  const share = statePopulation ? row.served / statePopulation : 0;
 
   return (
     <div className="pointer-events-auto absolute right-3 top-3 z-[1050] flex max-h-[calc(100dvh-1.5rem)] w-[380px] max-w-[calc(100vw-1.5rem)] flex-col overflow-hidden rounded-xl border bg-card shadow-xl">
@@ -190,7 +204,7 @@ function CatchmentWidget({
             Population served · {radius} km
           </p>
           <p className="mt-1 text-[26px] font-semibold leading-none tabular-nums">
-            {fmtValue(row.assigned)}
+            {fmtValue(row.served)}
           </p>
           <p className="mt-1 text-[10.5px] text-muted-foreground">
             people · {Math.round(share * 100)}% of {row.loc.state}
@@ -204,10 +218,10 @@ function CatchmentWidget({
 
         <div className="mt-4">
           <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
-            Districts in range
+            Districts contributing
           </p>
           <ul className="mt-1.5 space-y-1">
-            {row.districts.map((district) => (
+            {row.contributions.slice(0, 8).map((district) => (
               <li
                 key={district.key}
                 className="flex items-baseline justify-between gap-2 border-b border-border/60 pb-1 text-[10.5px] last:border-0"
@@ -218,7 +232,7 @@ function CatchmentWidget({
                 </span>
               </li>
             ))}
-            {row.districts.length === 0 ? (
+            {row.contributions.length === 0 ? (
               <li className="text-[10.5px] text-muted-foreground">
                 No district centre falls inside this radius.
               </li>
@@ -227,9 +241,10 @@ function CatchmentWidget({
         </div>
 
         <p className="mt-3 text-[9.5px] leading-relaxed text-muted-foreground">
-          Each district is assigned to its nearest hospital within {radius} km, so these totals add
-          up instead of counting the same people twice. Straight-line approximation, not drive
-          time.
+          Each district&apos;s population is split between the hospitals within {radius} km,
+          weighted by distance and measured to the district&apos;s edge — so the column adds up
+          and nearby sites share rather than one taking all. Straight-line approximation, not
+          drive time.
         </p>
 
         <div className="mt-3 flex gap-1.5">
@@ -271,7 +286,7 @@ function PanelAnalytics({
   selectedId: string | null;
   onSelect: (id: string) => void;
 }) {
-  const max = rows[0]?.assigned ?? 1;
+  const max = rows[0]?.served ?? 1;
 
   return (
     <div className="space-y-5 px-3 py-4">
@@ -314,19 +329,19 @@ function PanelAnalytics({
                   <span className="mt-1 block h-0.5 overflow-hidden rounded-full bg-secondary">
                     <span
                       className="block h-full rounded-full bg-foreground/70"
-                      style={{ width: `${Math.max(2, (row.assigned / max) * 100)}%` }}
+                      style={{ width: `${Math.max(2, (row.served / max) * 100)}%` }}
                     />
                   </span>
                 </td>
                 <td className="px-1 py-1.5 text-right align-middle font-mono text-[10px] tabular-nums">
-                  {fmtValue(row.assigned)}
+                  {fmtValue(row.served)}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
         <p className="mt-2 px-1 text-[9px] leading-relaxed text-muted-foreground">
-          Population served: each district assigned to its nearest hospital. Click a row for the breakdown.
+          Population served: each district is split between the hospitals in range. Click a row for the breakdown.
         </p>
       </section>
 
@@ -803,9 +818,10 @@ export default function MapView() {
 
   const shadeView = shadeData && shadeData.level === borderLevel && shade === "population" ? shadeData : null;
 
-  // Population each hospital serves at the current radius. Districts are assigned to
-  // their nearest hospital inside the radius, so the column adds up instead of
-  // double-counting the same people for every nearby site.
+  // Population each hospital serves at the current radius. A district's population is
+  // split between every hospital within reach, weighted by distance, so the numbers add
+  // up across sites instead of double-counting — and no site shows zero just because a
+  // neighbour is a few hundred metres closer.
   const hospitalCatchment = useMemo<CatchmentRow[]>(() => {
     const districts = Object.entries(DISTRICT_POPULATION)
       .map(([key, population]) => {
@@ -816,40 +832,40 @@ export default function MapView() {
       .filter((district): district is NonNullable<typeof district> => district !== null);
 
     const buckets = new Map<string, CatchmentRow>(
-      LOCATIONS.map((loc) => [loc.id, { loc, assigned: 0, within: 0, districts: [] }]),
+      LOCATIONS.map((loc) => [loc.id, { loc, served: 0, within: 0, contributions: [] }]),
     );
 
     for (const district of districts) {
-      let nearestId: string | null = null;
-      let nearestDistance = Infinity;
+      const reachable = LOCATIONS.map((loc) => ({
+        loc,
+        distance: districtDistanceKm(district.key, district.centre, loc.coords),
+      })).filter((entry) => entry.distance <= catchmentKm);
 
-      for (const loc of LOCATIONS) {
-        const distance = haversineKm(district.centre, loc.coords);
-        if (distance > catchmentKm) continue;
-        buckets.get(loc.id)!.within += district.population;
-        if (distance < nearestDistance) {
-          nearestDistance = distance;
-          nearestId = loc.id;
-        }
-      }
+      if (!reachable.length) continue;
 
-      if (nearestId) {
-        const bucket = buckets.get(nearestId)!;
-        bucket.assigned += district.population;
-        bucket.districts.push({
+      // Inverse-square weighting, softened so two sites in the same building still split.
+      const weights = reachable.map((entry) => 1 / (entry.distance ** 2 + 0.25));
+      const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+
+      reachable.forEach((entry, index) => {
+        const bucket = buckets.get(entry.loc.id)!;
+        const share = district.population * (weights[index] / totalWeight);
+        bucket.within += district.population;
+        bucket.served += share;
+        bucket.contributions.push({
           key: district.key,
           name: DISTRICT_NAME[district.key] ?? district.key,
-          population: district.population,
+          population: share,
         });
-      }
+      });
     }
 
     return [...buckets.values()]
       .map((row) => ({
         ...row,
-        districts: row.districts.sort((a, b) => b.population - a.population),
+        contributions: row.contributions.sort((a, b) => b.population - a.population),
       }))
-      .sort((a, b) => b.assigned - a.assigned || b.within - a.within);
+      .sort((a, b) => b.served - a.served || b.within - a.within);
   }, [catchmentKm]);
 
   const selectedRow = selectedHospitalId
@@ -880,7 +896,9 @@ export default function MapView() {
       entry.total += population;
       total += population;
 
-      const reachable = LOCATIONS.some((loc) => haversineKm(centre, loc.coords) <= catchmentKm);
+      const reachable = LOCATIONS.some(
+        (loc) => districtDistanceKm(key, centre, loc.coords) <= catchmentKm,
+      );
       if (reachable) {
         entry.covered += population;
         covered += population;
