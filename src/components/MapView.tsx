@@ -742,7 +742,11 @@ function LayerLegend({
   onTogglePrivate,
   sizeBy,
   onSizeChange,
+  hospitalsOnly,
+  onToggleHospitalsOnly,
 }: {
+  hospitalsOnly: boolean;
+  onToggleHospitalsOnly: () => void;
   showAsiaOne: boolean;
   showPublic: boolean;
   showPrivate: boolean;
@@ -818,6 +822,20 @@ function LayerLegend({
           </li>
         ))}
       </ul>
+
+      <button
+        type="button"
+        onClick={onToggleHospitalsOnly}
+        aria-pressed={hospitalsOnly}
+        title="Hide specialist centres and physiotherapy/chiro sites"
+        className={`mt-1.5 w-full rounded border px-1 py-1 text-[10px] font-medium transition ${
+          hospitalsOnly
+            ? "border-primary bg-primary text-primary-foreground"
+            : "border-border text-muted-foreground hover:bg-secondary hover:text-foreground"
+        }`}
+      >
+        Hospitals only
+      </button>
 
       <p className="mt-1.5 border-t pt-1.5 text-[9px] leading-relaxed text-muted-foreground">
         Tap a row to show or hide.
@@ -928,6 +946,7 @@ export default function MapView() {
   const [catchmentOpen, setCatchmentOpen] = useState(true);
   const [showCatchment, setShowCatchment] = useState(true);
   const [showAsiaOne, setShowAsiaOne] = useState(true);
+  const [hospitalsOnly, setHospitalsOnly] = useState(false);
   const [showPublic, setShowPublic] = useState(true);
   const [showPrivate, setShowPrivate] = useState(true);
   const [sizeBy, setSizeBy] = useState<SizeMode>("beds");
@@ -1670,7 +1689,7 @@ export default function MapView() {
             : null}
 
           {showAsiaOne
-            ? LOCATIONS.map((loc) => {
+            ? LOCATIONS.filter((loc) => !hospitalsOnly || loc.kind === "Hospital").map((loc) => {
             const active = activeId === loc.id;
             const hovered = hoverId === loc.id;
             const capacity = CAPACITY_BY_ID.get(loc.id);
@@ -1826,6 +1845,8 @@ export default function MapView() {
             showPublic={showPublic}
             showPrivate={showPrivate}
             onToggleAsiaOne={() => setShowAsiaOne((value) => !value)}
+            hospitalsOnly={hospitalsOnly}
+            onToggleHospitalsOnly={() => setHospitalsOnly((value) => !value)}
             onTogglePublic={() => setShowPublic((value) => !value)}
             onTogglePrivate={() => setShowPrivate((value) => !value)}
             sizeBy={sizeBy}
